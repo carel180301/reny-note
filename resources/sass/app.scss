@@ -34,3 +34,18 @@
     width: 0 !important;
     height: 0 !important;
 }
+
+.sticky-header {
+    position: sticky;
+    top: 60px; /* Sit below navbar */
+    z-index: 1100;
+    background: white;
+    padding: 6px 0;
+}
+
+thead {
+    position: sticky;
+    top: 120px; /* below header */
+    background: white;
+    z-index: 1100;
+}

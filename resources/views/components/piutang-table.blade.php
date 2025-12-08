@@ -8,13 +8,14 @@
     @endif
 
 
-    <div id="piutangTable">
-         <h2 class="text-center mt-1 position-sticky bg-white" style="top: 0px; z-index: 100;">
-        Daftar Piutang
-    </h2>
+     <!-- Sticky header outside the scroll -->
+        <div class="sticky-header text-center">
+            <h2>Daftar Piutang</h2>
+        </div>
 
-        <!-- TABLE WRAPPER -->
+    <div id="piutangTable">
         <div class="table-scroll-wrapper">
+
              <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
                 <table class="table table-hover w-100">
                     <thead class="position-sticky top-0 bg-white" style="z-index: 1;">
