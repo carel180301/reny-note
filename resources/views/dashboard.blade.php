@@ -9,7 +9,7 @@
         }
     </style>
 
-    <div class="py-6 flex-grow">
+    <div class="flex-grow">
         <div class="w-full h-full">
             <div class="bg-white overflow-hidden shadow-sm h-full">
                 <div class="p-6 text-gray-900 overflow-x-auto">

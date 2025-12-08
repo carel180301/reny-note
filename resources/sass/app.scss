@@ -14,27 +14,23 @@
     z-index: 9999 !important;
 }
 
-.table-responsive::-webkit-scrollbar {
-    width: 0;
-}
-
-.table-responsive {
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Prevent outer page scroll showing */
+/* Hide scrollbar on main scroll containers */
+.table-responsive,
 .table-scroll-wrapper {
-    overflow: hidden;
+    max-height: 70vh !important;
+    overflow-y: scroll !important;
+
+    /* Firefox */
+    scrollbar-width: none !important;
+
+    /* IE/old Edge */
+    -ms-overflow-style: none !important;
 }
 
-/* Inner scroll area (table) scrolls but scrollbar is hidden */
-.table-responsive {
-    max-height: 70vh;
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Hide WebKit scrollbar */
-.table-responsive::-webkit-scrollbar {
-    display: none;
+/* Chrome, Safari, New Edge */
+.table-responsive::-webkit-scrollbar,
+.table-scroll-wrapper::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
