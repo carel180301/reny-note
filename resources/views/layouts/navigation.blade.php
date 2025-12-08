@@ -39,9 +39,9 @@
                     <form class="d-flex me-4" onsubmit="return false;">
                         <div class="input-group">
                             <input type="search" id="searchInput" class="form-control" placeholder="Search">
-                            <button class="btn btn-outline-secondary" type="button">
+                            {{-- <button class="btn btn-outline-secondary" type="button">
                                 <i class="bi bi-search"></i>
-                            </button>
+                            </button> --}}
                         </div>
                     </form>
 
