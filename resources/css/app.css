@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override Bootstrap/Tailwind primary color to white where `.text-primary` is used */
+:root {
+    --bs-primary: #ffffff;
+}
+
+.text-primary {
+    color: #ffffff !important;
+}
+
+/* Ensure sticky navbar shadow above content when needed */
+.sticky {
+    -webkit-backdrop-filter: saturate(180%) blur(6px);
+    backdrop-filter: saturate(180%) blur(6px);
+}
+
+/* Ensure body has neutral colors (override accidental blue) */
+body {
+    color: #111827 !important; /* Tailwind gray-900 */
+    background-color: #ffffff !important;
+}
+
+/* Sticky page heading just below the navbar */
+.piutang-heading {
+    position: sticky;
+    top: 4rem; /* below navbar (h-16) */
+    background: #ffffff;
+    z-index: 45;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+/* Sticky table head for piutang page. Adjust `top` so it sits under navbar + heading */
+.piutang-page .table thead th {
+    position: sticky;
+    top: calc(4rem + 3rem); /* navbar + heading approx */
+    z-index: 40;
+}

@@ -1,0 +1,40 @@
+@import "bootstrap/scss/bootstrap";
+// @import "../css/app.css";
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+    }
+}
+
+.dropdown-container {
+    position: relative;
+    z-index: 9999 !important;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 0;
+}
+
+.table-responsive {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Prevent outer page scroll showing */
+.table-scroll-wrapper {
+    overflow: hidden;
+}
+
+/* Inner scroll area (table) scrolls but scrollbar is hidden */
+.table-responsive {
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide WebKit scrollbar */
+.table-responsive::-webkit-scrollbar {
+    display: none;
+}
