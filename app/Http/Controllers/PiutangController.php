@@ -76,6 +76,7 @@ class PiutangController extends Controller
             ->orWhere('currency', 'like', "%$keyword%")
             ->orWhere('outstanding', 'like', "%$keyword%")
             ->orWhere('email', 'like', "%$keyword%")
+             ->orWhere('cob', 'like', "%$keyword%")
             ->get();
 
         return view('components.piutang-table', [
