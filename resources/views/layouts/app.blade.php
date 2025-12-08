@@ -15,7 +15,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased flex flex-col min-h-screen">
-        <div class="flex flex-col flex-grow bg-gray-100">
+        <div class="flex flex-col flex-grow bg-white-100">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Footer (fixed to bottom). pb added to main to avoid overlap -->
-        <footer class="bg-white shadow fixed bottom-0 left-0 w-full z-40">
+        <footer class="bg-white fixed bottom-0 left-0 w-full z-40">
             <div class="w-full py-3 px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">&copy; 2025 PT. Asuransi Kredit Indonesia</div>
         </footer>
     </body>
