@@ -34,28 +34,29 @@
     </script>
 
     <script>
-        let searchTimeout = null;
+    let searchTimeout = null;
 
-        document.getElementById('searchInput').addEventListener('keyup', function() {
-            clearTimeout(searchTimeout);
+    document.getElementById('searchInput').addEventListener('input', function() {
+        clearTimeout(searchTimeout);
 
-            const q = this.value;
+        const q = this.value;
 
-            searchTimeout = setTimeout(() => {
+        searchTimeout = setTimeout(() => {
 
-                fetch(`/piutang/search?q=` + encodeURIComponent(q))
-                    .then(res => res.text())
-                    .then(html => {
-                        document.querySelector('x-piutang-table').outerHTML = html;
-                    })
-                    .catch(() => console.log("Search failed"));
+            fetch(`/piutang/search?q=` + encodeURIComponent(q))
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('piutangTable').innerHTML = html;
+                })
+                .catch(() => console.log("Search failed"));
 
-            }, 300); // wait 300ms to reduce spam
-        });
-    </script>
+        }, 300);
+    });
+</script>
+
 
     <script>
-        document.getElementById('searchInput').addEventListener('keyup', function() {
+        document.getElementById('searchInput').addEventListener('input', function() {
             clearTimeout(searchTimeout);
 
             const q = this.value;
