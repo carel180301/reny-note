@@ -3,7 +3,7 @@
 
 
     <!-- Primary Navigation Menu -->
-    <div class="w-full px-4 sm:px-6 lg:px-8">
+    <div class="w-full px-4 sm:px-6 lg:px-8 pt-5">
         <div class="flex justify-between items-center h-16">
             <div class="flex">
                 <!-- Logo -->
