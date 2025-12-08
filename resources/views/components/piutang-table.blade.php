@@ -10,8 +10,8 @@
 
     <div id="piutangTable">
          <h2 class="text-center mt-1 position-sticky bg-white" style="top: 0px; z-index: 100;">
-            Daftar Piutang
-        </h2>
+        Daftar Piutang
+    </h2>
 
         <!-- TABLE WRAPPER -->
         <div class="table-scroll-wrapper">
