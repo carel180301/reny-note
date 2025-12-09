@@ -33,7 +33,7 @@
         }
     </script>
 
-    <script>
+    {{-- <script>
     let searchTimeout = null;
 
     document.getElementById('searchInput').addEventListener('input', function() {
@@ -52,7 +52,7 @@
 
         }, 300);
     });
-</script>
+</script> --}}
 
 
     <script>

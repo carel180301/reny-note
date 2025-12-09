@@ -15,10 +15,11 @@
 
     <div id="piutangTable">
         {{-- <div class="table-scroll-wrapper"> --}}
-             <div class="table-responsive">
+             <div class="table-responsive" style="overflow: visible !important;">
+
 
                 <table class="table table-hover w-100">
-                    <thead class="position-sticky top-0 bg-white" style="z-index: 1;">
+                    <thead>
 
 
                         <tr class="text-center">
