@@ -56,23 +56,26 @@
 
 
     <script>
-        document.getElementById('searchInput').addEventListener('input', function() {
-            clearTimeout(searchTimeout);
+    let searchTimeout = null; // ✅ ADD THIS LINE
 
-            const q = this.value;
+    document.getElementById('searchInput').addEventListener('input', function() {
+        clearTimeout(searchTimeout);
 
-            searchTimeout = setTimeout(() => {
+        const q = this.value;
 
-                fetch(`/piutang/search?q=` + encodeURIComponent(q))
-                    .then(res => res.text())
-                    .then(html => {
-                        document.getElementById('piutangTable').innerHTML = html;
-                    })
-                    .catch(() => console.log("Search failed"));
+        searchTimeout = setTimeout(() => {
 
-            }, 300);
-        });
-    </script>
+            fetch(`/piutang/search?q=` + encodeURIComponent(q))
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById('piutangTable').innerHTML = html;
+                })
+                .catch(() => console.log("Search failed"));
+
+        }, 300);
+    });
+</script>
+
 </x-app-layout>
 
 
