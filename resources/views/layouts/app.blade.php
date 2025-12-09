@@ -19,14 +19,14 @@
             @include('layouts.navigation')
 
             <!-- Page Heading -->
-            @isset($header)
+            {{-- @isset($header)
                 <header class="bg-white shadow p-0">
                     <div class="max-w-7xl mx-auto p-0">
                         {{ $header }}
                     </div>
                 </header>
 
-            @endisset
+            @endisset --}}
 
             <!-- Page Content -->
             <main class="flex-grow pb-16">
