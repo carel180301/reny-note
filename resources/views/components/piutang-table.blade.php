@@ -23,6 +23,7 @@
 
 
                         <tr class="text-center">
+                            <th class="text-white" style="background:#2a3d5e">No.</th>
                             <th class="text-white" style="background:#2a3d5e">COB</th>
                             <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
                             <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
@@ -39,8 +40,9 @@
 
                     <tbody>
 
-                    @foreach($piutangs as $piutang)
+                    @foreach($piutangs as $index => $piutang)
                         <tr>
+                            <td>{{ $index + 1 }}</td>
                             <td>{{ $piutang->cob }}</td>
                             <td>{{ $piutang->nomor_polis }}</td>
                             <td>{{ $piutang->tanggal_polis }}</td>
