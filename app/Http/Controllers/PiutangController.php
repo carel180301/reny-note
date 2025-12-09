@@ -8,7 +8,8 @@ use App\Models\Piutang;
 class PiutangController extends Controller
 {
     public function index(){
-        $piutangs = Piutang::all();
+        $piutangs = Piutang::orderBy('created_at', 'desc')->get();
+
         return view('piutangs.index', ['piutangs' => $piutangs]);
     }
 
@@ -76,7 +77,8 @@ class PiutangController extends Controller
             ->orWhere('currency', 'like', "%$keyword%")
             ->orWhere('outstanding', 'like', "%$keyword%")
             ->orWhere('email', 'like', "%$keyword%")
-             ->orWhere('cob', 'like', "%$keyword%")
+            ->orWhere('cob', 'like', "%$keyword%")
+            ->orderBy('created_at', 'desc')
             ->get();
 
         return view('components.piutang-table', [

@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', function () {
-    $piutangs = Piutang::all();
+    $piutangs = Piutang::orderBy('created_at', 'desc')->get();
     return view('dashboard', compact('piutangs'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
