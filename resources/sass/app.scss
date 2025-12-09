@@ -18,18 +18,24 @@
     overflow: visible !important;
 }
 
-/* Sticky page section title */
-.sticky-header {
-    position: sticky;
-    top: 70px; /* below navbar */
-    z-index: 1100;
-    background: white;
+/* REMOVE BIG TOP SPACING */
+.bg-white.shadow-sm.h-full {
+    padding-top: 0 !important;
 }
 
-/* Sticky table header */
+/* Sticky title JUST under navigation */
+.sticky-header {
+    position: sticky;
+    top: 65px; /* navbar height */
+    z-index: 1100;
+    background: white;
+    padding: 8px 0; /* reduce vertical space */
+}
+
+/* Sticky table header directly below sticky title */
 table thead th {
     position: sticky;
-    top: 120px; /* below sticky header */
+    top: 110px;
     z-index: 1200;
     background: white;
 }

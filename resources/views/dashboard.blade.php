@@ -12,13 +12,13 @@
     <div class="flex-grow">
         <div class="w-full h-full">
             <div class="bg-white shadow-sm h-full">
-                <div class="p-6 text-gray-900"></div>
+                {{-- <div class="p-6 text-gray-900"></div> --}}
                     <x-piutang-table :piutangs="$piutangs" />
 
                     {{-- <br>
                     <a href="{{ route('piutang.index') }}" class="text-blue-500 hover:text-blue-950">Piutang Page</a>
                  --}}
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>
