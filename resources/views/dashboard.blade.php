@@ -34,6 +34,14 @@
         }
     </script>
 
+    <script>
+        $(document).on('click', '.editBtn', function () {
+            let id = $(this).data('id');
+            $('#id').val(id);
+            $('#updateBtn').prop('disabled', false);
+        });
+    </script>
+
     {{-- <script>
     let searchTimeout = null;
 
@@ -57,7 +65,7 @@
 
 
     <script>
-    let searchTimeout = null; // ✅ ADD THIS LINE
+    let searchTimeout = null; 
 
     document.getElementById('searchInput').addEventListener('input', function() {
         clearTimeout(searchTimeout);
