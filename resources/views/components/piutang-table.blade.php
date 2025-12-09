@@ -9,9 +9,9 @@
 
 
      <!-- Sticky header outside the scroll -->
-        <div class="sticky-header text-center">
+        {{-- <div class="sticky-header text-center">
             <h2>Daftar Piutang</h2>
-        </div>
+        </div> --}}
 
     <div id="piutangTable">
         {{-- <div class="table-scroll-wrapper"> --}}

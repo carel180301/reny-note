@@ -12,6 +12,7 @@
     <div class="flex-grow">
         <div class="w-full h-full">
             <div class="bg-white shadow-sm h-full">
+                <h2 class="text-center">Daftar Piutang</h2>
                 {{-- <div class="p-6 text-gray-900"></div> --}}
                     <x-piutang-table :piutangs="$piutangs" />
 
