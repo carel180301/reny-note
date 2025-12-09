@@ -1,6 +1,4 @@
 @import "bootstrap/scss/bootstrap";
-// @import "../css/app.css";
-
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 @media (min-width: 992px) {
@@ -14,38 +12,24 @@
     z-index: 9999 !important;
 }
 
-/* Hide scrollbar on main scroll containers */
-.table-responsive,
-.table-scroll-wrapper {
-    max-height: 70vh !important;
-    overflow-y: scroll !important;
-
-    /* Firefox */
-    scrollbar-width: none !important;
-
-    /* IE/old Edge */
-    -ms-overflow-style: none !important;
+.table-responsive {
+    display: table; /* IMPORTANT */
+    width: 100%;
+    overflow: visible !important;
 }
 
-/* Chrome, Safari, New Edge */
-.table-responsive::-webkit-scrollbar,
-.table-scroll-wrapper::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
+/* Sticky title */
 .sticky-header {
     position: sticky;
-    top: 60px; /* Sit below navbar */
+    top: 60px;
     z-index: 1100;
     background: white;
-    padding: 6px 0;
 }
 
-thead {
+/* Sticky table header */
+thead th {
     position: sticky;
-    top: 120px; /* below header */
+    top: 120px; /* adjust depending navbar height */
+    z-index: 1200;
     background: white;
-    z-index: 1100;
 }
