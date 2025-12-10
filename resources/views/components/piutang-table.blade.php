@@ -39,7 +39,22 @@
                     <td>{{ $piutang->wpc }}</td>
                     <td>{{ $piutang->email }}</td>
                     <td>{{ $piutang->currency }}</td>
-                    <td>{{ $piutang->outstanding }}</td>
+
+                    <!-- FORMATTED OUTSTANDING -->
+                    <td>
+                        @php
+                            // Remove thousand separators (.)
+                            $value = str_replace('.', '', $piutang->outstanding);
+
+                            // Convert decimal separator (,) to dot for PHP float
+                            $value = str_replace(',', '.', $value);
+
+                            // Convert to float
+                            $numeric = (float) $value;
+                        @endphp
+
+                        {{ number_format($numeric, 2, ',', '.') }}
+                    </td>
 
                     <td>
                         @php
