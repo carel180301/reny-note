@@ -18,24 +18,28 @@ class PiutangController extends Controller
     }
 
     public function store(Request $request){
-        $data = $request->validate([
-            'cob' => 'required',
-            'nomor_polis' => 'required',
-            // 'nomor_jurnal' => 'required',
-            'tanggal_polis' => 'required',
-            'broker' => 'required',
-            'nama_tertanggung' => 'required',
-            'wpc' => 'required',
-            'email' => 'required',
-            'currency' => 'required',
-            // 'tsi' => 'required'
-            'outstanding' => 'required'
-        ]);
+    $data = $request->validate([
+        'cob' => 'required',
+        'nomor_polis' => 'required',
+        'tanggal_polis' => 'required',
+        'broker' => 'required',
+        'nama_tertanggung' => 'required',
+        'wpc' => 'required',
+        'email' => 'required',
+        'currency' => 'required',
+        'outstanding' => 'required'
+    ]);
 
-        Piutang::create($data);
+    // CLEAN OUTSTANDING
+    $data['outstanding'] = str_replace('.', '', $data['outstanding']);
+    $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
+    $data['outstanding'] = (float)$data['outstanding'];
 
-        return redirect(route('dashboard'))->with('success', 'Piutang Added Successfully');
-    }
+    Piutang::create($data);
+
+    return redirect(route('dashboard'))->with('success', 'Piutang Added Successfully');
+}
+
 
     
     public function edit(Piutang $piutang){
@@ -43,24 +47,28 @@ class PiutangController extends Controller
     }
 
     public function update(Piutang $piutang, Request $request){
-          $data = $request->validate([
-            'cob' => 'required',
-            'nomor_polis' => 'required',
-            // 'nomor_jurnal' => 'required',
-            'tanggal_polis' => 'required',
-            'broker' => 'required',
-            'nama_tertanggung' => 'required',
-            'wpc' => 'required',
-            'email' => 'required',
-            'currency' => 'required',
-            // 'tsi' => 'required'
-            'outstanding' => 'required'
-        ]);
+    $data = $request->validate([
+        'cob' => 'required',
+        'nomor_polis' => 'required',
+        'tanggal_polis' => 'required',
+        'broker' => 'required',
+        'nama_tertanggung' => 'required',
+        'wpc' => 'required',
+        'email' => 'required',
+        'currency' => 'required',
+        'outstanding' => 'required'
+    ]);
 
-        $piutang->update($data);
+    // CLEAN OUTSTANDING
+    $data['outstanding'] = str_replace('.', '', $data['outstanding']);
+    $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
+    $data['outstanding'] = (float)$data['outstanding'];
 
-        return back()->with('success', 'Piutang Updated Successfully');
-    }
+    $piutang->update($data);
+
+    return back()->with('success', 'Piutang Updated Successfully');
+}
+
     
     public function destroy(Piutang $piutang){
         $piutang->delete();

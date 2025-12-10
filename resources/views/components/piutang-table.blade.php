@@ -43,14 +43,7 @@
                     <!-- FORMATTED OUTSTANDING -->
                     <td>
                         @php
-                            // Remove thousand separators (.)
-                            $value = str_replace('.', '', $piutang->outstanding);
-
-                            // Convert decimal separator (,) to dot for PHP float
-                            $value = str_replace(',', '.', $value);
-
-                            // Convert to float
-                            $numeric = (float) $value;
+                            $numeric = (float) $piutang->outstanding;
                         @endphp
 
                         {{ number_format($numeric, 2, ',', '.') }}
