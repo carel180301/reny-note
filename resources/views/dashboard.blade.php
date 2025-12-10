@@ -161,6 +161,48 @@
     </div>
 </div>
 
+<script>
+function formatNumberInput(input) {
+    let value = input.value;
+
+    // detect if user just typed a comma at the end
+    const endsWithComma = value.endsWith(',');
+
+    // remove everything except digits and comma
+    value = value.replace(/[^\d,]/g, '');
+
+    // split integer and decimal part
+    let parts = value.split(',');
+
+    let integerPart = parts[0];
+    let decimalPart = parts[1] || '';
+
+    // format thousands on integer part
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+    // if user is still typing decimal comma
+    if (endsWithComma && decimalPart.length === 0) {
+        input.value = integerPart + ',';
+        return;
+    }
+
+    // rebuild value fully
+    if (decimalPart.length > 0) {
+        input.value = integerPart + ',' + decimalPart;
+    } else {
+        input.value = integerPart;
+    }
+}
+
+// apply formatter on all fields with name="outstanding"
+document.addEventListener('input', function(e) {
+    if (e.target.name === 'outstanding') {
+        formatNumberInput(e.target);
+    }
+});
+</script>
+
+
 </x-app-layout>
 
 
