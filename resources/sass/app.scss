@@ -12,30 +12,28 @@
     z-index: 9999 !important;
 }
 
-.table-responsive {
-    display: table; /* IMPORTANT */
-    width: 100%;
-    overflow: visible !important;
-}
-
 /* REMOVE BIG TOP SPACING */
 .bg-white.shadow-sm.h-full {
     padding-top: 0 !important;
 }
 
-/* Sticky title JUST under navigation */
-.sticky-header {
-    position: sticky;
-    top: 65px; /* navbar height */
-    z-index: 1100;
-    background: white;
-    padding: 8px 0; /* reduce vertical space */
+.table-responsive {
+    display: block !important;
+    width: 100% !important;
+    overflow: visible !important;
 }
 
-/* Sticky table header directly below sticky title */
-table thead th {
+.sticky-header {
     position: sticky;
-    top: 110px;
+    top: 65px; /* below navbar */
+    z-index: 1100;
+    background: white;
+}
+
+/* STICKY TABLE HEADER */
+#piutangTable table thead th {
+    position: sticky;
+    top: 110px; /* below navbar + title */
     z-index: 1200;
     background: white;
 }

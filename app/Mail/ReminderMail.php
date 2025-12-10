@@ -23,7 +23,7 @@ class ReminderMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Reminder for Piutang Due Date',
+            subject: 'Reminder Pembayaran Outstanding',
         );
     }
 

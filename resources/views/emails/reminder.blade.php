@@ -7,21 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Reminder for Outstanding Payment</h3>
+    <h3>Reminder Pembayaran Outstanding</h3>
 
-    <p>Dear {{ $piutang->nama_tertanggung }},</p>
+    <p>Yth. {{ $piutang->nama_tertanggung }},</p>
 
-    <p>This is a reminder that your policy:</p>
+    <p>Ini adalah pengingat polis Anda:</p>
 
     <ul>
+        <li><strong>COB:</strong> {{ $piutang->cob }}</li>
         <li><strong>Nomor Polis:</strong> {{ $piutang->nomor_polis }}</li>
+        <li><strong>Tanggal Polis:</strong> {{ $piutang->tanggal_polis }}</li>
+        <li><strong>Broker / Agen:</strong> {{ $piutang->broker }}</li>
+        <li><strong>Nama Tertanggung:</strong> {{ $piutang->nama_tertanggung }}</li>
+        <li><strong>Jatuh Tempo (WPC):</strong> {{ $piutang->wpc }}</li>
+        <li><strong>E-mail:</strong> {{ $piutang->email }}</li>
+        <li><strong>Currency:</strong> {{ $piutang->currency }}</li>
         <li><strong>Outstanding:</strong> {{ $piutang->outstanding }}</li>
-        <li><strong>Due Date (WPC):</strong> {{ $piutang->wpc }}</li>
+        {{-- <li><strong>Status:</strong> {{ $piutang->status }}</li> --}}
     </ul>
 
-    <p>Please settle the outstanding amount before the due date.</p>
-
-    <p>Thank you.</p>
+    <p>Harap segera melakukan pembayaran sebelum tanggal jatuh tempo. Terima kasih.</p>
+    <br>
+    <p>Salam Hormat, </p>
+    <p>Pt. Asuransi Kredit Indonesia</p>
 
 </body>
 </html>

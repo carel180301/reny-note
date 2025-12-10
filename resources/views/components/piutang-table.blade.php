@@ -7,7 +7,7 @@
 @endif
 
 <div id="piutangTable">
-    <div class="table-responsive" style="overflow: visible !important;">
+    <div class="table-responsive">
 
         <table class="table table-hover w-100">
             <thead>
