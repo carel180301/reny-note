@@ -74,6 +74,7 @@ class PiutangController extends Controller
     $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
     $data['outstanding'] = (float)$data['outstanding'];
 
+    
     if (strpos($data['tanggal_polis'], '/') !== false) {
         $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
     }
