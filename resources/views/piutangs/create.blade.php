@@ -35,7 +35,8 @@
         </div> --}}
         <div>
             <label>Tanggal Polis: </label>
-            <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />
+            {{-- <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" /> --}}
+            <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
         </div>
         <div>
             <label>Broker / Agen / Ceding: </label> 
@@ -47,7 +48,8 @@
         </div>
         <div>
             <label>WPC (Jatuh Tempo): </label>
-            <input type="date" name="wpc" placeholder="WPC (Jatuh Tempo)" />
+            {{-- <input type="date" name="wpc" placeholder="WPC (Jatuh Tempo)" /> --}}
+            <input type="text" name="wpc" class="form-control" placeholder="dd/mm/yyyy">
         </div>
         <div>
             <label>E-mail: </label>

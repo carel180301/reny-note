@@ -18,27 +18,37 @@ class PiutangController extends Controller
     }
 
     public function store(Request $request){
-    $data = $request->validate([
-        'cob' => 'required',
-        'nomor_polis' => 'required',
-        'tanggal_polis' => 'required',
-        'broker' => 'required',
-        'nama_tertanggung' => 'required',
-        'wpc' => 'required',
-        'email' => 'required',
-        'currency' => 'required',
-        'outstanding' => 'required'
-    ]);
+        $data = $request->validate([
+            'cob' => 'required',
+            'nomor_polis' => 'required',
+            'tanggal_polis' => 'required',
+            'broker' => 'required',
+            'nama_tertanggung' => 'required',
+            'wpc' => 'required',
+            'email' => 'required',
+            'currency' => 'required',
+            'outstanding' => 'required'
+        ]);
 
-    // CLEAN OUTSTANDING
-    $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-    $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-    $data['outstanding'] = (float)$data['outstanding'];
+        // CLEAN OUTSTANDING
+        $data['outstanding'] = str_replace('.', '', $data['outstanding']);
+        $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
+        $data['outstanding'] = (float)$data['outstanding'];
 
-    Piutang::create($data);
+        // Convert only if user typed dd/mm/yyyy
+        if (strpos($data['tanggal_polis'], '/') !== false) {
+            $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
+        }
+        if (strpos($data['wpc'], '/') !== false) {
+            $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
+        }
 
-    return redirect(route('dashboard'))->with('success', 'Piutang Added Successfully');
-}
+
+
+        Piutang::create($data);
+
+        return redirect(route('dashboard'))->with('success', 'Piutang Added Successfully');
+    }
 
 
     
@@ -63,6 +73,15 @@ class PiutangController extends Controller
     $data['outstanding'] = str_replace('.', '', $data['outstanding']);
     $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
     $data['outstanding'] = (float)$data['outstanding'];
+
+    if (strpos($data['tanggal_polis'], '/') !== false) {
+        $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
+    }
+    if (strpos($data['wpc'], '/') !== false) {
+        $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
+    }
+
+
 
     $piutang->update($data);
 

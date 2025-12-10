@@ -16,7 +16,7 @@
                     <th class="text-white" style="background:#2a3d5e">COB</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e">Broker / Agen</th>
+                    <th class="text-white" style="background:#2a3d5e">Broker / Agen / Ceding</th>
                     <th class="text-white" style="background:#2a3d5e">Nama Tertanggung</th>
                     <th class="text-white" style="background:#2a3d5e">WPC</th>
                     <th class="text-white" style="background:#2a3d5e">E-mail</th>
@@ -142,7 +142,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Tanggal Polis</label>
-                        <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
+                        {{-- <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}"> --}}
+                        <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="mb-3">
@@ -157,7 +158,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">WPC</label>
-                        <input type="date" class="form-control" name="wpc" value="{{ $piutang->wpc }}">
+                        {{-- <input type="date" class="form-control" name="wpc" value="{{ $piutang->wpc }}"> --}}
+                        <input type="text" name="wpc" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="mb-3">

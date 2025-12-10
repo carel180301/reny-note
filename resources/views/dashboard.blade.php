@@ -112,7 +112,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Tanggal Polis</label>
-                        <input type="date" class="form-control" name="tanggal_polis">
+                        {{-- <input type="date" class="form-control" name="tanggal_polis"> --}}
+                        <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="mb-3">
@@ -127,7 +128,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">WPC</label>
-                        <input type="date" class="form-control" name="wpc">
+                        {{-- <input type="date" class="form-control" name="wpc"> --}}
+                        <input type="text" name="wpc" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="mb-3">
@@ -198,6 +200,27 @@ function formatNumberInput(input) {
 document.addEventListener('input', function(e) {
     if (e.target.name === 'outstanding') {
         formatNumberInput(e.target);
+    }
+});
+</script>
+
+<script>
+function formatDateInput(input) {
+    let value = input.value.replace(/[^\d]/g, '');
+
+    // auto insert slashes: dd/mm/yyyy
+    if (value.length >= 5) {
+        value = value.substring(0,2) + '/' + value.substring(2,4) + '/' + value.substring(4,8);
+    } else if (value.length >= 3) {
+        value = value.substring(0,2) + '/' + value.substring(2,4);
+    }
+
+    input.value = value;
+}
+
+document.addEventListener('input', function(e) {
+    if (e.target.name === 'tanggal_polis' || e.target.name === 'wpc') {
+        formatDateInput(e.target);
     }
 });
 </script>
