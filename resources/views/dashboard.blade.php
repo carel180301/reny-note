@@ -85,6 +85,81 @@
     });
 </script>
 
+<!-- ADD PIUTANG MODAL -->
+<div class="modal fade" id="addPiutangModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Piutang</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form method="POST" action="{{ route('piutang.store') }}">
+                    @csrf
+
+                    <div class="mb-3">
+                        <label class="form-label">COB</label>
+                        <input class="form-control" name="cob">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Polis</label>
+                        <input class="form-control" name="nomor_polis">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Polis</label>
+                        <input type="date" class="form-control" name="tanggal_polis">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Broker</label>
+                        <input class="form-control" name="broker">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nama Tertanggung</label>
+                        <input class="form-control" name="nama_tertanggung">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">WPC</label>
+                        <input type="date" class="form-control" name="wpc">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input class="form-control" name="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Currency</label>
+                        <select class="form-select" name="currency">
+                            <option value="IDR">IDR</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="SGD">SGD</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Outstanding</label>
+                        <input class="form-control" name="outstanding">
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 </x-app-layout>
 
 
