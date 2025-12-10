@@ -33,10 +33,10 @@
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $piutang->cob }}</td>
                     <td>{{ $piutang->nomor_polis }}</td>
-                    <td>{{ $piutang->tanggal_polis }}</td>
+                    <td>{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}</td>
                     <td>{{ $piutang->broker }}</td>
                     <td>{{ $piutang->nama_tertanggung }}</td>
-                    <td>{{ $piutang->wpc }}</td>
+                    <td>{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}</td>
                     <td>{{ $piutang->email }}</td>
                     <td>{{ $piutang->currency }}</td>
 
