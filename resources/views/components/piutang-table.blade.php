@@ -9,21 +9,21 @@
 <div id="piutangTable">
     <div class="table-responsive">
 
-        <table class="table table-hover w-100">
-            <thead>
+        <table class="table table-hover w-100 align-middle">
+            <thead class="bg-primary-dark">
                 <tr class="text-center">
-                    <th class="text-white" style="background:#2a3d5e">No.</th>
-                    <th class="text-white" style="background:#2a3d5e">COB</th>
-                    <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
-                    <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e">Broker / Agen / Ceding</th>
-                    <th class="text-white" style="background:#2a3d5e">Nama Tertanggung</th>
-                    <th class="text-white" style="background:#2a3d5e">WPC</th>
-                    <th class="text-white" style="background:#2a3d5e">E-mail</th>
-                    <th class="text-white" style="background:#2a3d5e">Currency</th>
-                    <th class="text-white" style="background:#2a3d5e">Outstanding</th>
-                    <th class="text-white" style="background:#2a3d5e">Status</th>
-                    <th class="text-white" style="background:#2a3d5e">Action</th>
+                    <th class="text-white" style="background:#2a3d5e;">No.</th>
+                    <th class="text-white" style="background:#2a3d5e;">COB</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
+                    <th class="text-white" style="background:#2a3d5e;">Broker / Agen / Ceding</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
+                    <th class="text-white" style="background:#2a3d5e;">WPC</th>
+                    <th class="text-white" style="background:#2a3d5e;">E-mail</th>
+                    <th class="text-white" style="background:#2a3d5e;">Currency</th>
+                    <th class="text-white" style="background:#2a3d5e;">Outstanding</th>
+                    <th class="text-white" style="background:#2a3d5e;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
 
@@ -40,12 +40,8 @@
                     <td>{{ $piutang->email }}</td>
                     <td>{{ $piutang->currency }}</td>
 
-                    <!-- FORMATTED OUTSTANDING -->
                     <td>
-                        @php
-                            $numeric = (float) $piutang->outstanding;
-                        @endphp
-
+                        @php $numeric = (float) $piutang->outstanding; @endphp
                         {{ number_format($numeric, 2, ',', '.') }}
                     </td>
 
@@ -66,32 +62,26 @@
                             @else
                                 <span class="badge bg-secondary">{{ $daysLeft }} Hari Lagi</span>
                             @endif
-
                         @elseif($daysLeft === 0)
                             <span class="badge bg-warning text-dark">Due today</span>
-
                         @else
                             <span class="badge bg-danger">{{ abs($daysLeft) }} Hari Lewat</span>
                         @endif
                     </td>
 
-                    <!-- ACTION -->
                     <td>
-                        <div class="d-flex gap-2 align-items-center">
+                        <div class="d-flex gap-2 justify-content-center">
 
-                            <!-- SEND EMAIL -->
                             <button class="btn p-0 text-primary" onclick="sendEmail({{ $piutang->id }})">
                                 <i class="bi bi-envelope-fill fs-5"></i>
                             </button>
 
-                            <!-- EDIT BUTTON -->
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
                                     data-bs-target="#editPiutangModal{{ $piutang->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
-                            <!-- DELETE -->
                             <form method="POST" action="{{ route('piutang.destroy', $piutang) }}">
                                 @csrf
                                 @method('delete')
@@ -109,11 +99,6 @@
 
     </div>
 </div>
-
-
-<!-- ======================
-     ALL EDIT MODALS HERE
-     ====================== -->
 
 @foreach($piutangs as $piutang)
 <div class="modal fade" id="editPiutangModal{{ $piutang->id }}">
@@ -142,7 +127,6 @@
 
                     <div class="mb-3">
                         <label class="form-label">Tanggal Polis</label>
-                        {{-- <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}"> --}}
                         <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
 
@@ -158,7 +142,6 @@
 
                     <div class="mb-3">
                         <label class="form-label">WPC</label>
-                        {{-- <input type="date" class="form-control" name="wpc" value="{{ $piutang->wpc }}"> --}}
                         <input type="text" name="wpc" class="form-control" placeholder="dd/mm/yyyy">
                     </div>
 
