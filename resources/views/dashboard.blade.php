@@ -226,6 +226,27 @@ document.addEventListener('input', function(e) {
 });
 </script>
 
+<script>
+let searchTimeoutMobile = null;
+
+document.getElementById('searchInputMobile').addEventListener('input', function() {
+    clearTimeout(searchTimeoutMobile);
+
+    const q = this.value;
+
+    searchTimeoutMobile = setTimeout(() => {
+
+        fetch(`/piutang/search?q=` + encodeURIComponent(q))
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('piutangTable').innerHTML = html;
+            })
+            .catch(() => console.log("Mobile search failed"));
+
+    }, 300);
+});
+</script>
+
 
 </x-app-layout>
 
