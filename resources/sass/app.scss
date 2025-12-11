@@ -12,28 +12,31 @@
     z-index: 9999 !important;
 }
 
-/* REMOVE BIG TOP SPACING */
+/* ADD TOP SPACING BACK TO PAGE CONTENT */
 .bg-white.shadow-sm.h-full {
-    padding-top: 0 !important;
+    padding-top: 50px !important; /* <-- Adjust this to move header lower */
 }
 
+/* TABLE RESPONSIVE FIX */
 .table-responsive {
     display: block !important;
     width: 100% !important;
     overflow: visible !important;
 }
 
+/* STICKY PAGE HEADER */
 .sticky-header {
     position: sticky;
-    top: 65px; /* below navbar */
+    top: 120px; /* <-- Distance from navbar — adjust as needed */
     z-index: 1100;
     background: white;
+    padding-bottom: 10px; /* Adds breathing room */
 }
 
 /* STICKY TABLE HEADER */
 #piutangTable table thead th {
     position: sticky;
-    top: 110px; /* below navbar + title */
+    top: 180px; /* <-- sticky-header top + header height */
     z-index: 1200;
     background: white;
 }
