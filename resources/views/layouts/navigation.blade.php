@@ -71,17 +71,22 @@
                 <!-- HAMBURGER (MOBILE ONLY) -->
                 <div class="flex sm:hidden">
                     <button @click="open = !open"
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 
-                                   hover:text-gray-500 hover:bg-gray-100">
+                            class="inline-flex items-center justify-center p-2 rounded-md 
+                                   text-gray-400 hover:text-red-600 hover:bg-red-50">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+
+                            <!-- Hamburger icon -->
                             <path :class="{'hidden': open, 'inline-flex': !open }"
-                                class="inline-flex"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
+                                  class="inline-flex"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16" />
+
+                            <!-- X icon (red) -->
                             <path :class="{'hidden': !open, 'inline-flex': open }"
-                                class="hidden"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
+                                  class="hidden"
+                                  stroke="red"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
@@ -94,21 +99,8 @@
     <!-- MOBILE MENU -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
 
-        <div class="pt-2 pb-3 space-y-1">
-
-            <!-- Mobile search -->
-            @if(request()->routeIs('dashboard'))
-            <div class="px-4 mt-3">
-                <input type="search" id="searchInputMobile"
-                       class="form-control"
-                       placeholder="Search...">
-            </div>
-            @endif
-
-        </div>
-
-        <!-- MOBILE PROFILE SECTION -->
-        <div class="pt-4 pb-1 border-t border-gray-200" x-data="{ mobileProfileOpen: false }">
+        <!-- MOBILE PROFILE SECTION (Now at top) -->
+        <div class="pt-4 pb-3 border-t border-gray-200" x-data="{ mobileProfileOpen: false }">
 
             <div class="flex items-center justify-between px-4">
 
@@ -161,6 +153,15 @@
 
             </div>
         </div>
+
+        <!-- SEARCH BAR (Now moved to bottom) -->
+        @if(request()->routeIs('dashboard'))
+        <div class="px-4 pb-4 mt-4">
+            <input type="search" id="searchInputMobile"
+                   class="form-control"
+                   placeholder="Search...">
+        </div>
+        @endif
 
     </div>
 
