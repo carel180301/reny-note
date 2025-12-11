@@ -1,15 +1,5 @@
 <x-app-layout>
 
-    <style>
-        .navbar-collapse {
-            display: flex !important;
-            flex-basis: auto !important;
-        }
-        .navbar-toggler {
-            z-index: 2000;
-        }
-    </style>
-
     <div class="container-fluid px-2 px-md-4">
 
         <h2 class="text-center sticky-header pt-4">
@@ -22,47 +12,81 @@
 
     </div>
 
-    <!-- SEND EMAIL FUNCTION -->
-    <script>
-        function sendEmail(id) {
-            fetch(`/piutang/${id}/send-email`)
-                .then(res => res.text())
-                .then(msg => alert(msg))
-                .catch(() => alert("Failed to send email"));
-        }
-    </script>
 
-    <!-- Unified Search -->
-    <script>
-    (function() {
-        let searchTimeout = null;
+    <!-- ADD PIUTANG MODAL (Required for the + button) -->
+    <div class="modal fade" id="addPiutangModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-        function doSearch(q) {
-            fetch(`/piutang/search?q=` + encodeURIComponent(q))
-                .then(res => res.text())
-                .then(html => {
-                    const container = document.getElementById('piutangTable');
-                    if (container) container.innerHTML = html;
-                })
-                .catch(() => console.log("Search failed"));
-        }
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Piutang</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
 
-        const desktopInput = document.getElementById('searchInput');
-        if (desktopInput) {
-            desktopInput.addEventListener('input', function() {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => doSearch(this.value), 300);
-            });
-        }
+                <form method="POST" action="{{ route('piutang.store') }}">
+                    @csrf
+                    <div class="modal-body">
 
-        const mobileInput = document.getElementById('searchInputMobile');
-        if (mobileInput) {
-            mobileInput.addEventListener('input', function() {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => doSearch(this.value), 300);
-            });
-        }
-    })();
-    </script>
+                        <div class="mb-3">
+                            <label class="form-label">COB</label>
+                            <input name="cob" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Polis</label>
+                            <input name="nomor_polis" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Polis</label>
+                            <input name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Broker</label>
+                            <input name="broker" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Tertanggung</label>
+                            <input name="nama_tertanggung" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">WPC</label>
+                            <input name="wpc" class="form-control" placeholder="dd/mm/yyyy">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input name="email" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Currency</label>
+                            <select name="currency" class="form-select">
+                                <option>IDR</option>
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>SGD</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Outstanding</label>
+                            <input name="outstanding" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 
 </x-app-layout>
