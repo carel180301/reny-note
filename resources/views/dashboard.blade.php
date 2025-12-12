@@ -39,7 +39,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Polis</label>
-                            <input name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
+                            <input name="tanggal_polis" class="form-control date-input" placeholder="dd/mm/yyyy">
                         </div>
 
                         <div class="mb-3">
@@ -54,7 +54,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">WPC</label>
-                            <input name="wpc" class="form-control" placeholder="dd/mm/yyyy">
+                            <input name="wpc" class="form-control date-input" placeholder="dd/mm/yyyy">
                         </div>
 
                         <div class="mb-3">
@@ -88,5 +88,42 @@
         </div>
     </div>
 
+
+    <!-- AUTO-FORMAT DATE SCRIPT -->
+    <script>
+        function formatDateInput(value) {
+            value = value.replace(/\D/g, ""); // Remove non-digits
+
+            if (value.length >= 2) value = value.slice(0,2) + "/" + value.slice(2);
+            if (value.length >= 5) value = value.slice(0,5) + "/" + value.slice(5,9);
+
+            return value.slice(0, 10); // Limit to dd/mm/yyyy
+        }
+
+        function normalizePastedDate(text) {
+            text = text.replace(/\D/g, ""); // Remove everything except numbers
+
+            if (text.length === 8) {
+                return text.slice(0,2) + "/" + text.slice(2,4) + "/" + text.slice(4);
+            }
+
+            return text;
+        }
+
+        document.addEventListener("input", function (e) {
+            if (e.target.classList.contains("date-input")) {
+                e.target.value = formatDateInput(e.target.value);
+            }
+        });
+
+        document.addEventListener("paste", function (e) {
+            if (e.target.classList.contains("date-input")) {
+                e.preventDefault();
+                let paste = (e.clipboardData || window.clipboardData).getData("text");
+                e.target.value = normalizePastedDate(paste);
+                e.target.value = formatDateInput(e.target.value);
+            }
+        });
+    </script>
 
 </x-app-layout>
