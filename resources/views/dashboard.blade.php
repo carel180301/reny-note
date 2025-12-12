@@ -123,7 +123,6 @@
             }
         });
 
-
         /* LIVE SEARCH FIX */
         (function() {
             let searchTimeout = null;
@@ -133,7 +132,7 @@
                     .then(res => res.text())
                     .then(html => {
                         const container = document.getElementById('piutangTable');
-                        if (container) container.outerHTML = html; // FIXED
+                        if (container) container.outerHTML = html;
                     })
                     .catch(() => console.log("Search failed"));
             }
@@ -156,15 +155,33 @@
         })();
     </script>
 
-        <script>
+    <script>
+        function sendEmail(id) {
+            if (!confirm("Kirim email reminder untuk piutang ini?")) return;
+
+            fetch(`/piutang/${id}/send-email`)
+                .then(() => {
+                    // NO MORE ALERT — PAGE RELOADS AND SHOWS SUCCESS ALERT FROM SESSION
+                    window.location.reload();
+                })
+                .catch(err => {
+                    alert("Gagal mengirim email");
+                    console.error(err);
+                });
+        }
+    </script>
+
+    <script>
     function sendEmail(id) {
         if (!confirm("Kirim email reminder untuk piutang ini?")) return;
 
         fetch(`/piutang/${id}/send-email`)
-            .then(res => res.text())
-            .then(msg => {
-                alert(msg);
-                location.reload();
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    // Reload so session('success') can show in the blade alert
+                    window.location.reload();
+                }
             })
             .catch(err => {
                 alert("Gagal mengirim email");
