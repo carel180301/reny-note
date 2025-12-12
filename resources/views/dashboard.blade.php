@@ -189,6 +189,26 @@
             });
     }
 </script>
+<!-- <script>
+    function sendEmail(id) {
+        // ❌ removed confirm()
+        // now email sends instantly
+
+        fetch(`/piutang/${id}/send-email`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    // Reload so session('success') can show in the blade alert
+                    window.location.reload();
+                }
+            })
+            .catch(err => {
+                alert("Gagal mengirim email");
+                console.error(err);
+            });
+    }
+</script> -->
+
 
 
 </x-app-layout>
