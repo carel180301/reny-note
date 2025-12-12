@@ -127,7 +127,10 @@
 
                     <div class="mb-3">
                         <label class="form-label">Tanggal Polis</label>
-                        <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
+                        <input type="text" name="tanggal_polis"
+                            class="form-control"
+                            value="{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}"
+                            placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="mb-3">
@@ -142,7 +145,10 @@
 
                     <div class="mb-3">
                         <label class="form-label">WPC</label>
-                        <input type="text" name="wpc" class="form-control" placeholder="dd/mm/yyyy">
+                        <input type="text" name="wpc"
+                            class="form-control"
+                            value="{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}"
+                            placeholder="dd/mm/yyyy">
                     </div>
 
                     <div class="mb-3">
