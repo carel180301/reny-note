@@ -92,21 +92,19 @@
     <!-- AUTO-FORMAT DATE SCRIPT -->
     <script>
         function formatDateInput(value) {
-            value = value.replace(/\D/g, ""); // Remove non-digits
+            value = value.replace(/\D/g, "");
 
             if (value.length >= 2) value = value.slice(0,2) + "/" + value.slice(2);
             if (value.length >= 5) value = value.slice(0,5) + "/" + value.slice(5,9);
 
-            return value.slice(0, 10); // Limit to dd/mm/yyyy
+            return value.slice(0, 10);
         }
 
         function normalizePastedDate(text) {
-            text = text.replace(/\D/g, ""); // Remove everything except numbers
-
+            text = text.replace(/\D/g, "");
             if (text.length === 8) {
                 return text.slice(0,2) + "/" + text.slice(2,4) + "/" + text.slice(4);
             }
-
             return text;
         }
 
@@ -124,6 +122,38 @@
                 e.target.value = formatDateInput(e.target.value);
             }
         });
+
+
+        /* LIVE SEARCH FIX */
+        (function() {
+            let searchTimeout = null;
+
+            function doSearch(q) {
+                fetch(`/piutang/search?q=` + encodeURIComponent(q))
+                    .then(res => res.text())
+                    .then(html => {
+                        const container = document.getElementById('piutangTable');
+                        if (container) container.outerHTML = html; // FIXED
+                    })
+                    .catch(() => console.log("Search failed"));
+            }
+
+            const desktopInput = document.getElementById('searchInput');
+            if (desktopInput) {
+                desktopInput.addEventListener('input', function() {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => doSearch(this.value), 300);
+                });
+            }
+
+            const mobileInput = document.getElementById('searchInputMobile');
+            if (mobileInput) {
+                mobileInput.addEventListener('input', function() {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => doSearch(this.value), 300);
+                });
+            }
+        })();
     </script>
 
 </x-app-layout>

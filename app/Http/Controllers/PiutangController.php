@@ -35,7 +35,6 @@ class PiutangController extends Controller
         $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
         $data['outstanding'] = (float)$data['outstanding'];
 
-        // Convert only if user typed dd/mm/yyyy
         if (strpos($data['tanggal_polis'], '/') !== false) {
             $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
         }
@@ -43,53 +42,44 @@ class PiutangController extends Controller
             $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
         }
 
-
-
         Piutang::create($data);
 
         return redirect(route('dashboard'))->with('success', 'Piutang Added Successfully');
     }
 
-
-    
     public function edit(Piutang $piutang){
         return view('piutangs.edit', ['piutang' => $piutang]);
     }
 
     public function update(Piutang $piutang, Request $request){
-    $data = $request->validate([
-        'cob' => 'required',
-        'nomor_polis' => 'required',
-        'tanggal_polis' => 'required',
-        'broker' => 'required',
-        'nama_tertanggung' => 'required',
-        'wpc' => 'required',
-        'email' => 'required',
-        'currency' => 'required',
-        'outstanding' => 'required'
-    ]);
+        $data = $request->validate([
+            'cob' => 'required',
+            'nomor_polis' => 'required',
+            'tanggal_polis' => 'required',
+            'broker' => 'required',
+            'nama_tertanggung' => 'required',
+            'wpc' => 'required',
+            'email' => 'required',
+            'currency' => 'required',
+            'outstanding' => 'required'
+        ]);
 
-    // CLEAN OUTSTANDING
-    $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-    $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-    $data['outstanding'] = (float)$data['outstanding'];
+        $data['outstanding'] = str_replace('.', '', $data['outstanding']);
+        $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
+        $data['outstanding'] = (float)$data['outstanding'];
 
-    
-    if (strpos($data['tanggal_polis'], '/') !== false) {
-        $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
+        if (strpos($data['tanggal_polis'], '/') !== false) {
+            $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
+        }
+        if (strpos($data['wpc'], '/') !== false) {
+            $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
+        }
+
+        $piutang->update($data);
+
+        return back()->with('success', 'Piutang Updated Successfully');
     }
-    if (strpos($data['wpc'], '/') !== false) {
-        $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-    }
 
-
-
-    $piutang->update($data);
-
-    return back()->with('success', 'Piutang Updated Successfully');
-}
-
-    
     public function destroy(Piutang $piutang){
         $piutang->delete();
         return redirect(route('dashboard'))->with('success', 'Piutang Deleted Successfully');
@@ -111,7 +101,6 @@ class PiutangController extends Controller
 
         return view('components.piutang-table', [
             'piutangs' => $data
-        ])->render();
+        ]);
     }
-
 }
