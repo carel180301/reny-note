@@ -156,4 +156,22 @@
         })();
     </script>
 
+        <script>
+    function sendEmail(id) {
+        if (!confirm("Kirim email reminder untuk piutang ini?")) return;
+
+        fetch(`/piutang/${id}/send-email`)
+            .then(res => res.text())
+            .then(msg => {
+                alert(msg);
+                location.reload();
+            })
+            .catch(err => {
+                alert("Gagal mengirim email");
+                console.error(err);
+            });
+    }
+</script>
+
+
 </x-app-layout>
