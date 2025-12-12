@@ -170,7 +170,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Outstanding</label>
-                        <input class="form-control" name="outstanding" value="{{ $piutang->outstanding }}">
+                        <input class="form-control outstanding-input" name="outstanding" value="{{ number_format($piutang->outstanding, 2, ',', '.') }}">
+
                     </div>
 
                     <div class="text-center">

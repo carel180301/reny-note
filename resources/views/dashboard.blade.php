@@ -74,7 +74,8 @@
 
                         <div class="mb-3">
                             <label class="form-label">Outstanding</label>
-                            <input name="outstanding" class="form-control">
+                            <input name="outstanding" class="form-control outstanding-input">
+
                         </div>
 
                     </div>
@@ -208,6 +209,55 @@
             });
     }
 </script> -->
+
+<script>
+    function formatCurrencyInput(value) {
+        if (value === "") return "";
+
+        // If user starts with comma, convert to "0,"
+        if (value.startsWith(",")) {
+            value = "0" + value;
+        }
+
+        // Split on comma
+        let parts = value.split(",", 2);
+
+        // Extract digits in each part
+        let intPart = parts[0].replace(/\D/g, "");
+        let decPart = parts[1] ? parts[1].replace(/\D/g, "").slice(0, 2) : "";
+
+        // If somehow everything got deleted, return empty
+        if (!intPart && !decPart) return "";
+
+        // Add thousand separators to integer part
+        if (intPart.length > 0) {
+            intPart = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        // If user typed a trailing comma, keep it
+        if (value.endsWith(",") && decPart === "") {
+            return intPart + ",";
+        }
+
+        // Rebuild number
+        return decPart ? intPart + "," + decPart : intPart;
+    }
+
+    document.addEventListener("input", function(e) {
+        if (e.target.classList.contains("outstanding-input")) {
+            e.target.value = formatCurrencyInput(e.target.value);
+        }
+    });
+
+    document.addEventListener("paste", function(e) {
+        if (e.target.classList.contains("outstanding-input")) {
+            e.preventDefault();
+            let paste = (e.clipboardData || window.clipboardData).getData("text");
+            e.target.value = formatCurrencyInput(paste);
+        }
+    });
+</script>
+
 
 
 
