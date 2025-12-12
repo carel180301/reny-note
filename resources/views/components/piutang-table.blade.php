@@ -82,13 +82,14 @@
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
-                            <form method="POST" action="{{ route('piutang.destroy', $piutang) }}">
+                            <form method="POST" action="{{ route('piutang.destroy', $piutang) }}" class="delete-form">
                                 @csrf
                                 @method('delete')
-                                <button class="btn p-0 text-danger">
+                                <button class="btn p-0 text-danger delete-btn">
                                     <i class="bi bi-trash-fill fs-5"></i>
                                 </button>
                             </form>
+
 
                         </div>
                     </td>
@@ -183,3 +184,14 @@
     </div>
 </div>
 @endforeach
+
+<script>
+    document.addEventListener("click", function(e) {
+        if (e.target.closest(".delete-btn")) {
+            e.preventDefault();
+            if (confirm("Yakin ingin menghapus piutang ini?")) {
+                e.target.closest("form").submit();
+            }
+        }
+    });
+</script>
