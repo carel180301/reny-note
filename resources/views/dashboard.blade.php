@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn btn-primary">Simpan</button>
+                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
                     </div>
                 </form>
 
