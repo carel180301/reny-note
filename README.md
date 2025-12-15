@@ -22,6 +22,7 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
     <img src="public/assets/apr_register-page.jpg" width="400" alt="My Project Logo">
 
 -   Actions
+
     <img src="public/assets/apr_actions.png" width="400" alt="My Project Logo">
     -   klik ➕ untuk menambah daftar piutang
     -   ketik kata di search bar untuk mencari piutang
