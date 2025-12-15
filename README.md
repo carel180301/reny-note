@@ -25,14 +25,20 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
 
     <img src="public/assets/apr_actions.png" width="400" alt="My Project Logo">
 
-    -   klik ➕ untuk menambah daftar piutang
+    -   click ➕ untuk menambah daftar piutang
 
     -   ketik kata di search bar untuk mencari piutang
 
-    -   klik profile picture untuk setting profile
+    -   click profile picture untuk setting profile
 
-    -   klik ✉️ untuk mengirim email reminder
+    -   click ✉️ untuk mengirim email reminder
 
-    -   klik ✏️ untuk edit piutang
+    -   click ✏️ untuk edit piutang
 
-    -   klik 🗑️ untuk menghapus piutang
+    -   click 🗑️ untuk menghapus piutang
+
+-   Cek E-mail
+
+    <img src="public/assets/apr_send-email-example.png" width="400" alt="My Project Logo">
+
+    sesudah click tombol ✉️, maka email akan otomatis terkirim ke email tujuan beserta detail piutang nya sebagaimana contoh di atas
