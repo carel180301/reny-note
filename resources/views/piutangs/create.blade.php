@@ -39,7 +39,7 @@
             <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
         </div>
         <div>
-            <label>Broker / Agen / Ceding: </label> 
+            <label>Agen / Broker / Ceding: </label> 
             <input type="text" name="broker" placeholder="Nama Broker" />
         </div>
         <div>

@@ -16,7 +16,7 @@
                     <th class="text-white" style="background:#2a3d5e;">COB</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Broker / Agen / Ceding</th>
+                    <th class="text-white" style="background:#2a3d5e;">Agen / Broker / Ceding</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
                     <th class="text-white" style="background:#2a3d5e;">WPC</th>
                     <th class="text-white" style="background:#2a3d5e;">E-mail</th>
@@ -136,7 +136,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Broker</label>
+                        <label class="form-label">Agen / Broker / Ceding</label>
                         <input class="form-control" name="broker" value="{{ $piutang->broker }}">
                     </div>
 

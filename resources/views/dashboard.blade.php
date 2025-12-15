@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Broker</label>
+                            <label class="form-label">Agen / Broker / Ceding</label>
                             <input name="broker" class="form-control">
                         </div>
 

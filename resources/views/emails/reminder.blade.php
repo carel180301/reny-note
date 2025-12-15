@@ -17,7 +17,7 @@
         <li><strong>COB:</strong> {{ $piutang->cob }}</li>
         <li><strong>Nomor Polis:</strong> {{ $piutang->nomor_polis }}</li>
         <li><strong>Tanggal Polis:</strong> {{ $piutang->tanggal_polis }}</li>
-        <li><strong>Broker / Agen:</strong> {{ $piutang->broker }}</li>
+        <li><strong>Agen / Broker / Ceding:</strong> {{ $piutang->broker }}</li>
         <li><strong>Nama Tertanggung:</strong> {{ $piutang->nama_tertanggung }}</li>
         <li><strong>Jatuh Tempo (WPC):</strong> {{ $piutang->wpc }}</li>
         <li><strong>E-mail:</strong> {{ $piutang->email }}</li>
