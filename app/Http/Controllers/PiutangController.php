@@ -30,7 +30,6 @@ class PiutangController extends Controller
             'outstanding' => 'required'
         ]);
 
-        // CLEAN OUTSTANDING
         $data['outstanding'] = str_replace('.', '', $data['outstanding']);
         $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
         $data['outstanding'] = (float)$data['outstanding'];

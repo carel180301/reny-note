@@ -9,7 +9,7 @@
 <body>
     <h3>Reminder Pembayaran Outstanding</h3>
 
-    <p>Yth. {{ $piutang->nama_tertanggung }},</p>
+    <p>Yth. {{ $piutang->broker }},</p>
 
     <p>Ini adalah pengingat polis Anda:</p>
 
