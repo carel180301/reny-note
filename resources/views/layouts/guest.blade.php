@@ -16,21 +16,24 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-white-100">
-            <div>
-                <a href="/">
-                    {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
-                    <a href="/">
-                        <img 
-                            src="{{ asset('assets/logo_askrindo.png') }}" 
-                            alt="" 
-                            class="img-fluid d-block mx-auto"
-                            style="max-width: 450px; width: 100%;">
-                    </a>
-                </a>
-            </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+            <!-- FORM CONTAINER -->
+            <div class="w-full sm:max-w-3xl mt-6 px-14 py-14 bg-white shadow-md overflow-hidden sm:rounded-lg">
+
+
+
+
+                <!-- LOGO INSIDE FORM -->
+                <div class="flex justify-center mb-6">
+                    <img 
+                        src="{{ asset('assets/logo_askrindo.png') }}" 
+                        alt="Askrindo Logo"
+                        style="max-width: 300px; width: 100%;">
+                </div>
+
+                <!-- FORM SLOT -->
                 {{ $slot }}
+
             </div>
         </div>
     </body>
