@@ -7,6 +7,9 @@
 
         <title>{{ config('app.name', 'Askrindo') }}</title>
 
+        <!-- ✅ FIXED FAVICON PATH (ONLY CHANGE) -->
+        <link rel="icon" type="image/png" href="{{ asset('assets/logo-askrindo-minimal.png') }}">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -14,23 +17,13 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-            <!-- Bootstrap JS FIX -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+        <!-- Bootstrap JS FIX -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </head>
+
     <body class="font-sans antialiased flex flex-col min-h-screen">
         <div class="flex flex-col flex-grow bg-white-100">
             @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            {{-- @isset($header)
-                <header class="bg-white shadow p-0">
-                    <div class="max-w-7xl mx-auto p-0">
-                        {{ $header }}
-                    </div>
-                </header>
-
-            @endisset --}}
 
             <!-- Page Content -->
             <main class="flex-grow pb-16">
@@ -38,9 +31,11 @@
             </main>
         </div>
 
-        <!-- Footer (fixed to bottom). pb added to main to avoid overlap -->
+        <!-- Footer -->
         <footer class="bg-white fixed bottom-0 left-0 w-full z-40">
-            <div class="w-full py-3 px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">&copy; 2025 PT. Asuransi Kredit Indonesia</div>
+            <div class="w-full py-3 px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+                &copy; 2025 PT. Asuransi Kredit Indonesia
+            </div>
         </footer>
     </body>
 </html>
