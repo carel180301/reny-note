@@ -13,7 +13,7 @@ class EmailsController extends Controller
         Mail::to($piutang->email)->send(new ReminderMail($piutang));
 
         // IMPORTANT FIX → Return JSON instead of redirect
-        session()->flash('success', 'Email sent successfully to ' . $piutang->email);
+        session()->flash('success', 'Email berhasil dikirim ke: ' . $piutang->email);
 
         return response()->json(['status' => 'ok']);
     }

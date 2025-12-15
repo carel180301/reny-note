@@ -38,7 +38,7 @@
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900"
                        href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('Lupa password') }}
                     </a>
                 @endif
             </div>
@@ -52,7 +52,7 @@
 
             <div class="text-center mt-4">
                 <p class="text-sm text-gray-600">
-                    Don't have an account?
+                    Belum punya akun?
                     <a href="{{ route('register') }}" class="text-blue-600 hover:underline">
                         Register
                     </a>

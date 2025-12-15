@@ -43,7 +43,7 @@ class PiutangController extends Controller
 
         Piutang::create($data);
 
-        return redirect(route('dashboard'))->with('success', 'Piutang Added Successfully');
+        return redirect(route('dashboard'))->with('success', 'Piutang baru berhasil ditambahkan!');
     }
 
     public function edit(Piutang $piutang){
@@ -76,12 +76,12 @@ class PiutangController extends Controller
 
         $piutang->update($data);
 
-        return back()->with('success', 'Piutang Updated Successfully');
+        return back()->with('success', 'Piutang berhasil di-update!');
     }
 
     public function destroy(Piutang $piutang){
         $piutang->delete();
-        return redirect(route('dashboard'))->with('success', 'Piutang Deleted Successfully');
+        return redirect(route('dashboard'))->with('success', 'Piutang berhasil dihapus!');
     }
 
     public function search(Request $request)
