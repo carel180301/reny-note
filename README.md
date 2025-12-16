@@ -5,7 +5,7 @@
 
 </a></p>
 
-## Askrindo Piutang Reminder
+<h1 align="center">Askrindo Piutang Reminder</h1>
 
 ## Tentang Askrindo Piutang Reminder
 
@@ -76,3 +76,7 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
     <img src="public/assets/apr_send-email-example.png" width="400" alt="My Project Logo">
 
     sesudah click tombol ✉️, maka email akan otomatis terkirim ke email tujuan beserta detail piutang nya sebagaimana contoh di atas
+
+## Author
+
+Carel Prianugra Ceri Pratama
