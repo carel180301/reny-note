@@ -11,6 +11,11 @@
 
 Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan monitor daftar piutang - piutang yang ada, berapa hari lagi sebelum tanggal jatuh tempo untuk piutang - piutang tersebut, serta mengirim reminder piutang kepada pihak-pihak yang bersangkutan dengan cara yang sangat mudah.
 
+## Cara Run Project Secara Local
+
+ <img src="public/assets/apr_folder.png" width="400" alt="My Project Logo">
+  <img src="public/assets/apr_folder_right-click.png" width="400" alt="My Project Logo">
+
 ## Cara Menggunakan Askrindo Piutang Reminder
 
 -   Melakukan login
