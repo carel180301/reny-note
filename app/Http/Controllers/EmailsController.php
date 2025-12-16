@@ -36,7 +36,7 @@ class EmailsController extends Controller
             }
             $piutang->red_sent_at = now();
         }
-        // if overdue (<0) → unlimited → no blocking
+        // Jika WPC sudah lewat → unlimited → no blocking
 
         Mail::to($piutang->email)->send(new ReminderMail($piutang));
         $piutang->save();

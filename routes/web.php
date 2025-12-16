@@ -6,15 +6,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PiutangController;
 use App\Models\Piutang;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', function () {
     return redirect()->route('login');
 });
-
-
 
 Route::get('/dashboard', function () {
     $piutangs = Piutang::orderBy('created_at', 'desc')->get();

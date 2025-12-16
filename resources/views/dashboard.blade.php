@@ -13,7 +13,7 @@
     </div>
 
 
-    <!-- ADD PIUTANG MODAL (Required for the + button) -->
+    <!-- ADD PIUTANG MODAL-->
     <div class="modal fade" id="addPiutangModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -84,13 +84,11 @@
                         <button class="btn btn-primary d-block mx-auto">Simpan</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
 
-
-    <!-- AUTO-FORMAT DATE SCRIPT -->
+    <!-- AUTO-FORMAT DATE-->
     <script>
         function formatDateInput(value) {
             value = value.replace(/\D/g, "");
@@ -124,7 +122,7 @@
             }
         });
 
-        /* LIVE SEARCH*/
+        /* LIVE SEARCH */
         (function() {
             let searchTimeout = null;
 
@@ -162,7 +160,6 @@
 
             fetch(`/piutang/${id}/send-email`)
                 .then(() => {
-                    // NO MORE ALERT — PAGE RELOADS AND SHOWS SUCCESS ALERT FROM SESSION
                     window.location.reload();
                 })
                 .catch(err => {
@@ -180,7 +177,6 @@
             .then(res => res.json())
             .then(data => {
                 if (data.status === 'ok') {
-                    // Reload so session('success') can show in the blade alert
                     window.location.reload();
                 }
             })
@@ -190,25 +186,6 @@
             });
     }
 </script>
-<!-- <script>
-    function sendEmail(id) {
-        // ❌ removed confirm()
-        // now email sends instantly
-
-        fetch(`/piutang/${id}/send-email`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'ok') {
-                    // Reload so session('success') can show in the blade alert
-                    window.location.reload();
-                }
-            })
-            .catch(err => {
-                alert("Gagal mengirim email");
-                console.error(err);
-            });
-    }
-</script> -->
 
 <script>
     function formatCurrencyInput(value) {

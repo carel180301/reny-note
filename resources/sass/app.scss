@@ -5,7 +5,6 @@
     background: #2a3d5e !important;
 }
 
-/* Navbar fix */
 @media (min-width: 992px) {
     .navbar-collapse {
         display: flex !important;
@@ -17,31 +16,25 @@
     z-index: 9999 !important;
 }
 
-/* Page container spacing */
 .bg-white.shadow-sm {
     padding-top: 20px !important;
 }
 
-/* --- FIXED STICKY BEHAVIOR ------------------------ */
-
-/* Sticky page title (Daftar Piutang) */
 .sticky-header {
     position: sticky;
-    top: 80px; /* Navbar height */
+    top: 80px;
     z-index: 1200;
     background: white;
     padding-bottom: 8px;
     border-bottom: 1px solid #ddd;
 }
 
-/* Sticky Table Header */
 #piutangTable table thead th {
     position: sticky;
-    top: 140px; /* 80px (navbar) + 60px (header) */
+    top: 140px;
     z-index: 1300;
 }
 
-/* Table responsive wrapper */
 .table-responsive {
     display: block !important;
     width: 100% !important;
@@ -50,35 +43,31 @@
     -webkit-overflow-scrolling: touch;
 }
 
-/* Ensure wrappers don't force height */
 .flex-grow,
 .w-full {
     height: auto !important;
 }
 
-/* Mobile adjustments */
+/* Mobile*/
 @media (max-width: 768px) {
     .sticky-header {
-        top: 70px; /* smaller navbar */
+        top: 70px;
         padding: 12px 0;
         font-size: 18px;
     }
 
     #piutangTable table thead th {
-        top: 125px; /* 70px header + ~55px title height */
+        top: 125px;
         font-size: 12px;
         padding: 6px;
     }
 }
 
-/* ----------------------------------------------- */
-/* FORCE BLACK TABLE HEADER — FIX FOR WHITE HEADER */
-/* ----------------------------------------------- */
 #piutangTable table thead th,
 #piutangTable table.table thead th,
 #piutangTable table.table thead th.bg-primary-dark {
-    background: #000 !important; /* BLACK FIX */
-    color: #fff !important; /* White text */
+    background: #000 !important;
+    color: #fff !important;
     background-image: none !important;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

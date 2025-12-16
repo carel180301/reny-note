@@ -2,11 +2,9 @@
 
     <div class="w-full px-4 sm:px-6 lg:px-8 pt-5">
         <div class="flex justify-between items-center h-16">
-
             <div class="flex items-center">
                 <a href="{{ route('dashboard') }}">
-                    <img src="{{ asset('assets/logo_askrindo.png') }}" alt="Logo"
-                         class="block h-12 w-auto" style="max-width:200px;" />
+                    <img src="{{ asset('assets/logo_askrindo.png') }}" alt="Logo" class="block h-12 w-auto" style="max-width:200px;" />
                 </a>
             </div>
 
@@ -21,9 +19,7 @@
 
                     <form class="d-none d-sm-flex" onsubmit="return false;">
                         <div class="input-group">
-                            <input type="search" id="searchInput"
-                                   class="form-control"
-                                   placeholder="Search">
+                            <input type="search" id="searchInput" class="form-control" placeholder="Search">
                         </div>
                     </form>
                 @endif
@@ -36,8 +32,7 @@
                         $initials = strtoupper(substr($name, 0, 3));
                     @endphp
 
-                    <button @click="dropdownOpen = !dropdownOpen"
-                            class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
+                    <button @click="dropdownOpen = !dropdownOpen" class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
                         <div class="rounded-full bg-[#f08523] text-white w-8 h-8 flex items-center justify-center font-semibold">
                             {{ $initials }}
                         </div>
@@ -54,8 +49,7 @@
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit"
-                                    class="block w-full text-left px-4 py-2 text-sm text-gray-700">
+                            <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700">
                                 Log Out
                             </button>
                         </form>
@@ -81,19 +75,14 @@
                         </svg>
                     </button>
                 </div>
-
             </div>
         </div>
     </div>
 
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
-
         <div class="pt-4 pb-3 border-t border-gray-200" x-data="{ mobileProfileOpen: false }">
-
             <div class="flex items-center justify-between px-4">
-
                 <div class="flex items-center space-x-4">
-
                     <div class="rounded-full bg-[#f08523] text-white w-10 h-10 flex items-center justify-center font-semibold">
                         {{ $initials }}
                     </div>
@@ -102,7 +91,6 @@
                         <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                         <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                     </div>
-
                 </div>
 
                 <button @click="mobileProfileOpen = !mobileProfileOpen"
@@ -134,7 +122,6 @@
                         Log Out
                     </button>
                 </form>
-
             </div>
         </div>
 
@@ -146,5 +133,4 @@
         </div>
         @endif
     </div>
-
 </nav>

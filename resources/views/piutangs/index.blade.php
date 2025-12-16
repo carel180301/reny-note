@@ -17,7 +17,7 @@
         }
 
         main {
-            flex: 1; /* pushes footer to bottom */
+            flex: 1; 
         }
     </style>
 
@@ -74,7 +74,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </nav>
@@ -178,7 +177,7 @@
                     </td>
                 </tr>
 
-                <!-- EDIT MODAL (OUTSIDE THE TR!!) -->
+                <!-- EDIT MODAL -->
                 <div class="modal fade" id="editPiutangModal{{ $piutang->id }}">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -246,16 +245,12 @@
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
-
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             @endforeach
-
             </tbody>
         </table>
     </div>
@@ -365,9 +360,6 @@
         </footer>
     </div>
 
-
-
-    <!-- SEND EMAIL FUNCTION -->
     <script>
         function sendEmail(id) {
             fetch(`/piutang/${id}/send-email`)
