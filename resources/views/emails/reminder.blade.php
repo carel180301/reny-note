@@ -16,10 +16,17 @@
     <ul>
         <li><strong>COB:</strong> {{ $piutang->cob }}</li>
         <li><strong>Nomor Polis:</strong> {{ $piutang->nomor_polis }}</li>
-        <li><strong>Tanggal Polis:</strong> {{ $piutang->tanggal_polis }}</li>
+        <!-- <li><strong>Tanggal Polis:</strong> {{ $piutang->tanggal_polis }}</li> -->
+         <li>
+            <strong>Tanggal Polis:</strong>
+            {{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}
+        </li>
         <li><strong>Agen / Broker / Ceding:</strong> {{ $piutang->broker }}</li>
         <li><strong>Nama Tertanggung:</strong> {{ $piutang->nama_tertanggung }}</li>
-        <li><strong>Jatuh Tempo (WPC):</strong> {{ $piutang->wpc }}</li>
+        <li>
+            <strong>Jatuh Tempo (WPC):</strong>
+            {{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}
+        </li>
         <li><strong>E-mail:</strong> {{ $piutang->email }}</li>
         <li><strong>Currency:</strong> {{ $piutang->currency }}</li>
         <li><strong>Outstanding:</strong> {{ $piutang->outstanding }}</li>
