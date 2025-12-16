@@ -13,8 +13,13 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
 
 ## Cara Run Project Secara Local
 
- <img src="public/assets/apr_folder.png" width="400" alt="My Project Logo">
-  <img src="public/assets/apr_folder_right-click.png" width="400" alt="My Project Logo">
+<img src="public/assets/apr_folder.png" width="400" alt="My Project Logo">
+<img src="public/assets/apr_folder_right-click.png" width="400" alt="My Project Logo">
+<img src="public/assets/apr_terminal_tab.png" width="400" alt="My Project Logo">
+<img src="public/assets/apr_terminal_npm-run-dev.png" width="400" alt="My Project Logo">
+<img src="public/assets/apr_terminal_add-additional-terminal.png" width="400" alt="My Project Logo">
+<img src="public/assets/apr_terminal_php-artisan-serve" width="400" alt="My Project Logo">
+<img src="public/assets/apr_login-page.jpg" width="400" alt="My Project Logo">
 
 ## Cara Menggunakan Askrindo Piutang Reminder
 
