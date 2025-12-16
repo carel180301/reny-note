@@ -9,7 +9,7 @@
 
 ## Tentang Askrindo Piutang Reminder
 
-Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan monitor daftar piutang - piutang yang ada, berapa hari lagi sebelum tanggal jatuh tempo untuk piutang - piutang tersebut, serta mengirim reminder piutang kepada pihak-pihak yang bersangkutan dengan cara yang sangat mudah.
+Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan monitor daftar piutang - piutang yang ada, berapa hari lagi sebelum tanggal jatuh tempo untuk piutang - piutang tersebut, serta mengirim reminder piutang kepada pihak-pihak yang bersangkutan dengan cara yang sangat mudah. <br>
 
 ## Cara Run Project Secara Local (untuk developer)
 
@@ -75,8 +75,8 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
 
     <img src="public/assets/apr_send-email-example.png" width="400" alt="My Project Logo">
 
-    sesudah click tombol ✉️, maka email akan otomatis terkirim ke email tujuan beserta detail piutang nya sebagaimana contoh di atas
+    sesudah click tombol ✉️, maka email akan otomatis terkirim ke email tujuan beserta detail piutang nya sebagaimana contoh di atas. <br>
 
 ## Author
 
-Carel Prianugra Ceri Pratama
+[Carel Prianugra Ceri Pratama](https://www.linkedin.com/in/carel-prianugra-ceri-pratama/)
