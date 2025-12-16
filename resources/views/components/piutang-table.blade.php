@@ -45,6 +45,7 @@
                         {{ number_format($numeric, 2, ',', '.') }}
                     </td>
 
+                    {{-- STATUS --}}
                     <td>
                         @php
                             $today = \Carbon\Carbon::today();
@@ -69,19 +70,49 @@
                         @endif
                     </td>
 
+                    {{-- ACTION --}}
                     <td>
+                        @php
+                            $emailDisabled = false;
+
+                            // BLACK (>90 days) → disabled
+                            if ($daysLeft > 90) {
+                                $emailDisabled = true;
+                            }
+                            // GREEN (61–90) → once
+                            elseif ($daysLeft > 60 && $piutang->green_sent_at) {
+                                $emailDisabled = true;
+                            }
+                            // YELLOW (31–60) → once
+                            elseif ($daysLeft > 30 && $piutang->yellow_sent_at) {
+                                $emailDisabled = true;
+                            }
+                            // RED (0–30) → once
+                            elseif ($daysLeft >= 0 && $piutang->red_sent_at) {
+                                $emailDisabled = true;
+                            }
+                            // OVERDUE (<0) → unlimited
+                        @endphp
+
                         <div class="d-flex gap-2 justify-content-center">
 
-                            <button class="btn p-0 text-primary" onclick="sendEmail({{ $piutang->id }})">
+                            {{-- SEND EMAIL --}}
+                            <button
+                                class="btn p-0 {{ $emailDisabled ? 'text-secondary' : 'text-primary' }}"
+                                {{ $emailDisabled ? 'disabled' : '' }}
+                                onclick="sendEmail({{ $piutang->id }})"
+                            >
                                 <i class="bi bi-envelope-fill fs-5"></i>
                             </button>
 
+                            {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
                                     data-bs-target="#editPiutangModal{{ $piutang->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
+                            {{-- DELETE --}}
                             <form method="POST" action="{{ route('piutang.destroy', $piutang) }}" class="delete-form">
                                 @csrf
                                 @method('delete')
@@ -89,7 +120,6 @@
                                     <i class="bi bi-trash-fill fs-5"></i>
                                 </button>
                             </form>
-
 
                         </div>
                     </td>
@@ -101,7 +131,7 @@
     </div>
 </div>
 
-
+{{-- EDIT MODALS --}}
 @foreach($piutangs as $piutang)
 <div class="modal fade" id="editPiutangModal{{ $piutang->id }}">
     <div class="modal-dialog">
@@ -131,8 +161,7 @@
                         <label class="form-label">Tanggal Polis</label>
                         <input type="text" name="tanggal_polis"
                                class="form-control date-input"
-                               value="{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}"
-                               placeholder="dd/mm/yyyy">
+                               value="{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}">
                     </div>
 
                     <div class="mb-3">
@@ -149,8 +178,7 @@
                         <label class="form-label">WPC</label>
                         <input type="text" name="wpc"
                                class="form-control date-input"
-                               value="{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}"
-                               placeholder="dd/mm/yyyy">
+                               value="{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}">
                     </div>
 
                     <div class="mb-3">
@@ -170,8 +198,9 @@
 
                     <div class="mb-3">
                         <label class="form-label">Outstanding</label>
-                        <input class="form-control outstanding-input" name="outstanding" value="{{ number_format($piutang->outstanding, 2, ',', '.') }}">
-
+                        <input class="form-control outstanding-input"
+                               name="outstanding"
+                               value="{{ number_format($piutang->outstanding, 2, ',', '.') }}">
                     </div>
 
                     <div class="text-center">
@@ -187,12 +216,12 @@
 @endforeach
 
 <script>
-    document.addEventListener("click", function(e) {
-        if (e.target.closest(".delete-btn")) {
-            e.preventDefault();
-            if (confirm("Yakin ingin menghapus piutang ini?")) {
-                e.target.closest("form").submit();
-            }
+document.addEventListener("click", function(e) {
+    if (e.target.closest(".delete-btn")) {
+        e.preventDefault();
+        if (confirm("Yakin ingin menghapus piutang ini?")) {
+            e.target.closest("form").submit();
         }
-    });
+    }
+});
 </script>

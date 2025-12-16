@@ -15,14 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('cob');
             $table->string('nomor_polis');
-            // $table->string('nomor_jurnal');
             $table->date('tanggal_polis');
             $table->string('broker');
             $table->string('nama_tertanggung');
             $table->date('wpc');
             $table->string('email');
             $table->string('currency');
-            // $table->string('tsi');
             $table->string('outstanding');
             $table->timestamps();
         });

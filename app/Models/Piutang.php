@@ -13,14 +13,12 @@ class Piutang extends Model
     protected $fillable = [
         'cob',
         'nomor_polis',
-        // 'nomor_jurnal',
         'tanggal_polis',
         'broker',
         'nama_tertanggung',
         'wpc',
         'email',
         'currency',
-        // 'tsi'
         'outstanding'
     ];
 }

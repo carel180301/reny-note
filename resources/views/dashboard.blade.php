@@ -124,7 +124,7 @@
             }
         });
 
-        /* LIVE SEARCH FIX */
+        /* LIVE SEARCH*/
         (function() {
             let searchTimeout = null;
 
