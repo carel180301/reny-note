@@ -37,7 +37,7 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
 
     -   click 🗑️ untuk menghapus piutang
 
--   Cek E-mail
+-   Cek E-mail setelah click ✉️
 
     <img src="public/assets/apr_send-email-example.png" width="400" alt="My Project Logo">
 
