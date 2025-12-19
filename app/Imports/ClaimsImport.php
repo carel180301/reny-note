@@ -10,6 +10,9 @@ class ClaimsImport implements ToCollection
 {
     public function collection(Collection $rows)
     {
+        // REMOVE HEADER ROW
+        $rows->shift();
+
         foreach ($rows as $row) {
 
             // skip empty rows
@@ -18,7 +21,7 @@ class ClaimsImport implements ToCollection
             }
 
             Claim::create([
-                'nomor_rekening' => $row[0],
+                'nomor_rekening' => trim($row[0]),
             ]);
         }
     }
