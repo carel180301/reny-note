@@ -125,7 +125,7 @@
                     <!-- OUTSTANDING -->
                     <td>{{ $claim->outstanding }}</td>
 
-                    <td>
+                    <!-- <td>
                         @php
                             $today = \Carbon\Carbon::today();
                             $wpc = \Carbon\Carbon::parse($claim->wpc);
@@ -149,7 +149,7 @@
                         @else
                             <span class="badge bg-danger">{{ abs($daysLeft) }} Hari Lewat</span>
                         @endif
-                    </td>
+                    </td> -->
 
                     <!-- ACTIONS -->
                     <td>
@@ -271,11 +271,11 @@
                         @csrf
 
                         <div class="mb-3">
-                            <label class="form-label">COB</label>
-                            <input class="form-control" name="cob">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input class="form-control" name="nomor_rekening">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input class="form-control" name="nomor_polis">
                         </div>
@@ -319,7 +319,7 @@
                         <div class="mb-3">
                             <label class="form-label">Outstanding</label>
                             <input class="form-control" name="outstanding">
-                        </div>
+                        </div> -->
 
                         <div class="text-center">
                             <button class="btn btn-primary">Save</button>
