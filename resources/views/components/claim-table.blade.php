@@ -6,15 +6,15 @@
     </div>
 @endif
 
-<div id="piutangTable">
+<div id="claimTable">
     <div class="table-responsive">
 
         <table class="table table-hover w-100 align-middle">
             <thead class="bg-primary-dark">
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e;">No.</th>
-                    <th class="text-white" style="background:#2a3d5e;">COB</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Agen / Broker / Ceding</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
@@ -22,30 +22,30 @@
                     <th class="text-white" style="background:#2a3d5e;">E-mail</th>
                     <th class="text-white" style="background:#2a3d5e;">Currency</th>
                     <th class="text-white" style="background:#2a3d5e;">Outstanding</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e;">Status</th> -->
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
 
             <tbody>
-            @foreach($piutangs as $index => $piutang)
+            @foreach($claims as $index => $claim)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ $piutang->cob }}</td>
-                    <td>{{ $piutang->nomor_polis }}</td>
+                    <td>{{ $claim->nomor_rekening }}</td>
+                    <!-- <td>{{ $piutang->nomor_polis }}</td>
                     <td>{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}</td>
                     <td>{{ $piutang->broker }}</td>
                     <td>{{ $piutang->nama_tertanggung }}</td>
                     <td>{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}</td>
                     <td>{{ $piutang->email }}</td>
-                    <td>{{ $piutang->currency }}</td>
+                    <td>{{ $piutang->currency }}</td> -->
 
-                    <td>
+                    <!-- <td>
                         @php $numeric = (float) $piutang->outstanding; @endphp
                         {{ number_format($numeric, 2, ',', '.') }}
-                    </td>
+                    </td> -->
 
-                    {{-- STATUS --}}
+                    <!-- {{-- STATUS --}}
                     <td>
                         @php
                             $today = \Carbon\Carbon::today();
@@ -68,11 +68,11 @@
                         @else
                             <span class="badge bg-danger">{{ abs($daysLeft) }} Hari Lewat</span>
                         @endif
-                    </td>
+                    </td> -->
 
                     {{-- ACTION --}}
                     <td>
-                        @php
+                        <!-- @php
                             $emailDisabled = false;
 
                             // BLACK (>90 days) → disabled
@@ -92,7 +92,7 @@
                                 $emailDisabled = true;
                             }
                             // OVERDUE (<0) → unlimited
-                        @endphp
+                        @endphp -->
 
                         <div class="d-flex gap-2 justify-content-center">
 

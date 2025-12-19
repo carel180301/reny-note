@@ -5,11 +5,11 @@
 
 </a></p>
 
-<h1 align="center">Askrindo Piutang Reminder</h1>
+<h1 align="center">Askrindo Claims Registration</h1>
 
-## Tentang Askrindo Piutang Reminder
+## Tentang Askrindo Claims Registration
 
-Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan monitor daftar piutang - piutang yang ada, berapa hari lagi sebelum tanggal jatuh tempo untuk piutang - piutang tersebut, serta mengirim reminder piutang kepada pihak-pihak yang bersangkutan dengan cara yang sangat mudah. <br>
+Askrindo Claims Registration adalah sebuah website agar Askrindo dapat melakukan monitor daftar piutang - piutang yang ada, berapa hari lagi sebelum tanggal jatuh tempo untuk piutang - piutang tersebut, serta mengirim reminder piutang kepada pihak-pihak yang bersangkutan dengan cara yang sangat mudah. <br>
 
 ## Cara Run Project Secara Local (untuk developer)
 
@@ -17,7 +17,7 @@ Askrindo Piutang Reminder adalah sebuah website agar Askrindo dapat melakukan mo
 
  <img src="public/assets/apr_xampp.png" width="400" alt="My Project Logo">
 
-2. Cari folder askrindo-piutang-reminder
+2. Cari folder askrindo-claims-registration
 
  <img src="public/assets/apr_folder.png" width="400" alt="My Project Logo">
 

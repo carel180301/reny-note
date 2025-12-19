@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>add new piutang</h1>
-    <form method="post" action="{{ route('piutang.store') }}">
+    <h1>add new Klaim</h1>
+    <form method="post" action="{{ route('claim.store') }}">
         <div>
             @if ($errors->any())
             <ul>
@@ -22,10 +22,10 @@
         @csrf
         @method('post')
         <div>
-            <label>COB: </label> 
-            <input type="text" name="cob" placeholder="COB" />
+            <label>Nomor Rekening: </label> 
+            <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" />
         </div>
-        <div>
+        <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />
         </div>
@@ -72,9 +72,9 @@
          <div>
             <label>Outstanding: </label>
             <input type="text" name="outstanding" placeholder="Outstanding" />
-        </div>
+        </div> -->
         <div>
-            <input type="submit" value="Save a New Piutang"/>
+            <input type="submit" value="Save a New Claim"/>
         </div>
     </form>
 </body>

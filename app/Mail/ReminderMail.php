@@ -13,11 +13,11 @@ class ReminderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $piutang;
+    public $claim;
 
-    public function __construct($piutang)
+    public function __construct($claim)
     {
-        $this->piutang = $piutang;
+        $this->claim = $claim;
     }
 
     public function envelope(): Envelope
@@ -32,7 +32,7 @@ class ReminderMail extends Mailable
         return new Content(
             view: 'emails.reminder',
             with: [
-                'piutang' => $this->piutang
+                'claim' => $this->claim
             ],
         );
     }

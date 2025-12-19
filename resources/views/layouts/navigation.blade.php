@@ -13,7 +13,7 @@
                 @if(request()->routeIs('dashboard'))
                     <button type="button" class="btn p-0 text-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#addPiutangModal">
+                            data-bs-target="#addClaimModal">
                         <i class="bi bi-plus-lg fs-4"></i>
                     </button>
 

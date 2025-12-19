@@ -1,4 +1,4 @@
-<x-piutang-table :piutangs="$piutangs" />
+<x-claim-table :claims="$claims" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <main class="m-4 pb-16 piutang-page">
+    <main class="m-4 pb-16 claim-page">
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top bg-white" style="z-index:1030">
@@ -42,7 +42,7 @@
                 <ul class="navbar-nav me-auto"></ul>
 
                 <!-- Add Button -->
-                <button type="button" class="btn p-0 me-3 text-primary" data-bs-toggle="modal" data-bs-target="#addPiutangModal">
+                <button type="button" class="btn p-0 me-3 text-primary" data-bs-toggle="modal" data-bs-target="#addClaimModal">
                     <i class="bi bi-plus-lg fs-4"></i>
                 </button>
 
@@ -79,7 +79,7 @@
     </nav>
 
 
-    <h2 class="text-center mt-2 piutang-heading">Daftar Piutang</h2>
+    <h2 class="text-center mt-2 claim-heading">Daftar Klaim</h2>
 
     <!-- SUCCESS ALERT -->
     @if(session('success'))
@@ -111,24 +111,24 @@
 
             <tbody>
 
-            @foreach($piutangs as $piutang)
+            @foreach($claims as $claim)
                 <tr>
-                    <td>{{ $piutang->cob }}</td>
-                    <td>{{ $piutang->nomor_polis }}</td>
-                    <td>{{ $piutang->tanggal_polis }}</td>
-                    <td>{{ $piutang->broker }}</td>
-                    <td>{{ $piutang->nama_tertanggung }}</td>
-                    <td>{{ $piutang->wpc }}</td>
-                    <td>{{ $piutang->email }}</td>
-                    <td>{{ $piutang->currency }}</td>
+                    <td>{{ $claim->nomor_rekening }}</td>
+                    <!-- <td>{{ $claim->nomor_polis }}</td> -->
+                    <!-- <td>{{ $claim->tanggal_polis }}</td>
+                    <td>{{ $claim->broker }}</td>
+                    <td>{{ $claim->nama_tertanggung }}</td>
+                    <td>{{ $claim->wpc }}</td>
+                    <td>{{ $claim->email }}</td>
+                    <td>{{ $claim->currency }}</td> -->
 
                     <!-- OUTSTANDING -->
-                    <td>{{ $piutang->outstanding }}</td>
+                    <td>{{ $claim->outstanding }}</td>
 
                     <td>
                         @php
                             $today = \Carbon\Carbon::today();
-                            $wpc = \Carbon\Carbon::parse($piutang->wpc);
+                            $wpc = \Carbon\Carbon::parse($claim->wpc);
                             $daysLeft = $today->diffInDays($wpc, false);
                         @endphp
 
@@ -155,18 +155,18 @@
                     <td>
                         <div class="d-flex gap-2 align-items-center">
                               <!-- SEND EMAIL -->
-                            <button class="btn p-0 text-primary" onclick="sendEmail({{ $piutang->id }})">
+                            <button class="btn p-0 text-primary" onclick="sendEmail({{ $claim->id }})">
                                 <i class="bi bi-envelope-fill fs-5"></i>
                             </button>
 
                             <!-- EDIT BUTTON -->
                             <button class="btn p-0 text-warning" data-bs-toggle="modal"
-                                    data-bs-target="#editPiutangModal{{ $piutang->id }}">
+                                    data-bs-target="#editClaimModal{{ $claim->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
                             <!-- DELETE -->
-                            <form method="POST" action="{{ route('piutang.destroy', $piutang) }}">
+                            <form method="POST" action="{{ route('claim.destroy', $claim) }}">
                                 @csrf
                                 @method('delete')
                                 <button class="btn p-0 text-danger">
@@ -178,26 +178,26 @@
                 </tr>
 
                 <!-- EDIT MODAL -->
-                <div class="modal fade" id="editPiutangModal{{ $piutang->id }}">
+                <div class="modal fade" id="editClaimModal{{ $claim->id }}">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <h5 class="modal-title">Edit Piutang</h5>
+                                <h5 class="modal-title">Edit Klaim</h5>
                                 <button class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
 
                             <div class="modal-body">
-                                <form method="POST" action="{{ route('piutang.update', $piutang) }}">
+                                <form method="POST" action="{{ route('claim.update', $claim) }}">
                                     @csrf
                                     @method('PUT')
 
                                     <div class="mb-3">
-                                        <label class="form-label">COB</label>
-                                        <input class="form-control" name="cob" value="{{ $piutang->cob }}">
+                                        <label class="form-label">Nomor Rekening</label>
+                                        <input class="form-control" name="nomor_rekening" value="{{ $claim->nomor_rekening }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Nomor Polis</label>
                                         <input class="form-control" name="nomor_polis" value="{{ $piutang->nomor_polis }}">
                                     </div>
@@ -240,7 +240,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Outstanding</label>
                                         <input class="form-control" name="outstanding" value="{{ $piutang->outstanding }}">
-                                    </div>
+                                    </div> -->
 
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>

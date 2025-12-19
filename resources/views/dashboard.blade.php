@@ -3,36 +3,36 @@
     <div class="container-fluid px-2 px-md-4">
 
         <h2 class="text-center sticky-header pt-4">
-            Daftar Piutang
+            Daftar Klaim
         </h2>
 
         <div class="bg-white shadow-sm rounded px-1">
-            <x-piutang-table :piutangs="$piutangs" />
+            <x-claim-table :claims="$claims" />
         </div>
 
     </div>
 
 
-    <!-- ADD PIUTANG MODAL-->
-    <div class="modal fade" id="addPiutangModal">
+    <!-- ADD Claim MODAL-->
+    <div class="modal fade" id="addClaimModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambah Piutang</h5>
+                    <h5 class="modal-title">Tambah Klaim</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
-                <form method="POST" action="{{ route('piutang.store') }}">
+                <form method="POST" action="{{ route('claim.store') }}">
                     @csrf
                     <div class="modal-body">
 
                         <div class="mb-3">
-                            <label class="form-label">COB</label>
-                            <input name="cob" class="form-control">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input name="nomor_rekening" class="form-control">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">
                         </div>
@@ -76,7 +76,7 @@
                             <label class="form-label">Outstanding</label>
                             <input name="outstanding" class="form-control outstanding-input">
 
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -127,10 +127,10 @@
             let searchTimeout = null;
 
             function doSearch(q) {
-                fetch(`/piutang/search?q=` + encodeURIComponent(q))
+                fetch(`/claim/search?q=` + encodeURIComponent(q))
                     .then(res => res.text())
                     .then(html => {
-                        const container = document.getElementById('piutangTable');
+                        const container = document.getElementById('claimTable');
                         if (container) container.outerHTML = html;
                     })
                     .catch(() => console.log("Search failed"));
@@ -156,9 +156,9 @@
 
     <script>
         function sendEmail(id) {
-            if (!confirm("Kirim email reminder untuk piutang ini?")) return;
+            if (!confirm("Kirim email reminder untuk klaim ini?")) return;
 
-            fetch(`/piutang/${id}/send-email`)
+            fetch(`/claim/${id}/send-email`)
                 .then(() => {
                     window.location.reload();
                 })
@@ -171,9 +171,9 @@
 
     <script>
     function sendEmail(id) {
-        if (!confirm("Kirim email reminder untuk piutang ini?")) return;
+        if (!confirm("Kirim email reminder untuk klaim ini?")) return;
 
-        fetch(`/piutang/${id}/send-email`)
+        fetch(`/claim/${id}/send-email`)
             .then(res => res.json())
             .then(data => {
                 if (data.status === 'ok') {

@@ -9,13 +9,13 @@
 <body>
     <h3>Reminder Pembayaran Outstanding</h3>
 
-    <p>Yth. {{ $piutang->broker }},</p>
+    <p>Yth. {{ $claim->broker }},</p>
 
     <p>Ini adalah pengingat polis Anda:</p>
 
     <ul>
-        <li><strong>COB:</strong> {{ $piutang->cob }}</li>
-        <li><strong>Nomor Polis:</strong> {{ $piutang->nomor_polis }}</li>
+        <li><strong>COB:</strong> {{ $claim->nomor_rekening }}</li>
+        <!-- <li><strong>Nomor Polis:</strong> {{ $piutang->nomor_polis }}</li>
 
         <li>
             <strong>Tanggal Polis:</strong>
@@ -36,7 +36,7 @@
         <li>
             <strong>Outstanding:</strong>
             {{ number_format((float) $piutang->outstanding, 2, ',', '.') }}
-        </li>
+        </li> -->
     </ul>
 
     <p>Harap segera melakukan pembayaran sebelum tanggal jatuh tempo. Terima kasih.</p>

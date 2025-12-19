@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Edit Piutang</h1>
-    <form method="post" action="{{ route('piutang.update', ['piutang' => $piutang]) }}">
+    <h1>Edit Klaim</h1>
+    <form method="post" action="{{ route('claim.update', ['claim' => $claim]) }}">
         <div>
             @if ($errors->any())
             <ul>
@@ -22,10 +22,10 @@
         @csrf
         @method('put')
         <div>
-            <label>COB:</label> 
-            <input type="text" name="cob" placeholder="COB" value="{{$piutang->cob}}" />
+            <label>Nomor Rekening:</label> 
+            <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" value="{{$Sclaim->nomor_rekening}}" />
         </div>
-        <div>
+        <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />
         </div>
@@ -72,7 +72,7 @@
         <div>
             <label>Outstanding:</label>
             <input type="text" name="outstanding" placeholder="Outstanding" value="{{$piutang->outstanding}}" />
-        </div>
+        </div> -->
         <div>
             <input type="submit" value="Update"/>
         </div>
