@@ -132,27 +132,27 @@
 </div>
 
 {{-- EDIT MODALS --}}
-@foreach($piutangs as $piutang)
-<div class="modal fade" id="editPiutangModal{{ $piutang->id }}">
+@foreach($claims as $claim)
+<div class="modal fade" id="editClaimModal{{ $claim->id }}">
     <div class="modal-dialog">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title">Edit Piutang</h5>
+                <h5 class="modal-title">Edit Klaim</h5>
                 <button class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
             <div class="modal-body">
-                <form method="POST" action="{{ route('piutang.update', $piutang) }}">
+                <form method="POST" action="{{ route('claim.update', $claim) }}">
                     @csrf
                     @method('PUT')
 
                     <div class="mb-3">
-                        <label class="form-label">COB</label>
-                        <input class="form-control" name="cob" value="{{ $piutang->cob }}">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input class="form-control" name="nomor_rekening" value="{{ $claim->nomor_rekening }}">
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Nomor Polis</label>
                         <input class="form-control" name="nomor_polis" value="{{ $piutang->nomor_polis }}">
                     </div>
@@ -201,7 +201,7 @@
                         <input class="form-control outstanding-input"
                                name="outstanding"
                                value="{{ number_format($piutang->outstanding, 2, ',', '.') }}">
-                    </div>
+                    </div> -->
 
                     <div class="text-center">
                         <button class="btn btn-primary">Update</button>
@@ -219,7 +219,7 @@
 document.addEventListener("click", function(e) {
     if (e.target.closest(".delete-btn")) {
         e.preventDefault();
-        if (confirm("Yakin ingin menghapus piutang ini?")) {
+        if (confirm("Yakin ingin menghapus claim ini?")) {
             e.target.closest("form").submit();
         }
     }
