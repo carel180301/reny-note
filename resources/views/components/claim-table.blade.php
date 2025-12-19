@@ -14,15 +14,6 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e;">No.</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Agen / Broker / Ceding</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
-                    <th class="text-white" style="background:#2a3d5e;">WPC</th>
-                    <th class="text-white" style="background:#2a3d5e;">E-mail</th>
-                    <th class="text-white" style="background:#2a3d5e;">Currency</th>
-                    <th class="text-white" style="background:#2a3d5e;">Outstanding</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status</th> -->
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
@@ -33,6 +24,8 @@
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $claim->nomor_rekening }}</td>
 
+                    {{-- ✅ FIX: ACTION MUST BE INSIDE <td> --}}
+                    <td>
                         <div class="d-flex gap-2 justify-content-center">
                             {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
@@ -42,14 +35,15 @@
                             </button>
 
                             {{-- DELETE --}}
-                            <form method="POST" action="{{ route('claim.destroy', $claim) }}" class="delete-form">
+                            <form method="POST"
+                                  action="{{ route('claim.destroy', $claim) }}"
+                                  class="delete-form">
                                 @csrf
                                 @method('delete')
                                 <button class="btn p-0 text-danger delete-btn">
                                     <i class="bi bi-trash-fill fs-5"></i>
                                 </button>
                             </form>
-
                         </div>
                     </td>
                 </tr>
@@ -78,7 +72,9 @@
 
                     <div class="mb-3">
                         <label class="form-label">Nomor Rekening</label>
-                        <input class="form-control" name="nomor_rekening" value="{{ $claim->nomor_rekening }}">
+                        <input class="form-control"
+                               name="nomor_rekening"
+                               value="{{ $claim->nomor_rekening }}">
                     </div>
 
                     <div class="text-center">

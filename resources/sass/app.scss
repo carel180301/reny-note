@@ -73,3 +73,18 @@
     backface-visibility: hidden;
     display: table-cell;
 }
+
+#claimTable table {
+    table-layout: fixed;
+}
+
+#claimTable td,
+#claimTable th {
+    vertical-align: middle;
+}
+
+#claimTable td:last-child {
+    display: table-cell !important;
+    text-align: center;
+    white-space: nowrap;
+}
