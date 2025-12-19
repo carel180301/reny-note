@@ -32,88 +32,17 @@
                 <tr>
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $claim->nomor_rekening }}</td>
-                    <!-- <td>{{ $piutang->nomor_polis }}</td>
-                    <td>{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}</td>
-                    <td>{{ $piutang->broker }}</td>
-                    <td>{{ $piutang->nama_tertanggung }}</td>
-                    <td>{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}</td>
-                    <td>{{ $piutang->email }}</td>
-                    <td>{{ $piutang->currency }}</td> -->
-
-                    <!-- <td>
-                        @php $numeric = (float) $piutang->outstanding; @endphp
-                        {{ number_format($numeric, 2, ',', '.') }}
-                    </td> -->
-
-                    <!-- {{-- STATUS --}}
-                    <td>
-                        @php
-                            $today = \Carbon\Carbon::today();
-                            $wpc = \Carbon\Carbon::parse($piutang->wpc);
-                            $daysLeft = $today->diffInDays($wpc, false);
-                        @endphp
-
-                        @if($daysLeft > 0)
-                            @if($daysLeft <= 30)
-                                <span class="badge bg-danger">{{ $daysLeft }} Hari Lagi</span>
-                            @elseif($daysLeft <= 60)
-                                <span class="badge bg-warning">{{ $daysLeft }} Hari Lagi</span>
-                            @elseif($daysLeft <= 90)
-                                <span class="badge bg-success">{{ $daysLeft }} Hari Lagi</span>
-                            @else
-                                <span class="badge bg-secondary">{{ $daysLeft }} Hari Lagi</span>
-                            @endif
-                        @elseif($daysLeft === 0)
-                            <span class="badge bg-warning text-dark">Due today</span>
-                        @else
-                            <span class="badge bg-danger">{{ abs($daysLeft) }} Hari Lewat</span>
-                        @endif
-                    </td> -->
-
-                    {{-- ACTION --}}
-                    <td>
-                        <!-- @php
-                            $emailDisabled = false;
-
-                            // BLACK (>90 days) → disabled
-                            if ($daysLeft > 90) {
-                                $emailDisabled = true;
-                            }
-                            // GREEN (61–90) → once
-                            elseif ($daysLeft > 60 && $piutang->green_sent_at) {
-                                $emailDisabled = true;
-                            }
-                            // YELLOW (31–60) → once
-                            elseif ($daysLeft > 30 && $piutang->yellow_sent_at) {
-                                $emailDisabled = true;
-                            }
-                            // RED (0–30) → once
-                            elseif ($daysLeft >= 0 && $piutang->red_sent_at) {
-                                $emailDisabled = true;
-                            }
-                            // OVERDUE (<0) → unlimited
-                        @endphp -->
 
                         <div class="d-flex gap-2 justify-content-center">
-
-                            {{-- SEND EMAIL --}}
-                            <button
-                                class="btn p-0 {{ $emailDisabled ? 'text-secondary' : 'text-primary' }}"
-                                {{ $emailDisabled ? 'disabled' : '' }}
-                                onclick="sendEmail({{ $piutang->id }})"
-                            >
-                                <i class="bi bi-envelope-fill fs-5"></i>
-                            </button>
-
                             {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#editPiutangModal{{ $piutang->id }}">
+                                    data-bs-target="#editClaimModal{{ $claim->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
                             {{-- DELETE --}}
-                            <form method="POST" action="{{ route('piutang.destroy', $piutang) }}" class="delete-form">
+                            <form method="POST" action="{{ route('claim.destroy', $claim) }}" class="delete-form">
                                 @csrf
                                 @method('delete')
                                 <button class="btn p-0 text-danger delete-btn">
@@ -151,57 +80,6 @@
                         <label class="form-label">Nomor Rekening</label>
                         <input class="form-control" name="nomor_rekening" value="{{ $claim->nomor_rekening }}">
                     </div>
-
-                    <!-- <div class="mb-3">
-                        <label class="form-label">Nomor Polis</label>
-                        <input class="form-control" name="nomor_polis" value="{{ $piutang->nomor_polis }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Polis</label>
-                        <input type="text" name="tanggal_polis"
-                               class="form-control date-input"
-                               value="{{ \Carbon\Carbon::parse($piutang->tanggal_polis)->format('d/m/Y') }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Agen / Broker / Ceding</label>
-                        <input class="form-control" name="broker" value="{{ $piutang->broker }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nama Tertanggung</label>
-                        <input class="form-control" name="nama_tertanggung" value="{{ $piutang->nama_tertanggung }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">WPC</label>
-                        <input type="text" name="wpc"
-                               class="form-control date-input"
-                               value="{{ \Carbon\Carbon::parse($piutang->wpc)->format('d/m/Y') }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input class="form-control" name="email" value="{{ $piutang->email }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Currency</label>
-                        <select class="form-select" name="currency">
-                            <option value="IDR" {{ $piutang->currency=='IDR'?'selected':'' }}>IDR</option>
-                            <option value="USD" {{ $piutang->currency=='USD'?'selected':'' }}>USD</option>
-                            <option value="EUR" {{ $piutang->currency=='EUR'?'selected':'' }}>EUR</option>
-                            <option value="SGD" {{ $piutang->currency=='SGD'?'selected':'' }}>SGD</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Outstanding</label>
-                        <input class="form-control outstanding-input"
-                               name="outstanding"
-                               value="{{ number_format($piutang->outstanding, 2, ',', '.') }}">
-                    </div> -->
 
                     <div class="text-center">
                         <button class="btn btn-primary">Update</button>

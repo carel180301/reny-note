@@ -88,6 +88,45 @@
         </div>
     </div>
 
+
+    <!-- UPLOAD CLAIM MODAL -->
+    <div class="modal fade" id="uploadClaimModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Upload Excel</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form method="POST"
+                    action="{{ route('claim.upload') }}"
+                    enctype="multipart/form-data">
+                    @csrf
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">File Excel</label>
+                            <input type="file"
+                                name="file"
+                                class="form-control"
+                                accept=".xls,.xlsx"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary d-block mx-auto">
+                            Upload
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
     <!-- AUTO-FORMAT DATE-->
     <script>
         function formatDateInput(value) {

@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClaimController;
 use App\Models\Claim;
 
-
 Route::get('/', function () {
     return redirect()->route('login');
 });
@@ -26,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
     Route::get('/claim/{claim}/send-email', [EmailsController::class, 'sendClaimEmail'])->name('claim.sendEmail');
     Route::get('/claim/search', [ClaimController::class, 'search'])->name('claim.search');
+    Route::post('/claim/upload', [ClaimController::class, 'upload'])->name('claim.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

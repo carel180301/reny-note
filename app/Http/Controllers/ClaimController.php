@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Claim;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\ClaimsImport;
+
 
 class ClaimController extends Controller
 {
@@ -86,4 +89,17 @@ class ClaimController extends Controller
             'claims' => $data
         ]);
     }
+
+    public function upload(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|file|mimes:xls,xlsx'
+        ]);
+
+        Excel::import(new ClaimsImport, $request->file('file'));
+
+        return redirect()->route('dashboard')
+            ->with('success', 'Excel berhasil di-import!');
+    }
+
 }

@@ -17,6 +17,13 @@
                         <i class="bi bi-plus-lg fs-4"></i>
                     </button>
 
+                    <button type="button" class="btn p-0 text-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#uploadClaimModal">
+                        <i class="bi bi-upload fs-4"></i>
+                    </button>
+
+
                     <form class="d-none d-sm-flex" onsubmit="return false;">
                         <div class="input-group">
                             <input type="search" id="searchInput" class="form-control" placeholder="Search">
