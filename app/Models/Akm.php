@@ -11,6 +11,7 @@ class Akm extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_debitur'
+        'nama_debitur',
+        'cabang_bank'
     ];
 }

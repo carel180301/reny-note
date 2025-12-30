@@ -18,6 +18,9 @@
                     <th class="text-white" style="background:#2a3d5e;">
                         Nama Debitur
                     </th>
+                        <th class="text-white" style="background:#2a3d5e;">
+                       Cabang Bank
+                    </th>
                     <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
@@ -33,6 +36,10 @@
 
                     <td class="text-center">
                         {{ $akm->nama_debitur }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->cabang_bank }}
                     </td>
 
                     <td class="text-center">
@@ -82,9 +89,12 @@
 
                     <div class="mb-3">
                         <label class="form-label">Nama Debitur</label>
-                        <input class="form-control"
-                               name="nama_debitur"
-                               value="{{ $akm->nama_debitur }}">
+                        <input class="form-control" name="nama_debitur" value="{{ $akm->nama_debitur }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cabang Bank</label>
+                        <input class="form-control" name="cabang_bank" value="{{ $akm->cabang_bank }}">
                     </div>
 
                     <div class="text-center">

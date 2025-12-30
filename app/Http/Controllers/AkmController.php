@@ -21,7 +21,8 @@ class AkmController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'nama_debitur' => 'required'
+            'nama_debitur' => 'required',
+            'cabang_bank' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -46,7 +47,8 @@ class AkmController extends Controller
 
     public function update(Akm $akm, Request $request){
         $data = $request->validate([
-            'nama_debitur' => 'required'
+            'nama_debitur' => 'required',
+            'cabang_bank' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -75,6 +77,7 @@ class AkmController extends Controller
         $keyword = $request->query('q', '');
 
         $data = Akm::where('nama_debitur', 'like', "%$keyword%")
+            ->orWhere('cabang_bank', 'like', "%$keyword%")
             // ->orWhere('broker', 'like', "%$keyword%")
             // ->orWhere('nama_tertanggung', 'like', "%$keyword%")
             // ->orWhere('currency', 'like', "%$keyword%")

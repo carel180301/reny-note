@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('akms', function (Blueprint $table) {
             $table->id();
             $table->string('nama_debitur');
+            $table->string('cabang_bank');
             $table->timestamps();
         });
     }

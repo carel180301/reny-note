@@ -114,7 +114,8 @@
             @foreach($akms as $akm)
                 <tr>
                     <td>{{ $akm->nama_debitur }}</td>
-                    
+                    <td>{{ $akm->cabang_bank }}</td>
+
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
                     <td>{{ $claim->broker }}</td>
@@ -124,7 +125,7 @@
                     <td>{{ $claim->currency }}</td> -->
 
                     <!-- OUTSTANDING -->
-                    <td>{{ $akm->outstanding }}</td>
+                    <!-- <td>{{ $akm->outstanding }}</td> -->
 
                     <!-- <td>
                         @php
@@ -196,6 +197,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Nama Debitur</label>
                                         <input class="form-control" name="nama_debitur" value="{{ $akm->nama_debitur }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Cabang Bank</label>
+                                        <input class="form-control" name="cabang_bank" value="{{ $akm->cabang_bank }}">
                                     </div>
 
                                     <!-- <div class="mb-3">

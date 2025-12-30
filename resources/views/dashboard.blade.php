@@ -26,6 +26,11 @@
                             <input name="nama_debitur" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control">
+                        </div>
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">
