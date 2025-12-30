@@ -41,6 +41,12 @@
                             <input name="nomor_polis" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Polis</label>
+                            <input name="tanggal_polis" class="form-control">
+                        </div>
+
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">

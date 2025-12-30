@@ -33,6 +33,10 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Tanggal Polis
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -57,8 +61,12 @@
                         {{ $akm->nomor_rekening }}
                     </td>
 
-                     <td class="text-center">
+                    <td class="text-center">
                         {{ $akm->nomor_polis }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->tanggal_polis }}
                     </td>
 
                     <td class="text-center">
@@ -124,6 +132,11 @@
                     <div class="mb-3">
                         <label class="form-label">Nomor Polis</label>
                         <input class="form-control" name="nomor_polis" value="{{ $akm->nomor_polis }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Polis</label>
+                        <input class="form-control" name="tanggal_polis" value="{{ $akm->tanggal_polis }}">
                     </div>
 
                     <div class="text-center">

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('cabang_bank');
             $table->string('nomor_rekening');
             $table->string('nomor_polis');
+            $table->string('tanggal_polis');
             $table->timestamps();
         });
     }

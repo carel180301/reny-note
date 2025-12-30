@@ -25,10 +25,18 @@
             <label>Nomor Rekening: </label> 
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" />
         </div>
-         <div>
+         
+        <div>
             <label>Nomor Polis: </label> 
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />
         </div>
+
+         <div>
+            <label>Tanggal Polis: </label> 
+            <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />
+        </div>
+
+        
         <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />

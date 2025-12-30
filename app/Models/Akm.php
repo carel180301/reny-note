@@ -14,6 +14,7 @@ class Akm extends Model
         'nama_debitur',
         'cabang_bank',
         'nomor_rekening', 
-        'nomor_polis'
+        'nomor_polis', 
+        'tanggal_polis'
     ];
 }
