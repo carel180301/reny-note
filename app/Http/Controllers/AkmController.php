@@ -23,7 +23,8 @@ class AkmController extends Controller
         $data = $request->validate([
             'nama_debitur' => 'required',
             'cabang_bank' => 'required',
-            'nomor_rekening' => 'required'
+            'nomor_rekening' => 'required',
+            'nomor_polis' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -50,7 +51,8 @@ class AkmController extends Controller
         $data = $request->validate([
             'nama_debitur' => 'required',
             'cabang_bank' => 'required',
-            'nomor_rekening' => 'required'
+            'nomor_rekening' => 'required',
+            'nomor_polis' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -81,6 +83,7 @@ class AkmController extends Controller
         $data = Akm::where('nama_debitur', 'like', "%$keyword%")
             ->orWhere('cabang_bank', 'like', "%$keyword%")
             ->orWhere('nomor_rekening', 'like', "%$keyword%")
+            ->orWhere('nomor_polis', 'like', "%$keyword%")
             // ->orWhere('broker', 'like', "%$keyword%")
             // ->orWhere('nama_tertanggung', 'like', "%$keyword%")
             // ->orWhere('currency', 'like', "%$keyword%")

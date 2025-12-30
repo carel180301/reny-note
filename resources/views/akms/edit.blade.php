@@ -25,6 +25,11 @@
             <label>Nomor Rekening:</label> 
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" value="{{$Sclaim->nomor_rekening}}" />
         </div>
+
+        <div>
+            <label>Nomor Polis:</label> 
+            <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$Sclaim->nomor_polis}}" />
+        </div>
         <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />

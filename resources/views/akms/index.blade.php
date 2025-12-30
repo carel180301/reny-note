@@ -116,6 +116,7 @@
                     <td>{{ $akm->nama_debitur }}</td>
                     <td>{{ $akm->cabang_bank }}</td>
                     <td>{{ $akm->nomor_rekening }}</td>
+                    <td>{{ $akm->nomor_polis }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -210,6 +211,11 @@
                                         <input class="form-control" name="nomor_rekening" value="{{ $akm->nomor_rekening }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Polis</label>
+                                        <input class="form-control" name="nomor_polis" value="{{ $akm->nomor_polis }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Nomor Polis</label>
                                         <input class="form-control" name="nomor_polis" value="{{ $piutang->nomor_polis }}">
@@ -286,6 +292,11 @@
                         <div class="mb-3">
                             <label class="form-label">Nomor Rekening</label>
                             <input class="form-control" name="nomor_rekening">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Polis</label>
+                            <input class="form-control" name="nomor_polis">
                         </div>
 
                         <!-- <div class="mb-3">

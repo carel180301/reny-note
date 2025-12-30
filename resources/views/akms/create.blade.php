@@ -25,6 +25,10 @@
             <label>Nomor Rekening: </label> 
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" />
         </div>
+         <div>
+            <label>Nomor Polis: </label> 
+            <input type="text" name="nomor_polis" placeholder="Nomor Polis" />
+        </div>
         <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />
