@@ -40,6 +40,11 @@
             <label>Nomor STGR: </label> 
             <input type="text" name="nomor_stgr" placeholder="Nomor STGR" />
         </div>
+
+        <div>
+            <label>Tanggal STGR: </label> 
+            <input type="date" name="tanggal_stgr" placeholder="Tanggal STGR" />
+        </div>
         
         <!-- <div>
             <label>Nomor Polis: </label>

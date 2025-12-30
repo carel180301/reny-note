@@ -51,6 +51,11 @@
                             <input name="nomor_stgr" class="form-control">
                         </div>
 
+                         <div class="mb-3">
+                            <label class="form-label">Tanggal STGR</label>
+                            <input name="tanggal_stgr" class="form-control">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

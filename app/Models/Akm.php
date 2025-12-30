@@ -16,6 +16,7 @@ class Akm extends Model
         'nomor_rekening', 
         'nomor_polis', 
         'tanggal_polis',
-        'nomor_stgr'
+        'nomor_stgr',
+        'tanggal_stgr'
     ];
 }
