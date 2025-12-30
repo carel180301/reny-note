@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_debitur');
             $table->string('cabang_bank');
+            $table->string('nomor_rekening');
             $table->timestamps();
         });
     }

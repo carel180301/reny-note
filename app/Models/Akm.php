@@ -12,6 +12,7 @@ class Akm extends Model
 
     protected $fillable = [
         'nama_debitur',
-        'cabang_bank'
+        'cabang_bank',
+        'nomor_rekening'
     ];
 }
