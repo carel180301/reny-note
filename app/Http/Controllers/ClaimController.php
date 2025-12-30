@@ -11,7 +11,7 @@ use App\Imports\ClaimsImport;
 class ClaimController extends Controller
 {
     public function index(){
-        $claims = Claim::orderBy('created_at', 'desc')->get();
+        $claims = Claim::orderBy('created_at', 'asc')->get();
 
         return view('claims.index', ['claims' => $claims]);
     }

@@ -10,7 +10,7 @@ use App\Imports\AkmsImport;
 class AkmController extends Controller
 {
     public function index(){
-        $akms = Akm::orderBy('created_at', 'desc')->get();
+        $akms = Akm::orderBy('created_at', 'asc')->get();
 
         return view('akms.index', ['akms' => $akms]);
     }

@@ -12,7 +12,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    $akms = Akm::orderBy('created_at', 'desc')->get();
+    // $akms = Akm::orderBy('created_at', 'desc')->get();
+    $akms = Akm::orderBy('created_at', 'asc')->get();
     return view('dashboard', compact('akms'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
