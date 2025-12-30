@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('tanggal_stgr');
             $table->string('bulan_stgr');
             $table->string('tanggal_dol');
+            $table->string('jangka_waktu_awal');
             $table->timestamps();
         });
     }

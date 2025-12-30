@@ -55,6 +55,11 @@
             <label>Tanggal Dol:</label> 
             <input type="date" name="tanggal_dol" placeholder="Tanggal DOL" value="{{$Sclaim->tanggal_dol}}" />
         </div>
+
+        <div>
+            <label>Jangka Waktu Awal:</label> 
+            <input type="date" name="jangka_waktu_awal" placeholder="Jangka Waktu Awal" value="{{$Sclaim->jangka_waktu_awal}}" />
+        </div>
         <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />

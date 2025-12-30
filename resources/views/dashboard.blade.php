@@ -66,6 +66,11 @@
                             <input name="tanggal_dol" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Jangka Waktu Awal</label>
+                            <input name="jangka_waktu_awal" class="form-control">
+                        </div>
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">
