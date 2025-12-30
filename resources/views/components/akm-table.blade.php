@@ -6,23 +6,23 @@
     </div>
 @endif
 
-<div id="claimTable">
+<div id="akmTable">
     <div class="table-responsive">
 
         <table class="table table-hover w-100 align-middle">
             <thead class="bg-primary-dark">
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e;">No.</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
 
             <tbody>
-            @foreach($claims as $index => $claim)
+            @foreach($akms as $index => $akm)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ $claim->nomor_rekening }}</td>
+                    <td>{{ $akm->nama_debitur }}</td>
 
                     {{-- ✅ FIX: ACTION MUST BE INSIDE <td> --}}
                     <td>
@@ -30,13 +30,13 @@
                             {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#editClaimModal{{ $claim->id }}">
+                                    data-bs-target="#editAkmModal{{ $akm->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
                             {{-- DELETE --}}
                             <form method="POST"
-                                  action="{{ route('claim.destroy', $claim) }}"
+                                  action="{{ route('akm.destroy', $akm) }}"
                                   class="delete-form">
                                 @csrf
                                 @method('delete')
@@ -55,8 +55,8 @@
 </div>
 
 {{-- EDIT MODALS --}}
-@foreach($claims as $claim)
-<div class="modal fade" id="editClaimModal{{ $claim->id }}">
+@foreach($akms as $akm)
+<div class="modal fade" id="editAkmModal{{ $akm->id }}">
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -66,15 +66,15 @@
             </div>
 
             <div class="modal-body">
-                <form method="POST" action="{{ route('claim.update', $claim) }}">
+                <form method="POST" action="{{ route('akm.update', $akm) }}">
                     @csrf
                     @method('PUT')
 
                     <div class="mb-3">
-                        <label class="form-label">Nomor Rekening</label>
+                        <label class="form-label">Nama Debitur</label>
                         <input class="form-control"
-                               name="nomor_rekening"
-                               value="{{ $claim->nomor_rekening }}">
+                               name="nama_debitur"
+                               value="{{ $akm->nama_debitur }}">
                     </div>
 
                     <div class="text-center">
@@ -93,7 +93,7 @@
 document.addEventListener("click", function(e) {
     if (e.target.closest(".delete-btn")) {
         e.preventDefault();
-        if (confirm("Yakin ingin menghapus claim ini?")) {
+        if (confirm("Yakin ingin menghapus AKM ini?")) {
             e.target.closest("form").submit();
         }
     }

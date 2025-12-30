@@ -1,20 +1,14 @@
 <x-app-layout>
-
     <div class="container-fluid px-2 px-md-4">
-
-        <h2 class="text-center sticky-header pt-4">
-            Daftar Klaim
-        </h2>
-
+        <h2 class="text-center sticky-header pt-4">Daftar Klaim</h2>
+    
         <div class="bg-white shadow-sm rounded px-1">
-            <x-claim-table :claims="$claims" />
+            <x-akm-table :akms="$akms" />
         </div>
-
     </div>
 
-
-    <!-- ADD Claim MODAL-->
-    <div class="modal fade" id="addClaimModal">
+    <!-- Add AKM Modal-->
+    <div class="modal fade" id="addAkmModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -23,13 +17,13 @@
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
-                <form method="POST" action="{{ route('claim.store') }}">
+                <form method="POST" action="{{ route('akms.store') }}">
                     @csrf
                     <div class="modal-body">
 
                         <div class="mb-3">
-                            <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
+                            <label class="form-label">Nama Debitur</label>
+                            <input name="nama_debitur" class="form-control">
                         </div>
 
                         <!-- <div class="mb-3">
@@ -89,8 +83,8 @@
     </div>
 
 
-    <!-- UPLOAD CLAIM MODAL -->
-    <div class="modal fade" id="uploadClaimModal">
+    <!-- Upload AKM Modal -->
+    <!-- <div class="modal fade" id="uploadAkmModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -100,7 +94,7 @@
                 </div>
 
                 <form method="POST"
-                    action="{{ route('claim.upload') }}"
+                    action="{{ route('akms.upload') }}"
                     enctype="multipart/form-data">
                     @csrf
 
@@ -124,7 +118,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- AUTO-FORMAT DATE-->
@@ -166,10 +160,10 @@
             let searchTimeout = null;
 
             function doSearch(q) {
-                fetch(`/claim/search?q=` + encodeURIComponent(q))
+                fetch(`/akm/search?q=` + encodeURIComponent(q))
                     .then(res => res.text())
                     .then(html => {
-                        const container = document.getElementById('claimTable');
+                        const container = document.getElementById('akmTable');
                         if (container) container.outerHTML = html;
                     })
                     .catch(() => console.log("Search failed"));
@@ -197,7 +191,7 @@
         function sendEmail(id) {
             if (!confirm("Kirim email reminder untuk klaim ini?")) return;
 
-            fetch(`/claim/${id}/send-email`)
+            fetch(`/akm/${id}/send-email`)
                 .then(() => {
                     window.location.reload();
                 })
@@ -212,7 +206,7 @@
     function sendEmail(id) {
         if (!confirm("Kirim email reminder untuk klaim ini?")) return;
 
-        fetch(`/claim/${id}/send-email`)
+        fetch(`/akm/${id}/send-email`)
             .then(res => res.json())
             .then(data => {
                 if (data.status === 'ok') {

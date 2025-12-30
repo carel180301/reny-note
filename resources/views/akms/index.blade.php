@@ -1,4 +1,4 @@
-<x-claim-table :claims="$claims" />
+<x-akm-table :akms="$akms" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <main class="m-4 pb-16 claim-page">
+    <main class="m-4 pb-16 akm-page">
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top bg-white" style="z-index:1030">
@@ -42,7 +42,7 @@
                 <ul class="navbar-nav me-auto"></ul>
 
                 <!-- Add Button -->
-                <button type="button" class="btn p-0 me-3 text-primary" data-bs-toggle="modal" data-bs-target="#addClaimModal">
+                <button type="button" class="btn p-0 me-3 text-primary" data-bs-toggle="modal" data-bs-target="#addAkmModal">
                     <i class="bi bi-plus-lg fs-4"></i>
                 </button>
 
@@ -79,7 +79,7 @@
     </nav>
 
 
-    <h2 class="text-center mt-2 claim-heading">Daftar Klaim</h2>
+    <h2 class="text-center mt-2 akm-heading">Daftar AKM</h2>
 
     <!-- SUCCESS ALERT -->
     @if(session('success'))
@@ -111,9 +111,10 @@
 
             <tbody>
 
-            @foreach($claims as $claim)
+            @foreach($akms as $akm)
                 <tr>
-                    <td>{{ $claim->nomor_rekening }}</td>
+                    <td>{{ $akm->nama_debitur }}</td>
+                    
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
                     <td>{{ $claim->broker }}</td>
@@ -123,7 +124,7 @@
                     <td>{{ $claim->currency }}</td> -->
 
                     <!-- OUTSTANDING -->
-                    <td>{{ $claim->outstanding }}</td>
+                    <td>{{ $akm->outstanding }}</td>
 
                     <!-- <td>
                         @php
@@ -155,18 +156,18 @@
                     <td>
                         <div class="d-flex gap-2 align-items-center">
                               <!-- SEND EMAIL -->
-                            <button class="btn p-0 text-primary" onclick="sendEmail({{ $claim->id }})">
+                            <button class="btn p-0 text-primary" onclick="sendEmail({{ $akm->id }})">
                                 <i class="bi bi-envelope-fill fs-5"></i>
                             </button>
 
                             <!-- EDIT BUTTON -->
                             <button class="btn p-0 text-warning" data-bs-toggle="modal"
-                                    data-bs-target="#editClaimModal{{ $claim->id }}">
+                                    data-bs-target="#editAkmModal{{ $akm->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
                             <!-- DELETE -->
-                            <form method="POST" action="{{ route('claim.destroy', $claim) }}">
+                            <form method="POST" action="{{ route('akm.destroy', $akm) }}">
                                 @csrf
                                 @method('delete')
                                 <button class="btn p-0 text-danger">
@@ -178,23 +179,23 @@
                 </tr>
 
                 <!-- EDIT MODAL -->
-                <div class="modal fade" id="editClaimModal{{ $claim->id }}">
+                <div class="modal fade" id="editAkmModal{{ $akm->id }}">
                     <div class="modal-dialog">
                         <div class="modal-content">
 
                             <div class="modal-header">
-                                <h5 class="modal-title">Edit Klaim</h5>
+                                <h5 class="modal-title">Edit AKM</h5>
                                 <button class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
 
                             <div class="modal-body">
-                                <form method="POST" action="{{ route('claim.update', $claim) }}">
+                                <form method="POST" action="{{ route('akm.update', $akm) }}">
                                     @csrf
                                     @method('PUT')
 
                                     <div class="mb-3">
-                                        <label class="form-label">Nomor Rekening</label>
-                                        <input class="form-control" name="nomor_rekening" value="{{ $claim->nomor_rekening }}">
+                                        <label class="form-label">Nama Debitur</label>
+                                        <input class="form-control" name="nama_debitur" value="{{ $akm->nama_debitur }}">
                                     </div>
 
                                     <!-- <div class="mb-3">
@@ -256,18 +257,18 @@
     </div>
 
 
-    <!-- ADD PIUTANG MODAL -->
-    <div class="modal fade" id="addPiutangModal">
+    <!-- Add AKM Modal -->
+    <div class="modal fade" id="addAkmModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title">Add New Piutang</h5>
+                    <h5 class="modal-title">Add New AKM</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('piutang.store') }}">
+                    <form method="POST" action="{{ route('akm.store') }}">
                         @csrf
 
                         <div class="mb-3">
@@ -362,7 +363,7 @@
 
     <script>
         function sendEmail(id) {
-            fetch(`/piutang/${id}/send-email`)
+            fetch(`/akm/${id}/send-email`)
                 .then(res => res.text())
                 .then(msg => alert(msg))
                 .catch(() => alert("Failed to send email"));

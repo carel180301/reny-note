@@ -11,17 +11,32 @@
             <div class="flex items-center space-x-3">
 
                 @if(request()->routeIs('dashboard'))
+                     <div class="dropdown mr-5">
+                        <button style="background-color: #f08523;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pilih Tabel
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">PEN</a></li>
+                            <li><a class="dropdown-item" href="#">KUPRA</a></li>
+                            <li><a class="dropdown-item" href="#">FLPP</a></li>
+                            <li><a class="dropdown-item" href="#">SURETYSHIP</a></li>
+                            <li><a class="dropdown-item" href="#">AKM</a></li>
+                            <li><a class="dropdown-item" href="#">ASUM</a></li>
+                             <li><a class="dropdown-item" href="#">ASMIK</a></li>
+                        </ul>
+                    </div>
+
                     <button type="button" class="btn p-0 text-primary"
                             data-bs-toggle="modal"
                             data-bs-target="#addClaimModal">
                         <i class="bi bi-plus-lg fs-4"></i>
                     </button>
-
+<!-- 
                     <button type="button" class="btn p-0 text-primary"
                             data-bs-toggle="modal"
                             data-bs-target="#uploadClaimModal">
                         <i class="bi bi-upload fs-4"></i>
-                    </button>
+                    </button> -->
 
 
                     <form class="d-none d-sm-flex" onsubmit="return false;">
