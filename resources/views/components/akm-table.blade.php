@@ -10,23 +10,34 @@
     <div class="table-responsive">
 
         <table class="table table-hover w-100 align-middle">
-            <thead class="bg-primary-dark">
+            <thead>
                 <tr class="text-center">
-                    <th class="text-white" style="background:#2a3d5e;">No.</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nama Debitur</th>
-                    <th class="text-white" style="background:#2a3d5e;">Action</th>
+                    <th class="text-white" style="background:#2a3d5e;">
+                        No.
+                    </th>
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Nama Debitur
+                    </th>
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Action
+                    </th>
                 </tr>
             </thead>
 
             <tbody>
             @foreach($akms as $index => $akm)
                 <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ $akm->nama_debitur }}</td>
+                    <td class="text-center">
+                        {{ $index + 1 }}
+                    </td>
 
-                    {{-- ✅ FIX: ACTION MUST BE INSIDE <td> --}}
-                    <td>
-                        <div class="d-flex gap-2 justify-content-center">
+                    <td class="text-center">
+                        {{ $akm->nama_debitur }}
+                    </td>
+
+                    <td class="text-center">
+                        {{-- ✅ FIX 3: INLINE-FLEX (NO STRETCH) --}}
+                        <div class="d-inline-flex align-items-center gap-2">
                             {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
@@ -37,9 +48,9 @@
                             {{-- DELETE --}}
                             <form method="POST"
                                   action="{{ route('akms.destroy', $akm) }}"
-                                  class="delete-form">
+                                  class="m-0">
                                 @csrf
-                                @method('delete')
+                                @method('DELETE')
                                 <button class="btn p-0 text-danger delete-btn">
                                     <i class="bi bi-trash-fill fs-5"></i>
                                 </button>
@@ -78,7 +89,9 @@
                     </div>
 
                     <div class="text-center">
-                        <button class="btn btn-primary">Update</button>
+                        <button class="btn btn-primary">
+                            Update
+                        </button>
                     </div>
 
                 </form>
