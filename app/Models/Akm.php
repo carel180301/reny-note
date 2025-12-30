@@ -18,6 +18,7 @@ class Akm extends Model
         'tanggal_polis',
         'nomor_stgr',
         'tanggal_stgr',
-        'bulan_stgr'
+        'bulan_stgr',
+        'tanggal_dol'
     ];
 }

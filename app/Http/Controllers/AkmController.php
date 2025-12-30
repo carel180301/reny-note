@@ -28,7 +28,8 @@ class AkmController extends Controller
             'tanggal_polis' => 'required',
             'nomor_stgr' => 'required',
             'tanggal_stgr' => 'required',
-            'bulan_stgr' => 'required'
+            'bulan_stgr' => 'required',
+            'tanggal_dol' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -60,7 +61,8 @@ class AkmController extends Controller
             'tanggal_polis' => 'required',
             'nomor_stgr' => 'required',
             'tanggal_stgr' => 'required',
-            'bulan_stgr' => 'required'
+            'bulan_stgr' => 'required',
+            'tanggal_dol' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -96,6 +98,7 @@ class AkmController extends Controller
             ->orWhere('nomor_stgr', 'like', "%$keyword%")
             ->orWhere('tanggal_stgr', 'like', "%$keyword%")
             ->orWhere('bulan_stgr', 'like', "%$keyword%")
+            ->orWhere('tanggal_dol', 'like', "%$keyword%")
             // ->orWhere('broker', 'like', "%$keyword%")
             // ->orWhere('nama_tertanggung', 'like', "%$keyword%")
             // ->orWhere('currency', 'like', "%$keyword%")

@@ -50,6 +50,10 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Tanggal DOL
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -93,6 +97,11 @@
                     <td class="text-center">
                         {{ $akm->bulan_stgr }}
                     </td>
+
+                    <td class="text-center">
+                        {{ $akm->tanggal_dol }}
+                    </td>
+
 
                     <td class="text-center">
                         <div class="d-inline-flex align-items-center gap-2">
@@ -177,6 +186,11 @@
                     <div class="mb-3">
                         <label class="form-label">Bulan STGR</label>
                         <input class="form-control" name="bulan_stgr" value="{{ $akm->bulan_stgr }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal DOL</label>
+                        <input class="form-control" name="tanggal_dol" value="{{ $akm->tanggal_dol }}">
                     </div>
 
                     <div class="text-center">
