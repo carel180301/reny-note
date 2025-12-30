@@ -36,6 +36,10 @@
                         Tanggal Polis
                     </th>
 
+                     <th class="text-white" style="background:#2a3d5e;">
+                        Nomor STGR
+                    </th>
+
                     <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
@@ -67,6 +71,10 @@
 
                     <td class="text-center">
                         {{ $akm->tanggal_polis }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->nomor_stgr }}
                     </td>
 
                     <td class="text-center">
@@ -137,6 +145,11 @@
                     <div class="mb-3">
                         <label class="form-label">Tanggal Polis</label>
                         <input class="form-control" name="tanggal_polis" value="{{ $akm->tanggal_polis }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor STGR</label>
+                        <input class="form-control" name="nomor_stgr" value="{{ $akm->nomor_stgr }}">
                     </div>
 
                     <div class="text-center">

@@ -35,6 +35,11 @@
             <label>Tanggal Polis:</label> 
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" value="{{$Sclaim->tanggal_polis}}" />
         </div>
+
+        <div>
+            <label>Nomor STGR:</label> 
+            <input type="text" name="nomor_stgr" placeholder="Nomor STGR" value="{{$Sclaim->nomor_stgr}}" />
+        </div>
         <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />

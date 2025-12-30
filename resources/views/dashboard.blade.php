@@ -46,6 +46,11 @@
                             <input name="tanggal_polis" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nomor STGR</label>
+                            <input name="nomor_stgr" class="form-control">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
