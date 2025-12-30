@@ -36,7 +36,7 @@
 
                             {{-- DELETE --}}
                             <form method="POST"
-                                  action="{{ route('akm.destroy', $akm) }}"
+                                  action="{{ route('akms.destroy', $akm) }}"
                                   class="delete-form">
                                 @csrf
                                 @method('delete')
@@ -66,7 +66,7 @@
             </div>
 
             <div class="modal-body">
-                <form method="POST" action="{{ route('akm.update', $akm) }}">
+                <form method="POST" action="{{ route('akms.update', $akm) }}">
                     @csrf
                     @method('PUT')
 
