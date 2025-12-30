@@ -36,7 +36,6 @@
                     </td>
 
                     <td class="text-center">
-                        {{-- ✅ FIX 3: INLINE-FLEX (NO STRETCH) --}}
                         <div class="d-inline-flex align-items-center gap-2">
                             {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
