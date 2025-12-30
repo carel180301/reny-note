@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('tanggal_polis');
             $table->string('nomor_stgr');
             $table->string('tanggal_stgr');
+            $table->string('bulan_stgr');
             $table->timestamps();
         });
     }

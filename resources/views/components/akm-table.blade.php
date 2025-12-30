@@ -46,6 +46,10 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Bulan STGR
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -84,6 +88,10 @@
 
                     <td class="text-center">
                         {{ $akm->tanggal_stgr }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->bulan_stgr }}
                     </td>
 
                     <td class="text-center">
@@ -164,6 +172,11 @@
                     <div class="mb-3">
                         <label class="form-label">Tanggal STGR</label>
                         <input class="form-control" name="tanggal_stgr" value="{{ $akm->tanggal_stgr }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Bulan STGR</label>
+                        <input class="form-control" name="bulan_stgr" value="{{ $akm->bulan_stgr }}">
                     </div>
 
                     <div class="text-center">
