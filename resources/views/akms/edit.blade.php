@@ -90,6 +90,12 @@
                 <option value="proses_analisa">Proses Analisa</option>
             </select>
         </div>
+
+        <div>
+            <label>Tindak Lanjut:</label> 
+            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" value="{{$Sclaim->tindak_lanjut}}" />
+        </div>
+        
         
         <!-- <div>
             <label>Nomor Polis:</label>

@@ -25,6 +25,7 @@ class Akm extends Model
         'penyebab_klaim',
         'plafond',
         'nilai_tuntutan_klaim',
-        'status'
+        'status',
+        'tindak_lanjut'
     ];
 }

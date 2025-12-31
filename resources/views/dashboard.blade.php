@@ -101,6 +101,12 @@
                             </select>
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tindak Lanjut</label>
+                            <input name="tindak_lanjut" class="form-control">
+                        </div>
+
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

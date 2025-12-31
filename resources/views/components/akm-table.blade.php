@@ -77,6 +77,9 @@
                         Status
                     </th>
 
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Tindak Lanjut
+                    </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
                         Action
@@ -149,6 +152,10 @@
 
                     <td class="text-center">
                         {{ $akm->status }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->tindak_lanjut }}
                     </td>
 
 
@@ -272,6 +279,12 @@
                         <label class="form-label">Status</label>
                         <input class="form-control" name="status" value="{{ $akm->status }}">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tindak Lanjut</label>
+                        <input class="form-control" name="tindak_lanjut" value="{{ $akm->tindak_lanjut }}">
+                    </div>
+
                         
                     <div class="text-center">
                         <button class="btn btn-primary">
