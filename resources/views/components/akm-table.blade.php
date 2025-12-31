@@ -90,6 +90,11 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Nomor Register Sistem
+                    </th>
+
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -172,6 +177,10 @@
 
                     <td class="text-center">
                         {{ $akm->tanggal_surat_tambahan_data }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->nomor_register_sistem }}
                     </td>
 
 
@@ -309,6 +318,11 @@
                     <div class="mb-3">
                         <label class="form-label">Tanggal Surat Tambahan Data</label>
                         <input class="form-control" name="tanggal_surat_tambahan_data" value="{{ $akm->tanggal_surat_tambahan_data }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Register Sistem</label>
+                        <input class="form-control" name="nomor_register_sistem" value="{{ $akm->nomor_register_sistem }}">
                     </div>
 
                         

@@ -116,6 +116,12 @@
                             <input name="tanggal_surat_tambahan_data" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Register Sistem</label>
+                            <input name="nomor_register_sistem" class="form-control">
+                        </div>
+
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">

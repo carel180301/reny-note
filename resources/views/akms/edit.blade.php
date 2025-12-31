@@ -106,6 +106,12 @@
             <input type="date" name="tanggal_surat_tambahan_data" placeholder="Tanggal Surat Tambahan Data" value="{{$Sclaim->tanggal_surat_tambahan_data}}" />
         </div>
 
+        <div>
+            <label>Nomor Register Sistem:</label> 
+            <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem" value="{{$Sclaim->nomor_register_sistem}}" />
+        </div>
+
+
         
         <!-- <div>
             <label>Nomor Polis:</label>
