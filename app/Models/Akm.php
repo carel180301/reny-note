@@ -22,6 +22,7 @@ class Akm extends Model
         'tanggal_dol',
         'jangka_waktu_awal',
         'jangka_waktu_akhir',
-        'penyebab_klaim'
+        'penyebab_klaim',
+        'plafond'
     ];
 }

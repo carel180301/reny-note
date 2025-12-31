@@ -71,6 +71,11 @@
             <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim" />
         </div>
         
+        <div>
+            <label>Plafond: </label> 
+            <input type="text" name="plafond" placeholder="Plafond" />
+        </div>
+        
         <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />

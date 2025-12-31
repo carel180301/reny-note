@@ -81,6 +81,11 @@
                             <input name="penyebab_klaim" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Plafond</label>
+                            <input name="plafond" class="form-control">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

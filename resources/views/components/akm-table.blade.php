@@ -65,6 +65,9 @@
                         Penyebab Klaim
                     </th>
 
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Plafond
+                    </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
                         Action
@@ -125,6 +128,10 @@
 
                     <td class="text-center">
                         {{ $akm->penyebab_klaim }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->plafond }}
                     </td>
 
 
@@ -233,6 +240,12 @@
                         <label class="form-label">Penyebab Klaim</label>
                         <input class="form-control" name="penyebab_klaim" value="{{ $akm->penyebab_klaim }}">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Plafond</label>
+                        <input class="form-control" name="plafond" value="{{ $akm->plafond }}">
+                    </div>
+
 
                     <div class="text-center">
                         <button class="btn btn-primary">

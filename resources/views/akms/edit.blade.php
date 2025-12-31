@@ -71,6 +71,11 @@
             <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim" value="{{$Sclaim->penyebab_klaim}}" />
         </div>
         
+        <div>
+            <label>Plafond:</label> 
+            <input type="text" name="plafond" placeholder="Plafond" value="{{$Sclaim->plafond}}" />
+        </div>
+        
         <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />
