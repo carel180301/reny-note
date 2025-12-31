@@ -42,7 +42,7 @@ class AkmController extends Controller
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
-            'keterangan' => 'nullable'
+            'keterangan' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -88,7 +88,7 @@ class AkmController extends Controller
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
-            'keterangan' => 'nullable'
+            'keterangan' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
