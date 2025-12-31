@@ -26,6 +26,7 @@ class Akm extends Model
         'plafond',
         'nilai_tuntutan_klaim',
         'status',
-        'tindak_lanjut'
+        'tindak_lanjut',
+        'nomor_surat_tambahan_data'
     ];
 }

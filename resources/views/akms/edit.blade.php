@@ -96,6 +96,11 @@
             <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" value="{{$Sclaim->tindak_lanjut}}" />
         </div>
         
+        <div>
+            <label>Nomor Surat Tambahan Data:</label> 
+            <input type="text" name="nomor_surat_tambahan_data" placeholder="Nomor Surat Tambahan Data" value="{{$Sclaim->nomor_surat_tambahan_data}}" />
+        </div>
+        
         
         <!-- <div>
             <label>Nomor Polis:</label>
