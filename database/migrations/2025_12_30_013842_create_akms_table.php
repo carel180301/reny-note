@@ -34,6 +34,7 @@ return new class extends Migration
             $table->string('nomor_register_sistem');
             $table->string('tanggal_register_sistem');
             $table->string('status_sistem');
+            $table->text('keterangan')->nullable();
             $table->timestamps();
         });
     }

@@ -39,8 +39,7 @@
                     <th class="text-white" style="background:#2a3d5e;">
                         Nomor STGR
                     </th>
-
-                    
+  
                     <th class="text-white" style="background:#2a3d5e;">
                         Tanggal STGR
                     </th>
@@ -101,6 +100,9 @@
                         Status Sistem
                     </th>
 
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Keterangan / feedback pemutus
+                    </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
                         Action
@@ -197,6 +199,10 @@
 
                     <td class="text-center">
                         {{ $akm->status_sistem }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->keterangan }}
                     </td>
 
 
@@ -351,7 +357,10 @@
                         <input class="form-control" name="status_sistem" value="{{ $akm->status_sistem }}">
                     </div>
 
-
+                    <div class="mb-3">
+                        <label class="form-label">Keterangan / Feedback Pemutus</label>
+                        <input class="form-control" name="keterangan" value="{{ $akm->keterangan }}">
+                    </div>
 
                     <div class="text-center">
                         <button class="btn btn-primary">

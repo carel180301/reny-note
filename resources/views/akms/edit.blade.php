@@ -125,6 +125,11 @@
             </select>
         </div>
 
+        <div>
+            <label>Keterangan / Feedback Pemutus:</label> 
+            <input type="text" name="keterangan" placeholder="Keterangan" value="{{$Sclaim->keterangan}}" />
+        </div>
+
 
         
         <!-- <div>

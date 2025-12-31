@@ -124,6 +124,12 @@
                 <option value="not_done">Not Done Yet</option>
             </select>
         </div>
+
+        <div>
+            <label>Keterangan / Feedback Pemutus: </label> 
+            <input type="text" name="keterangan" placeholder="Keterangan" />
+        </div>
+
         
 
         <!-- <div>

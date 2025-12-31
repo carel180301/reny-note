@@ -135,6 +135,12 @@
                             </select>
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Keterangan / Feedback Pemutus</label>
+                            <input name="keterangan" class="form-control">
+                        </div>
+
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
