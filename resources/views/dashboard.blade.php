@@ -121,6 +121,11 @@
                             <input name="nomor_register_sistem" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Register Sistem</label>
+                            <input name="tanggal_register_sistem" class="form-control">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

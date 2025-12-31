@@ -111,6 +111,12 @@
             <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem" value="{{$Sclaim->nomor_register_sistem}}" />
         </div>
 
+        <div>
+            <label>Tanggal Register Sistem:</label> 
+            <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem" value="{{$Sclaim->tanggal_register_sistem}}" />
+        </div>
+
+
 
         
         <!-- <div>
