@@ -12,228 +12,85 @@
         <table class="table table-hover w-100 align-middle">
             <thead>
                 <tr class="text-center">
-                    <th class="text-white" style="background:#2a3d5e;">
-                        No.
-                    </th>
-                    
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nama Debitur
-                    </th>
-                    
-                    <th class="text-white" style="background:#2a3d5e;">
-                       Cabang Bank
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nomor Rekening
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nomor Polis
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tanggal Polis
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nomor STGR
-                    </th>
-  
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tanggal STGR
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Bulan STGR
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tanggal DOL
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Jangka Waktu Awal
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Jangka Waktu Akhir
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Penyebab Klaim
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Plafond
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nilai Tuntutan Klaim
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Status
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tindak Lanjut
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nomor Surat Tambahan Data
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tanggal Surat Tambahan Data
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nomor Register Sistem
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tanggal Register Sistem
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Status Sistem
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Keterangan / feedback pemutus
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Nomor Surat Persetujuan atau Penolakan
-                    </th>
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Tanggal Surat Persetujuan atau Penolakan
-                    </th>
-
-
-                    <th class="text-white" style="background:#2a3d5e;">
-                        Action
-                    </th>
+                    <th class="text-white" style="background:#2a3d5e;">No.</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
+                    <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
+                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
+                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e;">Plafond</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e;">Keterangan / feedback pemutus</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan atau Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan atau Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
 
             <tbody>
             @foreach($akms as $index => $akm)
                 <tr>
+                    <td class="text-center">{{ $index + 1 }}</td>
+                    <td class="text-center">{{ $akm->nama_debitur }}</td>
+                    <td class="text-center">{{ $akm->cabang_bank }}</td>
+                    <td class="text-center">{{ $akm->nomor_rekening }}</td>
+                    <td class="text-center">{{ $akm->nomor_polis }}</td>
+                    <td class="text-center">{{ $akm->tanggal_polis }}</td>
+                    <td class="text-center">{{ $akm->nomor_stgr }}</td>
+                    <td class="text-center">{{ $akm->tanggal_stgr }}</td>
+                    <td class="text-center">{{ $akm->bulan_stgr }}</td>
+                    <td class="text-center">{{ $akm->tanggal_dol }}</td>
+                    <td class="text-center">{{ $akm->jangka_waktu_awal }}</td>
+                    <td class="text-center">{{ $akm->jangka_waktu_akhir }}</td>
+                    <td class="text-center">{{ $akm->penyebab_klaim }}</td>
+                    <td class="text-center">{{ $akm->plafond }}</td>
+                    <td class="text-center">{{ $akm->nilai_tuntutan_klaim }}</td>
+                    <td class="text-center">{{ $akm->status }}</td>
+                    <td class="text-center">{{ $akm->tindak_lanjut }}</td>
+                    <td class="text-center">{{ $akm->nomor_surat_tambahan_data }}</td>
+                    <td class="text-center">{{ $akm->tanggal_surat_tambahan_data }}</td>
+                    <td class="text-center">{{ $akm->nomor_register_sistem }}</td>
+                    <td class="text-center">{{ $akm->tanggal_register_sistem }}</td>
+
+                    {{-- ✅ FIXED: STATUS SISTEM COLOR --}}
                     <td class="text-center">
-                        {{ $index + 1 }}
+                        @if($akm->status_sistem === 'done')
+                            <span class="badge bg-success text-white">
+                                Done
+                            </span>
+                        @else
+                            <span class="badge bg-danger text-white">
+                                Not done yet
+                            </span>
+                        @endif
                     </td>
 
-                    <td class="text-center">
-                        {{ $akm->nama_debitur }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->cabang_bank }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nomor_rekening }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nomor_polis }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tanggal_polis }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nomor_stgr }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tanggal_stgr }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->bulan_stgr }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tanggal_dol }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->jangka_waktu_awal }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->jangka_waktu_akhir }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->penyebab_klaim }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->plafond }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nilai_tuntutan_klaim }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->status }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tindak_lanjut }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nomor_surat_tambahan_data }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tanggal_surat_tambahan_data }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nomor_register_sistem }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tanggal_register_sistem }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->status_sistem }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->keterangan }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->nomor_surat_persetujuan_atau_penolakan }}
-                    </td>
-
-                    <td class="text-center">
-                        {{ $akm->tanggal_surat_persetujuan_atau_penolakan }}
-                    </td>
-
-
+                    <td class="text-center">{{ $akm->keterangan }}</td>
+                    <td class="text-center">{{ $akm->nomor_surat_persetujuan_atau_penolakan }}</td>
+                    <td class="text-center">{{ $akm->tanggal_surat_persetujuan_atau_penolakan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex align-items-center gap-2">
-                            {{-- EDIT --}}
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
                                     data-bs-target="#editAkmModal{{ $akm->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
 
-                            {{-- DELETE --}}
                             <form method="POST"
                                   action="{{ route('akms.destroy', $akm) }}"
                                   class="m-0">
@@ -252,166 +109,3 @@
 
     </div>
 </div>
-
-{{-- EDIT MODALS --}}
-@foreach($akms as $akm)
-<div class="modal fade" id="editAkmModal{{ $akm->id }}">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <h5 class="modal-title">Edit Klaim</h5>
-                <button class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-                <form method="POST" action="{{ route('akms.update', $akm) }}">
-                    @csrf
-                    @method('PUT')
-
-                    <div class="mb-3">
-                        <label class="form-label">Nama Debitur</label>
-                        <input class="form-control" name="nama_debitur" value="{{ $akm->nama_debitur }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Cabang Bank</label>
-                        <input class="form-control" name="cabang_bank" value="{{ $akm->cabang_bank }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Rekening</label>
-                        <input class="form-control" name="nomor_rekening" value="{{ $akm->nomor_rekening }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Polis</label>
-                        <input class="form-control" name="nomor_polis" value="{{ $akm->nomor_polis }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Polis</label>
-                        <input class="form-control" name="tanggal_polis" value="{{ $akm->tanggal_polis }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor STGR</label>
-                        <input class="form-control" name="nomor_stgr" value="{{ $akm->nomor_stgr }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal STGR</label>
-                        <input class="form-control" name="tanggal_stgr" value="{{ $akm->tanggal_stgr }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Bulan STGR</label>
-                        <input class="form-control" name="bulan_stgr" value="{{ $akm->bulan_stgr }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal DOL</label>
-                        <input class="form-control" name="tanggal_dol" value="{{ $akm->tanggal_dol }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Jangka Waktu Awal</label>
-                        <input class="form-control" name="jangka_waktu_awal" value="{{ $akm->jangka_waktu_awal }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Jangka Waktu Akhir</label>
-                        <input class="form-control" name="jangka_waktu_akhir" value="{{ $akm->jangka_waktu_akhir }}">
-                    </div>
-
-                    
-                    <div class="mb-3">
-                        <label class="form-label">Penyebab Klaim</label>
-                        <input class="form-control" name="penyebab_klaim" value="{{ $akm->penyebab_klaim }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Plafond</label>
-                        <input class="form-control" name="plafond" value="{{ $akm->plafond }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nilai Tuntutan Klaim</label>
-                        <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $akm->nilai_tuntutan_klaim }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Status</label>
-                        <input class="form-control" name="status" value="{{ $akm->status }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tindak Lanjut</label>
-                        <input class="form-control" name="tindak_lanjut" value="{{ $akm->tindak_lanjut }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Surat Tambahan Data</label>
-                        <input class="form-control" name="nomor_surat_tambahan_data" value="{{ $akm->nomor_surat_tambahan_data }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Surat Tambahan Data</label>
-                        <input class="form-control" name="tanggal_surat_tambahan_data" value="{{ $akm->tanggal_surat_tambahan_data }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Register Sistem</label>
-                        <input class="form-control" name="nomor_register_sistem" value="{{ $akm->nomor_register_sistem }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Register Sistem</label>
-                        <input class="form-control" name="tanggal_register_sistem" value="{{ $akm->tanggal_register_sistem }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Status Sistem</label>
-                        <input class="form-control" name="status_sistem" value="{{ $akm->status_sistem }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Keterangan / Feedback Pemutus</label>
-                        <input class="form-control" name="keterangan" value="{{ $akm->keterangan }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
-                        <input class="form-control" name="nomor_surat_persetujuan_atau_penolakan" value="{{ $akm->nomor_surat_persetujuan_atau_penolakan }}">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
-                        <input class="form-control" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $akm->tanggal_surat_persetujuan_atau_penolakan }}">
-                    </div>
-
-
-                    <div class="text-center">
-                        <button class="btn btn-primary">
-                            Update
-                        </button>
-                    </div>
-
-                </form>
-            </div>
-
-        </div>
-    </div>
-</div>
-@endforeach
-
-<script>
-document.addEventListener("click", function(e) {
-    if (e.target.closest(".delete-btn")) {
-        e.preventDefault();
-        if (confirm("Yakin ingin menghapus AKM ini?")) {
-            e.target.closest("form").submit();
-        }
-    }
-});
-</script>
