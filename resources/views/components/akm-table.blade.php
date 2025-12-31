@@ -74,6 +74,11 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Status
+                    </th>
+
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -140,6 +145,10 @@
 
                     <td class="text-center">
                         {{ $akm->nilai_tuntutan_klaim }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->status }}
                     </td>
 
 
@@ -259,7 +268,11 @@
                         <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $akm->nilai_tuntutan_klaim }}">
                     </div>
 
-
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <input class="form-control" name="status" value="{{ $akm->status }}">
+                    </div>
+                        
                     <div class="text-center">
                         <button class="btn btn-primary">
                             Update

@@ -81,6 +81,16 @@
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim" />
         </div>
         
+        <div>
+            <label class="form-label">Status:</label>
+            <select name="status" class="form-select">
+                <option value="" disabled selected>Pilih status</option>
+                <option value="terima">Terima</option>
+                <option value="tolak">Tolak</option>
+                <option value="proses_analisa">Proses Analisa</option>
+            </select>
+        </div>
+        
         <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />

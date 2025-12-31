@@ -24,6 +24,7 @@ class Akm extends Model
         'jangka_waktu_akhir',
         'penyebab_klaim',
         'plafond',
-        'nilai_tuntutan_klaim'
+        'nilai_tuntutan_klaim',
+        'status'
     ];
 }

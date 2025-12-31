@@ -91,6 +91,16 @@
                             <input name="nilai_tuntutan_klaim" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-select">
+                                <option value="" disabled selected>Select status</option>
+                                <option value="terima">Terima</option>
+                                <option value="tolak">Tolak</option>
+                                <option value="proses_analisa">Proses Analisa</option>
+                            </select>
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
