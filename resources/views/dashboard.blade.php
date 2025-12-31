@@ -71,6 +71,17 @@
                             <input name="jangka_waktu_awal" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Jangka Waktu Akhir</label>
+                            <input name="jangka_waktu_akhir" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Penyebab Klaim</label>
+                            <input name="penyebab_klaim" class="form-control">
+                        </div>
+
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">

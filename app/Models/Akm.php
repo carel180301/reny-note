@@ -20,6 +20,8 @@ class Akm extends Model
         'tanggal_stgr',
         'bulan_stgr',
         'tanggal_dol',
-        'jangka_waktu_awal'
+        'jangka_waktu_awal',
+        'jangka_waktu_akhir',
+        'penyebab_klaim'
     ];
 }

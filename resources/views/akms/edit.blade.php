@@ -60,6 +60,17 @@
             <label>Jangka Waktu Awal:</label> 
             <input type="date" name="jangka_waktu_awal" placeholder="Jangka Waktu Awal" value="{{$Sclaim->jangka_waktu_awal}}" />
         </div>
+
+        <div>
+            <label>Jangka Waktu Akhir:</label> 
+            <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir" value="{{$Sclaim->jangka_waktu_akhir}}" />
+        </div>
+
+        <div>
+            <label>Penyebab Klaim:</label> 
+            <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim" value="{{$Sclaim->penyebab_klaim}}" />
+        </div>
+        
         <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />

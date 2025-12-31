@@ -58,6 +58,15 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Jangka Waktu Akhir
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Penyebab Klaim
+                    </th>
+
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -108,6 +117,14 @@
 
                     <td class="text-center">
                         {{ $akm->jangka_waktu_awal }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->jangka_waktu_akhir }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->penyebab_klaim }}
                     </td>
 
 
@@ -204,6 +221,17 @@
                     <div class="mb-3">
                         <label class="form-label">Jangka Waktu Awal</label>
                         <input class="form-control" name="jangka_waktu_awal" value="{{ $akm->jangka_waktu_awal }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Jangka Waktu Akhir</label>
+                        <input class="form-control" name="jangka_waktu_akhir" value="{{ $akm->jangka_waktu_akhir }}">
+                    </div>
+
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Penyebab Klaim</label>
+                        <input class="form-control" name="penyebab_klaim" value="{{ $akm->penyebab_klaim }}">
                     </div>
 
                     <div class="text-center">
