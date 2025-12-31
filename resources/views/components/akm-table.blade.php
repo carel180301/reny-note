@@ -86,6 +86,10 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Tanggal Surat Tambahan Data
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -165,6 +169,11 @@
                     <td class="text-center">
                         {{ $akm->nomor_surat_tambahan_data }}
                     </td>
+
+                    <td class="text-center">
+                        {{ $akm->tanggal_surat_tambahan_data }}
+                    </td>
+
 
                     <td class="text-center">
                         <div class="d-inline-flex align-items-center gap-2">
@@ -295,6 +304,11 @@
                     <div class="mb-3">
                         <label class="form-label">Nomor Surat Tambahan Data</label>
                         <input class="form-control" name="nomor_surat_tambahan_data" value="{{ $akm->nomor_surat_tambahan_data }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Surat Tambahan Data</label>
+                        <input class="form-control" name="tanggal_surat_tambahan_data" value="{{ $akm->tanggal_surat_tambahan_data }}">
                     </div>
 
                         
