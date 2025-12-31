@@ -76,6 +76,11 @@
             <input type="text" name="plafond" placeholder="Plafond" value="{{$Sclaim->plafond}}" />
         </div>
         
+        <div>
+            <label>Nilai Tuntutan Klaim:</label> 
+            <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim" value="{{$Sclaim->nilai_tuntutan_klaim}}" />
+        </div>
+        
         <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />

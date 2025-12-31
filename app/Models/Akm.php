@@ -23,6 +23,7 @@ class Akm extends Model
         'jangka_waktu_awal',
         'jangka_waktu_akhir',
         'penyebab_klaim',
-        'plafond'
+        'plafond',
+        'nilai_tuntutan_klaim'
     ];
 }

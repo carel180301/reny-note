@@ -33,7 +33,8 @@ class AkmController extends Controller
             'jangka_waktu_awal' => 'required',
             'jangka_waktu_akhir' => 'required',
             'penyebab_klaim' => 'required',
-            'plafond' => 'required'
+            'plafond' => 'required',
+            'nilai_tuntutan_klaim' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -70,7 +71,8 @@ class AkmController extends Controller
             'jangka_waktu_awal' => 'required',
             'jangka_waktu_akhir' => 'required',
             'penyebab_klaim' => 'required',
-            'plafond' => 'required'
+            'plafond' => 'required',
+            'nilai_tuntutan_klaim' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -111,6 +113,7 @@ class AkmController extends Controller
             ->orWhere('jangka_waktu_akhir', 'like', "%$keyword%")
             ->orWhere('penyebab_klaim', 'like', "%$keyword%")
             ->orWhere('plafond', 'like', "%$keyword%")
+            ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
 
             // ->orWhere('broker', 'like', "%$keyword%")
             // ->orWhere('nama_tertanggung', 'like', "%$keyword%")

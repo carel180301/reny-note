@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('jangka_waktu_akhir');
             $table->string('penyebab_klaim');
             $table->string('plafond');
+            $table->string('nilai_tuntutan_klaim');
             $table->timestamps();
         });
     }

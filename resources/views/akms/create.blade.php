@@ -76,6 +76,11 @@
             <input type="text" name="plafond" placeholder="Plafond" />
         </div>
         
+        <div>
+            <label>Nilai Tuntutan Klaim: </label> 
+            <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim" />
+        </div>
+        
         <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />

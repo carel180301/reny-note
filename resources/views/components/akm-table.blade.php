@@ -70,6 +70,10 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Nilai Tuntutan Klaim
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -132,6 +136,10 @@
 
                     <td class="text-center">
                         {{ $akm->plafond }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->nilai_tuntutan_klaim }}
                     </td>
 
 
@@ -244,6 +252,11 @@
                     <div class="mb-3">
                         <label class="form-label">Plafond</label>
                         <input class="form-control" name="plafond" value="{{ $akm->plafond }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nilai Tuntutan Klaim</label>
+                        <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $akm->nilai_tuntutan_klaim }}">
                     </div>
 
 
