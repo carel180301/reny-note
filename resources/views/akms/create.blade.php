@@ -130,7 +130,11 @@
             <input type="text" name="keterangan" placeholder="Keterangan" />
         </div>
 
-        
+        <div>
+            <label>Nomor Surat Persetujuan atau Penolakan: </label> 
+            <input type="text" name="nomor_surat_persetujuan_atau_penolakan" placeholder="Nomor Surat Persetujuan atau Penolakan" />
+        </div>
+
 
         <!-- <div>
             <label>Nomor Polis: </label>

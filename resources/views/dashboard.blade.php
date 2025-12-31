@@ -140,6 +140,11 @@
                             <input name="keterangan" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
+                            <input name="nomor_surat_persetujuan_atau_penolakan" class="form-control">
+                        </div>
+
 
 
                         <!-- <div class="mb-3">

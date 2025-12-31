@@ -105,6 +105,10 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Nomor Surat Persetujuan atau Penolakan
+                    </th>
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -203,6 +207,10 @@
 
                     <td class="text-center">
                         {{ $akm->keterangan }}
+                    </td>
+
+                    <td class="text-center">
+                        {{ $akm->nomor_surat_persetujuan_atau_penolakan }}
                     </td>
 
 
@@ -361,6 +369,12 @@
                         <label class="form-label">Keterangan / Feedback Pemutus</label>
                         <input class="form-control" name="keterangan" value="{{ $akm->keterangan }}">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
+                        <input class="form-control" name="nomor_surat_persetujuan_atau_penolakan" value="{{ $akm->nomor_surat_persetujuan_atau_penolakan }}">
+                    </div>
+
 
                     <div class="text-center">
                         <button class="btn btn-primary">

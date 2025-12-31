@@ -35,6 +35,7 @@ return new class extends Migration
             $table->string('tanggal_register_sistem');
             $table->string('status_sistem');
             $table->text('keterangan');
+            $table->string('nomor_surat_persetujuan_atau_penolakan');
             $table->timestamps();
         });
     }
