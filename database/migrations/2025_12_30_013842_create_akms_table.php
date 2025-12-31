@@ -33,6 +33,7 @@ return new class extends Migration
             $table->string('tanggal_surat_tambahan_data');
             $table->string('nomor_register_sistem');
             $table->string('tanggal_register_sistem');
+            $table->string('status_sistem');
             $table->timestamps();
         });
     }

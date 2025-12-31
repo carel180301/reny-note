@@ -116,7 +116,16 @@
             <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem" />
         </div>
         
+        <div>
+            <label class="form-label">Status Sistem:</label>
+            <select name="status_sistem" class="form-select">
+                <option value="" disabled selected>Pilih Status sistem</option>
+                <option value="done">Done</option>
+                <option value="not_done">Not Done Yet</option>
+            </select>
+        </div>
         
+
         <!-- <div>
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />

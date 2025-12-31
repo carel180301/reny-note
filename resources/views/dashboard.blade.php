@@ -126,6 +126,15 @@
                             <input name="tanggal_register_sistem" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Status Sistem</label>
+                            <select name="status_sistem" class="form-select">
+                                <option value="" disabled selected>Select status</option>
+                                <option value="done">Done</option>
+                                <option value="not_done">Not Done Yet</option>
+                            </select>
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

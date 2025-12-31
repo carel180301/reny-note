@@ -97,6 +97,10 @@
                         Tanggal Register Sistem
                     </th>
 
+                    <th class="text-white" style="background:#2a3d5e;">
+                        Status Sistem
+                    </th>
+
 
                     <th class="text-white" style="background:#2a3d5e;">
                         Action
@@ -190,6 +194,11 @@
                     <td class="text-center">
                         {{ $akm->tanggal_register_sistem }}
                     </td>
+
+                    <td class="text-center">
+                        {{ $akm->status_sistem }}
+                    </td>
+
 
                     <td class="text-center">
                         <div class="d-inline-flex align-items-center gap-2">
@@ -336,6 +345,13 @@
                         <label class="form-label">Tanggal Register Sistem</label>
                         <input class="form-control" name="tanggal_register_sistem" value="{{ $akm->tanggal_register_sistem }}">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status Sistem</label>
+                        <input class="form-control" name="status_sistem" value="{{ $akm->status_sistem }}">
+                    </div>
+
+
 
                     <div class="text-center">
                         <button class="btn btn-primary">

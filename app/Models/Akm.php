@@ -30,6 +30,7 @@ class Akm extends Model
         'nomor_surat_tambahan_data',
         'tanggal_surat_tambahan_data',
         'nomor_register_sistem',
-        'tanggal_register_sistem'
+        'tanggal_register_sistem',
+        'status_sistem'
     ];
 }
