@@ -33,6 +33,7 @@ class Akm extends Model
         'tanggal_register_sistem',
         'status_sistem',
         'keterangan',
-        'nomor_surat_persetujuan_atau_penolakan'
+        'nomor_surat_persetujuan_atau_penolakan',
+        'tanggal_surat_persetujuan_atau_penolakan'
     ];
 }

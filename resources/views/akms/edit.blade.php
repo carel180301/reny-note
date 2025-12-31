@@ -135,6 +135,12 @@
             <input type="text" name="nomor_surat_persetujuan_atau_penolakan" placeholder="Nomor Surat Persetujuan atau Penolakan" value="{{$Sclaim->nomor_surat_persetujuan_atau_penolakan}}" />
         </div>
 
+        <div>
+            <label>Tanggal Surat Persetujuan atau Penolakan:</label> 
+            <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" placeholder="Tanggal Surat Persetujuan atau Penolakan" value="{{$Sclaim->tanggal_surat_persetujuan_atau_penolakan}}" />
+        </div>
+
+
 
         
         <!-- <div>

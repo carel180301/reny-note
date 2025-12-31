@@ -109,6 +109,11 @@
                     </th>
 
                     <th class="text-white" style="background:#2a3d5e;">
+                        Tanggal Surat Persetujuan atau Penolakan
+                    </th>
+
+
+                    <th class="text-white" style="background:#2a3d5e;">
                         Action
                     </th>
                 </tr>
@@ -212,6 +217,11 @@
                     <td class="text-center">
                         {{ $akm->nomor_surat_persetujuan_atau_penolakan }}
                     </td>
+
+                    <td class="text-center">
+                        {{ $akm->tanggal_surat_persetujuan_atau_penolakan }}
+                    </td>
+
 
 
                     <td class="text-center">
@@ -373,6 +383,11 @@
                     <div class="mb-3">
                         <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
                         <input class="form-control" name="nomor_surat_persetujuan_atau_penolakan" value="{{ $akm->nomor_surat_persetujuan_atau_penolakan }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
+                        <input class="form-control" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $akm->tanggal_surat_persetujuan_atau_penolakan }}">
                     </div>
 
 
