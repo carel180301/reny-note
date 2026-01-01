@@ -59,14 +59,39 @@
                     <td class="text-center">{{ $akm->penyebab_klaim }}</td>
                     <td class="text-center">{{ $akm->plafond }}</td>
                     <td class="text-center">{{ $akm->nilai_tuntutan_klaim }}</td>
-                    <td class="text-center">{{ $akm->status }}</td>
+                    <!-- <td class="text-center">{{ $akm->status }}</td> -->
+
+                 <td class="text-center">
+                    @php
+                        $status = strtolower(trim($akm->status));
+                    @endphp
+
+                    @if($status === 'tolak')
+                        <span class="badge bg-danger text-white">
+                            tolak
+                        </span>
+                    @elseif($status === 'terima')
+                        <span class="badge bg-success text-white">
+                            terima
+                        </span>
+                    @elseif($status === 'proses analisa')
+                        <span class="badge bg-primary text-white">
+                            proses analisa
+                        </span>
+                    @else
+                        <span class="badge bg-secondary text-white">
+                            {{ $akm->status_sistem ?? 'unknown' }}
+                        </span>
+                    @endif
+                </td>
+
+
                     <td class="text-center">{{ $akm->tindak_lanjut }}</td>
                     <td class="text-center">{{ $akm->nomor_surat_tambahan_data }}</td>
                     <td class="text-center">{{ $akm->tanggal_surat_tambahan_data }}</td>
                     <td class="text-center">{{ $akm->nomor_register_sistem }}</td>
                     <td class="text-center">{{ $akm->tanggal_register_sistem }}</td>
 
-                    {{-- ✅ FIXED: STATUS SISTEM COLOR --}}
                     <td class="text-center">
                         @if($akm->status_sistem === 'done')
                             <span class="badge bg-success text-white">
