@@ -8,7 +8,6 @@
 
 <div id="akmTable">
     <div class="table-responsive">
-
         <table class="table table-hover w-100 align-middle">
             <thead>
                 <tr class="text-center">
