@@ -18,16 +18,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    // Route::get('/claim', [ClaimController::class, 'index'])->name('claim.index');
-    // Route::get('/claim/create', [ClaimController::class, 'create'])->name('claim.create');
-    // Route::post('/claim', [ClaimController::class, 'store'])->name('claim.store');
-    // Route::get('/claim/{claim}/edit', [ClaimController::class, 'edit'])->name('claim.edit');
-    // Route::put('/claim/{claim}/update', [ClaimController::class, 'update'])->name('claim.update');
-    // Route::delete('/claim/{claim}/destroy', [ClaimController::class, 'destroy'])->name('claim.destroy');
-    // Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    // Route::get('/claim/{claim}/send-email', [EmailsController::class, 'sendClaimEmail'])->name('claim.sendEmail');
-    // Route::get('/claim/search', [ClaimController::class, 'search'])->name('claim.search');
-    // Route::post('/claim/upload', [ClaimController::class, 'upload'])->name('claim.upload');
+    Route::get('/akms', [AkmController::class, 'index'])->name('akms.index');
+    Route::get('/akms/create', [AkmController::class, 'create'])->name('akms.create');
+    Route::post('/akms', [AkmController::class, 'store'])->name('akms.store');
+    Route::get('/akms/{akms}/edit', [AkmController::class, 'edit'])->name('akms.edit');
+    Route::put('/akms/{akms}/update', [AkmController::class, 'update'])->name('akms.update');
+    Route::delete('/akms/{akms}/destroy', [AkmController::class, 'destroy'])->name('akms.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/akms/{akms}/send-email', [EmailsController::class, 'sendAkmEmail'])->name('akms.sendEmail');
+    Route::get('/akms/search', [AkmController::class, 'search'])->name('akms.search');
+    Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
     Route::resource('akms', AkmController::class);
     Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
 

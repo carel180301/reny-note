@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>add new Klaim</h1>
-    <form method="post" action="{{ route('claim.store') }}">
+    <form method="post" action="{{ route('akms.store') }}">
         <div>
             @if ($errors->any())
             <ul>
@@ -21,6 +21,16 @@
         </div>
         @csrf
         @method('post')
+        <div>
+            <label>Nama Debitur:</label>
+            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
+        </div>
+
+        <div>
+            <label>Cabang Bank:</label>
+            <input type="text" name="cabang_bank" placeholder="Cabang Bank">
+        </div>
+
         <div>
             <label>Nomor Rekening: </label> 
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" />
@@ -145,10 +155,6 @@
             <label>Nomor Polis: </label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis" />
         </div>
-        {{-- <div>
-            <label>Nomor Jurnal: </label>
-            <input type="text" name="nomor_jurnal" placeholder="Nomor Jurnal" />
-        </div> --}}
         <div>
             <label>Tanggal Polis: </label>
             {{-- <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" /> --}}

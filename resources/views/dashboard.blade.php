@@ -21,79 +21,90 @@
                     @csrf
                     <div class="modal-body">
 
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+
                         <div class="mb-3">
                             <label class="form-label">Nama Debitur</label>
-                            <input name="nama_debitur" class="form-control">
+                            <input name="nama_debitur" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Cabang Bank</label>
-                            <input name="cabang_bank" class="form-control">
+                            <input name="cabang_bank" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
+                            <input name="nomor_rekening" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
-                            <input name="nomor_polis" class="form-control">
+                            <input name="nomor_polis" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Polis</label>
-                            <input name="tanggal_polis" class="form-control">
+                            <input name="tanggal_polis" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nomor STGR</label>
-                            <input name="nomor_stgr" class="form-control">
+                            <input name="nomor_stgr" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal STGR</label>
-                            <input name="tanggal_stgr" class="form-control">
+                            <input name="tanggal_stgr" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Bulan STGR</label>
-                            <input name="bulan_stgr" class="form-control">
+                            <input name="bulan_stgr" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal DOL</label>
-                            <input name="tanggal_dol" class="form-control">
+                            <input name="tanggal_dol" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Jangka Waktu Awal</label>
-                            <input name="jangka_waktu_awal" class="form-control">
+                            <input name="jangka_waktu_awal" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Jangka Waktu Akhir</label>
-                            <input name="jangka_waktu_akhir" class="form-control">
+                            <input name="jangka_waktu_akhir" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Penyebab Klaim</label>
-                            <input name="penyebab_klaim" class="form-control">
+                            <input name="penyebab_klaim" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Plafond</label>
-                            <input name="plafond" class="form-control">
+                            <input name="plafond" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nilai Tuntutan Klaim</label>
-                            <input name="nilai_tuntutan_klaim" class="form-control">
+                            <input name="nilai_tuntutan_klaim" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Status</label>
-                            <select name="status" class="form-select">
+                            <select name="status" class="form-select" required>
                                 <option value="" disabled selected>Select status</option>
                                 <option value="terima">Terima</option>
                                 <option value="tolak">Tolak</option>
@@ -103,22 +114,22 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tindak Lanjut</label>
-                            <input name="tindak_lanjut" class="form-control">
+                            <input name="tindak_lanjut" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nomor Surat Tambahan Data</label>
-                            <input name="nomor_surat_tambahan_data" class="form-control">
+                            <input name="nomor_surat_tambahan_data" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Surat Tambahan Data</label>
-                            <input name="tanggal_surat_tambahan_data" class="form-control">
+                            <input name="tanggal_surat_tambahan_data" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nomor Register Sistem</label>
-                            <input name="nomor_register_sistem" class="form-control">
+                            <input name="nomor_register_sistem" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
@@ -128,7 +139,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Status Sistem</label>
-                            <select name="status_sistem" class="form-select">
+                            <select name="status_sistem" class="form-select"  required>
                                 <option value="" disabled selected>Select status</option>
                                 <option value="done">Done</option>
                                 <option value="not_done">Not Done Yet</option>
@@ -137,17 +148,17 @@
 
                         <div class="mb-3">
                             <label class="form-label">Keterangan / Feedback Pemutus</label>
-                            <input name="keterangan" class="form-control">
+                            <input name="keterangan" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
-                            <input name="nomor_surat_persetujuan_atau_penolakan" class="form-control">
+                            <input name="nomor_surat_persetujuan_atau_penolakan" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
-                            <input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control">
+                            <input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" required>
                         </div>
 
 
