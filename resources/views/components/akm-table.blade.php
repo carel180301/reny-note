@@ -116,14 +116,17 @@
                             </button>
 
                             <form method="POST"
-                                  action="{{ route('akms.destroy', $akm) }}"
-                                  class="m-0">
+                                action="{{ route('akms.destroy', $akm) }}"
+                                class="m-0"
+                                onsubmit="return confirm('Yakin ingin menghapus data ini?');">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn p-0 text-danger delete-btn">
+
+                                <button class="btn p-0 text-danger">
                                     <i class="bi bi-trash-fill fs-5"></i>
                                 </button>
                             </form>
+
                         </div>
                     </td>
                 </tr>
