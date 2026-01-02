@@ -63,11 +63,11 @@ class AkmController extends Controller
         return redirect(route('dashboard'))->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Akm $akm){
-        return view('akms.edit', ['akm' => $akm]);
+    public function edit(Akm $akms){
+        return view('akms.edit', ['akms' => $akms]);
     }
 
-    public function update(Akm $akm, Request $request){
+    public function update(Akm $akms, Request $request){
         $data = $request->validate([
             'nama_debitur' => 'required',
             'cabang_bank' => 'required',
@@ -106,13 +106,13 @@ class AkmController extends Controller
         //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
         // }
 
-        $akm->update($data);
+        $akms->update($data);
 
         return back()->with('success', 'Klaim berhasil di-update!');
     }
 
-    public function destroy(Akm $akm){
-        $akm->delete();
+    public function destroy(Akm $akms){
+        $akms->delete();
         return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
     }
 
