@@ -3,197 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Edit Klaim</title>
 </head>
 <body>
-    <h1>Edit Klaim</h1>
-    <form method="post" action="{{ route('claim.update', ['claim' => $claim]) }}">
-        <div>
-            @if ($errors->any())
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-            
-            @endif
-        </div>
-        @csrf
-        @method('put')
-        <div>
-            <label>Nomor Rekening:</label> 
-            <input type="text" name="nomor_rekening" placeholder="Nomor Rekening" value="{{$Sclaim->nomor_rekening}}" />
-        </div>
 
-        <div>
-            <label>Nomor Polis:</label> 
-            <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$Sclaim->nomor_polis}}" />
-        </div>
+<h1>Edit Klaim</h1>
 
-        <div>
-            <label>Tanggal Polis:</label> 
-            <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" value="{{$Sclaim->tanggal_polis}}" />
-        </div>
+<form method="POST" action="{{ route('akms.update', $akms) }}">
+    @csrf
+    @method('PUT')
 
-        <div>
-            <label>Nomor STGR:</label> 
-            <input type="text" name="nomor_stgr" placeholder="Nomor STGR" value="{{$Sclaim->nomor_stgr}}" />
-        </div>
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
 
-        <div>
-            <label>Tanggal STGR:</label> 
-            <input type="date" name="tanggal_stgr" placeholder="Tanggal STGR" value="{{$Sclaim->tanggal_stgr}}" />
-        </div>
+    <div>
+        <label>Nomor Rekening:</label>
+        <input type="text" name="nomor_rekening" value="{{ $akms->nomor_rekening }}">
+    </div>
 
-        <div>
-            <label>Bulan STGR:</label> 
-            <input type="text" name="bulan_stgr" placeholder="Bulan STGR" value="{{$Sclaim->bulan_stgr}}" />
-        </div>
+    <div>
+        <label>Nomor Polis:</label>
+        <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">
+    </div>
 
-        <div>
-            <label>Tanggal Dol:</label> 
-            <input type="date" name="tanggal_dol" placeholder="Tanggal DOL" value="{{$Sclaim->tanggal_dol}}" />
-        </div>
+    <div>
+        <label>Tanggal Polis:</label>
+        <input type="date" name="tanggal_polis" value="{{ $akms->tanggal_polis }}">
+    </div>
 
-        <div>
-            <label>Jangka Waktu Awal:</label> 
-            <input type="date" name="jangka_waktu_awal" placeholder="Jangka Waktu Awal" value="{{$Sclaim->jangka_waktu_awal}}" />
-        </div>
+    <div>
+        <label>Nomor STGR:</label>
+        <input type="text" name="nomor_stgr" value="{{ $akms->nomor_stgr }}">
+    </div>
 
-        <div>
-            <label>Jangka Waktu Akhir:</label> 
-            <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir" value="{{$Sclaim->jangka_waktu_akhir}}" />
-        </div>
+    <div>
+        <label>Tanggal STGR:</label>
+        <input type="date" name="tanggal_stgr" value="{{ $akms->tanggal_stgr }}">
+    </div>
 
-        <div>
-            <label>Penyebab Klaim:</label> 
-            <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim" value="{{$Sclaim->penyebab_klaim}}" />
-        </div>
-        
-        <div>
-            <label>Plafond:</label> 
-            <input type="text" name="plafond" placeholder="Plafond" value="{{$Sclaim->plafond}}" />
-        </div>
-        
-        <div>
-            <label>Nilai Tuntutan Klaim:</label> 
-            <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim" value="{{$Sclaim->nilai_tuntutan_klaim}}" />
-        </div>
-        
-        <div>
-            <label class="form-label">Status:</label>
-            <select name="status" class="form-select">
-                <option value="" disabled selected>Select status</option>
-                <option value="terima">Terima</option>
-                <option value="tolak">Tolak</option>
-                <option value="proses_analisa">Proses Analisa</option>
-            </select>
-        </div>
+    <div>
+        <label>Bulan STGR:</label>
+        <input type="text" name="bulan_stgr" value="{{ $akms->bulan_stgr }}">
+    </div>
 
-        <div>
-            <label>Tindak Lanjut:</label> 
-            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut" value="{{$Sclaim->tindak_lanjut}}" />
-        </div>
-        
-        <div>
-            <label>Nomor Surat Tambahan Data:</label> 
-            <input type="text" name="nomor_surat_tambahan_data" placeholder="Nomor Surat Tambahan Data" value="{{$Sclaim->nomor_surat_tambahan_data}}" />
-        </div>
+    <div>
+        <label>Tanggal DOL:</label>
+        <input type="date" name="tanggal_dol" value="{{ $akms->tanggal_dol }}">
+    </div>
 
-        <div>
-            <label>Tanggal Surat Tambahan Data:</label> 
-            <input type="date" name="tanggal_surat_tambahan_data" placeholder="Tanggal Surat Tambahan Data" value="{{$Sclaim->tanggal_surat_tambahan_data}}" />
-        </div>
+    <div>
+        <label>Jangka Waktu Awal:</label>
+        <input type="date" name="jangka_waktu_awal" value="{{ $akms->jangka_waktu_awal }}">
+    </div>
 
-        <div>
-            <label>Nomor Register Sistem:</label> 
-            <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem" value="{{$Sclaim->nomor_register_sistem}}" />
-        </div>
+    <div>
+        <label>Jangka Waktu Akhir:</label>
+        <input type="date" name="jangka_waktu_akhir" value="{{ $akms->jangka_waktu_akhir }}">
+    </div>
 
-        <div>
-            <label>Tanggal Register Sistem:</label> 
-            <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem" value="{{$Sclaim->tanggal_register_sistem}}" />
-        </div>
+    <div>
+        <label>Penyebab Klaim:</label>
+        <input type="text" name="penyebab_klaim" value="{{ $akms->penyebab_klaim }}">
+    </div>
 
-        <div>
-            <label class="form-label">Status Sistem:</label>
-            <select name="status_sistem" class="form-select">
-                <option value="" disabled selected>Pilih Status Sistem</option>
-                <option value="done">Done</option>
-                <option value="not_done">Not Done Yet</option>
-            </select>
-        </div>
+    <div>
+        <label>Plafond:</label>
+        <input type="text" name="plafond" value="{{ $akms->plafond }}">
+    </div>
 
-        <div>
-            <label>Keterangan / Feedback Pemutus:</label> 
-            <input type="text" name="keterangan" placeholder="Keterangan" value="{{$Sclaim->keterangan}}" />
-        </div>
+    <div>
+        <label>Nilai Tuntutan Klaim:</label>
+        <input type="text" name="nilai_tuntutan_klaim" value="{{ $akms->nilai_tuntutan_klaim }}">
+    </div>
 
-        <div>
-            <label>Nomor Surat Persetujuan atau Penolakan:</label> 
-            <input type="text" name="nomor_surat_persetujuan_atau_penolakan" placeholder="Nomor Surat Persetujuan atau Penolakan" value="{{$Sclaim->nomor_surat_persetujuan_atau_penolakan}}" />
-        </div>
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="terima" {{ $akms->status == 'terima' ? 'selected' : '' }}>Terima</option>
+            <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option>
+        </select>
+    </div>
 
-        <div>
-            <label>Tanggal Surat Persetujuan atau Penolakan:</label> 
-            <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" placeholder="Tanggal Surat Persetujuan atau Penolakan" value="{{$Sclaim->tanggal_surat_persetujuan_atau_penolakan}}" />
-        </div>
+    <div>
+        <label>Tindak Lanjut:</label>
+        <input type="text" name="tindak_lanjut" value="{{ $akms->tindak_lanjut }}">
+    </div>
 
+    <div>
+        <label>Status Sistem:</label>
+        <select name="status_sistem">
+            <option value="done" {{ $akms->status_sistem == 'done' ? 'selected' : '' }}>Done</option>
+            <option value="not_done" {{ $akms->status_sistem == 'not_done' ? 'selected' : '' }}>Not Done Yet</option>
+        </select>
+    </div>
 
+    <div>
+        <label>Keterangan:</label>
+        <input type="text" name="keterangan" value="{{ $akms->keterangan }}">
+    </div>
 
-        
-        <!-- <div>
-            <label>Nomor Polis:</label>
-            <input type="text" name="nomor_polis" placeholder="Nomor Polis" value="{{$piutang->nomor_polis}}" />
-        </div>
-        {{-- <div>
-            <label>Nomor Jurnal:</label>
-            <input type="text" name="nomor_jurnal" placeholder="Nomor Jurnal" value="{{$piutang->nomor_jurnal}}" />
-        </div> --}}
-        <div>
-            <label>Tanggal Polis:</label>
-            {{-- <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" value="{{$piutang->tanggal_polis}}" /> --}}
-            <input type="text" name="tanggal_polis" class="form-control" placeholder="dd/mm/yyyy">
-        </div>
-        <div>
-            <label>Broker / Agen / Ceding:</label> 
-            <input type="text" name="broker" placeholder="Nama Broker" value="{{$piutang->broker}}" />
-        </div>
-        <div>
-            <label>Nama Tertanggung:</label> 
-            <input type="text" name="nama_tertanggung" placeholder="Nama Tertanggung" value="{{$piutang->nama_tertanggung}}" />
-        </div>
-        <div>
-            <label>WPC (Jatuh Tempo):</label>
-            {{-- <input type="date" name="wpc" placeholder="WPC (Jatuh Tempo)" value="{{$piutang->wpc}}" /> --}}
-            <input type="text" name="wpc" class="form-control" placeholder="dd/mm/yyyy">
-        </div>
-        <div>
-            <label>E-mail:</label>
-            <input type="email" name="email" placeholder="E-mail" value="{{$piutang->email}}" />
-        </div>
-        <div>
-            <label class="form-label">Currency:</label>
-            <select name="currency" class="form-select">
-                <option value="" disabled selected>Select currency</option>
-                <option value="IDR">IDR</option>
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="SGD">SGD</option>
-            </select>
-        </div>
-        {{-- <div>
-            <label>TSI:</label>
-            <input type="text" name="tsi" placeholder="TSI" value="{{$piutang->tsi}}" />
-        </div> --}}
-        <div>
-            <label>Outstanding:</label>
-            <input type="text" name="outstanding" placeholder="Outstanding" value="{{$piutang->outstanding}}" />
-        </div> -->
-        <div>
-            <input type="submit" value="Update"/>
-        </div>
-    </form>
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>
+
 </body>
 </html>
