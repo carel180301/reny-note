@@ -297,7 +297,7 @@
             let searchTimeout = null;
 
             function doSearch(q) {
-                fetch(`/akm/search?q=` + encodeURIComponent(q))
+                fetch(`/akms/search?q=` + encodeURIComponent(q))
                     .then(res => res.text())
                     .then(html => {
                         const container = document.getElementById('akmTable');
