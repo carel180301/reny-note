@@ -122,7 +122,7 @@
 <!-- ================= EDIT MODALS (OUTSIDE TABLE) ================= -->
 @foreach($akms as $akm)
 <div class="modal fade" id="editAkmModal{{ $akm->id }}" tabindex="-1">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-md">
         <div class="modal-content">
 
             <div class="modal-header">
@@ -177,9 +177,10 @@
 
                 </div>
 
-                <div class="modal-footer">
+                <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>
                 </div>
+
 
             </form>
         </div>
