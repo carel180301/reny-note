@@ -15,20 +15,33 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function (Request $request) {
 
-    $query = Akm::query()->orderBy('created_at', 'asc');
+    $table = $request->get('table', 'akm');
 
-    if ($request->filled('status')) {
-        $query->where('status', $request->status);
+    $akms = collect();
+    $asums = collect();
+
+    if ($table === 'akm') {
+        $query = Akm::query()->orderBy('created_at', 'asc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        $akms = $query->get();
     }
 
-    if ($request->filled('status_sistem')) {
-        $query->where('status_sistem', $request->status_sistem);
+    if ($table === 'asum') {
+        $asums = \App\Models\Asum::orderBy('created_at', 'asc')->get();
     }
 
-    $akms = $query->get();
+    return view('dashboard', compact('akms', 'asums', 'table'));
 
-    return view('dashboard', compact('akms'));
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 
 Route::middleware('auth')->group(function () {

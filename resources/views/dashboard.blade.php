@@ -103,8 +103,10 @@
         <div class="bg-white shadow-sm rounded px-1">
             @if(request('table') === 'akm')
                 <x-akm-table :akms="$akms" />
-            @else
-                {{-- Intentionally blank for testing --}}
+            @elseif(request('table') === 'asum') 
+                <!-- {{ dd(get_defined_vars()) }} -->
+
+                <x-asum-table :asums="$asums" />
             @endif
         </div>
 
