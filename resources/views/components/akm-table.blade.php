@@ -7,6 +7,8 @@
 @endif
 
 <div id="akmTable">
+
+    <!-- ================= TABLE ================= -->
     <div class="table-responsive">
         <table class="table table-hover w-100 align-middle">
             <thead>
@@ -33,9 +35,9 @@
                     <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Keterangan / feedback pemutus</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan atau Penolakan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan atau Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan / Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan / Penolakan</th>
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
@@ -62,13 +64,13 @@
                     <td class="text-center">
                         @php $status = strtolower(trim($akm->status)); @endphp
                         @if($status === 'tolak')
-                            <span class="badge bg-danger">tolak</span>
+                            <span class="badge bg-danger">Tolak</span>
                         @elseif($status === 'terima')
-                            <span class="badge bg-success">terima</span>
-                        @elseif($status === 'proses analisa')
-                            <span class="badge bg-primary">proses analisa</span>
+                            <span class="badge bg-success">Terima</span>
+                        @elseif($status === 'proses_analisa')
+                            <span class="badge bg-primary">Proses Analisa</span>
                         @else
-                            <span class="badge bg-secondary">unknown</span>
+                            <span class="badge bg-secondary">Unknown</span>
                         @endif
                     </td>
 
@@ -82,7 +84,7 @@
                         @if($akm->status_sistem === 'done')
                             <span class="badge bg-success">Done</span>
                         @else
-                            <span class="badge bg-danger">Not done yet</span>
+                            <span class="badge bg-danger">Not Done Yet</span>
                         @endif
                     </td>
 
@@ -90,15 +92,14 @@
                     <td class="text-center">{{ $akm->nomor_surat_persetujuan_atau_penolakan }}</td>
                     <td class="text-center">{{ $akm->tanggal_surat_persetujuan_atau_penolakan }}</td>
 
+                    <!-- ACTION (UNCHANGED ICONS) -->
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
-                            <!-- ✅ FIX: EDIT LINK -->
                             <button class="btn p-0 text-warning"
                                     data-bs-toggle="modal"
                                     data-bs-target="#editAkmModal{{ $akm->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
                             </button>
-
 
                             <form method="POST"
                                   action="{{ route('akms.destroy', $akm) }}"
@@ -112,163 +113,76 @@
                         </div>
                     </td>
                 </tr>
-                <!-- EDIT AKM MODAL -->
-            <div class="modal fade" id="editAkmModal{{ $akm->id }}">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5 class="modal-title">Edit Klaim</h5>
-                            <button class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <form method="POST" action="{{ route('akms.update', $akm) }}">
-                            @csrf
-                            @method('PUT')
-
-                            <div class="modal-body">
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nama Debitur</label>
-                                    <input name="nama_debitur" class="form-control" value="{{ $akm->nama_debitur }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Cabang Bank</label>
-                                    <input name="cabang_bank" class="form-control" value="{{ $akm->cabang_bank }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nomor Rekening</label>
-                                    <input name="nomor_rekening" class="form-control" value="{{ $akm->nomor_rekening }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nomor Polis</label>
-                                    <input name="nomor_polis" class="form-control" value="{{ $akm->nomor_polis }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tanggal Polis</label>
-                                    <input name="tanggal_polis" class="form-control" value="{{ $akm->tanggal_polis }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nomor STGR</label>
-                                    <input name="nomor_stgr" class="form-control" value="{{ $akm->nomor_stgr }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tanggal STGR</label>
-                                    <input name="tanggal_stgr" class="form-control" value="{{ $akm->tanggal_stgr }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Bulan STGR</label>
-                                    <input name="bulan_stgr" class="form-control" value="{{ $akm->bulan_stgr }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tanggal DOL</label>
-                                    <input name="tanggal_dol" class="form-control" value="{{ $akm->tanggal_dol }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Jangka Waktu Awal</label>
-                                    <input name="jangka_waktu_awal" class="form-control" value="{{ $akm->jangka_waktu_awal }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Jangka Waktu Akhir</label>
-                                    <input name="jangka_waktu_akhir" class="form-control" value="{{ $akm->jangka_waktu_akhir }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Penyebab Klaim</label>
-                                    <input name="penyebab_klaim" class="form-control" value="{{ $akm->penyebab_klaim }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Plafond</label>
-                                    <input name="plafond" class="form-control" value="{{ $akm->plafond }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nilai Tuntutan Klaim</label>
-                                    <input name="nilai_tuntutan_klaim" class="form-control" value="{{ $akm->nilai_tuntutan_klaim }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Status</label>
-                                    <select name="status" class="form-select" required>
-                                        <option value="terima" {{ $akm->status == 'terima' ? 'selected' : '' }}>Terima</option>
-                                        <option value="tolak" {{ $akm->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-                                        <option value="proses_analisa" {{ $akm->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tindak Lanjut</label>
-                                    <input name="tindak_lanjut" class="form-control" value="{{ $akm->tindak_lanjut }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nomor Surat Tambahan Data</label>
-                                    <input name="nomor_surat_tambahan_data" class="form-control" value="{{ $akm->nomor_surat_tambahan_data }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tanggal Surat Tambahan Data</label>
-                                    <input name="tanggal_surat_tambahan_data" class="form-control" value="{{ $akm->tanggal_surat_tambahan_data }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nomor Register Sistem</label>
-                                    <input name="nomor_register_sistem" class="form-control" value="{{ $akm->nomor_register_sistem }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tanggal Register Sistem</label>
-                                    <input name="tanggal_register_sistem" class="form-control" value="{{ $akm->tanggal_register_sistem }}">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Status Sistem</label>
-                                    <select name="status_sistem" class="form-select" required>
-                                        <option value="done" {{ $akm->status_sistem == 'done' ? 'selected' : '' }}>Done</option>
-                                        <option value="not_done" {{ $akm->status_sistem == 'not_done' ? 'selected' : '' }}>Not Done Yet</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Keterangan / Feedback Pemutus</label>
-                                    <input name="keterangan" class="form-control" value="{{ $akm->keterangan }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
-                                    <input name="nomor_surat_persetujuan_atau_penolakan" class="form-control" value="{{ $akm->nomor_surat_persetujuan_atau_penolakan }}" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
-                                    <input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" value="{{ $akm->tanggal_surat_persetujuan_atau_penolakan }}" required>
-                                </div>
-
-                            </div>
-
-                            <div class="modal-footer">
-                                <button class="btn btn-primary d-block mx-auto">
-                                    Update
-                                </button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
             @endforeach
             </tbody>
         </table>
     </div>
 </div>
+
+<!-- ================= EDIT MODALS (OUTSIDE TABLE) ================= -->
+@foreach($akms as $akm)
+<div class="modal fade" id="editAkmModal{{ $akm->id }}" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Klaim</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('akms.update', $akm) }}">
+                @csrf
+                @method('PUT')
+
+                <div class="modal-body">
+
+                    @foreach([
+                        'nama_debitur','cabang_bank','nomor_rekening','nomor_polis',
+                        'tanggal_polis','nomor_stgr','tanggal_stgr','bulan_stgr',
+                        'tanggal_dol','jangka_waktu_awal','jangka_waktu_akhir',
+                        'penyebab_klaim','plafond','nilai_tuntutan_klaim',
+                        'tindak_lanjut','nomor_surat_tambahan_data',
+                        'tanggal_surat_tambahan_data','nomor_register_sistem',
+                        'tanggal_register_sistem','keterangan',
+                        'nomor_surat_persetujuan_atau_penolakan',
+                        'tanggal_surat_persetujuan_atau_penolakan'
+                    ] as $field)
+                        <div class="mb-3">
+                            <label class="form-label">{{ ucwords(str_replace('_',' ', $field)) }}</label>
+                            <input name="{{ $field }}" class="form-control"
+                                   value="{{ $akm->$field }}" required>
+                        </div>
+                    @endforeach
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="terima" {{ $akm->status=='terima'?'selected':'' }}>Terima</option>
+                            <option value="tolak" {{ $akm->status=='tolak'?'selected':'' }}>Tolak</option>
+                            <option value="proses_analisa" {{ $akm->status=='proses_analisa'?'selected':'' }}>
+                                Proses Analisa
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status Sistem</label>
+                        <select name="status_sistem" class="form-select" required>
+                            <option value="done" {{ $akm->status_sistem=='done'?'selected':'' }}>Done</option>
+                            <option value="not_done" {{ $akm->status_sistem=='not_done'?'selected':'' }}>
+                                Not Done Yet
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Update</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
