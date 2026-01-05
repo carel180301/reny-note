@@ -18,7 +18,6 @@ Route::get('/dashboard', function (Request $request) {
     $table = $request->get('table', 'akm');
 
     $akms = collect();
-    $asums = collect();
 
     if ($table === 'akm') {
         $query = Akm::query()->orderBy('created_at', 'asc');
@@ -34,11 +33,7 @@ Route::get('/dashboard', function (Request $request) {
         $akms = $query->get();
     }
 
-    if ($table === 'asum') {
-        $asums = \App\Models\Asum::orderBy('created_at', 'asc')->get();
-    }
-
-    return view('dashboard', compact('akms', 'asums', 'table'));
+    return view('dashboard', compact('akms', 'table'));
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -57,8 +52,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
     Route::resource('akms', AkmController::class);
     Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
-
-
 
     // Route::get('/akm', [AkmController::class, 'index']);
 

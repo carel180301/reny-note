@@ -103,10 +103,6 @@
         <div class="bg-white shadow-sm rounded px-1">
             @if(request('table') === 'akm')
                 <x-akm-table :akms="$akms" />
-            @elseif(request('table') === 'asum') 
-                <!-- {{ dd(get_defined_vars()) }} -->
-
-                <x-asum-table :asums="$asums" />
             @endif
         </div>
 
@@ -402,14 +398,21 @@
             let searchTimeout = null;
 
             function doSearch(q) {
-                fetch(`/akms/search?q=` + encodeURIComponent(q))
+                const table = new URLSearchParams(window.location.search).get('table');
+
+                let url = '/akms/search';
+                // if (table === 'asum') {
+                //     url = '/asums/search';
+                // }
+
+                fetch(url + '?q=' + encodeURIComponent(q))
                     .then(res => res.text())
                     .then(html => {
-                        const container = document.getElementById('akmTable');
+                        const container = document.getElementById(table + 'Table');
                         if (container) container.outerHTML = html;
-                    })
-                    .catch(() => console.log("Search failed"));
+                    });
             }
+
 
             const desktopInput = document.getElementById('searchInput');
             if (desktopInput) {
