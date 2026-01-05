@@ -7,7 +7,7 @@
 
 
             {{-- LEFT: FILTERS --}}
-            <div class="col-auto">
+            <div class="col-auto mt-5">
                 @if(request('table') === 'akm')
                     <div class="d-flex gap-2 flex-wrap">
 
@@ -74,7 +74,8 @@
             {{-- CENTER: TITLE --}}
             @if(request('table'))
                 <h2 class="mb-0 position-absolute start-50 translate-middle-x text-center"
-                    style="top: 50%;">
+                style="top: 50%; pointer-events: none;">
+
                     Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
                 </h2>
             @endif
