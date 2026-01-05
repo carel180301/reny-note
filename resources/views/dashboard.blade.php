@@ -54,7 +54,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Polis</label>
-                            <input name="tanggal_polis" class="form-control" required>
+                            <input type="date" name="tanggal_polis" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
@@ -64,7 +64,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal STGR</label>
-                            <input name="tanggal_stgr" class="form-control" required>
+                            <input type="date" name="tanggal_stgr" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
@@ -74,17 +74,17 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal DOL</label>
-                            <input name="tanggal_dol" class="form-control" required>
+                            <input type="date" name="tanggal_dol" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Jangka Waktu Awal</label>
-                            <input name="jangka_waktu_awal" class="form-control" required>
+                            <input type="date" name="jangka_waktu_awal" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Jangka Waktu Akhir</label>
-                            <input name="jangka_waktu_akhir" class="form-control" required>
+                            <input type="date" name="jangka_waktu_akhir" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
@@ -124,7 +124,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Surat Tambahan Data</label>
-                            <input name="tanggal_surat_tambahan_data" class="form-control" required>
+                            <input type="date" name="tanggal_surat_tambahan_data" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
@@ -134,7 +134,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Register Sistem</label>
-                            <input name="tanggal_register_sistem" class="form-control">
+                            <input type="date" name="tanggal_register_sistem" class="form-control">
                         </div>
 
                         <div class="mb-3">
@@ -158,7 +158,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
-                            <input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" required>
+                            <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" required>
                         </div>
 
 
