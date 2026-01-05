@@ -3,7 +3,8 @@
         <!-- <h2 class="text-center sticky-header pt-4">Daftar Klaim</h2> -->
 
         {{-- HEADER ROW --}}
-        <div class="row align-items-center mb-2">
+        <div class="row align-items-center mb-2 position-relative">
+
 
             {{-- LEFT: FILTERS --}}
             <div class="col-auto">
@@ -71,13 +72,12 @@
             </div>
 
             {{-- CENTER: TITLE --}}
-            <div class="col text-center">
-                @if(request('table'))
-                    <h2 class="mb-0">
-                        Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
-                    </h2>
-                @endif
-            </div>
+            @if(request('table'))
+                <h2 class="mb-0 position-absolute start-50 translate-middle-x text-center"
+                    style="top: 50%;">
+                    Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
+                </h2>
+            @endif
 
             {{-- RIGHT: EMPTY (keeps title centered) --}}
             <div class="col-auto"></div>
