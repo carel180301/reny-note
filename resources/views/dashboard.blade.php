@@ -1,10 +1,21 @@
 <x-app-layout>
     <div class="container-fluid px-2 px-md-4">
-        <h2 class="text-center sticky-header pt-4">Daftar Klaim</h2>
+        <!-- <h2 class="text-center sticky-header pt-4">Daftar Klaim</h2> -->
+
+        @if(request('table'))
+            <h2 class="text-center text-muted">
+                Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
+            </h2>
+        @endif
     
         <div class="bg-white shadow-sm rounded px-1">
-            <x-akm-table :akms="$akms" />
+            @if(request('table') === 'akm')
+                <x-akm-table :akms="$akms" />
+            @else
+                {{-- Intentionally blank for testing --}}
+            @endif
         </div>
+
     </div>
 
     <!-- Add AKM Modal-->

@@ -16,13 +16,41 @@
                             Pilih Tabel
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">PEN</a></li>
-                            <li><a class="dropdown-item" href="#">KUPRA</a></li>
-                            <li><a class="dropdown-item" href="#">FLPP</a></li>
-                            <li><a class="dropdown-item" href="#">SURETYSHIP</a></li>
-                            <li><a class="dropdown-item" href="#">AKM</a></li>
-                            <li><a class="dropdown-item" href="#">ASUM</a></li>
-                             <li><a class="dropdown-item" href="#">ASMIK</a></li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'pen']) }}">
+                                    PEN
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'kupra']) }}">
+                                    KUPRA
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'flpp']) }}">
+                                    FLPP
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'suretyship']) }}">
+                                    SURETYSHIP
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'akm']) }}">
+                                    AKM
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'asum']) }}">
+                                    ASUM
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'asmik']) }}">
+                                    ASMIK
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
