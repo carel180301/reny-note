@@ -3,7 +3,7 @@
         <!-- <h2 class="text-center sticky-header pt-4">Daftar Klaim</h2> -->
 
         @if(request('table'))
-            <h2 class="text-center text-muted">
+            <h2 class="text-center">
                 Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
             </h2>
         @endif
