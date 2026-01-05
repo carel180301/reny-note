@@ -2,11 +2,102 @@
     <div class="container-fluid px-2 px-md-4">
         <!-- <h2 class="text-center sticky-header pt-4">Daftar Klaim</h2> -->
 
-        @if(request('table'))
-            <h2 class="text-center">
-                Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
-            </h2>
+        {{-- HEADER ROW --}}
+        <div class="row align-items-center mb-2">
+
+            {{-- LEFT: FILTERS --}}
+            <div class="col-auto">
+                @if(request('table') === 'akm')
+                    <div class="d-flex gap-2 flex-wrap">
+
+                        <!-- Status Filter -->
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                Status
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
+                                        Terima
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
+                                        Tolak
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
+                                        Proses Analisa
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Status Sistem Filter -->
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                Status Sistem
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
+                                        Done
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
+                                        Not Done
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Reset -->
+                        <a href="{{ route('dashboard', ['table' => 'akm']) }}"
+                        class="btn btn-outline-danger">
+                            Reset
+                        </a>
+
+                    </div>
+                @endif
+            </div>
+
+            {{-- CENTER: TITLE --}}
+            <div class="col text-center">
+                @if(request('table'))
+                    <h2 class="mb-0">
+                        Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
+                    </h2>
+                @endif
+            </div>
+
+            {{-- RIGHT: EMPTY (keeps title centered) --}}
+            <div class="col-auto"></div>
+
+        </div>
+
+        {{-- ACTIVE FILTER BADGES --}}
+        @if(request()->except('table'))
+            <div class="mb-3">
+                <span class="text-muted me-2">Filters:</span>
+                @foreach(request()->except('table') as $key => $value)
+                    <span class="badge bg-secondary me-1">
+                        {{ ucfirst(str_replace('_',' ',$key)) }}: {{ $value }}
+                    </span>
+                @endforeach
+            </div>
         @endif
+
+
+
     
         <div class="bg-white shadow-sm rounded px-1">
             @if(request('table') === 'akm')

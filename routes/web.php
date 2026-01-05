@@ -6,16 +6,30 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClaimController;
 use App\Models\Akm;
 use App\Http\Controllers\AkmController;
+use Illuminate\Http\Request;
+
 
 Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('/dashboard', function () {
-    // $akms = Akm::orderBy('created_at', 'desc')->get();
-    $akms = Akm::orderBy('created_at', 'asc')->get();
+Route::get('/dashboard', function (Request $request) {
+
+    $query = Akm::query()->orderBy('created_at', 'asc');
+
+    if ($request->filled('status')) {
+        $query->where('status', $request->status);
+    }
+
+    if ($request->filled('status_sistem')) {
+        $query->where('status_sistem', $request->status_sistem);
+    }
+
+    $akms = $query->get();
+
     return view('dashboard', compact('akms'));
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/akms', [AkmController::class, 'index'])->name('akms.index');
