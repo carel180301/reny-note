@@ -115,6 +115,7 @@
                 <tr>
                     <td>{{ $asum->nama_tertanggung }}</td>
                     <td>{{ $asum->posisi }}</td>
+                    <td>{{ $asum->cob }}</td>
                     <!-- <td>{{ $akm->cabang_bank }}</td>
                     <td>{{ $akm->nomor_rekening }}</td>
                     <td>{{ $akm->nomor_polis }}</td> -->
@@ -208,6 +209,12 @@
                                             <option value="member" {{ $asum->posisi=='member'?'selected':'' }}>Member</option>
                                         </select>
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">COB</label>
+                                        <input class="form-control" name="cob" value="{{ $asum->cob }}">
+                                    </div>
+
 
 
                                     <!-- <div class="mb-3">
@@ -313,6 +320,12 @@
                                 <option value="SGD">SGD</option> -->
                             </select>
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">COB</label>
+                            <input class="form-control" name="cob">
+                        </div>
+
 
 
                         <!-- <div class="mb-3">

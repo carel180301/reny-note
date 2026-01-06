@@ -334,7 +334,6 @@
             <form method="POST" action="{{ route('asums.store') }}">
                 @csrf
                 <div class="modal-body">
-
                     <div class="mb-3">
                         <label class="form-label">Nama Tertanggung</label>
                         <input name="nama_tertanggung" class="form-control" required>
@@ -346,6 +345,11 @@
                             <option value="" disabled selected>Pilih Posisi</option>
                             <option value="member">Member</option>
                         </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">COB</label>
+                        <input name="cob" class="form-control" required>
                     </div>
                 </div>
 

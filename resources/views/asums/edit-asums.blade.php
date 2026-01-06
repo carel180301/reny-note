@@ -35,6 +35,12 @@
         </select>
     </div>
 
+    <div>
+        <label>COB:</label>
+        <input type="text" name="cob" value="{{ $asums->cob }}">
+    </div>
+
+
 
     <!-- <div>
         <label>Nomor Polis:</label>

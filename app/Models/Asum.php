@@ -12,7 +12,8 @@ class Asum extends Model
 
     protected $fillable = [
         'nama_tertanggung',
-        'posisi'
+        'posisi',
+        'cob'
         // 'nomor_rekening', 
         // 'nomor_polis', 
         // 'tanggal_polis',

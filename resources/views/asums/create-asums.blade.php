@@ -36,6 +36,12 @@
             </select>
         </div>
 
+        <div>
+            <label>COB:</label>
+            <input type="text" name="cob" placeholder="COB">
+        </div>
+
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
