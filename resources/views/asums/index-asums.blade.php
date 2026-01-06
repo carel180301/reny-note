@@ -360,6 +360,12 @@
                             <input class="form-control" name="nomor_stgr">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal STGR</label>
+                            <input class="form-control" name="tanggal_stgr">
+                        </div>
+
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input class="form-control" name="nomor_polis">

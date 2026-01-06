@@ -20,6 +20,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
@@ -69,6 +70,7 @@
                     <td class="text-center">{{ $asum->nomor_polis }}</td>
                     <td class="text-center">{{ $asum->tanggal_polis }}</td>
                     <td class="text-center">{{ $asum->nomor_stgr }}</td>
+                    <td class="text-center">{{ $asum->tanggal_stgr }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -135,6 +137,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor STGR</label><input name="nomor_stgr" class="form-control" value="{{ $asum->nomor_stgr }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Tanggal STGR</label><input name="tanggal_stgr" class="form-control" value="{{ $asum->tanggal_stgr }}" required></div>
                 </div>
                             
                 <div class="modal-footer justify-content-center">

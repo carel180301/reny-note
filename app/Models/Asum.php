@@ -17,6 +17,7 @@ class Asum extends Model
         'nama_pekerjaan',
         'nomor_polis',
         'tanggal_polis',
-        'nomor_stgr'
+        'nomor_stgr',
+        'tanggal_stgr'
     ];
 }

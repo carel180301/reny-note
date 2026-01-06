@@ -61,6 +61,12 @@
             <input type="text" name="nomor_stgr" placeholder="Nomor STGR">
         </div>
 
+        <div>
+            <label>Tanggal STGR:</label>
+            <input type="date" name="tanggal_stgr" placeholder="Tanggal STGR">
+        </div>
+
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
