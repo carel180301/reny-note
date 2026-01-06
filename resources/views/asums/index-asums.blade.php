@@ -96,15 +96,11 @@
             <thead>
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e">Nama Tertanggung</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e">Posisi</th>
+                    <th class="text-white" style="background:#2a3d5e">COB</th>
+                    <th class="text-white" style="background:#2a3d5e">Nama Pekerjaan</th>
+                    <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e">Agen / Broker / Ceding</th>
-                    <th class="text-white" style="background:#2a3d5e">Nama Tertanggung</th>
-                    <th class="text-white" style="background:#2a3d5e">WPC</th>
-                    <th class="text-white" style="background:#2a3d5e">E-mail</th>
-                    <th class="text-white" style="background:#2a3d5e">Currency</th>
-                    <th class="text-white" style="background:#2a3d5e">Outstanding</th>
-                    <th class="text-white" style="background:#2a3d5e">Status</th> -->
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -118,9 +114,7 @@
                     <td>{{ $asum->cob }}</td>
                     <td>{{ $asum->nama_pekerjaan }}</td>
                     <td>{{ $asum->nomor_polis }}</td>
-                    <!-- <td>{{ $akm->cabang_bank }}</td>
-                    <td>{{ $akm->nomor_rekening }}</td>
-                    <td>{{ $akm->nomor_polis }}</td> -->
+                    <td>{{ $asum->tanggal_polis }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -225,6 +219,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Nomor Polis</label>
                                         <input class="form-control" name="nomor_polis" value="{{ $asum->nomor_polis }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Polis</label>
+                                        <input class="form-control" name="tanggal_polis" value="{{ $asum->tanggal_polis }}">
                                     </div>
 
                                     <!-- <div class="mb-3">
@@ -344,6 +343,11 @@
                         <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input class="form-control" name="nomor_polis">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Polis</label>
+                            <input class="form-control" name="tanggal_polis">
                         </div>
 
                         <!-- <div class="mb-3">

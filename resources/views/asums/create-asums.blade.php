@@ -52,6 +52,10 @@
             <input type="text" name="nomor_polis" placeholder="Nomor Polis">
         </div>
 
+        <div>
+            <label>Tanggal Polis:</label>
+            <input type="date" name="tanggal_polis" placeholder="Tanggal Polis">
+        </div>
 
         <!-- <div>
             <label>Cabang Bank:</label>

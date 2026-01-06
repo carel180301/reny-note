@@ -5,7 +5,6 @@
         {{-- HEADER ROW --}}
         <div class="row align-items-center mb-2 position-relative">
 
-
             {{-- LEFT: FILTERS --}}
             <div class="col-auto mt-5">
                 @if(request('table') === 'akm')
@@ -360,6 +359,11 @@
                     <div class="mb-3">
                         <label class="form-label">Nomor Polis</label>
                         <input name="nomor_polis" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Polis</label>
+                        <input name="tanggal_polis" class="form-control" required>
                     </div>
                 </div>
 
