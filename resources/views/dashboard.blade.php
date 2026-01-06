@@ -382,6 +382,11 @@
                         <label class="form-label">Tanggal DOL</label>
                         <input name="tanggal_dol" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Jangka Waktu Awal</label>
+                        <input name="jangka_waktu_awal" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

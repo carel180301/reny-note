@@ -20,6 +20,7 @@ class Asum extends Model
         'nomor_stgr',
         'tanggal_stgr',
         'bulan_stgr',
-        'tanggal_dol'
+        'tanggal_dol',
+        'jangka_waktu_awal'
     ];
 }

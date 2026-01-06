@@ -75,6 +75,12 @@
         <input type="date" name="tanggal_dol" value="{{ $asums->tanggal_dol }}">
     </div>
 
+    <div>
+        <label>Jangka Waktu Awal:</label>
+        <input type="date" name="jangka_waktu_awal" value="{{ $asums->jangka_waktu_awal }}">
+    </div>
+
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">

@@ -76,6 +76,11 @@
             <input type="date" name="tanggal_dol" placeholder="Tanggal DOL">
         </div>
 
+        <div>
+            <label>Jangka Waktu Awal:</label>
+            <input type="date" name="jangka_waktu_awal" placeholder="Jangka Waktu Awal">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
