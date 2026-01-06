@@ -9,7 +9,6 @@
             </div>
 
             <div class="flex items-center space-x-3">
-
                 @if(request()->routeIs('dashboard'))
                      <div class="dropdown mr-5">
                         <button style="background-color: #f08523;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,11 +53,17 @@
                         </ul>
                     </div>
 
-                    <button type="button" class="btn p-0 text-primary"
+                    @php
+                        $table = request('table', 'akm');
+                    @endphp
+
+                    <button type="button"
+                            class="btn p-0 text-primary"
                             data-bs-toggle="modal"
-                            data-bs-target="#addAkmModal">
+                            data-bs-target="#add{{ ucfirst($table) }}Modal">
                         <i class="bi bi-plus-lg fs-4"></i>
                     </button>
+
 <!-- 
                     <button type="button" class="btn p-0 text-primary"
                             data-bs-toggle="modal"

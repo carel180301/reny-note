@@ -5,8 +5,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClaimController;
 use App\Models\Akm;
+use App\Models\Asum;
 use App\Http\Controllers\AkmController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\AsumController;
 
 
 Route::get('/', function () {
@@ -18,9 +20,10 @@ Route::get('/dashboard', function (Request $request) {
     $table = $request->get('table', 'akm');
 
     $akms = collect();
+    $asums = collect();
 
-    if ($table === 'akm') {
-        $query = Akm::query()->orderBy('created_at', 'asc');
+   if ($table === 'akm') {
+    $query = Akm::query()->orderBy('created_at', 'asc');
 
         if ($request->filled('status')) {
             $query->where('status', $request->status);
@@ -33,7 +36,11 @@ Route::get('/dashboard', function (Request $request) {
         $akms = $query->get();
     }
 
-    return view('dashboard', compact('akms', 'table'));
+    if ($table === 'asum') {
+        $asums = Asum::orderBy('created_at', 'asc')->get();
+    }
+
+    return view('dashboard', compact('akms', 'asums', 'table'));
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -52,8 +59,16 @@ Route::middleware('auth')->group(function () {
     Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
     Route::resource('akms', AkmController::class);
     Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
-
     // Route::get('/akm', [AkmController::class, 'index']);
+
+    Route::get('/asums', [AsumController::class, 'index'])->name('asums.index');
+    Route::get('/asums/create', [AsumController::class, 'create'])->name('asums.create');
+    Route::post('/asums', [AsumController::class, 'store'])->name('asums.store');
+    Route::get('/asums/{asums}/edit', [AsumController::class, 'edit'])->name('asums.edit');
+    Route::put('/asums/{asums}/update', [AsumController::class, 'update'])->name('asums.update');
+    Route::delete('/asums/{asums}/destroy', [AsumController::class, 'destroy'])->name('asums.destroy');
+    Route::get('/asums/search', [AsumController::class, 'search'])->name('asums.search');
+    Route::post('/asums/upload', [AsumController::class, 'upload'])->name('asums.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

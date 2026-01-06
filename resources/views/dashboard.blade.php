@@ -104,6 +104,10 @@
             @if(request('table') === 'akm')
                 <x-akm-table :akms="$akms" />
             @endif
+
+            @if(request('table') === 'asum')
+                <x-asum-table :asums="$asums" />
+            @endif
         </div>
 
     </div>
@@ -112,7 +116,6 @@
     <div class="modal fade" id="addAkmModal">
         <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-header">
                     <h5 class="modal-title">Tambah Klaim</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
@@ -131,8 +134,6 @@
                             </ul>
                         </div>
                     @endif
-
-
                         <div class="mb-3">
                             <label class="form-label">Nama Debitur</label>
                             <input name="nama_debitur" class="form-control" required>
@@ -319,6 +320,37 @@
             </div>
         </div>
     </div>
+
+    <!-- Add ASUM Modal-->
+    <div class="modal fade" id="addAsumModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim ASUM</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('asums.store') }}">
+                @csrf
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label class="form-label">Nama Tertanggung</label>
+                        <input name="nama_tertanggung" class="form-control" required>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
 
 
     <!-- Upload AKM Modal -->
