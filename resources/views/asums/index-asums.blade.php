@@ -117,6 +117,7 @@
                     <td>{{ $asum->posisi }}</td>
                     <td>{{ $asum->cob }}</td>
                     <td>{{ $asum->nama_pekerjaan }}</td>
+                    <td>{{ $asum->nomor_polis }}</td>
                     <!-- <td>{{ $akm->cabang_bank }}</td>
                     <td>{{ $akm->nomor_rekening }}</td>
                     <td>{{ $akm->nomor_polis }}</td> -->
@@ -221,7 +222,10 @@
                                         <input class="form-control" name="nama_pekerjaan" value="{{ $asum->nama_pekerjaan }}">
                                     </div>
 
-
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Polis</label>
+                                        <input class="form-control" name="nomor_polis" value="{{ $asum->nomor_polis }}">
+                                    </div>
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -337,8 +341,10 @@
                             <input class="form-control" name="nama_pekerjaan">
                         </div>
 
-
-
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Polis</label>
+                            <input class="form-control" name="nomor_polis">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

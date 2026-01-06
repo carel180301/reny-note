@@ -356,6 +356,11 @@
                         <label class="form-label">Nama Pekerjaan</label>
                         <input name="nama_pekerjaan" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Polis</label>
+                        <input name="nomor_polis" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

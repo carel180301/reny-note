@@ -45,6 +45,12 @@
         <input type="text" name="nama_pekerjaan" value="{{ $asums->nama_pekerjaan }}">
     </div>
 
+    <div>
+        <label>Nomor Polis:</label>
+        <input type="text" name="nomor_polis" value="{{ $asums->nomor_polis }}">
+    </div>
+
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">

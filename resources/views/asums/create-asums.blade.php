@@ -47,6 +47,11 @@
         </div>
 
 
+        <div>
+            <label>Nomor Polis:</label>
+            <input type="text" name="nomor_polis" placeholder="Nomor Polis">
+        </div>
+
 
         <!-- <div>
             <label>Cabang Bank:</label>
