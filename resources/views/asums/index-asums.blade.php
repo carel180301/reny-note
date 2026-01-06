@@ -103,6 +103,7 @@
                     <th class="text-white" style="background:#2a3d5e">Nomor STGR</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal STGR</th>
                     <th class="text-white" style="background:#2a3d5e">Bulan STGR</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal DOL</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -119,6 +120,7 @@
                     <td>{{ $asum->nomor_stgr }}</td>
                     <td>{{ $asum->tanggal_stgr }}</td>
                     <td>{{ $asum->bulan_stgr }}</td>
+                    <td>{{ $asum->tanggal_dol }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -244,6 +246,12 @@
                                         <label class="form-label">Bulan STGR</label>
                                         <input class="form-control" name="bulan_stgr" value="{{ $asum->bulan_stgr }}">
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal DOL</label>
+                                        <input class="form-control" name="tanggal_dol" value="{{ $asum->tanggal_dol }}">
+                                    </div>
+
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -383,6 +391,12 @@
                             <label class="form-label">Bulan STGR</label>
                             <input class="form-control" name="bulan_stgr">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal DOL</label>
+                            <input class="form-control" name="tanggal_dol">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

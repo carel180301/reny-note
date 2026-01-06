@@ -71,6 +71,11 @@
             <input type="text" name="bulan_stgr" placeholder="Bulan STGR">
         </div>
 
+        <div>
+            <label>Tanggal DOL:</label>
+            <input type="date" name="tanggal_dol" placeholder="Tanggal DOL">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

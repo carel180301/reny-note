@@ -70,7 +70,10 @@
         <input type="text" name="bulan_stgr" value="{{ $asums->bulan_stgr }}">
     </div>
 
-
+    <div>
+        <label>Tanggal DOL:</label>
+        <input type="date" name="tanggal_dol" value="{{ $asums->tanggal_dol }}">
+    </div>
 
     <!-- <div>
         <label>Nomor Polis:</label>
