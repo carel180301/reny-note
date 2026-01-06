@@ -18,6 +18,7 @@ class Asum extends Model
         'nomor_polis',
         'tanggal_polis',
         'nomor_stgr',
-        'tanggal_stgr'
+        'tanggal_stgr',
+        'bulan_stgr'
     ];
 }

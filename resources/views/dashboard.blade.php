@@ -373,19 +373,19 @@
                         <input name="tanggal_stgr" class="form-control" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Bulan STGR</label>
+                        <input name="bulan_stgr" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">
                     <button class="btn btn-primary d-block mx-auto">Simpan</button>
                 </div>
             </form>
-
         </div>
     </div>
 </div>
-
-
-
     <!-- Upload AKM Modal -->
     <!-- <div class="modal fade" id="uploadAkmModal">
         <div class="modal-dialog">

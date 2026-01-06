@@ -66,6 +66,10 @@
             <input type="date" name="tanggal_stgr" placeholder="Tanggal STGR">
         </div>
 
+        <div>
+            <label>Bulan STGR:</label>
+            <input type="text" name="bulan_stgr" placeholder="Bulan STGR">
+        </div>
 
         <!-- <div>
             <label>Cabang Bank:</label>
