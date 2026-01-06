@@ -41,6 +41,12 @@
             <input type="text" name="cob" placeholder="COB">
         </div>
 
+        <div>
+            <label>Nama Pekerjaan:</label>
+            <input type="text" name="nama_pekerjaan" placeholder="Nama Pekerjaan">
+        </div>
+
+
 
         <!-- <div>
             <label>Cabang Bank:</label>

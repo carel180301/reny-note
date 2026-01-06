@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama_tertanggung');
             $table->string('posisi');
             $table->string('cob');
+            $table->string('nama_pekerjaan');
             // $table->string('nama_pekerjaan');
             // $table->string('nomor_polis');
             // $table->string('tanggal_polis');

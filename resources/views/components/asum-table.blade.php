@@ -16,6 +16,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
                     <th class="text-white" style="background:#2a3d5e;">Posisi</th>
                     <th class="text-white" style="background:#2a3d5e;">COB</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
@@ -60,6 +61,7 @@
                     </td>
 
                     <td class="text-center">{{ $asum->cob }}</td>
+                    <td class="text-center">{{ $asum->nama_pekerjaan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -110,6 +112,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">COB</label><input name="cob" class="form-control" value="{{ $asum->cob }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Nama Pekerjaan</label><input name="nama_pekerjaan" class="form-control" value="{{ $asum->nama_pekerjaan }}" required></div>
                 </div>
 
 
