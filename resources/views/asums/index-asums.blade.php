@@ -114,6 +114,7 @@
             @foreach($asums as $asum)
                 <tr>
                     <td>{{ $asum->nama_tertanggung }}</td>
+                    <td>{{ $asum->posisi }}</td>
                     <!-- <td>{{ $akm->cabang_bank }}</td>
                     <td>{{ $akm->nomor_rekening }}</td>
                     <td>{{ $akm->nomor_polis }}</td> -->
@@ -200,6 +201,14 @@
                                         <label class="form-label">Nama Tertanggung</label>
                                         <input class="form-control" name="nama_tertanggung" value="{{ $asum->nama_tertanggung }}">
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Posisi</label>
+                                        <select class="form-select" name="posisi">
+                                            <option value="member" {{ $asum->posisi=='member'?'selected':'' }}>Member</option>
+                                        </select>
+                                    </div>
+
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -293,6 +302,18 @@
                             <label class="form-label">Nama Tertanggung</label>
                             <input class="form-control" name="nama_tertanggung">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Posisi</label>
+                            <select class="form-select" name="posisi">
+                                <option disabled selected>Pilih Posisi</option>
+                                <option value="member">Member</option>
+                                <!-- <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option> -->
+                            </select>
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

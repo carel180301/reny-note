@@ -26,6 +26,16 @@
             <input type="text" name="nama_tertanggung" placeholder="Nama Tertanggung">
         </div>
 
+        <div>
+            <label class="form-label">Posisi:</label>
+            <select name="posisi" class="form-select">
+                <option value="" disabled selected>Pilih Posisi</option>
+                <option value="member">Member</option>
+                <!-- <option value="tolak">Tolak</option>
+                <option value="proses_analisa">Proses Analisa</option> -->
+            </select>
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

@@ -340,6 +340,13 @@
                         <input name="nama_tertanggung" class="form-control" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Posisi</label>
+                        <select name="posisi" class="form-select" required>
+                            <option value="" disabled selected>Pilih Posisi</option>
+                            <option value="member">Member</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

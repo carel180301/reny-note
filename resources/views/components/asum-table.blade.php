@@ -14,6 +14,7 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e;">No.</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
+                    <th class="text-white" style="background:#2a3d5e;">Posisi</th>
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
@@ -46,6 +47,8 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $asum->nama_tertanggung }}</td>
+                    <td class="text-center">{{ $asum->posisi }}</td>
+
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -88,6 +91,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nama Tertanggung</label><input name="nama_tertanggung" class="form-control" value="{{ $asum->nama_tertanggung }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Posisi</label><input name="posisi" class="form-control" value="{{ $asum->posisi }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
