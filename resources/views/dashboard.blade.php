@@ -117,7 +117,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambah Klaim</h5>
+                    <h5 class="modal-title">Tambah Klaim AKM</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
