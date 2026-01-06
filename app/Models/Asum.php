@@ -16,6 +16,7 @@ class Asum extends Model
         'cob',
         'nama_pekerjaan',
         'nomor_polis',
-        'tanggal_polis'
+        'tanggal_polis',
+        'nomor_stgr'
     ];
 }

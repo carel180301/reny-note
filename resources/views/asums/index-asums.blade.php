@@ -20,7 +20,6 @@
             flex: 1; 
         }
     </style>
-
 </head>
 
 <body>
@@ -101,10 +100,10 @@
                     <th class="text-white" style="background:#2a3d5e">Nama Pekerjaan</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
+                    <th class="text-white" style="background:#2a3d5e">Nomor STGR</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
-
             <tbody>
 
             @foreach($asums as $asum)
@@ -115,6 +114,7 @@
                     <td>{{ $asum->nama_pekerjaan }}</td>
                     <td>{{ $asum->nomor_polis }}</td>
                     <td>{{ $asum->tanggal_polis }}</td>
+                    <td>{{ $asum->nomor_stgr }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -224,6 +224,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input class="form-control" name="tanggal_polis" value="{{ $asum->tanggal_polis }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor STGR</label>
+                                        <input class="form-control" name="nomor_stgr" value="{{ $asum->nomor_stgr }}">
                                     </div>
 
                                     <!-- <div class="mb-3">
@@ -348,6 +353,11 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Polis</label>
                             <input class="form-control" name="tanggal_polis">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor STGR</label>
+                            <input class="form-control" name="nomor_stgr">
                         </div>
 
                         <!-- <div class="mb-3">

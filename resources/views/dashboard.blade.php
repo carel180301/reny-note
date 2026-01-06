@@ -96,9 +96,6 @@
             </div>
         @endif
 
-
-
-    
         <div class="bg-white shadow-sm rounded px-1">
             @if(request('table') === 'akm')
                 <x-akm-table :akms="$akms" />
@@ -364,6 +361,11 @@
                     <div class="mb-3">
                         <label class="form-label">Tanggal Polis</label>
                         <input name="tanggal_polis" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor STGR</label>
+                        <input name="nomor_stgr" class="form-control" required>
                     </div>
                 </div>
 

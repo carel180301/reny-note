@@ -55,6 +55,11 @@
         <input type="date" name="tanggal_polis" value="{{ $asums->tanggal_polis }}">
     </div>
 
+    <div>
+        <label>Nomor STGR:</label>
+        <input type="text" name="nomor_stgr" value="{{ $asums->nomor_stgr }}">
+    </div>
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">
