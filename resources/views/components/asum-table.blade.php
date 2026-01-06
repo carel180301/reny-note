@@ -47,8 +47,16 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $asum->nama_tertanggung }}</td>
-                    <td class="text-center">{{ $asum->posisi }}</td>
 
+                    <td class="text-center">
+                        @if($asum->posisi === 'member')
+                            <span class="badge bg-danger">Member</span>
+                        {{--
+                        @else
+                            <span class="badge bg-danger">Not Done Yet</span>
+                        --}}
+                        @endif
+                    </td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
