@@ -95,7 +95,10 @@
         <input type="text" name="nilai_tsi" value="{{ $asums->nilai_tsi }}">
     </div>
 
-
+    <div>
+        <label>Share ASK:</label>
+        <input type="text" name="share_ask" value="{{ $asums->share_ask }}">
+    </div>
 
     <!-- <div>
         <label>Nomor Polis:</label>

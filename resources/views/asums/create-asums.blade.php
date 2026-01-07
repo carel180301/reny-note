@@ -96,6 +96,10 @@
             <input type="text" name="nilai_tsi" placeholder="Nilai TSI">
         </div>
 
+        <div>
+            <label>Share ASK:</label>
+            <input type="text" name="share_ask" placeholder="Share ASK">
+        </div>
 
         <!-- <div>
             <label>Cabang Bank:</label>
@@ -220,10 +224,6 @@
             <label>Tanggal Surat Persetujuan atau Penolakan: </label> 
             <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" placeholder="Tanggal Surat Persetujuan atau Penolakan" />
         </div> -->
-
-
-
-
 
         <!-- <div>
             <label>Nomor Polis: </label>
