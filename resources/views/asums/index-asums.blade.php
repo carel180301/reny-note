@@ -108,6 +108,7 @@
                     <th class="text-white" style="background:#2a3d5e">Penyebab Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai TSI</th>
                     <th class="text-white" style="background:#2a3d5e">Share ASK</th>
+                    <th class="text-white" style="background:#2a3d5e">Nilai Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -130,6 +131,7 @@
                     <td>{{ $asum->penyebab_klaim }}</td>
                     <td>{{ $asum->nilai_tsi }}</td>
                     <td>{{ $asum->share_ask }}</td>
+                    <td>{{ $asum->nilai_share_ask }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -281,6 +283,11 @@
                                         <input class="form-control" name="share_ask" value="{{ $asum->share_ask }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Nilai Share ASK</label>
+                                        <input class="form-control" name="nilai_share_ask" value="{{ $asum->nilai_share_ask }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
                                         <input class="form-control" name="cabang_bank" value="{{ $akm->cabang_bank }}">
@@ -359,7 +366,6 @@
     <div class="modal fade" id="addAsumModal">
         <div class="modal-dialog">
             <div class="modal-content">
-
                 <div class="modal-header">
                     <h5 class="modal-title">Add New Asum</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
@@ -448,6 +454,11 @@
                         <div class="mb-3">
                             <label class="form-label">Share ASK</label>
                             <input class="form-control" name="share_ask">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Share ASK</label>
+                            <input class="form-control" name="nilai_share_ask">
                         </div>
 
                         <!-- <div class="mb-3">

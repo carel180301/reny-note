@@ -407,6 +407,11 @@
                         <label class="form-label">Share ASK</label>
                         <input name="share_ask" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nilai Share ASK</label>
+                        <input name="nilai_share_ask" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

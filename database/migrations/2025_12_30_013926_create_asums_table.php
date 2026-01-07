@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('penyebab_klaim');
             $table->string('nilai_tsi');
             $table->string('share_ask');
-            // $table->string('tanggal_dol');
+            $table->string('nilai_share_ask');
             // $table->string('jangka_waktu_awal');
             // $table->string('jangka_waktu_akhir');
             // $table->string('penyebab_klaim');

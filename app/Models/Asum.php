@@ -25,6 +25,7 @@ class Asum extends Model
         'jangka_waktu_akhir',
         'penyebab_klaim',
         'nilai_tsi',
-        'share_ask'
+        'share_ask',
+        'nilai_share_ask'
     ];
 }

@@ -100,6 +100,12 @@
         <input type="text" name="share_ask" value="{{ $asums->share_ask }}">
     </div>
 
+    <div>
+        <label>Nilai Share ASK:</label>
+        <input type="text" name="nilai_share_ask" value="{{ $asums->nilai_share_ask }}">
+    </div>
+
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">
