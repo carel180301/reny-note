@@ -39,6 +39,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Claim Settlement</th>
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
@@ -103,6 +104,7 @@
 
                     <td class="text-center">{{ $asum->keterangan }}</td>
                     <td class="text-center">{{ $asum->tanggal_persetujuan }}</td>
+                    <td class="text-center">{{ $asum->nomor_claim_settlement }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -245,6 +247,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Persetujuan</label><input name="tanggal_persetujuan" class="form-control" value="{{ $asum->tanggal_persetujuan }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Nomor Claim Settlement</label><input name="nomor_claim_settlement" class="form-control" value="{{ $asum->nomor_claim_settlement }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

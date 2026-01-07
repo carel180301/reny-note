@@ -161,7 +161,7 @@
             </select>
         </div>
 
-         <div>
+        <div>
             <label>Keterangan / Feedback Pemutus:</label>
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
@@ -170,6 +170,12 @@
             <label>Tanggal Persetujuan:</label>
             <input type="date" name="tanggal_persetujuan" placeholder="Tanggal Persetujuan">
         </div>
+
+        <div>
+            <label>Nomor Claim Settlement:</label>
+            <input type="text" name="nomor_claim_settlement" placeholder="Nomor Claim Settlement">
+        </div>
+
         
         <div>
             <input type="submit" value="Save a New Claim"/>

@@ -39,6 +39,7 @@ return new class extends Migration
             $table->string('status_sistem');
             $table->string('keterangan');
             $table->string('tanggal_persetujuan');
+            $table->string('nomor_claim_settlement');
             $table->timestamps();
         });
     }

@@ -149,6 +149,7 @@
                     <td>{{ $asum->status_sistem }}</td>
                     <td>{{ $asum->keterangan }}</td>
                     <td>{{ $asum->tanggal_persetujuan }}</td>
+                    <td>{{ $asum->nomor_claim_settlement }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -345,7 +346,7 @@
                                         <input class="form-control" name="status_sistem" value="{{ $asum->status_sistem }}">
                                     </div>
 
-                                     <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Keterangan / Feedback Pemutus</label>
                                         <input class="form-control" name="keterangan" value="{{ $asum->keterangan }}">
                                     </div>
@@ -353,6 +354,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Tanggal Persetujuan</label>
                                         <input class="form-control" name="tanggal_persetujuan" value="{{ $asum->tanggal_persetujuan }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Claim Settlement</label>
+                                        <input class="form-control" name="nomor_claim_settlement" value="{{ $asum->nomor_claim_settlement }}">
                                     </div>
 
                                     <div class="text-center">
@@ -521,10 +527,16 @@
                             <input class="form-control" name="keterangan">
                         </div>
 
-                           <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Tanggal Persetujuan</label>
                             <input class="form-control" name="tanggal_persetujuan">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Claim Settlement</label>
+                            <input class="form-control" name="nomor_claim_settlement">
+                        </div>
+
 
                         <div class="text-center">
                             <button class="btn btn-primary">Save</button>
