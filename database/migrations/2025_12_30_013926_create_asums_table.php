@@ -33,6 +33,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('tindak_lanjut');
             $table->string('nomor_surat_tambahan_data');
+            $table->string('tanggal_surat_tambahan_data');
 
             // $table->string('jangka_waktu_awal');
             // $table->string('jangka_waktu_akhir');

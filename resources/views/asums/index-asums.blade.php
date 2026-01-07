@@ -112,6 +112,8 @@
                     <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Status</th>
                     <th class="text-white" style="background:#2a3d5e">Tindak Lanjut</th>
+                    <th class="text-white" style="background:#2a3d5e">Nomor Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -138,6 +140,8 @@
                     <td>{{ $asum->nilai_tuntutan_klaim }}</td>
                     <td>{{ $asum->status }}</td>
                     <td>{{ $asum->tindak_lanjut }}</td>
+                    <td>{{ $asum->nomor_surat_tambahan_data }}</td>
+                    <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -308,6 +312,17 @@
                                         <label class="form-label">Tindak Lanjut</label>
                                         <input class="form-control" name="tindak_lanjut" value="{{ $asum->tindak_lanjut }}">
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Surat Tambahan Data</label>
+                                        <input class="form-control" name="nomor_surat_tambahan_data" value="{{ $asum->nomor_surat_tambahan_data }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Surat Tambahan Data</label>
+                                        <input class="form-control" name="tanggal_surat_tambahan_data" value="{{ $asum->tanggal_surat_tambahan_data }}">
+                                    </div>
+
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -513,6 +528,10 @@
                             <input class="form-control" name="nomor_surat_tambahan_data">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Surat Tambahan Data</label>
+                            <input class="form-control" name="tanggal_surat_tambahan_data">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

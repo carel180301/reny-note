@@ -40,6 +40,7 @@ class AsumController extends Controller
             'status' => 'required',
             'tindak_lanjut' => 'required',
             'nomor_surat_tambahan_data' => 'required',
+            'tanggal_surat_tambahan_data' => 'required'
             // 'tanggal_dol' => 'required',
             // 'jangka_waktu_awal' => 'required',
             // 'jangka_waktu_akhir' => 'required',
@@ -98,7 +99,8 @@ class AsumController extends Controller
             'nilai_tuntutan_klaim' => 'required',
             'status' => 'required',
             'tindak_lanjut' => 'required',
-            'nomor_surat_tambahan_data' => 'required'
+            'nomor_surat_tambahan_data' => 'required',
+            'tanggal_surat_tambahan_data' => 'required'
 
             // 'bulan_stgr' => 'required',
             // 'tanggal_dol' => 'required',
@@ -136,7 +138,6 @@ class AsumController extends Controller
 
     public function destroy(Asum $asums){
         $asums->delete();
-
         return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
     }
 
@@ -164,6 +165,7 @@ class AsumController extends Controller
             ->orWhere('status', 'like', "%$keyword%")
             ->orWhere('tindak_lanjut', 'like', "%$keyword%")
             ->orWhere('nomor_surat_tambahan_data', 'like', "%$keyword%")
+            ->orWhere('tanggal_surat_tambahan_data', 'like', "%$keyword%")
 
             // ->orWhere('plafond', 'like', "%$keyword%")
             // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
