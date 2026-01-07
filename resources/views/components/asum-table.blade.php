@@ -114,6 +114,17 @@
                     <td class="text-center">{{ $asum->tanggal_register_sistem }}</td>
 
                     <td class="text-center">
+                        @if($asum->status === '-')
+                            <span class="badge bg-warning">-</span>
+                        {{--
+                        @else
+                            <span class="badge bg-primary">Not Done Yet</span>
+                        --}}
+                        @endif
+                    </td>
+                     
+
+                    <td class="text-center">
                         <div class="d-inline-flex gap-2">
                             <button class="btn p-0 text-warning" data-bs-toggle="modal" data-bs-target="#editAsumModal{{ $asum->id }}">
                                 <i class="bi bi-pencil-fill fs-5"></i>
@@ -243,6 +254,11 @@
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Register Sistem</label><input name="tanggal_register_sistem" class="form-control" value="{{ $asum->tanggal_register_sistem }}" required></div>
                 </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Status Sistem</label><input name="status_sistem" class="form-control" value="{{ $asum->status_sistem }}" required></div>
+                </div>
+
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>

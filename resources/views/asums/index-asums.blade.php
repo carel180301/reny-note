@@ -146,6 +146,7 @@
                     <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
                     <td>{{ $asum->nomor_register_sistem }}</td>
                     <td>{{ $asum->tanggal_register_sistem }}</td>
+                    <td>{{ $asum->status_sistem }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -336,6 +337,12 @@
                                         <label class="form-label">Tanggal Register Sistem</label>
                                         <input class="form-control" name="tanggal_register_sistem" value="{{ $asum->tanggal_register_sistem }}">
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Status Sistem</label>
+                                        <input class="form-control" name="status_sistem" value="{{ $asum->status_sistem }}">
+                                    </div>
+
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -555,6 +562,18 @@
                             <label class="form-label">Tanggal Register Sistem</label>
                             <input class="form-control" name="tanggal_register_sistem">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status Sistem</label>
+                            <select class="form-select" name="status_sistem">
+                                <option disabled selected>Pilih Status Sistem</option>
+                                <option value="">-</option>
+                                <!-- <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option> -->
+                            </select>
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

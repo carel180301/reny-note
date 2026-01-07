@@ -450,6 +450,15 @@
                         <label class="form-label">Tanggal Register Sistem</label>
                         <input name="tanggal_register_sistem" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status Sistem</label>
+                        <select name="status_sistem" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status Sistem</option>
+                            <option value="">-</option>
+                        </select>
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">

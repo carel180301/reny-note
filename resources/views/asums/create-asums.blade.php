@@ -157,6 +157,16 @@
             <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem">
         </div>
         
+        <div>
+            <label class="form-label">Status Sistem:</label>
+            <select name="status_sistem" class="form-select">
+                <option value="" disabled selected>Pilih Status</option>
+                <option value="">-</option>
+                <!-- <option value="tolak">Tolak</option>
+                <option value="proses_analisa">Proses Analisa</option> -->
+            </select>
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
