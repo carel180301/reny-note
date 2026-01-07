@@ -119,6 +119,11 @@
         </select>
     </div>
 
+    <div>
+        <label>Tindak Lanjut:</label>
+        <input type="text" name="tindak_lanjut" value="{{ $asums->tindak_lanjut }}">
+    </div>
+
 
     <!-- <div>
         <label>Nomor Polis:</label>

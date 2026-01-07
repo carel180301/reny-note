@@ -126,6 +126,12 @@
             </select>
         </div>
 
+        
+        <div>
+            <label>Tindak Lanjut:</label>
+            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut">
+        </div>
+
 
         <!-- <div>
             <label>Cabang Bank:</label>

@@ -111,6 +111,7 @@
                     <th class="text-white" style="background:#2a3d5e">Nilai Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Status</th>
+                    <th class="text-white" style="background:#2a3d5e">Tindak Lanjut</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -136,6 +137,7 @@
                     <td>{{ $asum->nilai_share_ask }}</td>
                     <td>{{ $asum->nilai_tuntutan_klaim }}</td>
                     <td>{{ $asum->status }}</td>
+                    <td>{{ $asum->tindak_lanjut }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -302,6 +304,10 @@
                                         <input class="form-control" name="status" value="{{ $asum->status }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tindak Lanjut</label>
+                                        <input class="form-control" name="tindak_lanjut" value="{{ $asum->tindak_lanjut }}">
+                                    </div>
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -492,7 +498,10 @@
                             </select>
                         </div>
 
-
+                        <div class="mb-3">
+                            <label class="form-label">Tindak Lanjut</label>
+                            <input class="form-control" name="tindak_lanjut">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

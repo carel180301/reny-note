@@ -31,6 +31,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Nilai Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
@@ -101,6 +102,8 @@
                         --}}
                         @endif
                     </td>
+                    
+                    <td class="text-center">{{ $asum->tindak_lanjut }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -211,6 +214,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $asum->status }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Tindak Lanjut</label><input name="tindak_lanjut" class="form-control" value="{{ $asum->tindak_lanjut }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
