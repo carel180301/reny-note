@@ -43,7 +43,8 @@ class AsumController extends Controller
             'tanggal_surat_tambahan_data' => 'required',
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
-            'status_sistem' => 'required'
+            'status_sistem' => 'required',
+            'keterangan' => 'required'
 
             // 'jangka_waktu_akhir' => 'required',
             // 'penyebab_klaim' => 'required',

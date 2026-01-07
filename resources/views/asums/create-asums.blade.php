@@ -167,6 +167,11 @@
             </select>
         </div>
 
+         <div>
+            <label>Keterangan / Feedback Pemutus:</label>
+            <input type="text" name="keterangan" placeholder="Keterangan">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

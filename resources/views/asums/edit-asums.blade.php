@@ -158,6 +158,11 @@
         </select>
     </div>
 
+    <div>
+        <label>Keterangan / Feedback Pemutus:</label>
+        <input type="text" name="keterangan" value="{{ $asums->keterangan }}">
+    </div>
+
 
     <!-- <div>
         <label>Nomor Polis:</label>

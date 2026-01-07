@@ -259,6 +259,11 @@
                     <div class="mb-3"><label class="form-label">Status Sistem</label><input name="status_sistem" class="form-control" value="{{ $asum->status_sistem }}" required></div>
                 </div>
 
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Keterangan / Feedback Pemutus</label><input name="keterangan" class="form-control" value="{{ $asum->keterangan }}" required></div>
+                </div>
+
+
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>

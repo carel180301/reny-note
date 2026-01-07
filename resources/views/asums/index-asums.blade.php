@@ -147,6 +147,7 @@
                     <td>{{ $asum->nomor_register_sistem }}</td>
                     <td>{{ $asum->tanggal_register_sistem }}</td>
                     <td>{{ $asum->status_sistem }}</td>
+                    <td>{{ $asum->keterangan }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -341,6 +342,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Status Sistem</label>
                                         <input class="form-control" name="status_sistem" value="{{ $asum->status_sistem }}">
+                                    </div>
+
+                                     <div class="mb-3">
+                                        <label class="form-label">Keterangan / Feedback Pemutus</label>
+                                        <input class="form-control" name="keterangan" value="{{ $asum->keterangan }}">
                                     </div>
 
 
@@ -572,6 +578,11 @@
                                 <option value="EUR">EUR</option>
                                 <option value="SGD">SGD</option> -->
                             </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Keterangan / Feedback Pemutus</label>
+                            <input class="form-control" name="keterangan">
                         </div>
 
 
