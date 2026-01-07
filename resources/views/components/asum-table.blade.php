@@ -109,6 +109,7 @@
                     <td class="text-center">{{ $asum->nomor_claim_settlement }}</td>
                     <td class="text-center">{{ $asum->tanggal_claim_settlement }}</td>
                     <td class="text-center">{{ $asum->nomor_surat_persetujuan_atau_penolakan }}</td>
+                    <td class="text-center">{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -263,6 +264,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor Surat Persetujuan atau Penolakan</label><input name="nomor_surat_persetujuan_atau_penolakan" class="form-control" value="{{ $asum->nomor_surat_persetujuan_atau_penolakan }}" required></div>
+                </div>
+
+                 <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label><input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" value="{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

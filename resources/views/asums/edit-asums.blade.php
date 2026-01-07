@@ -184,6 +184,11 @@
     </div>
     
     <div>
+        <label>Tanggal Surat Persetujuan atau Penolakan:</label>
+        <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $asums->tanggal_surat_persetujuan_atau_penolakan }}">
+    </div>
+
+    <div>
         <button type="submit">Update</button>
     </div>
 </form>

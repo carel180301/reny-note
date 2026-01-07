@@ -152,6 +152,7 @@
                     <td>{{ $asum->nomor_claim_settlement }}</td>
                     <td>{{ $asum->tanggal_claim_settlement }}</td>
                     <td>{{ $asum->nomor_surat_persetujuan_atau_penolakan }}</td>
+                    <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
