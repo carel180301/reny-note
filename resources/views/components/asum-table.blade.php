@@ -90,7 +90,17 @@
                     <td class="text-center">{{ $asum->share_ask }}</td>
                     <td class="text-center">{{ $asum->nilai_share_ask }}</td>
                     <td class="text-center">{{ $asum->nilai_tuntutan_klaim }}</td>
-                    <td class="text-center">{{ $asum->status }}</td>
+                    <!-- <td class="text-center">{{ $asum->status }}</td> -->
+
+                    <td class="text-center">
+                        @if($asum->status === 'tambahan data')
+                            <span class="badge bg-warning">Tambahan Data</span>
+                        {{--
+                        @else
+                            <span class="badge bg-primary">Not Done Yet</span>
+                        --}}
+                        @endif
+                    </td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
