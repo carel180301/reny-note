@@ -172,6 +172,12 @@
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
+        <div>
+            <label>Tanggal Persetujuan:</label>
+            <input type="date" name="tanggal_persetujuan" placeholder="Tanggal Persetujuan">
+        </div>
+        
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

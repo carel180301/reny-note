@@ -38,6 +38,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
@@ -126,6 +127,7 @@
                     </td>
 
                     <td class="text-center">{{ $asum->keterangan }}</td>
+                    <td class="text-center">{{ $asum->tanggal_persetujuan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -264,6 +266,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Keterangan / Feedback Pemutus</label><input name="keterangan" class="form-control" value="{{ $asum->keterangan }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Tanggal Persetujuan</label><input name="tanggal_persetujuan" class="form-control" value="{{ $asum->tanggal_persetujuan }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

@@ -163,6 +163,11 @@
         <input type="text" name="keterangan" value="{{ $asums->keterangan }}">
     </div>
 
+    <div>
+        <label>Tanggal Persetujuan:</label>
+        <input type="date" name="tanggal_persetujuan" value="{{ $asums->tanggal_persetujuan }}">
+    </div>
+    
 
     <!-- <div>
         <label>Nomor Polis:</label>

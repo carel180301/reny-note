@@ -148,6 +148,7 @@
                     <td>{{ $asum->tanggal_register_sistem }}</td>
                     <td>{{ $asum->status_sistem }}</td>
                     <td>{{ $asum->keterangan }}</td>
+                    <td>{{ $asum->tanggal_persetujuan }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -347,6 +348,11 @@
                                      <div class="mb-3">
                                         <label class="form-label">Keterangan / Feedback Pemutus</label>
                                         <input class="form-control" name="keterangan" value="{{ $asum->keterangan }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Persetujuan</label>
+                                        <input class="form-control" name="tanggal_persetujuan" value="{{ $asum->tanggal_persetujuan }}">
                                     </div>
 
 
@@ -585,6 +591,10 @@
                             <input class="form-control" name="keterangan">
                         </div>
 
+                           <div class="mb-3">
+                            <label class="form-label">Tanggal Persetujuan</label>
+                            <input class="form-control" name="tanggal_persetujuan">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
