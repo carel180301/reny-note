@@ -387,6 +387,11 @@
                         <label class="form-label">Jangka Waktu Awal</label>
                         <input name="jangka_waktu_awal" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Jangka Waktu Akhir</label>
+                        <input name="jangka_waktu_akhir" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

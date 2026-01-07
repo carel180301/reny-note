@@ -80,6 +80,10 @@
         <input type="date" name="jangka_waktu_awal" value="{{ $asums->jangka_waktu_awal }}">
     </div>
 
+    <div>
+        <label>Jangka Waktu Akhir:</label>
+        <input type="date" name="jangka_waktu_akhir" value="{{ $asums->jangka_waktu_akhir }}">
+    </div>
 
     <!-- <div>
         <label>Nomor Polis:</label>

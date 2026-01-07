@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('bulan_stgr');
             $table->string('tanggal_dol');
             $table->string('jangka_waktu_awal');
+            $table->string('jangka_waktu_akhir');
             // $table->string('tanggal_dol');
             // $table->string('jangka_waktu_awal');
             // $table->string('jangka_waktu_akhir');

@@ -24,6 +24,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
+                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
@@ -77,6 +78,7 @@
                     <td class="text-center">{{ $asum->bulan_stgr }}</td>
                     <td class="text-center">{{ $asum->tanggal_dol }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_awal }}</td>
+                    <td class="text-center">{{ $asum->jangka_waktu_akhir }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -161,10 +163,13 @@
                     <div class="mb-3"><label class="form-label">Jangka Waktu Awal</label><input name="jangka_waktu_awal" class="form-control" value="{{ $asum->jangka_waktu_awal }}" required></div>
                 </div>
 
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Jangka Waktu Akhir</label><input name="jangka_waktu_akhir" class="form-control" value="{{ $asum->jangka_waktu_akhir }}" required></div>
+                </div>
+
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>
                 </div>
-
             </form>
         </div>
     </div>
