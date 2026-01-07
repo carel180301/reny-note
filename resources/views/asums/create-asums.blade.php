@@ -91,6 +91,12 @@
             <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim">
         </div>
 
+        <div>
+            <label>Nilai TSI:</label>
+            <input type="text" name="nilai_tsi" placeholder="Nilai TSI">
+        </div>
+
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

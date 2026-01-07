@@ -90,6 +90,12 @@
         <input type="text" name="penyebab_klaim" value="{{ $asums->penyebab_klaim }}">
     </div>
 
+    <div>
+        <label>Nilai TSI:</label>
+        <input type="text" name="nilai_tsi" value="{{ $asums->nilai_tsi }}">
+    </div>
+
+
 
     <!-- <div>
         <label>Nomor Polis:</label>
