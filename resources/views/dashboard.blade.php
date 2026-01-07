@@ -478,6 +478,11 @@
                         <label class="form-label">Tanggal Claim Settlement</label>
                         <input name="tanggal_claim_settlement" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
+                        <input name="nomor_surat_persetujuan_atau_penolakan" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">
