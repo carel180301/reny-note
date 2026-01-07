@@ -39,30 +39,6 @@
                     <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
-
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
-                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
-                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
-                    <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Plafond</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan / Penolakan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan / Penolakan</th> -->
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
@@ -98,7 +74,6 @@
                     <td class="text-center">{{ $asum->share_ask }}</td>
                     <td class="text-center">{{ $asum->nilai_share_ask }}</td>
                     <td class="text-center">{{ $asum->nilai_tuntutan_klaim }}</td>
-                    <!-- <td class="text-center">{{ $asum->status }}</td> -->
 
                     <td class="text-center">
                         @if($asum->status === 'tambahan data')

@@ -35,6 +35,7 @@ class Asum extends Model
         'nomor_register_sistem',
         'tanggal_register_sistem',
         'status_sistem',
-        'keterangan'
+        'keterangan',
+        'tanggal_persetujuan'
     ];
 }

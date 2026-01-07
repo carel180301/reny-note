@@ -44,22 +44,8 @@ class AsumController extends Controller
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
-            'keterangan' => 'required'
-
-            // 'jangka_waktu_akhir' => 'required',
-            // 'penyebab_klaim' => 'required',
-            // 'plafond' => 'required',
-            // 'nilai_tuntutan_klaim' => 'required',
-            // 'status' => 'required',
-            // 'tindak_lanjut' => 'required',
-            // 'nomor_surat_tambahan_data' => 'required',
-            // 'tanggal_surat_tambahan_data' => 'required',
-            // 'nomor_register_sistem' => 'required',
-            // 'tanggal_register_sistem' => 'required',
-            // 'status_sistem' => 'required',
-            // 'keterangan' => 'required',
-            // 'nomor_surat_persetujuan_atau_penolakan' => 'required',
-            // 'tanggal_surat_persetujuan_atau_penolakan' => 'required'
+            'keterangan' => 'required',
+            'tanggal_persetujuan' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -106,25 +92,9 @@ class AsumController extends Controller
             'tanggal_surat_tambahan_data' => 'required',
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
-            'status_sistem' => 'required'
-
-            // 'bulan_stgr' => 'required',
-            // 'tanggal_dol' => 'required',
-            // 'jangka_waktu_awal' => 'required',
-            // 'jangka_waktu_akhir' => 'required',
-            // 'penyebab_klaim' => 'required',
-            // 'plafond' => 'required',
-            // 'nilai_tuntutan_klaim' => 'required',
-            // 'status' => 'required',
-            // 'tindak_lanjut' => 'required',
-            // 'nomor_surat_tambahan_data' => 'required',
-            // 'tanggal_surat_tambahan_data' => 'required',
-            // 'nomor_register_sistem' => 'required',
-            // 'tanggal_register_sistem' => 'required',
-            // 'status_sistem' => 'required',
-            // 'keterangan' => 'required',
-            // 'nomor_surat_persetujuan_atau_penolakan' => 'required',
-            // 'tanggal_surat_persetujuan_atau_penolakan' => 'required'
+            'status_sistem' => 'required',
+            'keterangan' => 'required',
+            'tanggal_persetujuan' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -175,26 +145,8 @@ class AsumController extends Controller
             ->orWhere('nomor_register_sistem', 'like', "%$keyword%")
             ->orWhere('tanggal_register_sistem', 'like', "%$keyword%")
             ->orWhere('status_sistem', 'like', "%$keyword%")
-
-            // ->orWhere('plafond', 'like', "%$keyword%")
-            // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
-            // ->orWhere('status', 'like', "%$keyword%")
-            // ->orWhere('tindak_lanjut', 'like', "%$keyword%")
-            // ->orWhere('nomor_surat_tambahan_data', 'like', "%$keyword%")
-            // ->orWhere('tanggal_surat_tambahan_data', 'like', "%$keyword%")
-            // ->orWhere('nomor_register_sistem', 'like', "%$keyword%")
-            // ->orWhere('tanggal_register_sistem', 'like', "%$keyword%")
-            // ->orWhere('status_sistem', 'like', "%$keyword%")
-            // ->orWhere('keterangan', 'like', "%$keyword%")
-            // ->orWhere('nomor_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
-            // ->orWhere('tanggal_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
-
-            // ->orWhere('broker', 'like', "%$keyword%")
-            // ->orWhere('nama_tertanggung', 'like', "%$keyword%")
-            // ->orWhere('currency', 'like', "%$keyword%")
-            // ->orWhere('outstanding', 'like', "%$keyword%")
-            // ->orWhere('email', 'like', "%$keyword%")
-            // ->orWhere('cob', 'like', "%$keyword%")
+            ->orWhere('keterangan', 'like', "%$keyword%")
+            ->orWhere('tanggal_persetujuan', 'like', "%$keyword%")
             // ->orderBy('created_at', 'desc')
             ->get();
 

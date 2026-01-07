@@ -355,67 +355,6 @@
                                         <input class="form-control" name="tanggal_persetujuan" value="{{ $asum->tanggal_persetujuan }}">
                                     </div>
 
-
-                                    <!-- <div class="mb-3">
-                                        <label class="form-label">Cabang Bank</label>
-                                        <input class="form-control" name="cabang_bank" value="{{ $akm->cabang_bank }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Nomor Rekening</label>
-                                        <input class="form-control" name="nomor_rekening" value="{{ $akm->nomor_rekening }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Nomor Polis</label>
-                                        <input class="form-control" name="nomor_polis" value="{{ $akm->nomor_polis }}">
-                                    </div> -->
-
-                                    <!-- <div class="mb-3">
-                                        <label class="form-label">Nomor Polis</label>
-                                        <input class="form-control" name="nomor_polis" value="{{ $piutang->nomor_polis }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Tanggal Polis</label>
-                                        <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Agen / Broker / Ceding</label>
-                                        <input class="form-control" name="broker" value="{{ $piutang->broker }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Nama Tertanggung</label>
-                                        <input class="form-control" name="nama_tertanggung" value="{{ $piutang->nama_tertanggung }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">WPC</label>
-                                        <input type="date" class="form-control" name="wpc" value="{{ $piutang->wpc }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input class="form-control" name="email" value="{{ $piutang->email }}">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Currency</label>
-                                        <select class="form-select" name="currency">
-                                            <option value="IDR" {{ $piutang->currency=='IDR'?'selected':'' }}>IDR</option>
-                                            <option value="USD" {{ $piutang->currency=='USD'?'selected':'' }}>USD</option>
-                                            <option value="EUR" {{ $piutang->currency=='EUR'?'selected':'' }}>EUR</option>
-                                            <option value="SGD" {{ $piutang->currency=='SGD'?'selected':'' }}>SGD</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label class="form-label">Outstanding</label>
-                                        <input class="form-control" name="outstanding" value="{{ $piutang->outstanding }}">
-                                    </div> -->
-
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
@@ -453,9 +392,6 @@
                             <select class="form-select" name="posisi">
                                 <option disabled selected>Pilih Posisi</option>
                                 <option value="member">Member</option>
-                                <!-- <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                                <option value="SGD">SGD</option> -->
                             </select>
                         </div>
 
@@ -539,9 +475,6 @@
                             <select class="form-select" name="status">
                                 <option disabled selected>Pilih Status</option>
                                 <option value="tambahan data">Tambahan Data</option>
-                                <!-- <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                                <option value="SGD">SGD</option> -->
                             </select>
                         </div>
 
@@ -580,9 +513,6 @@
                             <select class="form-select" name="status_sistem">
                                 <option disabled selected>Pilih Status Sistem</option>
                                 <option value="">-</option>
-                                <!-- <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                                <option value="SGD">SGD</option> -->
                             </select>
                         </div>
 
@@ -595,57 +525,6 @@
                             <label class="form-label">Tanggal Persetujuan</label>
                             <input class="form-control" name="tanggal_persetujuan">
                         </div>
-
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Nomor Polis</label>
-                            <input class="form-control" name="nomor_polis">
-                        </div> -->
-
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Nomor Polis</label>
-                            <input class="form-control" name="nomor_polis">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Polis</label>
-                            <input type="date" class="form-control" name="tanggal_polis">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Agen / Broker / Ceding</label>
-                            <input class="form-control" name="broker">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nama Tertanggung</label>
-                            <input class="form-control" name="nama_tertanggung">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">WPC</label>
-                            <input type="date" class="form-control" name="wpc">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input class="form-control" name="email">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Currency</label>
-                            <select class="form-select" name="currency">
-                                <option disabled selected>Select currency</option>
-                                <option value="IDR">IDR</option>
-                                <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                                <option value="SGD">SGD</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Outstanding</label>
-                            <input class="form-control" name="outstanding">
-                        </div> -->
 
                         <div class="text-center">
                             <button class="btn btn-primary">Save</button>

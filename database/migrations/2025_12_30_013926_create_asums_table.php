@@ -39,29 +39,6 @@ return new class extends Migration
             $table->string('status_sistem');
             $table->string('keterangan');
             $table->string('tanggal_persetujuan');
-
-            // $table->string('jangka_waktu_akhir');
-            // $table->string('penyebab_klaim');
-            // $table->string('nilai_tsi');
-            // $table->string('share_ask');
-            // $table->string('nilai_share_ask');
-            // $table->string('nilai_tuntutan_klaim');
-            // $table->string('status');
-            // $table->string('tindak_lanjut');
-            // $table->string('nomor_surat_tambahan_data');
-            // $table->string('tanggal_surat_tambahan_data');
-            // $table->string('nomor_register_sistem');
-            // $table->string('tanggal_register_sistem');
-            // $table->string('status_sistem');
-            // $table->string('keterangan');
-            // $table->string('tanggal_persetujuan');
-            // $table->string('nomor_claim_settlement');
-            // $table->string('tanggal_claim_settlement');
-            // $table->string('nomor_surat_persetujuan_atau_penolakan');
-            // $table->string('tanggal_surat_persetujuan_atau_penolakan');
-            // $table->string('nomor_memo_permintaan_dana');
-            // $table->string('tanggal_memo_permintaan_dana');
-            // $table->string('status_pembayaran');
             $table->timestamps();
         });
     }
