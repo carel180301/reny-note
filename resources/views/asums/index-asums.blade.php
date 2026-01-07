@@ -503,6 +503,17 @@
                             <input class="form-control" name="tindak_lanjut">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tindak Lanjut</label>
+                            <input class="form-control" name="tindak_lanjut">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Surat Tambahan Data</label>
+                            <input class="form-control" name="nomor_surat_tambahan_data">
+                        </div>
+
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input class="form-control" name="nomor_polis">

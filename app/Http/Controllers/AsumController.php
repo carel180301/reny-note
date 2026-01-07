@@ -39,7 +39,7 @@ class AsumController extends Controller
             'nilai_tuntutan_klaim' => 'required',
             'status' => 'required',
             'tindak_lanjut' => 'required',
-            // 'bulan_stgr' => 'required',
+            'nomor_surat_tambahan_data' => 'required',
             // 'tanggal_dol' => 'required',
             // 'jangka_waktu_awal' => 'required',
             // 'jangka_waktu_akhir' => 'required',
@@ -97,7 +97,8 @@ class AsumController extends Controller
             'nilai_share_ask' => 'required',
             'nilai_tuntutan_klaim' => 'required',
             'status' => 'required',
-            'tindak_lanjut' => 'required'
+            'tindak_lanjut' => 'required',
+            'nomor_surat_tambahan_data' => 'required'
 
             // 'bulan_stgr' => 'required',
             // 'tanggal_dol' => 'required',
@@ -162,6 +163,7 @@ class AsumController extends Controller
             ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
             ->orWhere('status', 'like', "%$keyword%")
             ->orWhere('tindak_lanjut', 'like', "%$keyword%")
+            ->orWhere('nomor_surat_tambahan_data', 'like', "%$keyword%")
 
             // ->orWhere('plafond', 'like', "%$keyword%")
             // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
