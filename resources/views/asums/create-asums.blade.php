@@ -152,6 +152,10 @@
             <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem">
         </div>
 
+        <div>
+            <label>Tanggal Register Sistem:</label>
+            <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem">
+        </div>
         
         <!-- <div>
             <label>Cabang Bank:</label>

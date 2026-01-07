@@ -115,6 +115,7 @@
                     <th class="text-white" style="background:#2a3d5e">Nomor Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -144,6 +145,7 @@
                     <td>{{ $asum->nomor_surat_tambahan_data }}</td>
                     <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
                     <td>{{ $asum->nomor_register_sistem }}</td>
+                    <td>{{ $asum->tanggal_register_sistem }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -328,6 +330,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Nomor Register Sistem</label>
                                         <input class="form-control" name="nomor_register_sistem" value="{{ $asum->nomor_register_sistem }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Register Sistem</label>
+                                        <input class="form-control" name="tanggal_register_sistem" value="{{ $asum->tanggal_register_sistem }}">
                                     </div>
 
                                     <!-- <div class="mb-3">
@@ -544,6 +551,10 @@
                             <input class="form-control" name="nomor_register_sistem">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Register Sistem</label>
+                            <input class="form-control" name="tanggal_register_sistem">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

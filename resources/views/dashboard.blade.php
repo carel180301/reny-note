@@ -445,6 +445,11 @@
                         <label class="form-label">Nomor Register Sistem</label>
                         <input name="nomor_register_sistem" class="form-control" required>
                     </div>
+
+                     <div class="mb-3">
+                        <label class="form-label">Tanggal Register Sistem</label>
+                        <input name="tanggal_register_sistem" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">
