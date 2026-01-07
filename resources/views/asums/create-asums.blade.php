@@ -116,6 +116,17 @@
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>
 
+        <div>
+            <label class="form-label">Status:</label>
+            <select name="status" class="form-select">
+                <option value="" disabled selected>Pilih Status</option>
+                <option value="tambahan data">Tambahan Data</option>
+                <!-- <option value="tolak">Tolak</option>
+                <option value="proses_analisa">Proses Analisa</option> -->
+            </select>
+        </div>
+
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

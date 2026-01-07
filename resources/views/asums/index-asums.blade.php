@@ -110,6 +110,7 @@
                     <th class="text-white" style="background:#2a3d5e">Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e">Status</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -134,6 +135,7 @@
                     <td>{{ $asum->share_ask }}</td>
                     <td>{{ $asum->nilai_share_ask }}</td>
                     <td>{{ $asum->nilai_tuntutan_klaim }}</td>
+                    <td>{{ $asum->status }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -294,6 +296,12 @@
                                         <label class="form-label">Nilai Tuntutan Klaim</label>
                                         <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $asum->nilai_tuntutan_klaim }}">
                                     </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Status</label>
+                                        <input class="form-control" name="status" value="{{ $asum->status }}">
+                                    </div>
+
 
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Cabang Bank</label>
@@ -472,6 +480,18 @@
                             <label class="form-label">Nilai Tuntutan Klaim</label>
                             <input class="form-control" name="nilai_tuntutan_klaim">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select" name="status">
+                                <option disabled selected>Pilih Status</option>
+                                <option value="tambahan data">Tambahan Data</option>
+                                <!-- <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option> -->
+                            </select>
+                        </div>
+
 
 
                         <!-- <div class="mb-3">

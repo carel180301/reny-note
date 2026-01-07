@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('share_ask');
             $table->string('nilai_share_ask');
             $table->string('nilai_tuntutan_klaim');
+            $table->string('status');
 
             // $table->string('jangka_waktu_awal');
             // $table->string('jangka_waktu_akhir');

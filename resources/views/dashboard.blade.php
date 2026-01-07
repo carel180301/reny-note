@@ -417,6 +417,16 @@
                         <label class="form-label">Nilai Tuntutan Klaim</label>
                         <input name="nilai_tuntutan_klaim" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status</option>
+                            <option value="tambahan data">Tambahan Data</option>
+                        </select>
+                    </div>
+
+    
                 </div>
 
                 <div class="modal-footer">

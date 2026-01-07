@@ -110,6 +110,16 @@
         <input type="text" name="nilai_tuntutan_klaim" value="{{ $asums->nilai_tuntutan_klaim }}">
     </div>
 
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="tambahan data" {{ $asums->status == 'tambahan_data' ? 'selected' : '' }}>Tambahan Data</option>
+            <!-- <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option> -->
+        </select>
+    </div>
+
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">
