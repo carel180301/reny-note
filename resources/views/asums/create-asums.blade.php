@@ -86,6 +86,10 @@
             <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir">
         </div>
 
+        <div>
+            <label>Penyebab Klaim:</label>
+            <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim">
+        </div>
 
         <!-- <div>
             <label>Cabang Bank:</label>

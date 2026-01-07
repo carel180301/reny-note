@@ -106,6 +106,7 @@
                     <th class="text-white" style="background:#2a3d5e">Tanggal DOL</th>
                     <th class="text-white" style="background:#2a3d5e">Jangka Waktu Awal</th>
                     <th class="text-white" style="background:#2a3d5e">Jangka Waktu Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e">Penyebab Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -125,6 +126,7 @@
                     <td>{{ $asum->tanggal_dol }}</td>
                     <td>{{ $asum->jangka_waktu_awal }}</td>
                     <td>{{ $asum->jangka_waktu_akhir }}</td>
+                    <td>{{ $asum->penyebab_klaim }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -418,6 +420,11 @@
                         <div class="mb-3">
                             <label class="form-label">Jangka Waktu Akhir</label>
                             <input class="form-control" name="jangka_waktu_akhir">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Penyebab Klaim</label>
+                            <input class="form-control" name="penyebab_klaim">
                         </div>
 
                         <!-- <div class="mb-3">

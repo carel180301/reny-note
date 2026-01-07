@@ -25,6 +25,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
@@ -79,6 +80,7 @@
                     <td class="text-center">{{ $asum->tanggal_dol }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_awal }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_akhir }}</td>
+                    <td class="text-center">{{ $asum->penyebab_klaim }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -165,6 +167,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Jangka Waktu Akhir</label><input name="jangka_waktu_akhir" class="form-control" value="{{ $asum->jangka_waktu_akhir }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Penyebab Klaim</label><input name="penyebab_klaim" class="form-control" value="{{ $asum->penyebab_klaim }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

@@ -85,6 +85,12 @@
         <input type="date" name="jangka_waktu_akhir" value="{{ $asums->jangka_waktu_akhir }}">
     </div>
 
+    <div>
+        <label>Penyebab Klaim:</label>
+        <input type="text" name="penyebab_klaim" value="{{ $asums->penyebab_klaim }}">
+    </div>
+
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">
