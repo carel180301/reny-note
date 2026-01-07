@@ -106,6 +106,16 @@
             <input type="text" name="nilai_share_ask" placeholder="Nilai Share ASK">
         </div>
 
+        <div>
+            <label>Nilai Share ASK:</label>
+            <input type="text" name="nilai_share_ask" placeholder="Nilai Share ASK">
+        </div>
+
+        <div>
+            <label>Nilai Tuntutan Klaim:</label>
+            <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

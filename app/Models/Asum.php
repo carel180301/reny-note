@@ -26,6 +26,7 @@ class Asum extends Model
         'penyebab_klaim',
         'nilai_tsi',
         'share_ask',
-        'nilai_share_ask'
+        'nilai_share_ask',
+        'nilai_tuntutan_klaim'
     ];
 }

@@ -78,7 +78,7 @@
     </nav>
 
 
-    <h2 class="text-center mt-2 akm-heading">Daftar AKM</h2>
+    <h2 class="text-center mt-2 akm-heading">Daftar ASUM</h2>
 
     <!-- SUCCESS ALERT -->
     @if(session('success'))
@@ -109,6 +109,7 @@
                     <th class="text-white" style="background:#2a3d5e">Nilai TSI</th>
                     <th class="text-white" style="background:#2a3d5e">Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai Share ASK</th>
+                    <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -132,6 +133,7 @@
                     <td>{{ $asum->nilai_tsi }}</td>
                     <td>{{ $asum->share_ask }}</td>
                     <td>{{ $asum->nilai_share_ask }}</td>
+                    <td>{{ $asum->nilai_tuntutan_klaim }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -286,6 +288,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Nilai Share ASK</label>
                                         <input class="form-control" name="nilai_share_ask" value="{{ $asum->nilai_share_ask }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nilai Tuntutan Klaim</label>
+                                        <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $asum->nilai_tuntutan_klaim }}">
                                     </div>
 
                                     <!-- <div class="mb-3">
@@ -460,6 +467,12 @@
                             <label class="form-label">Nilai Share ASK</label>
                             <input class="form-control" name="nilai_share_ask">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan Klaim</label>
+                            <input class="form-control" name="nilai_tuntutan_klaim">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>

@@ -11,7 +11,6 @@ class AsumController extends Controller
 {
     public function index(){
         $asums = Asum::orderBy('created_at', 'asc')->get();
-
         return view('asums.index', ['asums' => $asums]);
     }
 
@@ -36,7 +35,8 @@ class AsumController extends Controller
             'penyebab_klaim' => 'required',
             'nilai_tsi' => 'required',
             'share_ask' => 'required',
-            'nilai_share_ask' => 'required'
+            'nilai_share_ask' => 'required',
+            'nilai_tuntutan_klaim' => 'required'
 
             // 'bulan_stgr' => 'required',
             // 'tanggal_dol' => 'required',
@@ -69,7 +69,6 @@ class AsumController extends Controller
         // }
 
         Asum::create($data);
-
         return redirect()->route('dashboard', ['table' => 'asum'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
@@ -94,7 +93,8 @@ class AsumController extends Controller
             'penyebab_klaim' => 'required',
             'nilai_tsi' => 'required',
             'share_ask' => 'required',
-            'nilai_share_ask' => 'required'
+            'nilai_share_ask' => 'required',
+            'nilai_tuntutan_klaim' => 'required'
 
             // 'bulan_stgr' => 'required',
             // 'tanggal_dol' => 'required',
@@ -127,7 +127,6 @@ class AsumController extends Controller
         // }
 
         $asums->update($data);
-
         return back()->with('success', 'Klaim berhasil di-update!');
     }
 
@@ -157,6 +156,7 @@ class AsumController extends Controller
             ->orWhere('nilai_tsi', 'like', "%$keyword%")
             ->orWhere('share_ask', 'like', "%$keyword%")
             ->orWhere('nilai_share_ask', 'like', "%$keyword%")
+            ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
 
             // ->orWhere('penyebab_klaim', 'like', "%$keyword%")
             // ->orWhere('plafond', 'like', "%$keyword%")
@@ -193,7 +193,6 @@ class AsumController extends Controller
         ]);
 
         Excel::import(new AsumImport, $request->file('file'));
-
 
         return redirect()->route('dashboard')
             ->with('success', 'Excel berhasil di-import!');

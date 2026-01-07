@@ -105,6 +105,10 @@
         <input type="text" name="nilai_share_ask" value="{{ $asums->nilai_share_ask }}">
     </div>
 
+    <div>
+        <label>Nilai Tuntutan Klaim:</label>
+        <input type="text" name="nilai_tuntutan_klaim" value="{{ $asums->nilai_tuntutan_klaim }}">
+    </div>
 
     <!-- <div>
         <label>Nomor Polis:</label>
