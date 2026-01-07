@@ -34,8 +34,8 @@ return new class extends Migration
             $table->string('tindak_lanjut');
             $table->string('nomor_surat_tambahan_data');
             $table->string('tanggal_surat_tambahan_data');
+            $table->string('nomor_register_sistem');
 
-            // $table->string('jangka_waktu_awal');
             // $table->string('jangka_waktu_akhir');
             // $table->string('penyebab_klaim');
             // $table->string('nilai_tsi');

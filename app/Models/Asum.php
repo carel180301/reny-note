@@ -31,6 +31,7 @@ class Asum extends Model
         'status',
         'tindak_lanjut',
         'nomor_surat_tambahan_data',
-        'tanggal_surat_tambahan_data'
+        'tanggal_surat_tambahan_data',
+        'nomor_register_sistem'
     ];
 }

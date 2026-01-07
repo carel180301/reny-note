@@ -139,6 +139,11 @@
         <input type="date" name="tanggal_surat_tambahan_data" value="{{ $asums->tanggal_surat_tambahan_data }}">
     </div>
 
+    <div>
+        <label>Nomor Register Sistem:</label>
+        <input type="text" name="nomor_register_sistem" value="{{ $asums->nomor_register_sistem }}">
+    </div>
+
     <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $akms->nomor_polis }}">

@@ -146,6 +146,12 @@
             <label>Tanggal Surat Tambahan Data:</label>
             <input type="date" name="tanggal_surat_tambahan_data" placeholder="Tanggal Surat Tambahan Data">
         </div>
+
+        <div>
+            <label>Nomor Register Sistem:</label>
+            <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem">
+        </div>
+
         
         <!-- <div>
             <label>Cabang Bank:</label>
