@@ -176,7 +176,11 @@
             <input type="text" name="nomor_claim_settlement" placeholder="Nomor Claim Settlement">
         </div>
 
-        
+           <div>
+            <label>Tanggal Claim Settlement:</label>
+            <input type="date" name="tanggal_claim_settlement" placeholder="Tanggal Claim Settlement">
+        </div>
+
         <div>
             <input type="submit" value="Save a New Claim"/>
         </div>

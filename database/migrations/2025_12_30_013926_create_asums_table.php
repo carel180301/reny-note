@@ -40,6 +40,7 @@ return new class extends Migration
             $table->string('keterangan');
             $table->string('tanggal_persetujuan');
             $table->string('nomor_claim_settlement');
+            $table->string('tanggal_claim_settlement');
             $table->timestamps();
         });
     }

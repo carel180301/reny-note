@@ -150,6 +150,7 @@
                     <td>{{ $asum->keterangan }}</td>
                     <td>{{ $asum->tanggal_persetujuan }}</td>
                     <td>{{ $asum->nomor_claim_settlement }}</td>
+                    <td>{{ $asum->tanggal_claim_settlement }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -361,6 +362,11 @@
                                         <input class="form-control" name="nomor_claim_settlement" value="{{ $asum->nomor_claim_settlement }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Claim Settlement</label>
+                                        <input class="form-control" name="tanggal_persetujuan" value="{{ $asum->tanggal_persetujuan }}">
+                                    </div>
+
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
@@ -537,6 +543,10 @@
                             <input class="form-control" name="nomor_claim_settlement">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Claim Settlement</label>
+                            <input class="form-control" name="tanggal_claim_settlement">
+                        </div>
 
                         <div class="text-center">
                             <button class="btn btn-primary">Save</button>

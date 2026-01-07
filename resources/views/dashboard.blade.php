@@ -473,6 +473,11 @@
                         <label class="form-label">Nomor Claim Settlement</label>
                         <input name="nomor_claim_settlement" class="form-control" required>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Claim Settlement</label>
+                        <input name="tanggal_claim_settlement" class="form-control" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

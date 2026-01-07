@@ -173,6 +173,11 @@
         <input type="text" name="nomor_claim_settlement" value="{{ $asums->nomor_claim_settlement }}">
     </div>
 
+    <div>
+        <label>Tanggal Claim Settlement:</label>
+        <input type="date" name="tanggal_claim_settlement" value="{{ $asums->tanggal_claim_settlement }}">
+    </div>
+
     
     <div>
         <button type="submit">Update</button>

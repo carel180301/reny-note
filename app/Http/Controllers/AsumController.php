@@ -45,7 +45,9 @@ class AsumController extends Controller
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
             'keterangan' => 'required',
-            'tanggal_persetujuan' => 'required'
+            'tanggal_persetujuan' => 'required',
+            'nomor_claim_settlement' => 'required',
+            'tanggal_claim_settlement' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -94,7 +96,9 @@ class AsumController extends Controller
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
             'keterangan' => 'required',
-            'tanggal_persetujuan' => 'required'
+            'tanggal_persetujuan' => 'required',
+            'nomor_claim_settlement' => 'required',
+            'tanggal_claim_settlement' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -147,6 +151,8 @@ class AsumController extends Controller
             ->orWhere('status_sistem', 'like', "%$keyword%")
             ->orWhere('keterangan', 'like', "%$keyword%")
             ->orWhere('tanggal_persetujuan', 'like', "%$keyword%")
+            ->orWhere('nomor_claim_settlement', 'like', "%$keyword%")
+            ->orWhere('tanggal_claim_settlement', 'like', "%$keyword%")
             // ->orderBy('created_at', 'desc')
             ->get();
 
