@@ -64,12 +64,12 @@
             <input type="date" name="tanggal_stgr" placeholder="Tanggal STGR">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Bulan STGR:</label>
             <input type="text" name="bulan_stgr" placeholder="Bulan STGR">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Tanggal DOL:</label>
             <input type="date" name="tanggal_dol" placeholder="Tanggal DOL">
         </div>

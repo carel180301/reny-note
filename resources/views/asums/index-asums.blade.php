@@ -131,8 +131,8 @@
                     <td>{{ $asum->tanggal_polis }}</td>
                     <td>{{ $asum->nomor_stgr }}</td>
                     <td>{{ $asum->tanggal_stgr }}</td>
-                    <!-- <td>{{ $asum->bulan_stgr }}</td>
-                    <td>{{ $asum->tanggal_dol }}</td>
+                    <td>{{ $asum->bulan_stgr }}</td>
+                    <!-- <td>{{ $asum->tanggal_dol }}</td>
                     <td>{{ $asum->jangka_waktu_awal }}</td>
                     <td>{{ $asum->jangka_waktu_akhir }}</td>
                     <td>{{ $asum->penyebab_klaim }}</td>
