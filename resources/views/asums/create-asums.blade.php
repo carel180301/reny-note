@@ -79,6 +79,11 @@
             <input type="date" name="jangka_waktu_awal" placeholder="Jangka Waktu Awal">
         </div>
 
+        <div>
+            <label>Jangka Waktu Akhir:</label>
+            <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir">
+        </div>
+
         <!-- <div>
             <label>Jangka Waktu Akhir:</label>
             <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir">

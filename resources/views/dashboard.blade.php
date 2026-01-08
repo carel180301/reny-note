@@ -388,12 +388,12 @@
                         <input name="jangka_waktu_awal" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Jangka Waktu Akhir</label>
                         <input name="jangka_waktu_akhir" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Penyebab Klaim</label>
                         <input name="penyebab_klaim" class="form-control" required>
                     </div>
