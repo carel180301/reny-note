@@ -133,8 +133,8 @@
                     <td>{{ $asum->tanggal_stgr }}</td>
                     <td>{{ $asum->bulan_stgr }}</td>
                     <td>{{ $asum->tanggal_dol }}</td>
-                    <!-- <td>{{ $asum->jangka_waktu_awal }}</td>
-                    <td>{{ $asum->jangka_waktu_akhir }}</td>
+                    <td>{{ $asum->jangka_waktu_awal }}</td>
+                    <!-- <td>{{ $asum->jangka_waktu_akhir }}</td>
                     <td>{{ $asum->penyebab_klaim }}</td>
                     <td>{{ $asum->nilai_tsi }}</td>
                     <td>{{ $asum->share_ask }}</td>
@@ -287,12 +287,12 @@
                                         <input class="form-control" name="tanggal_dol" value="{{ $asum->tanggal_dol }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Jangka Waktu Awal</label>
                                         <input class="form-control" name="jangka_waktu_awal" value="{{ $asum->jangka_waktu_awal }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Jangka Waktu Akhir</label>
                                         <input class="form-control" name="jangka_waktu_akhir" value="{{ $asum->jangka_waktu_akhir }}">
                                     </div>
@@ -452,12 +452,12 @@
                             <input class="form-control" name="tanggal_dol">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Jangka Waktu Awal</label>
                             <input class="form-control" name="jangka_waktu_awal">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Jangka Waktu Akhir</label>
                             <input class="form-control" name="jangka_waktu_akhir">
                         </div>

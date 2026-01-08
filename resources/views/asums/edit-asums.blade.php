@@ -73,12 +73,12 @@
         <input type="date" name="tanggal_dol" value="{{ $asums->tanggal_dol }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Jangka Waktu Awal:</label>
         <input type="date" name="jangka_waktu_awal" value="{{ $asums->jangka_waktu_awal }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Jangka Waktu Akhir:</label>
         <input type="date" name="jangka_waktu_akhir" value="{{ $asums->jangka_waktu_akhir }}">
     </div>
