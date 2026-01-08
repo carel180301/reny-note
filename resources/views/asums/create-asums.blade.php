@@ -137,12 +137,12 @@
             <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Tanggal Register Sistem:</label>
             <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem">
         </div>
         
-        <div>
+        <!-- <div>
             <label class="form-label">Status Sistem:</label>
             <select name="status_sistem" class="form-select">
                 <option value="" disabled selected>Pilih Status</option>

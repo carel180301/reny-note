@@ -35,8 +35,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Claim Settlement</th>
@@ -96,9 +96,9 @@
                     <td class="text-center">{{ $asum->nomor_surat_tambahan_data }}</td>
                     <td class="text-center">{{ $asum->tanggal_surat_tambahan_data }}</td>
                     <td class="text-center">{{ $asum->nomor_register_sistem }}</td>
-                    <!-- <td class="text-center">{{ $asum->tanggal_register_sistem }}</td>
+                    <td class="text-center">{{ $asum->tanggal_register_sistem }}</td>
 
-                    <td class="text-center">
+                    <!-- <td class="text-center">
                         @if($asum->status === '-')
                             <span class="badge bg-warning">-</span>
                         {{--
@@ -254,11 +254,11 @@
                     <div class="mb-3"><label class="form-label">Nomor Register Sistem</label><input name="nomor_register_sistem" class="form-control" value="{{ $asum->nomor_register_sistem }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Register Sistem</label><input name="tanggal_register_sistem" class="form-control" value="{{ $asum->tanggal_register_sistem }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Status Sistem</label><input name="status_sistem" class="form-control" value="{{ $asum->status_sistem }}" required></div>
                 </div>
 

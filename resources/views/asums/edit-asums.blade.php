@@ -140,12 +140,12 @@
         <input type="text" name="nomor_register_sistem" value="{{ $asums->nomor_register_sistem }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Tanggal Register Sistem:</label>
         <input type="date" name="tanggal_register_sistem" value="{{ $asums->tanggal_register_sistem }}">
     </div>
     
-    <div>
+    <!-- <div>
         <label>Status Sistem:</label>
         <select name="status_sistem">
             <option value="" {{ $asums->status_sistem == 'a' ? 'selected' : '' }}>-</option>
