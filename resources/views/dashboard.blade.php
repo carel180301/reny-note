@@ -503,7 +503,7 @@
                         <label class="form-label">Status Pembayaran</label>
                         <select name="status_pembayaran" class="form-select" required>
                             <option value="" disabled selected>Pilih Status Pembayaran</option>
-                            <option value="">-</option>
+                            <option value="a">-</option>
                         </select>
                     </div>
 

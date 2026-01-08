@@ -205,7 +205,7 @@
             <label class="form-label">Status Pembayaran:</label>
             <select name="status_pembayaran" class="form-select">
                 <option value="" disabled selected>Pilih Status Pembayaran</option>
-                <option value="">-</option>
+                <option value="a">a</option>
             </select>
         </div>
 

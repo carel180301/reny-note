@@ -118,7 +118,7 @@
                     <td class="text-center">{{ $asum->tanggal_memo_permintaan_dana }}</td>
 
                     <td class="text-center">
-                        @if($asum->status_pembayaran === '-')
+                        @if($asum->status_pembayaran === 'a')
                             <span class="badge bg-warning">-</span>
                         {{--
                         @else

@@ -201,7 +201,7 @@
     <div>
         <label>Status Pembayaran:</label>
         <select name="status_pembayaran">
-            <option value="" {{ $asums->status_pembayaran == '-' ? 'selected' : '' }}>-</option>
+            <option value="a" {{ $asums->status_pembayaran == 'a' ? 'selected' : '' }}>-</option>
             <!-- <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
             <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option> -->
         </select>
