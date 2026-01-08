@@ -15,8 +15,8 @@ class Asum extends Model
         'posisi',
         'cob',
         'nama_pekerjaan',
-        'nomor_polis'
-        // 'tanggal_polis',
+        'nomor_polis',
+        'tanggal_polis'
         // 'nomor_stgr',
         // 'tanggal_stgr',
         // 'bulan_stgr',

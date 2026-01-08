@@ -49,12 +49,12 @@
             <input type="text" name="nomor_polis" placeholder="Nomor Polis">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Tanggal Polis:</label>
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Nomor STGR:</label>
             <input type="text" name="nomor_stgr" placeholder="Nomor STGR">
         </div>

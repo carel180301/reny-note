@@ -128,8 +128,8 @@
                     <td>{{ $asum->cob }}</td>
                     <td>{{ $asum->nama_pekerjaan }}</td>
                     <td>{{ $asum->nomor_polis }}</td>
-                    <!-- <td>{{ $asum->tanggal_polis }}</td>
-                    <td>{{ $asum->nomor_stgr }}</td>
+                    <td>{{ $asum->tanggal_polis }}</td>
+                    <!-- <td>{{ $asum->nomor_stgr }}</td>
                     <td>{{ $asum->tanggal_stgr }}</td>
                     <td>{{ $asum->bulan_stgr }}</td>
                     <td>{{ $asum->tanggal_dol }}</td>
@@ -422,7 +422,7 @@
                             <input class="form-control" name="nama_pekerjaan">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input class="form-control" name="nomor_polis">
                         </div>
@@ -432,7 +432,7 @@
                             <input class="form-control" name="tanggal_polis">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nomor STGR</label>
                             <input class="form-control" name="nomor_stgr">
                         </div>
