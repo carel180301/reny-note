@@ -22,8 +22,8 @@ class AsumController extends Controller
         $data = $request->validate([
             'nama_tertanggung' => 'required',
             'posisi' => 'required',
-            'cob' => 'required'
-            // 'nama_pekerjaan' => 'required',
+            'cob' => 'required',
+            'nama_pekerjaan' => 'required'
             // 'nomor_polis' => 'required',
             // 'tanggal_polis' => 'required',
             // 'nomor_stgr' => 'required',
@@ -78,8 +78,8 @@ class AsumController extends Controller
         $data = $request->validate([
             'nama_tertanggung' => 'required',
             'posisi' => 'required',
-            'cob' => 'required'
-            // 'nama_pekerjaan' => 'required',
+            'cob' => 'required',
+            'nama_pekerjaan' => 'required'
             // 'nomor_polis' => 'required',
             // 'tanggal_polis' => 'required',
             // 'nomor_stgr' => 'required',
@@ -138,7 +138,7 @@ class AsumController extends Controller
         $data = Asum::where('nama_tertanggung', 'like', "%$keyword%")
             ->orWhere('posisi', 'like', "%$keyword%")
             ->orWhere('cob', 'like', "%$keyword%")
-            // ->orWhere('nama_pekerjaan', 'like', "%$keyword%")
+            ->orWhere('nama_pekerjaan', 'like', "%$keyword%")
             // ->orWhere('nomor_polis', 'like', "%$keyword%")
             // ->orWhere('tanggal_polis', 'like', "%$keyword%")
             // ->orWhere('nomor_stgr', 'like', "%$keyword%")

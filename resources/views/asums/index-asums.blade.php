@@ -96,8 +96,8 @@
                     <th class="text-white" style="background:#2a3d5e">Nama Tertanggung</th>
                     <th class="text-white" style="background:#2a3d5e">Posisi</th>
                     <th class="text-white" style="background:#2a3d5e">COB</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e">Nama Pekerjaan</th>
-                    <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e">Nama Pekerjaan</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor STGR</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal STGR</th>
@@ -126,8 +126,8 @@
                     <td>{{ $asum->nama_tertanggung }}</td>
                     <td>{{ $asum->posisi }}</td>
                     <td>{{ $asum->cob }}</td>
-                    <!-- <td>{{ $asum->nama_pekerjaan }}</td>
-                    <td>{{ $asum->nomor_polis }}</td>
+                    <td>{{ $asum->nama_pekerjaan }}</td>
+                    <!-- <td>{{ $asum->nomor_polis }}</td>
                     <td>{{ $asum->tanggal_polis }}</td>
                     <td>{{ $asum->nomor_stgr }}</td>
                     <td>{{ $asum->tanggal_stgr }}</td>
@@ -252,12 +252,12 @@
                                         <input class="form-control" name="cob" value="{{ $asum->cob }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Nama Pekerjaan</label>
                                         <input class="form-control" name="nama_pekerjaan" value="{{ $asum->nama_pekerjaan }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Nomor Polis</label>
                                         <input class="form-control" name="nomor_polis" value="{{ $asum->nomor_polis }}">
                                     </div>
@@ -417,12 +417,12 @@
                             <input class="form-control" name="cob">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Nama Pekerjaan</label>
                             <input class="form-control" name="nama_pekerjaan">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input class="form-control" name="nomor_polis">
                         </div>

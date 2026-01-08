@@ -39,12 +39,12 @@
             <input type="text" name="cob" placeholder="COB">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nama Pekerjaan:</label>
             <input type="text" name="nama_pekerjaan" placeholder="Nama Pekerjaan">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis">
         </div>

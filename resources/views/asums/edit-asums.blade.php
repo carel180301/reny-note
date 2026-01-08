@@ -38,12 +38,12 @@
         <input type="text" name="cob" value="{{ $asums->cob }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Nama Pekerjaan:</label>
         <input type="text" name="nama_pekerjaan" value="{{ $asums->nama_pekerjaan }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $asums->nomor_polis }}">
     </div>
