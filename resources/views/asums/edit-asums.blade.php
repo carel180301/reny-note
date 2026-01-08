@@ -113,14 +113,14 @@
         <input type="text" name="nilai_tuntutan_klaim" value="{{ $asums->nilai_tuntutan_klaim }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Status:</label>
         <select name="status">
             <option value="tambahan data" {{ $asums->status == 'tambahan_data' ? 'selected' : '' }}>Tambahan Data</option>
         </select>
     </div>
 
-    <div>
+    <!-- <div>
         <label>Tindak Lanjut:</label>
         <input type="text" name="tindak_lanjut" value="{{ $asums->tindak_lanjut }}">
     </div>

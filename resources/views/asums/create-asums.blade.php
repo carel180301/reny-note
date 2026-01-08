@@ -109,7 +109,7 @@
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>
 
-        <!-- <div>
+        <div>
             <label class="form-label">Status:</label>
             <select name="status" class="form-select">
                 <option value="" disabled selected>Pilih Status</option>
@@ -117,8 +117,7 @@
             </select>
         </div>
 
-        
-        <div>
+        <!-- <div>
             <label>Tindak Lanjut:</label>
             <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut">
         </div>

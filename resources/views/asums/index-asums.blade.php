@@ -140,8 +140,8 @@
                     <td>{{ $asum->share_ask }}</td>
                     <td>{{ $asum->nilai_share_ask }}</td>
                     <td>{{ $asum->nilai_tuntutan_klaim }}</td>
-                    <!-- <td>{{ $asum->status }}</td>
-                    <td>{{ $asum->tindak_lanjut }}</td>
+                    <td>{{ $asum->status }}</td>
+                    <!-- <td>{{ $asum->tindak_lanjut }}</td>
                     <td>{{ $asum->nomor_surat_tambahan_data }}</td>
                     <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
                     <td>{{ $asum->nomor_register_sistem }}</td>
@@ -322,12 +322,12 @@
                                         <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $asum->nilai_tuntutan_klaim }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Status</label>
                                         <input class="form-control" name="status" value="{{ $asum->status }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Tindak Lanjut</label>
                                         <input class="form-control" name="tindak_lanjut" value="{{ $asum->tindak_lanjut }}">
                                     </div>
@@ -492,7 +492,7 @@
                             <input class="form-control" name="nilai_tuntutan_klaim">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Status</label>
                             <select class="form-select" name="status">
                                 <option disabled selected>Pilih Status</option>
@@ -500,7 +500,7 @@
                             </select>
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Tindak Lanjut</label>
                             <input class="form-control" name="tindak_lanjut">
                         </div>

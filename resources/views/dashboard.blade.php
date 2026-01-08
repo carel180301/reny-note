@@ -418,7 +418,7 @@
                         <input name="nilai_tuntutan_klaim" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Status</label>
                         <select name="status" class="form-select" required>
                             <option value="" disabled selected>Pilih Status</option>
@@ -426,7 +426,7 @@
                         </select>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Tindak Lanjut</label>
                         <input name="tindak_lanjut" class="form-control" required>
                     </div>
