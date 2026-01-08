@@ -25,8 +25,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai TSI</th>
+                    <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Nilai TSI</th>
                     <th class="text-white" style="background:#2a3d5e;">Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e;">Nilai Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
@@ -76,9 +76,8 @@
                     <td class="text-center">{{ $asum->tanggal_dol }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_awal }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_akhir }}</td>
-                    <!-- <td class="text-center">{{ $asum->jangka_waktu_akhir }}</td>
                     <td class="text-center">{{ $asum->penyebab_klaim }}</td>
-                    <td class="text-center">{{ $asum->nilai_tsi }}</td>
+                    <!-- <td class="text-center">{{ $asum->nilai_tsi }}</td>
                     <td class="text-center">{{ $asum->share_ask }}</td>
                     <td class="text-center">{{ $asum->nilai_share_ask }}</td>
                     <td class="text-center">{{ $asum->nilai_tuntutan_klaim }}</td>
@@ -215,93 +214,9 @@
                     <div class="mb-3"><label class="form-label">Jangka Waktu Akhir</label><input name="jangka_waktu_akhir" class="form-control" value="{{ $asum->jangka_waktu_akhir }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Jangka Waktu Akhir</label><input name="jangka_waktu_akhir" class="form-control" value="{{ $asum->jangka_waktu_akhir }}" required></div>
-                </div>
-
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Penyebab Klaim</label><input name="penyebab_klaim" class="form-control" value="{{ $asum->penyebab_klaim }}" required></div>
                 </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nilai TSI</label><input name="nilai_tsi" class="form-control" value="{{ $asum->nilai_tsi }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Share ASK</label><input name="share_ask" class="form-control" value="{{ $asum->share_ask }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nilai Share ASK</label><input name="nilai_share_ask" class="form-control" value="{{ $asum->nilai_share_ask }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nilai Tuntutan Klaim</label><input name="nilai_tuntutan_klaim" class="form-control" value="{{ $asum->nilai_tuntutan_klaim }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $asum->status }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tindak Lanjut</label><input name="tindak_lanjut" class="form-control" value="{{ $asum->tindak_lanjut }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Surat Tambahan Data</label><input name="nomor_surat_tambahan_data" class="form-control" value="{{ $asum->nomor_surat_tambahan_data }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Surat Tambahan Data</label><input name="tanggal_surat_tambahan_data" class="form-control" value="{{ $asum->tanggal_surat_tambahan_data }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Register Sistem</label><input name="nomor_register_sistem" class="form-control" value="{{ $asum->nomor_register_sistem }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Register Sistem</label><input name="tanggal_register_sistem" class="form-control" value="{{ $asum->tanggal_register_sistem }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status Sistem</label><input name="status_sistem" class="form-control" value="{{ $asum->status_sistem }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Keterangan / Feedback Pemutus</label><input name="keterangan" class="form-control" value="{{ $asum->keterangan }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Persetujuan</label><input name="tanggal_persetujuan" class="form-control" value="{{ $asum->tanggal_persetujuan }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Claim Settlement</label><input name="nomor_claim_settlement" class="form-control" value="{{ $asum->nomor_claim_settlement }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Claim Settlement</label><input name="tanggal_claim_settlement" class="form-control" value="{{ $asum->tanggal_claim_settlement }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Surat Persetujuan atau Penolakan</label><input name="nomor_surat_persetujuan_atau_penolakan" class="form-control" value="{{ $asum->nomor_surat_persetujuan_atau_penolakan }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label><input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" value="{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Memo Permintaan Dana</label><input name="nomor_memo_permintaan_dana" class="form-control" value="{{ $asum->nomor_memo_permintaan_dana }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Memo Permintaan Dana</label><input name="tanggal_memo_permintaan_dana" class="form-control" value="{{ $asum->tanggal_memo_permintaan_dana }}" required></div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status Pembayaran</label><input name="status_pembayaran" class="form-control" value="{{ $asum->status_pembayaran }}" required></div>
-                </div> -->
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>

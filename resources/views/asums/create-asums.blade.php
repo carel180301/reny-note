@@ -84,17 +84,12 @@
             <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir">
         </div>
 
-        <!-- <div>
-            <label>Jangka Waktu Akhir:</label>
-            <input type="date" name="jangka_waktu_akhir" placeholder="Jangka Waktu Akhir">
-        </div>
-
         <div>
             <label>Penyebab Klaim:</label>
             <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Nilai TSI:</label>
             <input type="text" name="nilai_tsi" placeholder="Nilai TSI">
         </div>

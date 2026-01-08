@@ -135,9 +135,8 @@
                     <td>{{ $asum->tanggal_dol }}</td>
                     <td>{{ $asum->jangka_waktu_awal }}</td>
                     <td>{{ $asum->jangka_waktu_akhir }}</td>
-                    <!-- <td>{{ $asum->jangka_waktu_akhir }}</td>
                     <td>{{ $asum->penyebab_klaim }}</td>
-                    <td>{{ $asum->nilai_tsi }}</td>
+                    <!-- <td>{{ $asum->nilai_tsi }}</td>
                     <td>{{ $asum->share_ask }}</td>
                     <td>{{ $asum->nilai_share_ask }}</td>
                     <td>{{ $asum->nilai_tuntutan_klaim }}</td>
@@ -298,12 +297,12 @@
                                         <input class="form-control" name="jangka_waktu_akhir" value="{{ $asum->jangka_waktu_akhir }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
-                                        <label class="form-label">Jangka Waktu Akhir</label>
-                                        <input class="form-control" name="jangka_waktu_akhir" value="{{ $asum->jangka_waktu_akhir }}">
+                                    <div class="mb-3">
+                                        <label class="form-label">Penyebab Klaim</label>
+                                        <input class="form-control" name="penyebab_klaim" value="{{ $asum->penyebab_klaim }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Nilai TSI</label>
                                         <input class="form-control" name="nilai_tsi" value="{{ $asum->nilai_tsi }}">
                                     </div>
@@ -468,17 +467,12 @@
                             <input class="form-control" name="jangka_waktu_akhir">
                         </div>
 
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Jangka Waktu Akhir</label>
-                            <input class="form-control" name="jangka_waktu_akhir">
-                        </div>
-
                         <div class="mb-3">
                             <label class="form-label">Penyebab Klaim</label>
                             <input class="form-control" name="penyebab_klaim">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nilai TSI</label>
                             <input class="form-control" name="nilai_tsi">
                         </div>

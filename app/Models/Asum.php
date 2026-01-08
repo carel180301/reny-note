@@ -22,8 +22,8 @@ class Asum extends Model
         'bulan_stgr',
         'tanggal_dol',
         'jangka_waktu_awal',
-        'jangka_waktu_akhir'
-        // 'penyebab_klaim',
+        'jangka_waktu_akhir',
+        'penyebab_klaim',
         // 'nilai_tsi',
         // 'share_ask',
         // 'nilai_share_ask',
