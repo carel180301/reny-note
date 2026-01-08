@@ -24,8 +24,8 @@ class Asum extends Model
         'jangka_waktu_awal',
         'jangka_waktu_akhir',
         'penyebab_klaim',
-        'nilai_tsi'
-        // 'share_ask',
+        'nilai_tsi',
+        'share_ask'
         // 'nilai_share_ask',
         // 'nilai_tuntutan_klaim',
         // 'status',

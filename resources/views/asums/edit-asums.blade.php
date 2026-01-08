@@ -98,12 +98,12 @@
         <input type="text" name="nilai_tsi" value="{{ $asums->nilai_tsi }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Share ASK:</label>
         <input type="text" name="share_ask" value="{{ $asums->share_ask }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Nilai Share ASK:</label>
         <input type="text" name="nilai_share_ask" value="{{ $asums->nilai_share_ask }}">
     </div>
