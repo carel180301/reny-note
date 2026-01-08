@@ -89,12 +89,12 @@
             <input type="text" name="penyebab_klaim" placeholder="Penyebab Klaim">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nilai TSI:</label>
             <input type="text" name="nilai_tsi" placeholder="Nilai TSI">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Share ASK:</label>
             <input type="text" name="share_ask" placeholder="Share ASK">
         </div>

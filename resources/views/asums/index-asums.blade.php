@@ -136,8 +136,8 @@
                     <td>{{ $asum->jangka_waktu_awal }}</td>
                     <td>{{ $asum->jangka_waktu_akhir }}</td>
                     <td>{{ $asum->penyebab_klaim }}</td>
-                    <!-- <td>{{ $asum->nilai_tsi }}</td>
-                    <td>{{ $asum->share_ask }}</td>
+                    <td>{{ $asum->nilai_tsi }}</td>
+                    <!-- <td>{{ $asum->share_ask }}</td>
                     <td>{{ $asum->nilai_share_ask }}</td>
                     <td>{{ $asum->nilai_tuntutan_klaim }}</td>
                     <td>{{ $asum->status }}</td>
@@ -302,12 +302,12 @@
                                         <input class="form-control" name="penyebab_klaim" value="{{ $asum->penyebab_klaim }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Nilai TSI</label>
                                         <input class="form-control" name="nilai_tsi" value="{{ $asum->nilai_tsi }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Share ASK</label>
                                         <input class="form-control" name="share_ask" value="{{ $asum->share_ask }}">
                                     </div>
@@ -472,12 +472,12 @@
                             <input class="form-control" name="penyebab_klaim">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Nilai TSI</label>
                             <input class="form-control" name="nilai_tsi">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Share ASK</label>
                             <input class="form-control" name="share_ask">
                         </div>
