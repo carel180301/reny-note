@@ -96,7 +96,7 @@
                     <th class="text-white" style="background:#2a3d5e">Nama Tertanggung</th>
                     <th class="text-white" style="background:#2a3d5e">Posisi</th>
                     <th class="text-white" style="background:#2a3d5e">COB</th>
-                    <th class="text-white" style="background:#2a3d5e">Nama Pekerjaan</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e">Nama Pekerjaan</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor STGR</th>
@@ -115,7 +115,7 @@
                     <th class="text-white" style="background:#2a3d5e">Nomor Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e">Tanggal Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Register Sistem</th> -->
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -125,8 +125,8 @@
                 <tr>
                     <td>{{ $asum->nama_tertanggung }}</td>
                     <td>{{ $asum->posisi }}</td>
-                    <!-- <td>{{ $asum->cob }}</td>
-                    <td>{{ $asum->nama_pekerjaan }}</td>
+                    <td>{{ $asum->cob }}</td>
+                    <!-- <td>{{ $asum->nama_pekerjaan }}</td>
                     <td>{{ $asum->nomor_polis }}</td>
                     <td>{{ $asum->tanggal_polis }}</td>
                     <td>{{ $asum->nomor_stgr }}</td>
@@ -247,12 +247,12 @@
                                         </select>
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">COB</label>
                                         <input class="form-control" name="cob" value="{{ $asum->cob }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Nama Pekerjaan</label>
                                         <input class="form-control" name="nama_pekerjaan" value="{{ $asum->nama_pekerjaan }}">
                                     </div>
@@ -412,12 +412,12 @@
                             </select>
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">COB</label>
                             <input class="form-control" name="cob">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nama Pekerjaan</label>
                             <input class="form-control" name="nama_pekerjaan">
                         </div>

@@ -14,9 +14,9 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e;">No.</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Posisi</th>
+                    <th class="text-white" style="background:#2a3d5e;">Posisi</th>
                     <th class="text-white" style="background:#2a3d5e;">COB</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
@@ -66,8 +66,8 @@
                         @endif
                     </td>
 
-                    <!-- <td class="text-center">{{ $asum->cob }}</td>
-                    <td class="text-center">{{ $asum->nama_pekerjaan }}</td>
+                    <td class="text-center">{{ $asum->cob }}</td>
+                    <!-- <td class="text-center">{{ $asum->nama_pekerjaan }}</td>
                     <td class="text-center">{{ $asum->nomor_polis }}</td>
                     <td class="text-center">{{ $asum->tanggal_polis }}</td>
                     <td class="text-center">{{ $asum->nomor_stgr }}</td>
@@ -174,11 +174,11 @@
                     <div class="mb-3"><label class="form-label">Posisi</label><input name="posisi" class="form-control" value="{{ $asum->posisi }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">COB</label><input name="cob" class="form-control" value="{{ $asum->cob }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nama Pekerjaan</label><input name="nama_pekerjaan" class="form-control" value="{{ $asum->nama_pekerjaan }}" required></div>
                 </div>
 

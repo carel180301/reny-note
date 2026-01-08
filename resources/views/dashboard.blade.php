@@ -343,12 +343,12 @@
                         </select>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">COB</label>
                         <input name="cob" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Nama Pekerjaan</label>
                         <input name="nama_pekerjaan" class="form-control" required>
                     </div>

@@ -33,12 +33,12 @@
         </select>
     </div>
 
-    <!-- <div>
+    <div>
         <label>COB:</label>
         <input type="text" name="cob" value="{{ $asums->cob }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Nama Pekerjaan:</label>
         <input type="text" name="nama_pekerjaan" value="{{ $asums->nama_pekerjaan }}">
     </div>
