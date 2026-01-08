@@ -143,8 +143,8 @@
                     <td>{{ $asum->status }}</td>
                     <td>{{ $asum->tindak_lanjut }}</td>
                     <td>{{ $asum->nomor_surat_tambahan_data }}</td>
-                    <!-- <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
-                    <td>{{ $asum->nomor_register_sistem }}</td>
+                    <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
+                    <!-- <td>{{ $asum->nomor_register_sistem }}</td>
                     <td>{{ $asum->tanggal_register_sistem }}</td>
                     <td>{{ $asum->status_sistem }}</td>
                     <td>{{ $asum->keterangan }}</td>
@@ -337,12 +337,12 @@
                                         <input class="form-control" name="nomor_surat_tambahan_data" value="{{ $asum->nomor_surat_tambahan_data }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Tanggal Surat Tambahan Data</label>
                                         <input class="form-control" name="tanggal_surat_tambahan_data" value="{{ $asum->tanggal_surat_tambahan_data }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Nomor Register Sistem</label>
                                         <input class="form-control" name="nomor_register_sistem" value="{{ $asum->nomor_register_sistem }}">
                                     </div>
@@ -510,12 +510,12 @@
                             <input class="form-control" name="nomor_surat_tambahan_data">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Tanggal Surat Tambahan Data</label>
                             <input class="form-control" name="tanggal_surat_tambahan_data">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nomor Register Sistem</label>
                             <input class="form-control" name="nomor_register_sistem">
                         </div>
