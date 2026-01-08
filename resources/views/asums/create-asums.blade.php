@@ -132,12 +132,12 @@
             <input type="date" name="tanggal_surat_tambahan_data" placeholder="Tanggal Surat Tambahan Data">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nomor Register Sistem:</label>
             <input type="text" name="nomor_register_sistem" placeholder="Nomor Register Sistem">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Tanggal Register Sistem:</label>
             <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem">
         </div>

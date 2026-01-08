@@ -135,12 +135,12 @@
         <input type="date" name="tanggal_surat_tambahan_data" value="{{ $asums->tanggal_surat_tambahan_data }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Nomor Register Sistem:</label>
         <input type="text" name="nomor_register_sistem" value="{{ $asums->nomor_register_sistem }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Tanggal Register Sistem:</label>
         <input type="date" name="tanggal_register_sistem" value="{{ $asums->tanggal_register_sistem }}">
     </div>

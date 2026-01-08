@@ -441,12 +441,12 @@
                         <input name="tanggal_surat_tambahan_data" class="form-control" required>
                     </div>
 
-                     <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Nomor Register Sistem</label>
                         <input name="nomor_register_sistem" class="form-control" required>
                     </div>
 
-                     <div class="mb-3">
+                     <!-- <div class="mb-3">
                         <label class="form-label">Tanggal Register Sistem</label>
                         <input name="tanggal_register_sistem" class="form-control" required>
                     </div>
