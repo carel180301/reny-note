@@ -155,6 +155,7 @@
                     <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
                     <td>{{ $asum->nomor_memo_permintaan_dana }}</td>
                     <td>{{ $asum->tanggal_memo_permintaan_dana }}</td>
+                     <td>{{ $asum->status_pembayaran }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>

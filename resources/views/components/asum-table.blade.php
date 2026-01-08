@@ -45,6 +45,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan atau Penolakan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Memo Permintaan Dana</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Memo Permintaan Dana</th>
+                    <th class="text-white" style="background:#2a3d5e;">Status Pembayaran</th>
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
@@ -115,6 +116,16 @@
                     <td class="text-center">{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
                     <td class="text-center">{{ $asum->nomor_memo_permintaan_dana }}</td>
                     <td class="text-center">{{ $asum->tanggal_memo_permintaan_dana }}</td>
+
+                    <td class="text-center">
+                        @if($asum->status_pembayaran === '-')
+                            <span class="badge bg-warning">-</span>
+                        {{--
+                        @else
+                            <span class="badge bg-primary">Not Done Yet</span>
+                        --}}
+                        @endif
+                    </td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -281,6 +292,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Memo Permintaan Dana</label><input name="tanggal_memo_permintaan_dana" class="form-control" value="{{ $asum->tanggal_memo_permintaan_dana }}" required></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Status Pembayaran</label><input name="status_pembayaran" class="form-control" value="{{ $asum->status_pembayaran }}" required></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

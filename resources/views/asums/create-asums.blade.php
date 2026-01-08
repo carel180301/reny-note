@@ -196,10 +196,19 @@
             <input type="text" name="nomor_memo_permintaan_dana" placeholder="Nomor Memo Permintaan Dana">
         </div>
 
-         <div>
+        <div>
             <label>Tanggal Memo Permintaan Dana:</label>
             <input type="date" name="tanggal_memo_permintaan_dana" placeholder="Tanggal Memo Permintaan Dana">
         </div>
+
+        <div>
+            <label class="form-label">Status Pembayaran:</label>
+            <select name="status_pembayaran" class="form-select">
+                <option value="" disabled selected>Pilih Status Pembayaran</option>
+                <option value="">-</option>
+            </select>
+        </div>
+
 
         <div>
             <input type="submit" value="Save a New Claim"/>

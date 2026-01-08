@@ -499,6 +499,14 @@
                         <input name="tanggal_memo_permintaan_dana" class="form-control" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Status Pembayaran</label>
+                        <select name="status_pembayaran" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status Pembayaran</option>
+                            <option value="">-</option>
+                        </select>
+                    </div>
+
 
                 </div>
 
