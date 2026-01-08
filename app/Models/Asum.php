@@ -28,8 +28,8 @@ class Asum extends Model
         'share_ask',
         'nilai_share_ask',
         'nilai_tuntutan_klaim',
-        'status'
-        // 'tindak_lanjut',
+        'status',
+        'tindak_lanjut'
         // 'nomor_surat_tambahan_data',
         // 'tanggal_surat_tambahan_data',
         // 'nomor_register_sistem',

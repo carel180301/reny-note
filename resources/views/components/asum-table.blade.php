@@ -31,8 +31,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Nilai Share ASK</th>
                     <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e;">Status</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
@@ -92,8 +92,8 @@
                         @endif
                     </td>
                     
-                    <!-- <td class="text-center">{{ $asum->tindak_lanjut }}</td>
-                    <td class="text-center">{{ $asum->nomor_surat_tambahan_data }}</td>
+                    <td class="text-center">{{ $asum->tindak_lanjut }}</td>
+                    <!-- <td class="text-center">{{ $asum->nomor_surat_tambahan_data }}</td>
                     <td class="text-center">{{ $asum->tanggal_surat_tambahan_data }}</td>
                     <td class="text-center">{{ $asum->nomor_register_sistem }}</td>
                     <td class="text-center">{{ $asum->tanggal_register_sistem }}</td>
@@ -238,11 +238,11 @@
                     <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $asum->status }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tindak Lanjut</label><input name="tindak_lanjut" class="form-control" value="{{ $asum->tindak_lanjut }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor Surat Tambahan Data</label><input name="nomor_surat_tambahan_data" class="form-control" value="{{ $asum->nomor_surat_tambahan_data }}" required></div>
                 </div>
 

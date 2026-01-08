@@ -117,17 +117,12 @@
             </select>
         </div>
 
-        <!-- <div>
+        <div>
             <label>Tindak Lanjut:</label>
             <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut">
         </div>
         
-        <div>
-            <label>Tindak Lanjut:</label>
-            <input type="text" name="tindak_lanjut" placeholder="Tindak Lanjut">
-        </div>
-
-        <div>
+        <!-- <div>
             <label>Nomor Surat Tambahan Data:</label>
             <input type="text" name="nomor_surat_tambahan_data" placeholder="Nomor Surat Tambahan Data">
         </div>

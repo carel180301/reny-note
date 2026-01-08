@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('nilai_share_ask');
             $table->string('nilai_tuntutan_klaim');
             $table->string('status');
-            // $table->string('tindak_lanjut');
+            $table->string('tindak_lanjut');
             // $table->string('nomor_surat_tambahan_data');
             // $table->string('tanggal_surat_tambahan_data');
             // $table->string('nomor_register_sistem');
