@@ -157,7 +157,7 @@
             <label class="form-label">Status Sistem:</label>
             <select name="status_sistem" class="form-select">
                 <option value="" disabled selected>Pilih Status</option>
-                <option value="">-</option>
+                <option value="a">A</option>
             </select>
         </div>
 
