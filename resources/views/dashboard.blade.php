@@ -494,6 +494,12 @@
                         <input name="nomor_memo_permintaan_dana" class="form-control" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Memo Permintaan Dana</label>
+                        <input name="tanggal_memo_permintaan_dana" class="form-control" required>
+                    </div>
+
+
                 </div>
 
                 <div class="modal-footer">

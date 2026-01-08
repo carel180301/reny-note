@@ -194,6 +194,11 @@
     </div>
 
     <div>
+        <label>Tanggal Memo Permintaan Dana:</label>
+        <input type="date" name="tanggal_memo_permintaan_dana" value="{{ $asums->tanggal_memo_permintaan_dana }}">
+    </div>
+
+    <div>
         <button type="submit">Update</button>
     </div>
 </form>

@@ -196,6 +196,11 @@
             <input type="text" name="nomor_memo_permintaan_dana" placeholder="Nomor Memo Permintaan Dana">
         </div>
 
+         <div>
+            <label>Tanggal Memo Permintaan Dana:</label>
+            <input type="date" name="tanggal_memo_permintaan_dana" placeholder="Tanggal Memo Permintaan Dana">
+        </div>
+
         <div>
             <input type="submit" value="Save a New Claim"/>
         </div>
