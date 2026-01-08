@@ -17,8 +17,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Posisi</th>
                     <th class="text-white" style="background:#2a3d5e;">COB</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
@@ -68,8 +68,8 @@
 
                     <td class="text-center">{{ $asum->cob }}</td>
                     <td class="text-center">{{ $asum->nama_pekerjaan }}</td>
-                    <!-- <td class="text-center">{{ $asum->nomor_polis }}</td>
-                    <td class="text-center">{{ $asum->tanggal_polis }}</td>
+                    <td class="text-center">{{ $asum->nomor_polis }}</td>
+                    <!-- <td class="text-center">{{ $asum->tanggal_polis }}</td>
                     <td class="text-center">{{ $asum->nomor_stgr }}</td>
                     <td class="text-center">{{ $asum->tanggal_stgr }}</td>
                     <td class="text-center">{{ $asum->bulan_stgr }}</td>
@@ -182,11 +182,11 @@
                     <div class="mb-3"><label class="form-label">Nama Pekerjaan</label><input name="nama_pekerjaan" class="form-control" value="{{ $asum->nama_pekerjaan }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor Polis</label><input name="nomor_polis" class="form-control" value="{{ $asum->nomor_polis }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Polis</label><input name="tanggal_polis" class="form-control" value="{{ $asum->tanggal_polis }}" required></div>
                 </div>
 

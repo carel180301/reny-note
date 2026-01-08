@@ -44,12 +44,12 @@
             <input type="text" name="nama_pekerjaan" placeholder="Nama Pekerjaan">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nomor Polis:</label>
             <input type="text" name="nomor_polis" placeholder="Nomor Polis">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Tanggal Polis:</label>
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis">
         </div>

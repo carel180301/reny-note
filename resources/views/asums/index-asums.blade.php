@@ -127,8 +127,8 @@
                     <td>{{ $asum->posisi }}</td>
                     <td>{{ $asum->cob }}</td>
                     <td>{{ $asum->nama_pekerjaan }}</td>
-                    <!-- <td>{{ $asum->nomor_polis }}</td>
-                    <td>{{ $asum->tanggal_polis }}</td>
+                    <td>{{ $asum->nomor_polis }}</td>
+                    <!-- <td>{{ $asum->tanggal_polis }}</td>
                     <td>{{ $asum->nomor_stgr }}</td>
                     <td>{{ $asum->tanggal_stgr }}</td>
                     <td>{{ $asum->bulan_stgr }}</td>

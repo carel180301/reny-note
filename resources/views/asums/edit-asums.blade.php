@@ -43,12 +43,12 @@
         <input type="text" name="nama_pekerjaan" value="{{ $asums->nama_pekerjaan }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Nomor Polis:</label>
         <input type="text" name="nomor_polis" value="{{ $asums->nomor_polis }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Tanggal Polis:</label>
         <input type="date" name="tanggal_polis" value="{{ $asums->tanggal_polis }}">
     </div>
