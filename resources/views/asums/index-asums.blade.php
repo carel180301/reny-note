@@ -130,8 +130,8 @@
                     <td>{{ $asum->nomor_polis }}</td>
                     <td>{{ $asum->tanggal_polis }}</td>
                     <td>{{ $asum->nomor_stgr }}</td>
-                    <!-- <td>{{ $asum->tanggal_stgr }}</td>
-                    <td>{{ $asum->bulan_stgr }}</td>
+                    <td>{{ $asum->tanggal_stgr }}</td>
+                    <!-- <td>{{ $asum->bulan_stgr }}</td>
                     <td>{{ $asum->tanggal_dol }}</td>
                     <td>{{ $asum->jangka_waktu_awal }}</td>
                     <td>{{ $asum->jangka_waktu_akhir }}</td>
@@ -272,12 +272,12 @@
                                         <input class="form-control" name="nomor_stgr" value="{{ $asum->nomor_stgr }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Tanggal STGR</label>
                                         <input class="form-control" name="tanggal_stgr" value="{{ $asum->tanggal_stgr }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Bulan STGR</label>
                                         <input class="form-control" name="bulan_stgr" value="{{ $asum->bulan_stgr }}">
                                     </div>
@@ -437,12 +437,12 @@
                             <input class="form-control" name="nomor_stgr">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Tanggal STGR</label>
                             <input class="form-control" name="tanggal_stgr">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Bulan STGR</label>
                             <input class="form-control" name="bulan_stgr">
                         </div>

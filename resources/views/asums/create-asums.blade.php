@@ -59,12 +59,12 @@
             <input type="text" name="nomor_stgr" placeholder="Nomor STGR">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Tanggal STGR:</label>
             <input type="date" name="tanggal_stgr" placeholder="Tanggal STGR">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Bulan STGR:</label>
             <input type="text" name="bulan_stgr" placeholder="Bulan STGR">
         </div>

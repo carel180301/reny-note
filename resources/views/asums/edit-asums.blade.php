@@ -58,12 +58,12 @@
         <input type="text" name="nomor_stgr" value="{{ $asums->nomor_stgr }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Tanggal STGR:</label>
         <input type="date" name="tanggal_stgr" value="{{ $asums->tanggal_stgr }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Bulan STGR:</label>
         <input type="text" name="bulan_stgr" value="{{ $asums->bulan_stgr }}">
     </div>

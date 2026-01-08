@@ -368,12 +368,12 @@
                         <input name="nomor_stgr" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Tanggal STGR</label>
                         <input name="tanggal_stgr" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Bulan STGR</label>
                         <input name="bulan_stgr" class="form-control" required>
                     </div>

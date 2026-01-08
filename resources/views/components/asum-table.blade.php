@@ -20,8 +20,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
                     <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
@@ -71,8 +71,8 @@
                     <td class="text-center">{{ $asum->nomor_polis }}</td>
                     <td class="text-center">{{ $asum->tanggal_polis }}</td>
                     <td class="text-center">{{ $asum->nomor_stgr }}</td>
-                    <!-- <td class="text-center">{{ $asum->tanggal_stgr }}</td>
-                    <td class="text-center">{{ $asum->bulan_stgr }}</td>
+                    <td class="text-center">{{ $asum->tanggal_stgr }}</td>
+                    <!-- <td class="text-center">{{ $asum->bulan_stgr }}</td>
                     <td class="text-center">{{ $asum->tanggal_dol }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_awal }}</td>
                     <td class="text-center">{{ $asum->jangka_waktu_akhir }}</td>
@@ -194,11 +194,11 @@
                     <div class="mb-3"><label class="form-label">Nomor STGR</label><input name="nomor_stgr" class="form-control" value="{{ $asum->nomor_stgr }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal STGR</label><input name="tanggal_stgr" class="form-control" value="{{ $asum->tanggal_stgr }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Bulan STGR</label><input name="bulan_stgr" class="form-control" value="{{ $asum->bulan_stgr }}" required></div>
                 </div>
                 
