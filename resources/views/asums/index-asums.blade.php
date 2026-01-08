@@ -124,8 +124,8 @@
             @foreach($asums as $asum)
                 <tr>
                     <td>{{ $asum->nama_tertanggung }}</td>
-                    <!-- <td>{{ $asum->posisi }}</td>
-                    <td>{{ $asum->cob }}</td>
+                    <td>{{ $asum->posisi }}</td>
+                    <!-- <td>{{ $asum->cob }}</td>
                     <td>{{ $asum->nama_pekerjaan }}</td>
                     <td>{{ $asum->nomor_polis }}</td>
                     <td>{{ $asum->tanggal_polis }}</td>
@@ -240,14 +240,14 @@
                                         <input class="form-control" name="nama_tertanggung" value="{{ $asum->nama_tertanggung }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Posisi</label>
                                         <select class="form-select" name="posisi">
                                             <option value="member" {{ $asum->posisi=='member'?'selected':'' }}>Member</option>
                                         </select>
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">COB</label>
                                         <input class="form-control" name="cob" value="{{ $asum->cob }}">
                                     </div>
@@ -404,7 +404,7 @@
                             <input class="form-control" name="nama_tertanggung">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Posisi</label>
                             <select class="form-select" name="posisi">
                                 <option disabled selected>Pilih Posisi</option>
@@ -412,7 +412,7 @@
                             </select>
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">COB</label>
                             <input class="form-control" name="cob">
                         </div>

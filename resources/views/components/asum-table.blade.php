@@ -14,7 +14,7 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e;">No.</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
-                    <th class="text-white" style="background:#2a3d5e;">Posisi</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Posisi</th>
                     <th class="text-white" style="background:#2a3d5e;">COB</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
@@ -45,7 +45,7 @@
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan atau Penolakan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Memo Permintaan Dana</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Memo Permintaan Dana</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status Pembayaran</th>
+                    <th class="text-white" style="background:#2a3d5e;">Status Pembayaran</th> -->
                     <th class="text-white" style="background:#2a3d5e;">Action</th>
                 </tr>
             </thead>
@@ -56,7 +56,7 @@
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $asum->nama_tertanggung }}</td>
 
-                    <!-- <td class="text-center">
+                    <td class="text-center">
                         @if($asum->posisi === 'member')
                             <span class="badge bg-danger">Member</span>
                         {{--
@@ -66,7 +66,7 @@
                         @endif
                     </td>
 
-                    <td class="text-center">{{ $asum->cob }}</td>
+                    <!-- <td class="text-center">{{ $asum->cob }}</td>
                     <td class="text-center">{{ $asum->nama_pekerjaan }}</td>
                     <td class="text-center">{{ $asum->nomor_polis }}</td>
                     <td class="text-center">{{ $asum->tanggal_polis }}</td>
@@ -170,11 +170,11 @@
                     <div class="mb-3"><label class="form-label">Nama Tertanggung</label><input name="nama_tertanggung" class="form-control" value="{{ $asum->nama_tertanggung }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Posisi</label><input name="posisi" class="form-control" value="{{ $asum->posisi }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">COB</label><input name="cob" class="form-control" value="{{ $asum->cob }}" required></div>
                 </div>
 

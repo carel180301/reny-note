@@ -26,14 +26,14 @@
         <input type="text" name="nama_tertanggung" value="{{ $asums->nama_tertanggung }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Posisi:</label>
         <select name="posisi">
             <option value="member" {{ $asums->status == 'member' ? 'selected' : '' }}>member</option>
         </select>
     </div>
 
-    <div>
+    <!-- <div>
         <label>COB:</label>
         <input type="text" name="cob" value="{{ $asums->cob }}">
     </div>

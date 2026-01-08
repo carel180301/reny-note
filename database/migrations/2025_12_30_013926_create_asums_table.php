@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('asums', function (Blueprint $table) {
             $table->id();
             $table->string('nama_tertanggung');
-            // $table->string('posisi');
+            $table->string('posisi');
             // $table->string('cob');
             // $table->string('nama_pekerjaan');;
             // $table->string('nomor_polis');

@@ -11,8 +11,8 @@ class Asum extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_tertanggung'
-        // 'posisi',
+        'nama_tertanggung',
+        'posisi'
         // 'cob',
         // 'nama_pekerjaan',
         // 'nomor_polis',

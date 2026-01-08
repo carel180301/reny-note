@@ -21,7 +21,7 @@ class AsumController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'nama_tertanggung' => 'required',
-            // 'posisi' => 'required',
+            'posisi' => 'required'
             // 'cob' => 'required',
             // 'nama_pekerjaan' => 'required',
             // 'nomor_polis' => 'required',
@@ -77,7 +77,7 @@ class AsumController extends Controller
     public function update(Asum $asums, Request $request){
         $data = $request->validate([
             'nama_tertanggung' => 'required',
-            // 'posisi' => 'required',
+            'posisi' => 'required'
             // 'cob' => 'required',
             // 'nama_pekerjaan' => 'required',
             // 'nomor_polis' => 'required',
@@ -136,7 +136,7 @@ class AsumController extends Controller
         $keyword = $request->query('q', '');
 
         $data = Asum::where('nama_tertanggung', 'like', "%$keyword%")
-            // ->orWhere('posisi', 'like', "%$keyword%")
+            ->orWhere('posisi', 'like', "%$keyword%")
             // ->orWhere('cob', 'like', "%$keyword%")
             // ->orWhere('nama_pekerjaan', 'like', "%$keyword%")
             // ->orWhere('nomor_polis', 'like', "%$keyword%")

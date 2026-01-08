@@ -335,7 +335,7 @@
                         <input name="nama_tertanggung" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Posisi</label>
                         <select name="posisi" class="form-select" required>
                             <option value="" disabled selected>Pilih Posisi</option>
@@ -343,7 +343,7 @@
                         </select>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">COB</label>
                         <input name="cob" class="form-control" required>
                     </div>
