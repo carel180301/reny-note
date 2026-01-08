@@ -189,6 +189,11 @@
     </div>
 
     <div>
+        <label>Nomor Memo Permintaan Dana:</label>
+        <input type="text" name="nomor_memo_permintaan_dana" value="{{ $asums->nomor_memo_permintaan_dana }}">
+    </div>
+
+    <div>
         <button type="submit">Update</button>
     </div>
 </form>

@@ -43,6 +43,8 @@ return new class extends Migration
             $table->string('tanggal_claim_settlement');
             $table->string('nomor_surat_persetujuan_atau_penolakan');
             $table->string('tanggal_surat_persetujuan_atau_penolakan');
+            $table->string('nomor_memo_permintaan_dana');
+
             $table->timestamps();
         });
     }

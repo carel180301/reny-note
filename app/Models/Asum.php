@@ -40,6 +40,7 @@ class Asum extends Model
         'nomor_claim_settlement',
         'tanggal_claim_settlement',
         'nomor_surat_persetujuan_atau_penolakan',
-        'tanggal_surat_persetujuan_atau_penolakan'
+        'tanggal_surat_persetujuan_atau_penolakan',
+        'nomor_memo_permintaan_dana'
     ];
 }
