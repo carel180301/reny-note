@@ -132,8 +132,8 @@
                     <td>{{ $asum->nomor_stgr }}</td>
                     <td>{{ $asum->tanggal_stgr }}</td>
                     <td>{{ $asum->bulan_stgr }}</td>
-                    <!-- <td>{{ $asum->tanggal_dol }}</td>
-                    <td>{{ $asum->jangka_waktu_awal }}</td>
+                    <td>{{ $asum->tanggal_dol }}</td>
+                    <!-- <td>{{ $asum->jangka_waktu_awal }}</td>
                     <td>{{ $asum->jangka_waktu_akhir }}</td>
                     <td>{{ $asum->penyebab_klaim }}</td>
                     <td>{{ $asum->nilai_tsi }}</td>
@@ -277,7 +277,7 @@
                                         <input class="form-control" name="tanggal_stgr" value="{{ $asum->tanggal_stgr }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Bulan STGR</label>
                                         <input class="form-control" name="bulan_stgr" value="{{ $asum->bulan_stgr }}">
                                     </div>
@@ -287,7 +287,7 @@
                                         <input class="form-control" name="tanggal_dol" value="{{ $asum->tanggal_dol }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Jangka Waktu Awal</label>
                                         <input class="form-control" name="jangka_waktu_awal" value="{{ $asum->jangka_waktu_awal }}">
                                     </div>
@@ -442,7 +442,7 @@
                             <input class="form-control" name="tanggal_stgr">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Bulan STGR</label>
                             <input class="form-control" name="bulan_stgr">
                         </div>
@@ -452,7 +452,7 @@
                             <input class="form-control" name="tanggal_dol">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Jangka Waktu Awal</label>
                             <input class="form-control" name="jangka_waktu_awal">
                         </div>

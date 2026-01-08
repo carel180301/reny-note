@@ -69,12 +69,12 @@
             <input type="text" name="bulan_stgr" placeholder="Bulan STGR">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Tanggal DOL:</label>
             <input type="date" name="tanggal_dol" placeholder="Tanggal DOL">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Jangka Waktu Awal:</label>
             <input type="date" name="jangka_waktu_awal" placeholder="Jangka Waktu Awal">
         </div>

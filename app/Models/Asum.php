@@ -19,8 +19,8 @@ class Asum extends Model
         'tanggal_polis',
         'nomor_stgr',
         'tanggal_stgr',
-        'bulan_stgr'
-        // 'tanggal_dol',
+        'bulan_stgr',
+        'tanggal_dol',
         // 'jangka_waktu_awal',
         // 'jangka_waktu_akhir',
         // 'penyebab_klaim',

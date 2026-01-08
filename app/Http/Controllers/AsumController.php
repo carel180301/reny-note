@@ -28,8 +28,8 @@ class AsumController extends Controller
             'tanggal_polis' => 'required',
             'nomor_stgr' => 'required',
             'tanggal_stgr' => 'required',
-            'bulan_stgr' => 'required'
-            // 'tanggal_dol' => 'required',
+            'bulan_stgr' => 'required',
+            'tanggal_dol' => 'required'
             // 'jangka_waktu_awal' => 'required',
             // 'jangka_waktu_akhir' => 'required',
             // 'penyebab_klaim' => 'required',
@@ -84,8 +84,8 @@ class AsumController extends Controller
             'tanggal_polis' => 'required',
             'nomor_stgr' => 'required',
             'tanggal_stgr' => 'required',
-            'bulan_stgr' => 'required'
-            // 'tanggal_dol' => 'required',
+            'bulan_stgr' => 'required',
+            'tanggal_dol' => 'required'
             // 'jangka_waktu_awal' => 'required',
             // 'jangka_waktu_akhir' => 'required',
             // 'penyebab_klaim' => 'required',
@@ -144,7 +144,7 @@ class AsumController extends Controller
             ->orWhere('nomor_stgr', 'like', "%$keyword%")
             ->orWhere('tanggal_stgr', 'like', "%$keyword%")
             ->orWhere('bulan_stgr', 'like', "%$keyword%")
-            // ->orWhere('tanggal_dol', 'like', "%$keyword%")
+            ->orWhere('tanggal_dol', 'like', "%$keyword%")
             // ->orWhere('jangka_waktu_awal', 'like', "%$keyword%")
             // ->orWhere('jangka_waktu_akhir', 'like', "%$keyword%")
             // ->orWhere('penyebab_klaim', 'like', "%$keyword%")
