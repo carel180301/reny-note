@@ -125,12 +125,12 @@
         <input type="text" name="tindak_lanjut" value="{{ $asums->tindak_lanjut }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Nomor Surat Tambahan Data:</label>
         <input type="text" name="nomor_surat_tambahan_data" value="{{ $asums->nomor_surat_tambahan_data }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Tanggal Surat Tambahan Data:</label>
         <input type="date" name="tanggal_surat_tambahan_data" value="{{ $asums->tanggal_surat_tambahan_data }}">
     </div>

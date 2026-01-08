@@ -431,12 +431,12 @@
                         <input name="tindak_lanjut" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Nomor Surat Tambahan Data</label>
                         <input name="nomor_surat_tambahan_data" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Tanggal Surat Tambahan Data</label>
                         <input name="tanggal_surat_tambahan_data" class="form-control" required>
                     </div>
