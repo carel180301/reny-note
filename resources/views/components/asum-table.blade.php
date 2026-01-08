@@ -18,8 +18,8 @@
                     <th class="text-white" style="background:#2a3d5e;">COB</th>
                     <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
+                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
