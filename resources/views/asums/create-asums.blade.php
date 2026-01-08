@@ -104,12 +104,12 @@
             <input type="text" name="nilai_share_ask" placeholder="Nilai Share ASK">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nilai Tuntutan Klaim:</label>
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>
 
-        <div>
+        <!-- <div>
             <label class="form-label">Status:</label>
             <select name="status" class="form-select">
                 <option value="" disabled selected>Pilih Status</option>
