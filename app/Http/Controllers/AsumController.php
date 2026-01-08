@@ -34,8 +34,8 @@ class AsumController extends Controller
             'jangka_waktu_akhir' => 'required',
             'penyebab_klaim' => 'required',
             'nilai_tsi' => 'required',
-            'share_ask' => 'required'
-            // 'nilai_share_ask' => 'required',
+            'share_ask' => 'required',
+            'nilai_share_ask' => 'required'
             // 'nilai_tuntutan_klaim' => 'required',
             // 'status' => 'required',
             // 'tindak_lanjut' => 'required',
@@ -90,8 +90,8 @@ class AsumController extends Controller
             'jangka_waktu_akhir' => 'required',
             'penyebab_klaim' => 'required',
             'nilai_tsi' => 'required',
-            'share_ask' => 'required'
-            // 'nilai_share_ask' => 'required',
+            'share_ask' => 'required',
+            'nilai_share_ask' => 'required'
             // 'nilai_tuntutan_klaim' => 'required',
             // 'status' => 'required',
             // 'tindak_lanjut' => 'required',
@@ -150,7 +150,7 @@ class AsumController extends Controller
             ->orWhere('penyebab_klaim', 'like', "%$keyword%")
             ->orWhere('nilai_tsi', 'like', "%$keyword%")
             ->orWhere('share_ask', 'like', "%$keyword%")
-            // ->orWhere('nilai_share_ask', 'like', "%$keyword%")
+            ->orWhere('nilai_share_ask', 'like', "%$keyword%")
             // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
             // ->orWhere('status', 'like', "%$keyword%")
             // ->orWhere('tindak_lanjut', 'like', "%$keyword%")

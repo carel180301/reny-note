@@ -99,17 +99,12 @@
             <input type="text" name="share_ask" placeholder="Share ASK">
         </div>
 
+        <div>
+            <label>Nilai Share ASK:</label>
+            <input type="text" name="nilai_share_ask" placeholder="Nilai Share ASK">
+        </div>
+
         <!-- <div>
-            <label>Nilai Share ASK:</label>
-            <input type="text" name="nilai_share_ask" placeholder="Nilai Share ASK">
-        </div>
-
-        <div>
-            <label>Nilai Share ASK:</label>
-            <input type="text" name="nilai_share_ask" placeholder="Nilai Share ASK">
-        </div>
-
-        <div>
             <label>Nilai Tuntutan Klaim:</label>
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>

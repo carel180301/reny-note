@@ -28,8 +28,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
                     <th class="text-white" style="background:#2a3d5e;">Nilai TSI</th>
                     <th class="text-white" style="background:#2a3d5e;">Share ASK</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Nilai Share ASK</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e;">Nilai Share ASK</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e;">Status</th>
                     <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
@@ -79,8 +79,8 @@
                     <td class="text-center">{{ $asum->penyebab_klaim }}</td>
                     <td class="text-center">{{ $asum->nilai_tsi }}</td>
                     <td class="text-center">{{ $asum->share_ask }}</td>
-                    <!-- <td class="text-center">{{ $asum->nilai_share_ask }}</td>
-                    <td class="text-center">{{ $asum->nilai_tuntutan_klaim }}</td>
+                    <td class="text-center">{{ $asum->nilai_share_ask }}</td>
+                    <!-- <td class="text-center">{{ $asum->nilai_tuntutan_klaim }}</td>
 
                     <td class="text-center">
                         @if($asum->status === 'tambahan data')
@@ -226,11 +226,11 @@
                     <div class="mb-3"><label class="form-label">Share ASK</label><input name="share_ask" class="form-control" value="{{ $asum->share_ask }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nilai Share ASK</label><input name="nilai_share_ask" class="form-control" value="{{ $asum->nilai_share_ask }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nilai Tuntutan Klaim</label><input name="nilai_tuntutan_klaim" class="form-control" value="{{ $asum->nilai_tuntutan_klaim }}" required></div>
                 </div>
 
