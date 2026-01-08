@@ -26,12 +26,10 @@
         <input type="text" name="nama_tertanggung" value="{{ $asums->nama_tertanggung }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Posisi:</label>
         <select name="posisi">
             <option value="member" {{ $asums->status == 'member' ? 'selected' : '' }}>member</option>
-            <!-- <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option> -->
         </select>
     </div>
 
@@ -114,8 +112,6 @@
         <label>Status:</label>
         <select name="status">
             <option value="tambahan data" {{ $asums->status == 'tambahan_data' ? 'selected' : '' }}>Tambahan Data</option>
-            <!-- <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option> -->
         </select>
     </div>
 
@@ -153,8 +149,6 @@
         <label>Status Sistem:</label>
         <select name="status_sistem">
             <option value="" {{ $asums->status_sistem == 'a' ? 'selected' : '' }}>-</option>
-            <!-- <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option> -->
         </select>
     </div>
 
@@ -202,10 +196,8 @@
         <label>Status Pembayaran:</label>
         <select name="status_pembayaran">
             <option value="a" {{ $asums->status_pembayaran == 'a' ? 'selected' : '' }}>-</option>
-            <!-- <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option> -->
         </select>
-    </div>
+    </div> -->
 
     <div>
         <button type="submit">Update</button>

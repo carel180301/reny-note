@@ -26,7 +26,7 @@
             <input type="text" name="nama_tertanggung" placeholder="Nama Tertanggung">
         </div>
 
-        <div>
+        <!-- <div>
             <label class="form-label">Posisi:</label>
             <select name="posisi" class="form-select">
                 <option value="" disabled selected>Pilih Posisi</option>
@@ -207,8 +207,7 @@
                 <option value="" disabled selected>Pilih Status Pembayaran</option>
                 <option value="a">a</option>
             </select>
-        </div>
-
+        </div> -->
 
         <div>
             <input type="submit" value="Save a New Claim"/>

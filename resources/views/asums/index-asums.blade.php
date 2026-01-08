@@ -124,7 +124,7 @@
             @foreach($asums as $asum)
                 <tr>
                     <td>{{ $asum->nama_tertanggung }}</td>
-                    <td>{{ $asum->posisi }}</td>
+                    <!-- <td>{{ $asum->posisi }}</td>
                     <td>{{ $asum->cob }}</td>
                     <td>{{ $asum->nama_pekerjaan }}</td>
                     <td>{{ $asum->nomor_polis }}</td>
@@ -155,7 +155,7 @@
                     <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
                     <td>{{ $asum->nomor_memo_permintaan_dana }}</td>
                     <td>{{ $asum->tanggal_memo_permintaan_dana }}</td>
-                     <td>{{ $asum->status_pembayaran }}</td>
+                     <td>{{ $asum->status_pembayaran }}</td> -->
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -240,7 +240,7 @@
                                         <input class="form-control" name="nama_tertanggung" value="{{ $asum->nama_tertanggung }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Posisi</label>
                                         <select class="form-select" name="posisi">
                                             <option value="member" {{ $asum->posisi=='member'?'selected':'' }}>Member</option>
@@ -370,7 +370,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Tanggal Claim Settlement</label>
                                         <input class="form-control" name="tanggal_persetujuan" value="{{ $asum->tanggal_persetujuan }}">
-                                    </div>
+                                    </div> -->
 
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
@@ -404,7 +404,7 @@
                             <input class="form-control" name="nama_tertanggung">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Posisi</label>
                             <select class="form-select" name="posisi">
                                 <option disabled selected>Pilih Posisi</option>
@@ -551,7 +551,7 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Claim Settlement</label>
                             <input class="form-control" name="tanggal_claim_settlement">
-                        </div>
+                        </div> -->
 
                         <div class="text-center">
                             <button class="btn btn-primary">Save</button>

@@ -56,7 +56,7 @@
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $asum->nama_tertanggung }}</td>
 
-                    <td class="text-center">
+                    <!-- <td class="text-center">
                         @if($asum->posisi === 'member')
                             <span class="badge bg-danger">Member</span>
                         {{--
@@ -125,7 +125,7 @@
                             <span class="badge bg-primary">Not Done Yet</span>
                         --}}
                         @endif
-                    </td>
+                    </td> -->
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -170,7 +170,7 @@
                     <div class="mb-3"><label class="form-label">Nama Tertanggung</label><input name="nama_tertanggung" class="form-control" value="{{ $asum->nama_tertanggung }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Posisi</label><input name="posisi" class="form-control" value="{{ $asum->posisi }}" required></div>
                 </div>
 
@@ -296,7 +296,7 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Status Pembayaran</label><input name="status_pembayaran" class="form-control" value="{{ $asum->status_pembayaran }}" required></div>
-                </div>
+                </div> -->
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>
