@@ -244,6 +244,7 @@
                                         <label class="form-label">Posisi</label>
                                         <select class="form-select" name="posisi">
                                             <option value="member" {{ $asum->posisi=='member'?'selected':'' }}>Member</option>
+                                            <option value="non member" {{ $asum->posisi=='non member'?'selected':'' }}>Non Member</option>
                                         </select>
                                     </div>
 
@@ -442,6 +443,7 @@
                             <select class="form-select" name="posisi">
                                 <option disabled selected>Pilih Posisi</option>
                                 <option value="member">Member</option>
+                                <option value="non member">Non Member</option>
                             </select>
                         </div>
 

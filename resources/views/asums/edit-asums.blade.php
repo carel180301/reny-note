@@ -30,6 +30,7 @@
         <label>Posisi:</label>
         <select name="posisi">
             <option value="member" {{ $asums->status == 'member' ? 'selected' : '' }}>member</option>
+            <option value="non member" {{ $asums->status == 'non member' ? 'selected' : '' }}>non member</option>
         </select>
     </div>
 

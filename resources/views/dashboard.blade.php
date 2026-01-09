@@ -339,6 +339,7 @@
                         <select name="posisi" class="form-select" required>
                             <option value="" disabled selected>Pilih Posisi</option>
                             <option value="member">Member</option>
+                            <option value="non member">Non Member</option>
                         </select>
                     </div>
 

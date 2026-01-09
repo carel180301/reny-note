@@ -59,10 +59,8 @@
                     <td class="text-center">
                         @if($asum->posisi === 'member')
                             <span class="badge bg-danger">Member</span>
-                        {{--
                         @else
-                            <span class="badge bg-danger">Not Done Yet</span>
-                        --}}
+                            <span class="badge bg-danger">Non Member</span>
                         @endif
                     </td>
 
@@ -85,10 +83,8 @@
                     <td class="text-center">
                         @if($asum->status === 'tambahan data')
                             <span class="badge bg-warning">Tambahan Data</span>
-                        {{--
                         @else
-                            <span class="badge bg-primary">Not Done Yet</span>
-                        --}}
+                            <span class="badge bg-primary">Lainnya</span>
                         @endif
                     </td>
                     
@@ -167,7 +163,15 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Posisi</label><input name="posisi" class="form-control" value="{{ $asum->posisi }}" required></div>
+                    <div class="mb-3"><label class="form-label">Posisi</label>
+                    <select name="posisi" class="form-select" required>
+                        <option value="member" {{ $asum->posisi === 'member' ? 'selected' : '' }}>
+                            Member
+                        </option>
+                        <option value="non member" {{ $asum->posisi === 'non member' ? 'selected' : '' }}>
+                            Non Member
+                        </option>
+                    </select>
                 </div>
 
                 <div class="modal-body">
@@ -231,7 +235,14 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $asum->status }}" required></div>
+                    <div class="mb-3"><label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="tambahan data"
+                                {{ $asum->status === 'tambahan data' ? 'selected' : '' }}>
+                                Tambahan Data
+                            </option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="modal-body">
@@ -255,7 +266,17 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status Sistem</label><input name="status_sistem" class="form-control" value="{{ $asum->status_sistem }}" required></div>
+                    <div class="mb-3"><label class="form-label">Status Sistem</label>
+                        <select name="status_sistem" class="form-select" required>
+                            <option value="done" {{ $asum->status_sistem === 'done' ? 'selected' : '' }}>
+                                Done
+                            </option>
+                            <option value="not done yet"
+                                {{ $asum->status_sistem === 'not done yet' ? 'selected' : '' }}>
+                                Not Done Yet
+                            </option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="modal-body">
@@ -291,7 +312,17 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status Pembayaran</label><input name="status_pembayaran" class="form-control" value="{{ $asum->status_pembayaran }}" required></div>
+                    <div class="mb-3"><label class="form-label">Status Pembayaran</label>
+                        <select name="status_pembayaran" class="form-select" required>
+                            <option value="done" {{ $asum->status_pembayaran === 'done' ? 'selected' : '' }}>
+                                Done
+                            </option>
+                            <option value="not done yet"
+                                {{ $asum->status_pembayaran === 'not done yet' ? 'selected' : '' }}>
+                                Not Done Yet
+                            </option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
