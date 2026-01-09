@@ -191,13 +191,14 @@
             <input type="date" name="tanggal_memo_permintaan_dana" placeholder="Tanggal Memo Permintaan Dana">
         </div>
 
-        <!-- <div>
+        <div>
             <label class="form-label">Status Pembayaran:</label>
             <select name="status_pembayaran" class="form-select">
                 <option value="" disabled selected>Pilih Status Pembayaran</option>
-                <option value="a">a</option>
+                <option value="done">Done</option>
+                <option value="not done yet">Not Done Yet</option>
             </select>
-        </div> -->
+        </div>
 
         <div>
             <input type="submit" value="Save a New Claim"/>

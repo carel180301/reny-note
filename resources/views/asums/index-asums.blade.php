@@ -155,7 +155,7 @@
                     <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
                     <td>{{ $asum->nomor_memo_permintaan_dana }}</td>
                     <td>{{ $asum->tanggal_memo_permintaan_dana }}</td>
-                     <!-- <td>{{ $asum->status_pembayaran }}</td> -->
+                    <td>{{ $asum->status_pembayaran }}</td>
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -397,6 +397,14 @@
                                         <input class="form-control" name="tanggal_memo_permintaan_dana" value="{{ $asum->tanggal_memo_permintaan_dana }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Status Pembayaran</label>
+                                        <select class="form-select" name="status_pembayaran">
+                                            <option value="done" {{ $asum->status_pembayaran == 'done' ? 'selected' : '' }}>Done</option>
+                                            <option value="not done yet" {{ $asum->status_pembayaran == 'not done yet' ? 'selected' : '' }}>Not Done Yet</option>
+                                        </select>
+                                    </div>
+
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
@@ -592,6 +600,15 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Memo Permintaan Dana</label>
                             <input class="form-control" name="tanggal_memo_permintaan_dana">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status Pembayaran</label>
+                            <select class="form-select" name="status_pembayaran">
+                                <option disabled selected>Pilih Status Pembayaran</option>
+                                <option value="done">Done</option>
+                                <option value="not done yet">Not Done Yet</option>
+                            </select>
                         </div>
 
 

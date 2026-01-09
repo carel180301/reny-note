@@ -45,7 +45,7 @@ return new class extends Migration
             $table->string('tanggal_surat_persetujuan_atau_penolakan');
             $table->string('nomor_memo_permintaan_dana');
             $table->string('tanggal_memo_permintaan_dana');
-            // $table->string('status_pembayaran');
+            $table->string('status_pembayaran');
 
             $table->timestamps();
         });

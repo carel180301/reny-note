@@ -192,12 +192,13 @@
         <input type="date" name="tanggal_memo_permintaan_dana" value="{{ $asums->tanggal_memo_permintaan_dana }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Status Pembayaran:</label>
         <select name="status_pembayaran">
-            <option value="a" {{ $asums->status_pembayaran == 'a' ? 'selected' : '' }}>-</option>
+            <option value="done" {{ $asums->status_pembayaran == 'done' ? 'selected' : '' }}>Done</option>
+            <option value="not done yet" {{ $asums->status_pembayaran == 'not done yet' ? 'selected' : '' }}>Not Done Yet</option>
         </select>
-    </div> -->
+    </div>
 
     <div>
         <button type="submit">Update</button>
