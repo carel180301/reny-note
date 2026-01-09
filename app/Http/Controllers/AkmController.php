@@ -60,7 +60,8 @@ class AkmController extends Controller
 
         Akm::create($data);
 
-        return redirect(route('dashboard'))->with('success', 'Klaim baru berhasil ditambahkan!');
+        // return redirect(route('dashboard'))->with('success', 'Klaim baru berhasil ditambahkan!');
+        return redirect()->route('dashboard', ['table' => 'akm'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
     public function edit(Akm $akms){
