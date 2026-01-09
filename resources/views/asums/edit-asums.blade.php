@@ -152,12 +152,12 @@
         </select>
     </div>
 
-    <!-- <div>
+    <div>
         <label>Keterangan / Feedback Pemutus:</label>
         <input type="text" name="keterangan" value="{{ $asums->keterangan }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Tanggal Persetujuan:</label>
         <input type="date" name="tanggal_persetujuan" value="{{ $asums->tanggal_persetujuan }}">
     </div>

@@ -460,12 +460,12 @@
                         </select>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Keterangan / Feedback Pemutus</label>
-                        <input name="nilai_tuntutan_klaim" class="form-control" required>
+                        <input name="keterangan" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Tanggal Persetujuan</label>
                         <input name="tanggal_persetujuan" class="form-control" required>
                     </div>

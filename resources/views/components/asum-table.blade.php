@@ -37,8 +37,8 @@
                     <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
                     <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
+                    <th class="text-white" style="background:#2a3d5e;">Keterangan / Feedback Pemutus</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Claim Settlement</th>
                     <th class="text-white" style="background:#2a3d5e;">Tanggal Claim Settlement</th>
                     <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan atau Penolakan</th>
@@ -106,8 +106,8 @@
                         @endif
                     </td>
 
-                    <!-- <td class="text-center">{{ $asum->keterangan }}</td>
-                    <td class="text-center">{{ $asum->tanggal_persetujuan }}</td>
+                    <td class="text-center">{{ $asum->keterangan }}</td>
+                    <!-- <td class="text-center">{{ $asum->tanggal_persetujuan }}</td>
                     <td class="text-center">{{ $asum->nomor_claim_settlement }}</td>
                     <td class="text-center">{{ $asum->tanggal_claim_settlement }}</td>
                     <td class="text-center">{{ $asum->nomor_surat_persetujuan_atau_penolakan }}</td>
@@ -260,11 +260,11 @@
                     <div class="mb-3"><label class="form-label">Status Sistem</label><input name="status_sistem" class="form-control" value="{{ $asum->status_sistem }}" required></div>
                 </div>
 
-                <!-- <div class="modal-body">
+                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Keterangan / Feedback Pemutus</label><input name="keterangan" class="form-control" value="{{ $asum->keterangan }}" required></div>
                 </div>
 
-                <div class="modal-body">
+                <!-- <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Persetujuan</label><input name="tanggal_persetujuan" class="form-control" value="{{ $asum->tanggal_persetujuan }}" required></div>
                 </div>
 

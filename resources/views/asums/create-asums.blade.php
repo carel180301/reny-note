@@ -151,12 +151,12 @@
             </select>
         </div>
 
-        <!-- <div>
+        <div>
             <label>Keterangan / Feedback Pemutus:</label>
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Tanggal Persetujuan:</label>
             <input type="date" name="tanggal_persetujuan" placeholder="Tanggal Persetujuan">
         </div>
