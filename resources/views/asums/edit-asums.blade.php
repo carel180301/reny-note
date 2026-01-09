@@ -172,12 +172,12 @@
         <input type="date" name="tanggal_claim_settlement" value="{{ $asums->tanggal_claim_settlement }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Nomor Surat Persetujuan atau Penolakan:</label>
         <input type="text" name="nomor_surat_persetujuan_atau_penolakan" value="{{ $asums->nomor_surat_persetujuan_atau_penolakan }}">
     </div>
     
-    <div>
+    <!-- <div>
         <label>Tanggal Surat Persetujuan atau Penolakan:</label>
         <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $asums->tanggal_surat_persetujuan_atau_penolakan }}">
     </div>

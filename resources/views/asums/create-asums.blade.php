@@ -171,12 +171,12 @@
             <input type="date" name="tanggal_claim_settlement" placeholder="Tanggal Claim Settlement">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nomor Surat Persetujuan atau Penolakan:</label>
             <input type="text" name="nomor_surat_persetujuan_atau_penolakan" placeholder="Nomor Surat Persetujuan atau Penolakan">
         </div>
 
-         <div>
+         <!-- <div>
             <label>Tanggal Surat Persetujuan atau Penolakan:</label>
             <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" placeholder="Tanggal Surat Persetujuan atau Penolakan">
         </div>

@@ -47,8 +47,8 @@ class AsumController extends Controller
             'keterangan' => 'required',
             'tanggal_persetujuan' => 'required',
             'nomor_claim_settlement' => 'required',
-            'tanggal_claim_settlement' => 'required'
-            // 'nomor_surat_persetujuan_atau_penolakan' => 'required',
+            'tanggal_claim_settlement' => 'required',
+            'nomor_surat_persetujuan_atau_penolakan' => 'required'
             // 'tanggal_surat_persetujuan_atau_penolakan' => 'required',
             // 'nomor_memo_permintaan_dana' => 'required',
             // 'tanggal_memo_permintaan_dana' => 'required',
@@ -103,8 +103,8 @@ class AsumController extends Controller
             'keterangan' => 'required',
             'tanggal_persetujuan' => 'required',
             'nomor_claim_settlement' => 'required',
-            'tanggal_claim_settlement' => 'required'
-            // 'nomor_surat_persetujuan_atau_penolakan' => 'required',
+            'tanggal_claim_settlement' => 'required',
+            'nomor_surat_persetujuan_atau_penolakan' => 'required'
             // 'tanggal_surat_persetujuan_atau_penolakan' => 'required',
             // 'nomor_memo_permintaan_dana' => 'required',
             // 'tanggal_memo_permintaan_dana' => 'required',
@@ -162,8 +162,8 @@ class AsumController extends Controller
             ->orWhere('keterangan', 'like', "%$keyword%")
             ->orWhere('tanggal_persetujuan', 'like', "%$keyword%")
             ->orWhere('nomor_claim_settlement', 'like', "%$keyword%")
-            // ->orWhere('tanggal_claim_settlement', 'like', "%$keyword%")
-            // ->orWhere('nomor_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
+            ->orWhere('tanggal_claim_settlement', 'like', "%$keyword%")
+            ->orWhere('nomor_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
             // ->orWhere('tanggal_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
             // ->orWhere('nomor_memo_permintaan_dana', 'like', "%$keyword%")
             // ->orWhere('tanggal_memo_permintaan_dana', 'like', "%$keyword%")
