@@ -260,7 +260,6 @@
                         </div>
 
 
-
                         <!-- <div class="mb-3">
                             <label class="form-label">Nomor Polis</label>
                             <input name="nomor_polis" class="form-control">
@@ -490,12 +489,12 @@
                         <input name="tanggal_surat_persetujuan_atau_penolakan" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Nomor Memo Permintaan Dana</label>
                         <input name="nomor_memo_permintaan_dana" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Tanggal Memo Permintaan Dana</label>
                         <input name="tanggal_memo_permintaan_dana" class="form-control" required>
                     </div>

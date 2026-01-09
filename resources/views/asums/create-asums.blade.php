@@ -181,12 +181,12 @@
             <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" placeholder="Tanggal Surat Persetujuan atau Penolakan">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nomor Memo Permintaan Dana:</label>
             <input type="text" name="nomor_memo_permintaan_dana" placeholder="Nomor Memo Permintaan Dana">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Tanggal Memo Permintaan Dana:</label>
             <input type="date" name="tanggal_memo_permintaan_dana" placeholder="Tanggal Memo Permintaan Dana">
         </div>

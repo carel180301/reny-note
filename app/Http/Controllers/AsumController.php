@@ -49,8 +49,8 @@ class AsumController extends Controller
             'nomor_claim_settlement' => 'required',
             'tanggal_claim_settlement' => 'required',
             'nomor_surat_persetujuan_atau_penolakan' => 'required',
-            'tanggal_surat_persetujuan_atau_penolakan' => 'required'
-            // 'nomor_memo_permintaan_dana' => 'required',
+            'tanggal_surat_persetujuan_atau_penolakan' => 'required',
+            'nomor_memo_permintaan_dana' => 'required'
             // 'tanggal_memo_permintaan_dana' => 'required',
             // 'status_pembayaran' => 'required'
         ]);
@@ -105,8 +105,8 @@ class AsumController extends Controller
             'nomor_claim_settlement' => 'required',
             'tanggal_claim_settlement' => 'required',
             'nomor_surat_persetujuan_atau_penolakan' => 'required',
-            'tanggal_surat_persetujuan_atau_penolakan' => 'required'
-            // 'nomor_memo_permintaan_dana' => 'required',
+            'tanggal_surat_persetujuan_atau_penolakan' => 'required',
+            'nomor_memo_permintaan_dana' => 'required'
             // 'tanggal_memo_permintaan_dana' => 'required',
             // 'status_pembayaran' => 'required'
         ]);
@@ -165,7 +165,7 @@ class AsumController extends Controller
             ->orWhere('tanggal_claim_settlement', 'like', "%$keyword%")
             ->orWhere('nomor_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
             ->orWhere('tanggal_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
-            // ->orWhere('nomor_memo_permintaan_dana', 'like', "%$keyword%")
+            ->orWhere('nomor_memo_permintaan_dana', 'like', "%$keyword%")
             // ->orWhere('tanggal_memo_permintaan_dana', 'like', "%$keyword%")
             // ->orWhere('status_pembayaran', 'like', "%$keyword%")
             // ->orderBy('created_at', 'asc')

@@ -182,12 +182,12 @@
         <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $asums->tanggal_surat_persetujuan_atau_penolakan }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Nomor Memo Permintaan Dana:</label>
         <input type="text" name="nomor_memo_permintaan_dana" value="{{ $asums->nomor_memo_permintaan_dana }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Tanggal Memo Permintaan Dana:</label>
         <input type="date" name="tanggal_memo_permintaan_dana" value="{{ $asums->tanggal_memo_permintaan_dana }}">
     </div>
