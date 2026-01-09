@@ -36,8 +36,8 @@ class Asum extends Model
         'tanggal_register_sistem',
         'status_sistem',
         'keterangan',
-        'tanggal_persetujuan'
-        // 'nomor_claim_settlement',
+        'tanggal_persetujuan',
+        'nomor_claim_settlement'
         // 'tanggal_claim_settlement',
         // 'nomor_surat_persetujuan_atau_penolakan',
         // 'tanggal_surat_persetujuan_atau_penolakan',

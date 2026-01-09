@@ -161,12 +161,12 @@
             <input type="date" name="tanggal_persetujuan" placeholder="Tanggal Persetujuan">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nomor Claim Settlement:</label>
             <input type="text" name="nomor_claim_settlement" placeholder="Nomor Claim Settlement">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Tanggal Claim Settlement:</label>
             <input type="date" name="tanggal_claim_settlement" placeholder="Tanggal Claim Settlement">
         </div>
