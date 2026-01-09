@@ -40,7 +40,7 @@ return new class extends Migration
             $table->string('keterangan');
             $table->string('tanggal_persetujuan');
             $table->string('nomor_claim_settlement');
-            // $table->string('tanggal_claim_settlement');
+            $table->string('tanggal_claim_settlement');
             // $table->string('nomor_surat_persetujuan_atau_penolakan');
             // $table->string('tanggal_surat_persetujuan_atau_penolakan');
             // $table->string('nomor_memo_permintaan_dana');
