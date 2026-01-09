@@ -37,8 +37,23 @@ Route::get('/dashboard', function (Request $request) {
     }
 
     if ($table === 'asum') {
-        $asums = Asum::orderBy('created_at', 'asc')->get();
+        $query = Asum::query()->orderBy('created_at', 'asc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $asums = $query->get();
     }
+
 
     return view('dashboard', compact('akms', 'asums', 'table'));
 

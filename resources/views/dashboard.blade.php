@@ -68,6 +68,76 @@
 
                     </div>
                 @endif
+
+                @if(request('table') === 'asum')
+                    <div class="d-flex gap-2 flex-wrap">
+
+                        <!-- Status -->
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                Status
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tambahan data'])) }}">
+                                        Tambahan Data
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Status Sistem -->
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                Status Sistem
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
+                                        Done
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not done yet'])) }}">
+                                        Not Done Yet
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Status Pembayaran -->
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                Status Pembayaran
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_pembayaran' => 'done'])) }}">
+                                        Done
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_pembayaran' => 'not done yet'])) }}">
+                                        Not Done Yet
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Reset -->
+                        <a href="{{ route('dashboard', ['table' => 'asum']) }}"
+                        class="btn btn-outline-danger">
+                            Reset
+                        </a>
+
+                    </div>
+                @endif
+
             </div>
 
             {{-- CENTER: TITLE --}}
