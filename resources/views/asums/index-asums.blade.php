@@ -154,8 +154,8 @@
                     <td>{{ $asum->nomor_surat_persetujuan_atau_penolakan }}</td>
                     <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
                     <td>{{ $asum->nomor_memo_permintaan_dana }}</td>
-                    <!-- <td>{{ $asum->tanggal_memo_permintaan_dana }}</td>
-                     <td>{{ $asum->status_pembayaran }}</td> -->
+                    <td>{{ $asum->tanggal_memo_permintaan_dana }}</td>
+                     <!-- <td>{{ $asum->status_pembayaran }}</td> -->
 
                     <!-- <td>{{ $claim->nomor_polis }}</td> -->
                     <!-- <td>{{ $claim->tanggal_polis }}</td>
@@ -392,6 +392,11 @@
                                         <input class="form-control" name="nomor_memo_permintaan_dana" value="{{ $asum->nomor_memo_permintaan_dana }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Memo Permintaan Dana</label>
+                                        <input class="form-control" name="tanggal_memo_permintaan_dana" value="{{ $asum->tanggal_memo_permintaan_dana }}">
+                                    </div>
+
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
@@ -583,6 +588,12 @@
                             <label class="form-label">Nomor Memo Permintaan Dana</label>
                             <input class="form-control" name="nomor_memo_permintaan_dana">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Memo Permintaan Dana</label>
+                            <input class="form-control" name="tanggal_memo_permintaan_dana">
+                        </div>
+
 
                         <div class="text-center">
                             <button class="btn btn-primary">Save</button>

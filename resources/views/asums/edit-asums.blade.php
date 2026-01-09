@@ -187,12 +187,12 @@
         <input type="text" name="nomor_memo_permintaan_dana" value="{{ $asums->nomor_memo_permintaan_dana }}">
     </div>
 
-    <!-- <div>
+    <div>
         <label>Tanggal Memo Permintaan Dana:</label>
         <input type="date" name="tanggal_memo_permintaan_dana" value="{{ $asums->tanggal_memo_permintaan_dana }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Status Pembayaran:</label>
         <select name="status_pembayaran">
             <option value="a" {{ $asums->status_pembayaran == 'a' ? 'selected' : '' }}>-</option>
