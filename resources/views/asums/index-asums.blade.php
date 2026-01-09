@@ -146,8 +146,8 @@
                     <td>{{ $asum->tanggal_surat_tambahan_data }}</td>
                     <td>{{ $asum->nomor_register_sistem }}</td>
                     <td>{{ $asum->tanggal_register_sistem }}</td>
-                    <!-- <td>{{ $asum->status_sistem }}</td>
-                    <td>{{ $asum->keterangan }}</td>
+                    <td>{{ $asum->status_sistem }}</td>
+                    <!-- <td>{{ $asum->keterangan }}</td>
                     <td>{{ $asum->tanggal_persetujuan }}</td>
                     <td>{{ $asum->nomor_claim_settlement }}</td>
                     <td>{{ $asum->tanggal_claim_settlement }}</td>
@@ -352,12 +352,12 @@
                                         <input class="form-control" name="tanggal_register_sistem" value="{{ $asum->tanggal_register_sistem }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Status Sistem</label>
                                         <input class="form-control" name="status_sistem" value="{{ $asum->status_sistem }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Keterangan / Feedback Pemutus</label>
                                         <input class="form-control" name="keterangan" value="{{ $asum->keterangan }}">
                                     </div>
@@ -525,15 +525,16 @@
                             <input class="form-control" name="tanggal_register_sistem">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Status Sistem</label>
                             <select class="form-select" name="status_sistem">
                                 <option disabled selected>Pilih Status Sistem</option>
-                                <option value="a">a</option>
+                                <option value="done">Done</option>
+                                <option value="not done yet">Not Done Yet</option>
                             </select>
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Keterangan / Feedback Pemutus</label>
                             <input class="form-control" name="keterangan">
                         </div>

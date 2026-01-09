@@ -36,7 +36,7 @@ return new class extends Migration
             $table->string('tanggal_surat_tambahan_data');
             $table->string('nomor_register_sistem');
             $table->string('tanggal_register_sistem');
-            // $table->string('status_sistem');
+            $table->string('status_sistem');
             // $table->string('keterangan');
             // $table->string('tanggal_persetujuan');
             // $table->string('nomor_claim_settlement');

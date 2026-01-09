@@ -145,14 +145,14 @@
         <input type="date" name="tanggal_register_sistem" value="{{ $asums->tanggal_register_sistem }}">
     </div>
     
-    <!-- <div>
+    <div>
         <label>Status Sistem:</label>
         <select name="status_sistem">
-            <option value="" {{ $asums->status_sistem == 'a' ? 'selected' : '' }}>-</option>
+            <option value="done" {{ $asums->status_sistem == 'done' ? 'selected' : 'not done yet' }}>-</option>
         </select>
     </div>
 
-    <div>
+    <!-- <div>
         <label>Keterangan / Feedback Pemutus:</label>
         <input type="text" name="keterangan" value="{{ $asums->keterangan }}">
     </div>

@@ -451,15 +451,16 @@
                         <input name="tanggal_register_sistem" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Status Sistem</label>
                         <select name="status_sistem" class="form-select" required>
                             <option value="" disabled selected>Pilih Status Sistem</option>
-                            <option value="a">a</option>
+                            <option value="done">Done</option>
+                            <option value="not done yet">Not Done Yet</option>
                         </select>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Keterangan / Feedback Pemutus</label>
                         <input name="nilai_tuntutan_klaim" class="form-control" required>
                     </div>
@@ -506,8 +507,6 @@
                             <option value="a">a</option>
                         </select>
                     </div> -->
-
-
                 </div>
 
                 <div class="modal-footer">

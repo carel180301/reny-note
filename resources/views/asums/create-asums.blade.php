@@ -142,15 +142,16 @@
             <input type="date" name="tanggal_register_sistem" placeholder="Tanggal Register Sistem">
         </div>
         
-        <!-- <div>
+        <div>
             <label class="form-label">Status Sistem:</label>
             <select name="status_sistem" class="form-select">
                 <option value="" disabled selected>Pilih Status</option>
-                <option value="a">A</option>
+                <option value="done">Done</option>
+                <option value="not done yet">Not Done Yet</option>
             </select>
         </div>
 
-        <div>
+        <!-- <div>
             <label>Keterangan / Feedback Pemutus:</label>
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
