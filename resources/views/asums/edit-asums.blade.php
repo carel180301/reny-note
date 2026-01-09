@@ -177,12 +177,12 @@
         <input type="text" name="nomor_surat_persetujuan_atau_penolakan" value="{{ $asums->nomor_surat_persetujuan_atau_penolakan }}">
     </div>
     
-    <!-- <div>
+    <div>
         <label>Tanggal Surat Persetujuan atau Penolakan:</label>
         <input type="date" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $asums->tanggal_surat_persetujuan_atau_penolakan }}">
     </div>
 
-    <div>
+    <!-- <div>
         <label>Nomor Memo Permintaan Dana:</label>
         <input type="text" name="nomor_memo_permintaan_dana" value="{{ $asums->nomor_memo_permintaan_dana }}">
     </div>

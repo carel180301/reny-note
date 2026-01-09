@@ -152,8 +152,8 @@
                     <td>{{ $asum->nomor_claim_settlement }}</td>
                     <td>{{ $asum->tanggal_claim_settlement }}</td>
                     <td>{{ $asum->nomor_surat_persetujuan_atau_penolakan }}</td>
-                    <!-- <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
-                    <td>{{ $asum->nomor_memo_permintaan_dana }}</td>
+                    <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
+                    <!-- <td>{{ $asum->nomor_memo_permintaan_dana }}</td>
                     <td>{{ $asum->tanggal_memo_permintaan_dana }}</td>
                      <td>{{ $asum->status_pembayaran }}</td> -->
 
@@ -382,6 +382,11 @@
                                         <input class="form-control" name="nomor_surat_persetujuan_atau_penolakan" value="{{ $asum->nomor_surat_persetujuan_atau_penolakan }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
+                                        <input class="form-control" name="tanggal_surat_persetujuan_atau_penolakan" value="{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}">
+                                    </div>
+
                                     <div class="text-center">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
@@ -562,6 +567,11 @@
                         <div class="mb-3">
                             <label class="form-label">Nomor Surat Persetujuan atau Penolakan</label>
                             <input class="form-control" name="nomor_surat_persetujuan_atau_penolakan">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Surat Persetujuan atau Penolakan</label>
+                            <input class="form-control" name="tanggal_surat_persetujuan_atau_penolakan">
                         </div>
 
                         <div class="text-center">
