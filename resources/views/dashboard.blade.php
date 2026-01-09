@@ -465,12 +465,12 @@
                         <input name="keterangan" class="form-control" required>
                     </div>
 
-                    <!-- <div class="mb-3">
+                    <div class="mb-3">
                         <label class="form-label">Tanggal Persetujuan</label>
                         <input name="tanggal_persetujuan" class="form-control" required>
                     </div>
 
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Nomor Claim Settlement</label>
                         <input name="nomor_claim_settlement" class="form-control" required>
                     </div>

@@ -156,12 +156,12 @@
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Tanggal Persetujuan:</label>
             <input type="date" name="tanggal_persetujuan" placeholder="Tanggal Persetujuan">
         </div>
 
-        <div>
+        <!-- <div>
             <label>Nomor Claim Settlement:</label>
             <input type="text" name="nomor_claim_settlement" placeholder="Nomor Claim Settlement">
         </div>

@@ -148,8 +148,8 @@
                     <td>{{ $asum->tanggal_register_sistem }}</td>
                     <td>{{ $asum->status_sistem }}</td>
                     <td>{{ $asum->keterangan }}</td>
-                    <!-- <td>{{ $asum->tanggal_persetujuan }}</td>
-                    <td>{{ $asum->nomor_claim_settlement }}</td>
+                    <td>{{ $asum->tanggal_persetujuan }}</td>
+                    <!-- <td>{{ $asum->nomor_claim_settlement }}</td>
                     <td>{{ $asum->tanggal_claim_settlement }}</td>
                     <td>{{ $asum->nomor_surat_persetujuan_atau_penolakan }}</td>
                     <td>{{ $asum->tanggal_surat_persetujuan_atau_penolakan }}</td>
@@ -362,12 +362,12 @@
                                         <input class="form-control" name="keterangan" value="{{ $asum->keterangan }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
+                                    <div class="mb-3">
                                         <label class="form-label">Tanggal Persetujuan</label>
                                         <input class="form-control" name="tanggal_persetujuan" value="{{ $asum->tanggal_persetujuan }}">
                                     </div>
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label class="form-label">Nomor Claim Settlement</label>
                                         <input class="form-control" name="nomor_claim_settlement" value="{{ $asum->nomor_claim_settlement }}">
                                     </div>
@@ -539,12 +539,12 @@
                             <input class="form-control" name="keterangan">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
                             <label class="form-label">Tanggal Persetujuan</label>
                             <input class="form-control" name="tanggal_persetujuan">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Nomor Claim Settlement</label>
                             <input class="form-control" name="nomor_claim_settlement">
                         </div>

@@ -44,8 +44,8 @@ class AsumController extends Controller
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
-            'keterangan' => 'required'
-            // 'tanggal_persetujuan' => 'required',
+            'keterangan' => 'required',
+            'tanggal_persetujuan' => 'required'
             // 'nomor_claim_settlement' => 'required',
             // 'tanggal_claim_settlement' => 'required',
             // 'nomor_surat_persetujuan_atau_penolakan' => 'required',
@@ -100,8 +100,8 @@ class AsumController extends Controller
             'nomor_register_sistem' => 'required',
             'tanggal_register_sistem' => 'required',
             'status_sistem' => 'required',
-            'keterangan' => 'required'
-            // 'tanggal_persetujuan' => 'required',
+            'keterangan' => 'required',
+            'tanggal_persetujuan' => 'required'
             // 'nomor_claim_settlement' => 'required',
             // 'tanggal_claim_settlement' => 'required',
             // 'nomor_surat_persetujuan_atau_penolakan' => 'required',
@@ -160,7 +160,7 @@ class AsumController extends Controller
             ->orWhere('tanggal_register_sistem', 'like', "%$keyword%")
             ->orWhere('status_sistem', 'like', "%$keyword%")
             ->orWhere('keterangan', 'like', "%$keyword%")
-            // ->orWhere('tanggal_persetujuan', 'like', "%$keyword%")
+            ->orWhere('tanggal_persetujuan', 'like', "%$keyword%")
             // ->orWhere('nomor_claim_settlement', 'like', "%$keyword%")
             // ->orWhere('tanggal_claim_settlement', 'like', "%$keyword%")
             // ->orWhere('nomor_surat_persetujuan_atau_penolakan', 'like', "%$keyword%")
