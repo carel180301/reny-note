@@ -12,41 +12,41 @@
         <table class="table table-hover w-100 align-middle">
             <thead>
                 <tr class="text-center">
-                    <th class="text-white" style="background:#2a3d5e;">No.</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nama Tertanggung</th>
-                    <th class="text-white" style="background:#2a3d5e;">Posisi</th>
-                    <th class="text-white" style="background:#2a3d5e;">COB</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nama Pekerjaan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
-                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
-                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
-                    <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai TSI</th>
-                    <th class="text-white" style="background:#2a3d5e;">Share ASK</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai Share ASK</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Keterangan / Feedback Pemutus</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Persetujuan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Claim Settlement</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Claim Settlement</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan atau Penolakan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan atau Penolakan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Memo Permintaan Dana</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Memo Permintaan Dana</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status Pembayaran</th>
-                    <th class="text-white" style="background:#2a3d5e;">Action</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Tertanggung</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Posisi</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">COB</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Pekerjaan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Polis</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor STGR</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal STGR</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Bulan STGR</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal DOL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Jangka Waktu Awal</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Jangka Waktu Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Penyebab Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nilai TSI</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Share ASK</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nilai Share ASK</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tindak Lanjut</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Status Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan / Feedback Pemutus</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Persetujuan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Claim Settlement</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Claim Settlement</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Surat Persetujuan atau Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Surat Persetujuan atau Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Memo Permintaan Dana</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Memo Permintaan Dana</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Status Pembayaran</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
 

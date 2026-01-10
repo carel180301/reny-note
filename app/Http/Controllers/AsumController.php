@@ -128,7 +128,8 @@ class AsumController extends Controller
 
     public function destroy(Asum $asums){
         $asums->delete();
-        return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+        // return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+        return redirect()->route('dashboard', ['table' => 'asum'])->with('success', 'Klaim berhasil dihapus!');
     }
 
     public function search(Request $request)

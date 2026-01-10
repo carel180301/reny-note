@@ -13,32 +13,32 @@
         <table class="table table-hover w-100 align-middle">
             <thead>
                 <tr class="text-center">
-                    <th class="text-white" style="background:#2a3d5e;">No.</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nama Debitur</th>
-                    <th class="text-white" style="background:#2a3d5e;">Cabang Bank</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Rekening</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Polis</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Bulan STGR</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal DOL</th>
-                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Awal</th>
-                    <th class="text-white" style="background:#2a3d5e;">Jangka Waktu Akhir</th>
-                    <th class="text-white" style="background:#2a3d5e;">Penyebab Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Plafond</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nilai Tuntutan Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tindak Lanjut</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Register Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Status Sistem</th>
-                    <th class="text-white" style="background:#2a3d5e;">Keterangan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Nomor Surat Persetujuan / Penolakan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Tanggal Surat Persetujuan / Penolakan</th>
-                    <th class="text-white" style="background:#2a3d5e;">Action</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Polis</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Polis</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor STGR</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal STGR</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Bulan STGR</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal DOL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Jangka Waktu Awal</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Jangka Waktu Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Penyebab Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Plafond</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tindak Lanjut</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Surat Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Register Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Status Sistem</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Keterangan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Nomor Surat Persetujuan / Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Tanggal Surat Persetujuan / Penolakan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
 
