@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Klaim</title>
+</head>
+<body>
+
+<h1>Edit Klaim</h1>
+
+<form method="POST" action="{{ route('bris.update', $bris) }}">
+    @csrf
+    @method('PUT')
+
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+
+    <div>
+        <label>Unit:</label>
+        <input type="text" name="unit" value="{{ $bris->unit }}">
+    </div>
+
+    <!-- <div>
+        <label>Tanggal Polis:</label>
+        <input type="date" name="tanggal_polis" value="{{ $akms->tanggal_polis }}">
+    </div>
+
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="terima" {{ $akms->status == 'terima' ? 'selected' : '' }}>Terima</option>
+            <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option>
+        </select>
+    </div> -->
+
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>
+
+</body>
+</html>

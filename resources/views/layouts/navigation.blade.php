@@ -16,61 +16,24 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'pen']) }}">
-                                    PEN
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'kupra']) }}">
-                                    KUPRA
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'flpp']) }}">
-                                    FLPP
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'suretyship']) }}">
-                                    SURETYSHIP
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'akm']) }}">
-                                    AKM
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'asum']) }}">
-                                    ASUM
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'asmik']) }}">
-                                    ASMIK
-                                </a>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bri']) }}">BRI</a>
                             </li>
                         </ul>
                     </div>
 
                     @php
-                        $table = request('table', 'akm');
+                        $table = request('table', 'bri');
                     @endphp
 
-                    <button type="button"
-                            class="btn p-0 text-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#add{{ ucfirst($table) }}Modal">
+                    <button type="button" class="btn p-0 text-primary" data-bs-toggle="modal" data-bs-target="#add{{ ucfirst($table) }}Modal">
                         <i class="bi bi-plus-lg fs-4"></i>
                     </button>
 
-<!-- 
-                    <button type="button" class="btn p-0 text-primary"
+                    <!-- <button type="button" class="btn p-0 text-primary"
                             data-bs-toggle="modal"
                             data-bs-target="#uploadClaimModal">
                         <i class="bi bi-upload fs-4"></i>
                     </button> -->
-
 
                     <form class="d-none d-sm-flex" onsubmit="return false;">
                         <div class="input-group">
@@ -79,9 +42,7 @@
                     </form>
                 @endif
 
-
                 <div class="relative hidden sm:block" x-data="{ dropdownOpen: false }">
-
                     @php
                         $name = Auth::user()->name ?? '';
                         $initials = strtoupper(substr($name, 0, 3));
