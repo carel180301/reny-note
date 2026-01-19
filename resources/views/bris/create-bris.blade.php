@@ -30,6 +30,11 @@
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
         </div>
 
+        <div>
+            <label>Nama Debitur:</label>
+            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
+        </div>
+
         <!-- <div>
             <label>Tanggal Polis: </label> 
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />

@@ -22,7 +22,8 @@ class BriController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'unit' => 'required',
-            'cabang_bank' => 'required'
+            'cabang_bank' => 'required',
+            'nama_debitur' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -49,7 +50,8 @@ class BriController extends Controller
     public function update(Bri $bris, Request $request){
         $data = $request->validate([
             'unit' => 'required',
-            'cabang_bank' => 'required'
+            'cabang_bank' => 'required',
+            'nama_debitur' => 'required'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -78,6 +80,7 @@ class BriController extends Controller
 
         $data = Bri::where('unit', 'like', "%$keyword%")
         ->orWhere('cabang_bank', 'like', "%$keyword%")
+        ->orWhere('nama_debitur', 'like', "%$keyword%")
         ->get();
 
         return view('components.bri-table', [

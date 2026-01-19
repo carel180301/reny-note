@@ -12,6 +12,7 @@ class Bri extends Model
 
     protected $fillable = [
         'unit',
-        'cabang_bank'
+        'cabang_bank',
+        'nama_debitur'
     ];
 }

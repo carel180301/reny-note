@@ -106,6 +106,7 @@
                 <tr>
                     <td>{{ $bri->unit }}</td>
                     <td>{{ $bri->cabang_bank }}</td>
+                    <td>{{ $bri->nama_debitur }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -183,6 +184,11 @@
                                         <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Nama Debitur</label>
+                                        <input class="form-control" name="nama_debitur" value="{{ $bri->nama_debitur }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -233,6 +239,12 @@
                             <label class="form-label">Cabang Bank</label>
                             <input class="form-control" name="cabang_bank">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Debitur</label>
+                            <input class="form-control" name="nama_debitur">
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Tanggal Polis</label>

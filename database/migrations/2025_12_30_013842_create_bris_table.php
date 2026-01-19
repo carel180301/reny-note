@@ -13,6 +13,7 @@ return new class extends Migration{
             $table->id();
             $table->string('unit');
             $table->string('cabang_bank');
+            $table->string('nama_debitur');
             $table->timestamps();
         });
     }
