@@ -26,6 +26,22 @@
         <input type="text" name="unit" value="{{ $bris->unit }}">
     </div>
 
+    <div>
+        <label>Cabang Bank:</label>
+        <input type="text" name="cabang_bank" value="{{ $bris->cabang_bank }}">
+    </div>
+
+    <div>
+        <label>Nama Debitur:</label>
+        <input type="text" name="nama_debitur" value="{{ $bris->nama_debitur }}">
+    </div>
+
+    <div>
+        <label>Nomor Rekening:</label>
+        <input type="text" name="nomor_rekening" value="{{ $bris->nomor_rekening }}">
+    </div>
+
+
     <!-- <div>
         <label>Tanggal Polis:</label>
         <input type="date" name="tanggal_polis" value="{{ $akms->tanggal_polis }}">

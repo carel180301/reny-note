@@ -96,6 +96,8 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e">Unit</th>
                     <th class="text-white" style="background:#2a3d5e">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -107,6 +109,7 @@
                     <td>{{ $bri->unit }}</td>
                     <td>{{ $bri->cabang_bank }}</td>
                     <td>{{ $bri->nama_debitur }}</td>
+                    <td>{{ $bri->nomor_rekening }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -189,6 +192,11 @@
                                         <input class="form-control" name="nama_debitur" value="{{ $bri->nama_debitur }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Rekening</label>
+                                        <input class="form-control" name="nomor_rekening" value="{{ $bri->nomor_rekening }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -243,6 +251,11 @@
                         <div class="mb-3">
                             <label class="form-label">Nama Debitur</label>
                             <input class="form-control" name="nama_debitur">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input class="form-control" name="nomor_rekening">
                         </div>
 
 

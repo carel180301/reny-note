@@ -16,6 +16,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Unit</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -27,6 +28,7 @@
                     <td class="text-center">{{ $bri->unit }}</td>
                     <td class="text-center">{{ $bri->cabang_bank }}</td>
                     <td class="text-center">{{ $bri->nama_debitur }}</td>
+                    <td class="text-center">{{ $bri->nomor_rekening }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -73,6 +75,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $bri->nama_debitur }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bri->nomor_rekening }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

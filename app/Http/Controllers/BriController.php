@@ -21,9 +21,10 @@ class BriController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'unit' => 'nullable|required_without_all:cabang_bank,nama_debitur',
+            'unit' => 'nullable|required_without_all:cabang_bank,unit',
             'cabang_bank' => 'nullable|required_without_all:unit,nama_debitur',
             'nama_debitur' => 'nullable|required_without_all:unit,cabang_bank',
+            'nomor_rekening' => 'nullable|required_without_all:unit,nomor_rekening'
         ]);
 
 
@@ -53,6 +54,7 @@ class BriController extends Controller
             'unit' => 'nullable|required_without_all:cabang_bank,nama_debitur',
             'cabang_bank' => 'nullable|required_without_all:unit,nama_debitur',
             'nama_debitur' => 'nullable|required_without_all:unit,cabang_bank',
+            'nomor_rekening' => 'nullable|required_without_all:unit,cabang_bank',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -82,6 +84,7 @@ class BriController extends Controller
         $data = Bri::where('unit', 'like', "%$keyword%")
         ->orWhere('cabang_bank', 'like', "%$keyword%")
         ->orWhere('nama_debitur', 'like', "%$keyword%")
+        ->orWhere('nomor_rekening', 'like', "%$keyword%")
         ->get();
 
         return view('components.bri-table', [

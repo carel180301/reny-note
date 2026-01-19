@@ -35,6 +35,12 @@
             <input type="text" name="nama_debitur" placeholder="Nama Debitur">
         </div>
 
+        
+        <div>
+            <label>Nomor Rekening:</label>
+            <input type="text" name="nomor_rekening" placeholder="Nomor Rekening">
+        </div>
+
         <!-- <div>
             <label>Tanggal Polis: </label> 
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />
