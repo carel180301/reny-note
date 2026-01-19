@@ -11,6 +11,7 @@ class Bri extends Model
     use HasFactory;
 
     protected $fillable = [
-        'unit'
+        'unit',
+        'cabang_bank'
     ];
 }

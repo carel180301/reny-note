@@ -12,6 +12,7 @@ return new class extends Migration{
         Schema::create('bris', function (Blueprint $table) {
             $table->id();
             $table->string('unit');
+            $table->string('cabang_bank');
             $table->timestamps();
         });
     }

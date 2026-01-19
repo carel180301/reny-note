@@ -95,6 +95,7 @@
             <thead>
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e">Unit</th>
+                    <th class="text-white" style="background:#2a3d5e">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -104,6 +105,7 @@
             @foreach($bris as $bri)
                 <tr>
                     <td>{{ $bri->unit }}</td>
+                    <td>{{ $bri->cabang_bank }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -175,6 +177,12 @@
                                         <input class="form-control" name="unit" value="{{ $bri->unit }}">
                                     </div>
 
+                                    
+                                    <div class="mb-3">
+                                        <label class="form-label">Cabang Bank</label>
+                                        <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -219,6 +227,11 @@
                         <div class="mb-3">
                             <label class="form-label">Unit</label>
                             <input class="form-control" name="unit">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input class="form-control" name="cabang_bank">
                         </div>
 
                         <!-- <div class="mb-3">

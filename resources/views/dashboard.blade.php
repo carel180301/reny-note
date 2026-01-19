@@ -119,6 +119,11 @@
                                 <input name="unit" class="form-control" required>
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Cabang Bank</label>
+                                <input name="cabang_bank" class="form-control" required>
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -169,6 +174,12 @@
                             <label class="form-label">Unit</label>
                             <input name="unit" class="form-control" required>
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control" required>
+                        </div>
+
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Posisi</label>
