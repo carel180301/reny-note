@@ -139,6 +139,11 @@
                                 <input name="nilai_tuntutan_klaim" class="form-control">
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Tanggal Klaim Diterima</label>
+                                <input name="tanggal_klaim_diterima" class="form-control">
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -209,6 +214,11 @@
                         <div class="mb-3">
                             <label class="form-label">Nilai Tuntutan Klaim</label>
                             <input name="nilai_tuntutan_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Klaim Diterima</label>
+                            <input name="tanggal_klaim_diterima" class="form-control">
                         </div>
 
                         <!-- <div class="mb-3">

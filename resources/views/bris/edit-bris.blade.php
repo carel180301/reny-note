@@ -46,6 +46,11 @@
         <input type="text" name="nilai_tuntutan_klaim" value="{{ $bris->nilai_tuntutan_klaim }}">
     </div>
 
+    <div>
+        <label>Tanggal Klaim Diterima:</label>
+        <input type="text" name="tanggal_klaim_diterima" value="{{ $bris->tanggal_klaim_diterima }}">
+    </div>
+
     <!-- <div>
         <label>Tanggal Polis:</label>
         <input type="date" name="tanggal_polis" value="{{ $akms->tanggal_polis }}">

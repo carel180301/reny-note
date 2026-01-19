@@ -110,6 +110,7 @@
                     <td>{{ $bri->nama_debitur }}</td>
                     <td>{{ $bri->nomor_rekening }}</td>
                     <td>{{ $bri->nilai_tuntutan_klaim }}</td>
+                    <td>{{ $bri->tanggal_klaim_diterima }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -202,6 +203,11 @@
                                         <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $bri->nilai_tuntutan_klaim }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Klaim Diterima</label>
+                                        <input type="date" class="form-control" name="tanggal_klaim_diterima" value="{{ $bri->tanggal_klaim_diterima }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -268,6 +274,10 @@
                             <input class="form-control" name="nilai_tuntutan_klaim">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Klaim Diterima</label>
+                            <input class="form-control" name="tanggal_klaim_diterima">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Tanggal Polis</label>

@@ -45,6 +45,11 @@
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>
 
+        <div>
+            <label>Tanggal Klaim Diterima:</label>
+            <input type="text" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
+        </div>
+
         <!-- <div>
             <label>Tanggal Polis: </label> 
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />
