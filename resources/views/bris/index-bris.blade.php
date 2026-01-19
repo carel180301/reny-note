@@ -78,7 +78,7 @@
     </nav>
 
 
-    <h2 class="text-center mt-2 akm-heading">Daftar Klaim BRI</h2>
+    <!-- <h2 class="text-center mt-2 akm-heading">Daftar Klaim BRI</h2> -->
 
     <!-- SUCCESS ALERT -->
     @if(session('success'))

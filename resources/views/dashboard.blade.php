@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="container-fluid px-2 px-md-4">
         {{-- HEADER ROW --}}
-        <div class="row align-items-center mb-2 position5-relative">
+        <div class="row align-items-center mb-2 position-relative">
             {{-- LEFT: FILTERS --}}
             <div class="col-auto mt-5">
                 @if(request('table') === 'bri')
