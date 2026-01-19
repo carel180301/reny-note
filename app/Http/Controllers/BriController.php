@@ -21,10 +21,11 @@ class BriController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'unit' => 'nullable',
-            'cabang_bank' => 'nullable',
-            'nama_debitur' => 'nullable'
+            'unit' => 'nullable|required_without_all:cabang_bank,nama_debitur',
+            'cabang_bank' => 'nullable|required_without_all:unit,nama_debitur',
+            'nama_debitur' => 'nullable|required_without_all:unit,cabang_bank',
         ]);
+
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
         // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
@@ -49,9 +50,9 @@ class BriController extends Controller
 
     public function update(Bri $bris, Request $request){
         $data = $request->validate([
-            'unit' => 'nullable',
-            'cabang_bank' => 'nullable',
-            'nama_debitur' => 'nullable'
+            'unit' => 'nullable|required_without_all:cabang_bank,nama_debitur',
+            'cabang_bank' => 'nullable|required_without_all:unit,nama_debitur',
+            'nama_debitur' => 'nullable|required_without_all:unit,cabang_bank',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
