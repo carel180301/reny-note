@@ -54,7 +54,7 @@
     </div>
 </div>
 
-<!-- ================= Edit Modals ================= -->
+<!-- ================ Edit Modals ================= -->
 @foreach($bris as $bri)
 <div class="modal fade" id="editBriModal{{ $bri->id }}" tabindex="-1">
     <div class="modal-dialog modal-md">
