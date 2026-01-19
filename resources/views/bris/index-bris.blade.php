@@ -97,6 +97,8 @@
                     <th class="text-white" style="background:#2a3d5e">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Klaim Diterima</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Klaim Masuk Portal</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -111,6 +113,7 @@
                     <td>{{ $bri->nomor_rekening }}</td>
                     <td>{{ $bri->nilai_tuntutan_klaim }}</td>
                     <td>{{ $bri->tanggal_klaim_diterima }}</td>
+                    <td>{{ $bri->tanggal_klaim_masuk_portal }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -208,6 +211,11 @@
                                         <input type="date" class="form-control" name="tanggal_klaim_diterima" value="{{ $bri->tanggal_klaim_diterima }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                                        <input type="date" class="form-control" name="tanggal_klaim_masuk_portal" value="{{ $bri->tanggal_klaim_masuk_portal }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -277,6 +285,11 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Klaim Diterima</label>
                             <input class="form-control" name="tanggal_klaim_diterima">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                            <input class="form-control" name="tanggal_klaim_masuk_portal">
                         </div>
 
                         <!-- <div class="mb-3">

@@ -19,6 +19,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diterima</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Masuk Portal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -33,6 +34,7 @@
                     <td class="text-center">{{ $bri->nomor_rekening }}</td>
                     <td class="text-center">{{ $bri->nilai_tuntutan_klaim }}</td>
                     <td class="text-center">{{ $bri->tanggal_klaim_diterima }}</td>
+                    <td class="text-center">{{ $bri->tanggal_klaim_masuk_portal }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -91,6 +93,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tanggal Klaim Diterima</label><input name="tanggal_klaim_diterima" class="form-control" value="{{ $bri->tanggal_klaim_diterima }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Tanggal Klaim Masuk Portal</label><input name="tanggal_klaim_masuk_portal" class="form-control" value="{{ $bri->tanggal_klaim_masuk_portal }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

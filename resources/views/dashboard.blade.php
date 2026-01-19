@@ -144,6 +144,11 @@
                                 <input name="tanggal_klaim_diterima" class="form-control">
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                                <input name="tanggal_klaim_masuk_portal" class="form-control">
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -219,6 +224,11 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Klaim Diterima</label>
                             <input name="tanggal_klaim_diterima" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                            <input name="tanggal_klaim_masuk_portal" class="form-control">
                         </div>
 
                         <!-- <div class="mb-3">

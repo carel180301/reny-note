@@ -50,6 +50,11 @@
             <input type="text" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
         </div>
 
+        <div>
+            <label>Tanggal Klaim Masuk Portal:</label>
+            <input type="text" name="tanggal_klaim_masuk_portal" placeholder="Tanggal Klaim Masuk Portal">
+        </div>
+
         <!-- <div>
             <label>Tanggal Polis: </label> 
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />
