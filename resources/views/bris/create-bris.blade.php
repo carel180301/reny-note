@@ -35,10 +35,14 @@
             <input type="text" name="nama_debitur" placeholder="Nama Debitur">
         </div>
 
-        
         <div>
             <label>Nomor Rekening:</label>
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening">
+        </div>
+
+        <div>
+            <label>Nilai Tuntutan Klaim:</label>
+            <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>
 
         <!-- <div>

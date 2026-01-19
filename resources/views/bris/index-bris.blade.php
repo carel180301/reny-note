@@ -20,12 +20,10 @@
             flex: 1; 
         }
     </style>
-
 </head>
 
 <body>
     <main class="m-4 pb-16 bri-page">
-
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top bg-white" style="z-index:1030">
         <div class="container-fluid">
@@ -98,6 +96,7 @@
                     <th class="text-white" style="background:#2a3d5e">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Action</th>
                 </tr>
             </thead>
@@ -110,6 +109,7 @@
                     <td>{{ $bri->cabang_bank }}</td>
                     <td>{{ $bri->nama_debitur }}</td>
                     <td>{{ $bri->nomor_rekening }}</td>
+                    <td>{{ $bri->nilai_tuntutan_klaim }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -197,6 +197,11 @@
                                         <input class="form-control" name="nomor_rekening" value="{{ $bri->nomor_rekening }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Nilai Tuntutan Klaim</label>
+                                        <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $bri->nilai_tuntutan_klaim }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -256,6 +261,11 @@
                         <div class="mb-3">
                             <label class="form-label">Nomor Rekening</label>
                             <input class="form-control" name="nomor_rekening">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan Klaim</label>
+                            <input class="form-control" name="nilai_tuntutan_klaim">
                         </div>
 
 

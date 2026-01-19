@@ -134,6 +134,11 @@
                                 <input name="nomor_rekening" class="form-control">
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Nilai Tuntutan Klaim</label>
+                                <input name="nilai_tuntutan_klaim" class="form-control">
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -201,6 +206,10 @@
                             <input name="nomor_rekening" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan Klaim</label>
+                            <input name="nilai_tuntutan_klaim" class="form-control">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Posisi</label>
@@ -223,6 +232,7 @@
             </div>
         </div>
     </div>
+
     <!-- Upload AKM Modal -->
     <div class="modal fade" id="uploadBriModal">
         <div class="modal-dialog">

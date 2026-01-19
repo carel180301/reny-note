@@ -41,6 +41,10 @@
         <input type="text" name="nomor_rekening" value="{{ $bris->nomor_rekening }}">
     </div>
 
+    <div>
+        <label>Nilai Tuntutan Klaim:</label>
+        <input type="text" name="nilai_tuntutan_klaim" value="{{ $bris->nilai_tuntutan_klaim }}">
+    </div>
 
     <!-- <div>
         <label>Tanggal Polis:</label>

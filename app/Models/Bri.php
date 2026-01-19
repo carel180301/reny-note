@@ -14,6 +14,7 @@ class Bri extends Model
         'unit',
         'cabang_bank',
         'nama_debitur',
-        'nomor_rekening'
+        'nomor_rekening',
+        'nilai_tuntutan_klaim'
     ];
 }
