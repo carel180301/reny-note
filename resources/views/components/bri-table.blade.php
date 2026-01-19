@@ -64,15 +64,15 @@
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Unit</label><input name="unit" class="form-control" value="{{ $bri->unit }}" required></div>
+                    <div class="mb-3"><label class="form-label">Unit</label><input name="unit" class="form-control" value="{{ $bri->unit }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bri->cabang_bank }}" required></div>
+                    <div class="mb-3"><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bri->cabang_bank }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $bri->nama_debitur }}" required></div>
+                    <div class="mb-3"><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $bri->nama_debitur }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

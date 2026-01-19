@@ -116,17 +116,17 @@
                         @endif
                             <div class="mb-3">
                                 <label class="form-label">Unit</label>
-                                <input name="unit" class="form-control" required>
+                                <input name="unit" class="form-control">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Cabang Bank</label>
-                                <input name="cabang_bank" class="form-control" required>
+                                <input name="cabang_bank" class="form-control">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Nama Debitur</label>
-                                <input name="nama_debitur" class="form-control" required>
+                                <input name="nama_debitur" class="form-control">
                             </div>
 
                             <!-- <div class="mb-3">
@@ -177,17 +177,17 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label">Unit</label>
-                            <input name="unit" class="form-control" required>
+                            <input name="unit" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Cabang Bank</label>
-                            <input name="cabang_bank" class="form-control" required>
+                            <input name="cabang_bank" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nama Debitur</label>
-                            <input name="nama_debitur" class="form-control" required>
+                            <input name="nama_debitur" class="form-control">
                         </div>
 
 

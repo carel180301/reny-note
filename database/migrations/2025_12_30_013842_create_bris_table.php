@@ -11,9 +11,9 @@ return new class extends Migration{
     public function up(): void{
         Schema::create('bris', function (Blueprint $table) {
             $table->id();
-            $table->string('unit');
-            $table->string('cabang_bank');
-            $table->string('nama_debitur');
+            $table->string('unit')->nullable();
+            $table->string('cabang_bank')->nullable();
+            $table->string('nama_debitur')->nullable();
             $table->timestamps();
         });
     }

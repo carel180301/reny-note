@@ -21,9 +21,9 @@ class BriController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'unit' => 'required',
-            'cabang_bank' => 'required',
-            'nama_debitur' => 'required'
+            'unit' => 'nullable',
+            'cabang_bank' => 'nullable',
+            'nama_debitur' => 'nullable'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -49,9 +49,9 @@ class BriController extends Controller
 
     public function update(Bri $bris, Request $request){
         $data = $request->validate([
-            'unit' => 'required',
-            'cabang_bank' => 'required',
-            'nama_debitur' => 'required'
+            'unit' => 'nullable',
+            'cabang_bank' => 'nullable',
+            'nama_debitur' => 'nullable'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
