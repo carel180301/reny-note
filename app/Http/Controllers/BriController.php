@@ -21,17 +21,19 @@ class BriController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'unit' => 'nullable|required_without_all:cabang_bank,unit',
-            'cabang_bank' => 'nullable|required_without_all:unit,nama_debitur',
-            'nama_debitur' => 'nullable|required_without_all:unit,cabang_bank',
-            'nomor_rekening' => 'nullable|required_without_all:unit,nomor_rekening',
-            'nilai_tuntutan_klaim' => 'nullable|required_without_all:unit,nomor_rekening',
-            'tanggal_klaim_diterima' => 'nullable|required_without_all:unit,nomor_rekening',
-            'tanggal_klaim_masuk_portal' => 'nullable|required_without_all:unit,nomor_rekening',
-            'status' => 'nullable|required_without_all:unit,nomor_rekening',
-            'tambahan_data' => 'nullable|required_without_all:unit,nomor_rekening',
-            'date_update' => 'nullable|required_without_all:unit,nomor_rekening',
-            'nomor_box' => 'nullable|required_without_all:unit,nomor_rekening',
+            'unit' => 'nullable|string|max:255',
+            'cabang_bank' => 'nullable|string|max:255',
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255',
+            'nilai_tuntutan_klaim' => 'nullable|string|max:255',
+
+            'tanggal_klaim_diterima' => 'nullable|date',
+            'tanggal_klaim_masuk_portal' => 'nullable|date',
+            'date_update' => 'nullable|date',
+
+            'status' => 'nullable|string|max:50',
+            'tambahan_data' => 'nullable|string|max:255',
+            'nomor_box' => 'nullable|string|max:255',
         ]);
 
 
@@ -58,17 +60,19 @@ class BriController extends Controller
 
     public function update(Bri $bris, Request $request){
         $data = $request->validate([
-            'unit' => 'nullable|required_without_all:cabang_bank,nama_debitur',
-            'cabang_bank' => 'nullable|required_without_all:unit,nama_debitur',
-            'nama_debitur' => 'nullable|required_without_all:unit,cabang_bank',
-            'nomor_rekening' => 'nullable|required_without_all:unit,cabang_bank',
-            'nilai_tuntutan_klaim' => 'nullable|required_without_all:unit,cabang_bank',
-            'tanggal_klaim_diterima'=> 'nullable|required_without_all:unit,nomor_rekening',
-            'tanggal_klaim_masuk_portal'=> 'nullable|required_without_all:unit,nomor_rekening',
-            'status'=> 'nullable|required_without_all:unit,nomor_rekening',
-            'tambahan_data'=> 'nullable|required_without_all:unit,nomor_rekening',
-            'date_update'=> 'nullable|required_without_all:unit,nomor_rekening',
-            'nomor_box'=> 'nullable|required_without_all:unit,nomor_rekening',
+            'unit' => 'nullable|string|max:255',
+            'cabang_bank' => 'nullable|string|max:255',
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255',
+            'nilai_tuntutan_klaim' => 'nullable|string|max:255',
+
+            'tanggal_klaim_diterima' => 'nullable|date',
+            'tanggal_klaim_masuk_portal' => 'nullable|date',
+            'date_update' => 'nullable|date',
+
+            'status' => 'nullable|string|max:50',
+            'tambahan_data' => 'nullable|string|max:255',
+            'nomor_box' => 'nullable|string|max:255',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
