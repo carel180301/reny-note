@@ -20,6 +20,7 @@ class Bri extends Model
         'tanggal_klaim_masuk_portal',
         'status',
         'tambahan_data',
-        'date_update'
+        'date_update',
+        'nomor_box'
     ];
 }

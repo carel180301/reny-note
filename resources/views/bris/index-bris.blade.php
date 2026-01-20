@@ -117,6 +117,7 @@
                     <td>{{ $bri->status }}</td>
                     <td>{{ $bri->tambahan_data }}</td>
                     <td>{{ $bri->date_update }}</td>
+                    <td>{{ $bri->nomor_box }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -242,6 +243,11 @@
                                         <input type="date" class="form-control" name="date_update" value="{{ $bri->date_update }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Box</label>
+                                        <input class="form-control" name="nomor_box" value="{{ $bri->nomor_box }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -341,6 +347,11 @@
                         <div class="mb-3">
                             <label class="form-label">Date Update</label>
                             <input class="form-control" name="date_update">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Box</label>
+                            <input class="form-control" name="nomor_box">
                         </div>
 
                         <!-- <div class="mb-3">

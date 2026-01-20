@@ -21,6 +21,7 @@ return new class extends Migration{
             $table->string('status')->nullable();
             $table->string('tambahan_data')->nullable();
             $table->string('date_update')->nullable();
+            $table->string('nomor_box')->nullable();
             $table->timestamps();
         });
     }

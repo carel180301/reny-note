@@ -79,6 +79,12 @@
         <input type="text" name="date_update" value="{{ $bris->date_update }}">
     </div>
 
+    <div>
+        <label>No Box:</label>
+        <input type="text" name="nomor_box" value="{{ $bris->nomor_box }}">
+    </div>
+
+
     <!-- <div>
         <label>Tanggal Polis:</label>
         <input type="date" name="tanggal_polis" value="{{ $akms->tanggal_polis }}">

@@ -173,6 +173,11 @@
                                 <input name="date_update" class="form-control">
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">No Box</label>
+                                <input name="nomor_box" class="form-control">
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>

@@ -76,7 +76,12 @@
 
         <div>
             <label>Date Update:</label>
-            <input type="text" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
+            <input type="text" name="date_update" placeholder="Date Update">
+        </div>
+
+        <div>
+            <label>Nomor Box:</label>
+            <input type="text" name="nomor_box" placeholder="Nomor Box">
         </div>
 
 

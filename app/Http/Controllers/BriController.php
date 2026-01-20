@@ -31,6 +31,7 @@ class BriController extends Controller
             'status' => 'nullable|required_without_all:unit,nomor_rekening',
             'tambahan_data' => 'nullable|required_without_all:unit,nomor_rekening',
             'date_update' => 'nullable|required_without_all:unit,nomor_rekening',
+            'nomor_box' => 'nullable|required_without_all:unit,nomor_rekening',
         ]);
 
 
@@ -67,6 +68,7 @@ class BriController extends Controller
             'status'=> 'nullable|required_without_all:unit,nomor_rekening',
             'tambahan_data'=> 'nullable|required_without_all:unit,nomor_rekening',
             'date_update'=> 'nullable|required_without_all:unit,nomor_rekening',
+            'nomor_box'=> 'nullable|required_without_all:unit,nomor_rekening',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -103,6 +105,7 @@ class BriController extends Controller
         ->orWhere('status', 'like', "%$keyword%")
         ->orWhere('tambahan_data', 'like', "%$keyword%")
         ->orWhere('date_update', 'like', "%$keyword%")
+        ->orWhere('nomor_box', 'like', "%$keyword%")
         ->get();
 
         return view('components.bri-table', [
