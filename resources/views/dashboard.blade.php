@@ -149,6 +149,20 @@
                                 <input name="tanggal_klaim_masuk_portal" class="form-control">
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Status</label>
+                                <select name="status" class="form-select" required>
+                                    <option value="" disabled selected>Pilih Status</option>
+                                    <option value="batal">Batal</option>
+                                    <option value="disetujui">Disetujui</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="regist">Regist</option>
+                                    <option value="suspect">Suspect</option>
+                                    <option value="tamdat">Tamdat</option>
+                                    <option value="tolak">Tolak</option>
+                                </select>
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -229,6 +243,20 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Klaim Masuk Portal</label>
                             <input name="tanggal_klaim_masuk_portal" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-select" required>
+                                <option value="" disabled selected>Pilih Status</option>
+                                <option value="batal">Batal</option>
+                                <option value="disetujui">Disetujui</option>
+                                <option value="pending">Pending</option>
+                                <option value="regist">Regist</option>
+                                <option value="suspect">Suspect</option>
+                                <option value="tamdat">Tamdat</option>
+                                <option value="tolak">Tolak</option>
+                            </select>
                         </div>
 
                         <!-- <div class="mb-3">

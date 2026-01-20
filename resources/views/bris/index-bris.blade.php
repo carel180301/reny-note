@@ -114,6 +114,7 @@
                     <td>{{ $bri->nilai_tuntutan_klaim }}</td>
                     <td>{{ $bri->tanggal_klaim_diterima }}</td>
                     <td>{{ $bri->tanggal_klaim_masuk_portal }}</td>
+                    <td>{{ $bri->status }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -216,6 +217,19 @@
                                         <input type="date" class="form-control" name="tanggal_klaim_masuk_portal" value="{{ $bri->tanggal_klaim_masuk_portal }}">
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select class="form-select" name="status">
+                                            <option value="Batal" {{ $bri->status=='Batal'?'selected':'' }}>Batal</option>
+                                            <option value="Disetujui" {{ $bri->status=='Disetujui'?'selected':'' }}>Disetujui</option>
+                                            <option value="Pending" {{ $bri->status=='Pending'?'selected':'' }}>Pending</option>
+                                            <option value="Regist" {{ $bri->status=='Regist'?'selected':'' }}>Regist</option>
+                                            <option value="Suspect" {{ $bri->status=='Suspect'?'selected':'' }}>Suspect</option>
+                                            <option value="Tamdat" {{ $bri->status=='Tamdat'?'selected':'' }}>Tamdat</option>
+                                            <option value="Tolak" {{ $bri->status=='Tolak'?'selected':'' }}>Tolak</option>
+                                        </select>
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -290,6 +304,21 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal Klaim Masuk Portal</label>
                             <input class="form-control" name="tanggal_klaim_masuk_portal">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select" name="status">
+                                <option disabled selected>Pilih Status</option>
+                                <option value="Batal">Batal</option>
+                                <option value="Disetujui">Disetujui</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Regist">Regist</option>
+                                <option value="Suspect">Suspect</option>
+                                <option value="Tamdat">Tamdat</option>
+                                <option value="Suspect">Suspect</option>
+                                <option value="Tolak">Tolak</option>
+                            </select>
                         </div>
 
                         <!-- <div class="mb-3">

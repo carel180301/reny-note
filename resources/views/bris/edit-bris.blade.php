@@ -56,6 +56,19 @@
         <input type="text" name="tanggal_klaim_masuk_portal" value="{{ $bris->tanggal_klaim_masuk_portal }}">
     </div>
 
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="batal" {{ $bris->status == 'batal' ? 'selected' : '' }}>Batal</option>
+            <option value="disetujui" {{ $bris->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
+            <option value="pending" {{ $bris->status == 'pending' ? 'selected' : '' }}>Pending</option>
+            <option value="regist" {{ $bris->status == 'regist' ? 'selected' : '' }}>Regist</option>
+            <option value="suspect" {{ $bris->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
+            <option value="tamdat" {{ $bris->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
+            <option value="tolak" {{ $bris->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+        </select>
+    </div>
+
 
     <!-- <div>
         <label>Tanggal Polis:</label>

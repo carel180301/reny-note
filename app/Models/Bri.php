@@ -17,6 +17,7 @@ class Bri extends Model
         'nomor_rekening',
         'nilai_tuntutan_klaim',
         'tanggal_klaim_diterima',
-        'tanggal_klaim_masuk_portal'
+        'tanggal_klaim_masuk_portal',
+        'status',
     ];
 }
