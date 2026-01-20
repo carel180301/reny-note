@@ -141,12 +141,12 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Tanggal Klaim Diterima</label>
-                                <input name="tanggal_klaim_diterima" class="form-control">
+                                <input type="date" name="tanggal_klaim_diterima" class="form-control">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Tanggal Klaim Masuk Portal</label>
-                                <input name="tanggal_klaim_masuk_portal" class="form-control">
+                                <input type="date" name="tanggal_klaim_masuk_portal" class="form-control">
                             </div>
 
                             <div class="mb-3">
@@ -170,7 +170,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Date Update</label>
-                                <input name="date_update" class="form-control">
+                                <input type="date" name="date_update" class="form-control">
                             </div>
 
                             <div class="mb-3">
@@ -238,7 +238,6 @@
                             <label class="form-label">Nama Debitur</label>
                             <input name="nama_debitur" class="form-control">
                         </div>
-
                         
                         <div class="mb-3">
                             <label class="form-label">Nomor Rekening</label>
@@ -252,12 +251,12 @@
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Klaim Diterima</label>
-                            <input name="tanggal_klaim_diterima" class="form-control">
+                            <input type="date" name="tanggal_klaim_diterima" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tanggal Klaim Masuk Portal</label>
-                            <input name="tanggal_klaim_masuk_portal" class="form-control">
+                            <input type="date" name="tanggal_klaim_masuk_portal" class="form-control">
                         </div>
 
                         <div class="mb-3">
@@ -281,7 +280,12 @@
 
                         <div class="mb-3">
                             <label class="form-label">Date Update</label>
-                            <input name="date_update" class="form-control">
+                            <input type="date" name="date_update" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">No Box</label>
+                            <input name="nomor_box" class="form-control">
                         </div>
 
                         <!-- <div class="mb-3">

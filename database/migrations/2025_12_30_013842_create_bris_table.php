@@ -16,11 +16,11 @@ return new class extends Migration{
             $table->string('nama_debitur')->nullable();
             $table->string('nomor_rekening')->nullable();
             $table->string('nilai_tuntutan_klaim')->nullable();
-            $table->string('tanggal_klaim_diterima')->nullable();
-            $table->string('tanggal_klaim_masuk_portal')->nullable();
+            $table->date('tanggal_klaim_diterima')->nullable();
+            $table->date('tanggal_klaim_masuk_portal')->nullable();
             $table->string('status')->nullable();
             $table->string('tambahan_data')->nullable();
-            $table->string('date_update')->nullable();
+            $table->date('date_update')->nullable();
             $table->string('nomor_box')->nullable();
             $table->timestamps();
         });

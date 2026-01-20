@@ -47,12 +47,12 @@
 
         <div>
             <label>Tanggal Klaim Diterima:</label>
-            <input type="text" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
+            <input type="date" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
         </div>
 
         <div>
             <label>Tanggal Klaim Masuk Portal:</label>
-            <input type="text" name="tanggal_klaim_masuk_portal" placeholder="Tanggal Klaim Masuk Portal">
+            <input type="date" name="tanggal_klaim_masuk_portal" placeholder="Tanggal Klaim Masuk Portal">
         </div>
 
         <div>
@@ -76,7 +76,7 @@
 
         <div>
             <label>Date Update:</label>
-            <input type="text" name="date_update" placeholder="Date Update">
+            <input type="date" name="date_update" placeholder="Date Update">
         </div>
 
         <div>

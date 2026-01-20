@@ -48,12 +48,12 @@
 
     <div>
         <label>Tanggal Klaim Diterima:</label>
-        <input type="text" name="tanggal_klaim_diterima" value="{{ $bris->tanggal_klaim_diterima }}">
+        <input type="date" name="tanggal_klaim_diterima" value="{{ $bris->tanggal_klaim_diterima }}">
     </div>
 
     <div>
         <label>Tanggal Klaim Masuk Portal:</label>
-        <input type="text" name="tanggal_klaim_masuk_portal" value="{{ $bris->tanggal_klaim_masuk_portal }}">
+        <input type="date" name="tanggal_klaim_masuk_portal" value="{{ $bris->tanggal_klaim_masuk_portal }}">
     </div>
 
     <div>
@@ -76,7 +76,7 @@
 
     <div>
         <label>Date Update:</label>
-        <input type="text" name="date_update" value="{{ $bris->date_update }}">
+        <input type="date" name="date_update" value="{{ $bris->date_update }}">
     </div>
 
     <div>
