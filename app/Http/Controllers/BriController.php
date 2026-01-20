@@ -30,6 +30,7 @@ class BriController extends Controller
             'tanggal_klaim_masuk_portal' => 'nullable|required_without_all:unit,nomor_rekening',
             'status' => 'nullable|required_without_all:unit,nomor_rekening',
             'tambahan_data' => 'nullable|required_without_all:unit,nomor_rekening',
+            'date_update' => 'nullable|required_without_all:unit,nomor_rekening',
         ]);
 
 
@@ -64,7 +65,8 @@ class BriController extends Controller
             'tanggal_klaim_diterima'=> 'nullable|required_without_all:unit,nomor_rekening',
             'tanggal_klaim_masuk_portal'=> 'nullable|required_without_all:unit,nomor_rekening',
             'status'=> 'nullable|required_without_all:unit,nomor_rekening',
-            'tambahan_data'=> 'nullable|required_without_all:unit,nomor_rekening'
+            'tambahan_data'=> 'nullable|required_without_all:unit,nomor_rekening',
+            'date_update'=> 'nullable|required_without_all:unit,nomor_rekening',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -100,6 +102,7 @@ class BriController extends Controller
         ->orWhere('tanggal_klaim_masuk_portal', 'like', "%$keyword%")
         ->orWhere('status', 'like', "%$keyword%")
         ->orWhere('tambahan_data', 'like', "%$keyword%")
+        ->orWhere('date_update', 'like', "%$keyword%")
         ->get();
 
         return view('components.bri-table', [

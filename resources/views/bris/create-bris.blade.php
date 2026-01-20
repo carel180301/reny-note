@@ -74,6 +74,11 @@
             <input type="text" name="tambahan_data" placeholder="Tambahan Data">
         </div>
 
+        <div>
+            <label>Date Update:</label>
+            <input type="text" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
+        </div>
+
 
         <!-- <div>
             <label>Tanggal Polis: </label> 

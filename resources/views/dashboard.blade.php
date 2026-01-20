@@ -168,6 +168,11 @@
                                 <input name="tambahan_data" class="form-control">
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Date Update</label>
+                                <input name="date_update" class="form-control">
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -267,6 +272,11 @@
                         <div class="mb-3">
                             <label class="form-label">Tambahan Data</label>
                             <input name="tambahan_data" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Date Update</label>
+                            <input name="date_update" class="form-control">
                         </div>
 
                         <!-- <div class="mb-3">

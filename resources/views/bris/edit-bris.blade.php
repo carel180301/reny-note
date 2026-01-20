@@ -74,6 +74,10 @@
         <input type="text" name="tambahan_data" value="{{ $bris->tambahan_data }}">
     </div>
 
+    <div>
+        <label>Date Update:</label>
+        <input type="text" name="date_update" value="{{ $bris->date_update }}">
+    </div>
 
     <!-- <div>
         <label>Tanggal Polis:</label>

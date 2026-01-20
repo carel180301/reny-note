@@ -22,6 +22,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Masuk Portal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tambahan Data</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -39,6 +40,7 @@
                     <td class="text-center">{{ $bri->tanggal_klaim_masuk_portal }}</td>
                     <td class="text-center">{{ $bri->status }}</td>
                     <td class="text-center">{{ $bri->tambahan_data }}</td>
+                    <td class="text-center">{{ $bri->date_update }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -109,6 +111,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tambahan Data</label><input name="tambahan_data" class="form-control" value="{{ $bri->tambahan_data }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Date Update</label><input name="date_update" class="form-control" value="{{ $bri->date_update }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

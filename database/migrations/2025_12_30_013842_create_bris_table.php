@@ -20,6 +20,7 @@ return new class extends Migration{
             $table->string('tanggal_klaim_masuk_portal')->nullable();
             $table->string('status')->nullable();
             $table->string('tambahan_data')->nullable();
+            $table->string('date_update')->nullable();
             $table->timestamps();
         });
     }
