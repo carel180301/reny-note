@@ -69,6 +69,11 @@
             </select>
         </div>
 
+        <div>
+            <label>Tambahan Data:</label>
+            <input type="text" name="tambahan_data" placeholder="Tambahan Data">
+        </div>
+
 
         <!-- <div>
             <label>Tanggal Polis: </label> 

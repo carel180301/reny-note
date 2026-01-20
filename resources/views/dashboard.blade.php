@@ -163,6 +163,11 @@
                                 </select>
                             </div>
 
+                            <div class="mb-3">
+                                <label class="form-label">Tambahan Data</label>
+                                <input name="tambahan_data" class="form-control">
+                            </div>
+
                             <!-- <div class="mb-3">
                                 <label class="form-label">Tanggal Polis</label>
                                 <input type="date" name="tanggal_polis" class="form-control" required>
@@ -257,6 +262,11 @@
                                 <option value="tamdat">Tamdat</option>
                                 <option value="tolak">Tolak</option>
                             </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tambahan Data</label>
+                            <input name="tambahan_data" class="form-control">
                         </div>
 
                         <!-- <div class="mb-3">

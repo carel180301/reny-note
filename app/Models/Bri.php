@@ -19,5 +19,6 @@ class Bri extends Model
         'tanggal_klaim_diterima',
         'tanggal_klaim_masuk_portal',
         'status',
+        'tambahan_data',
     ];
 }

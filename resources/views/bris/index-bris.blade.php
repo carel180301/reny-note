@@ -115,6 +115,7 @@
                     <td>{{ $bri->tanggal_klaim_diterima }}</td>
                     <td>{{ $bri->tanggal_klaim_masuk_portal }}</td>
                     <td>{{ $bri->status }}</td>
+                    <td>{{ $bri->tambahan_data }}</td>
 
                     <!-- @php
                             $today = \Carbon\Carbon::today();
@@ -230,6 +231,11 @@
                                         </select>
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label class="form-label">Tambahan Data</label>
+                                        <input class="form-control" name="tambahan_data" value="{{ $bri->tambahan_data }}">
+                                    </div>
+
                                     <!-- <div class="mb-3">
                                         <label class="form-label">Tanggal Polis</label>
                                         <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
@@ -319,6 +325,11 @@
                                 <option value="Suspect">Suspect</option>
                                 <option value="Tolak">Tolak</option>
                             </select>
+                        </div>
+
+                         <div class="mb-3">
+                            <label class="form-label">Tambahan Data</label>
+                            <input class="form-control" name="tambahan_data">
                         </div>
 
                         <!-- <div class="mb-3">
