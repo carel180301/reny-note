@@ -75,7 +75,6 @@
         </div>
     </nav>
 
-
     <!-- <h2 class="text-center mt-2 akm-heading">Daftar Klaim BRI</h2> -->
 
     <!-- SUCCESS ALERT -->
@@ -85,7 +84,6 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
     @endif
-
 
     <!-- TABLE WRAPPER -->
     <div>

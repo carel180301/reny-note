@@ -100,11 +100,11 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Klaim Diterima</label><input name="tanggal_klaim_diterima" class="form-control" value="{{ $bri->tanggal_klaim_diterima }}"></div>
+                    <div class="mb-3"><label class="form-label">Tanggal Klaim Diterima</label><input type="date" name="tanggal_klaim_diterima" class="form-control" value="{{ $bri->tanggal_klaim_diterima }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Klaim Masuk Portal</label><input name="tanggal_klaim_masuk_portal" class="form-control" value="{{ $bri->tanggal_klaim_masuk_portal }}"></div>
+                    <div class="mb-3"><label class="form-label">Tanggal Klaim Masuk Portal</label><input type="date" name="tanggal_klaim_masuk_portal" class="form-control" value="{{ $bri->tanggal_klaim_masuk_portal }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Date Update</label><input name="date_update" class="form-control" value="{{ $bri->date_update }}"></div>
+                    <div class="mb-3"><label class="form-label">Date Update</label><input type="date" name="date_update" class="form-control" value="{{ $bri->date_update }}"></div>
                 </div>
 
                 <div class="modal-body">
