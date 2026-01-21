@@ -7,9 +7,11 @@ use App\Http\Controllers\ClaimController;
 // use App\Models\Akm;
 // use App\Models\Asum;
 use App\Models\Bri;
+use App\Models\Mandiri;
 // use App\Http\Controllers\AkmController;
 // use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
+use App\Http\Controllers\MandiriController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
@@ -17,12 +19,12 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function (Request $request) {
-
-    $table = $request->get('table', 'bri');
+    $table = $request->get('table', 'bri', 'mandiri');
 
     // $akms = collect();
     // $asums = collect();
     $bris = collect();
+    $mandiris = collect();
 
 
 //    if ($table === 'akm') {
@@ -75,11 +77,27 @@ Route::get('/dashboard', function (Request $request) {
         $bris = $query->get();
     }
 
-    return view('dashboard', compact('bris', 'table'));
+    else if ($table === 'mandiri') {
+        $query = Mandiri::query()->orderBy('created_at', 'asc');
 
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $mandiris = $query->get();
+    }
+
+
+    return view('dashboard', compact('bris', 'mandiris','table'));
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-
 
 Route::middleware('auth')->group(function () {
     // Route::get('/akms', [AkmController::class, 'index'])->name('akms.index');
@@ -117,6 +135,19 @@ Route::middleware('auth')->group(function () {
     Route::post('/bris/upload', [BriController::class, 'upload'])->name('bris.upload');
     Route::resource('bris', BriController::class);
     Route::post('/bris/upload', [BriController::class, 'upload'])->name('bris.upload');
+
+    Route::get('/mandiris', [MandiriController::class, 'index'])->name('mandiris.index');
+    Route::get('/mandiris/create', [MandiriController::class, 'create'])->name('mandiris.create');
+    Route::post('/mandiris', [MandiriController::class, 'store'])->name('mandiris.store');
+    Route::get('/mandiris/{mandiris}/edit', [MandiriController::class, 'edit'])->name('mandiris.edit');
+    Route::put('/mandiris/{mandiris}/update', [MandiriController::class, 'update'])->name('mandiris.update');
+    Route::delete('/mandiris/{mandiris}/destroy', [MandiriController::class, 'destroy'])->name('mandiris.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/mandiris/{mandiris}/send-email', [EmailsController::class, 'sendMandiriEmail'])->name('mandiris.sendEmail');
+    Route::get('/mandiris/search', [MandiriController::class, 'search'])->name('mandiris.search');
+    Route::post('/mandiris/upload', [MandiriController::class, 'upload'])->name('mandiris.upload');
+    Route::resource('mandiris', MandiriController::class);
+    Route::post('/mandiris/upload', [MandiriController::class, 'upload'])->name('mandiris.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

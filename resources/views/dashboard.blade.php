@@ -61,6 +61,64 @@
                         </a> -->
                     </div>
                 @endif
+
+                @if(request('table') === 'mandiri')
+                    <div class="d-flex gap-2 flex-wrap">
+                        <!-- Status Filter -->
+                        <!-- <div class="dropdown"> -->
+                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                Status
+                            </button> -->
+                            <!-- <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
+                                        Terima
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
+                                        Tolak
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
+                                        Proses Analisa
+                                    </a>
+                                </li>
+                            </ul> -->
+                        <!-- </div> -->
+
+                        <!-- Status Sistem Filter -->
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                Status Sistem
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
+                                        Done
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
+                                        Not Done
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+                        <!-- Reset -->
+                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
+                            Reset
+                        </a> -->
+                    </div>
+                @endif
             </div>
 
             {{-- CENTER: TITLE --}}
@@ -89,6 +147,10 @@
         <div class="bg-white shadow-sm rounded px-1">
             @if(request('table') === 'bri')
                 <x-bri-table :bris="$bris" />
+            @endif
+
+            @if(request('table') === 'mandiri')
+                <x-mandiri-table :mandiris="$mandiris" />
             @endif
         </div>
     </div>
@@ -212,24 +274,24 @@
         </div>
     </div>
 
-    <!-- Add BRI Modal-->
-    <div class="modal fade" id="addBriModal">
+    <!-- Add Mandiri Modal-->
+    <div class="modal fade" id="addMandiriModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambah Klaim BRI</h5>
+                    <h5 class="modal-title">Tambah Klaim Mandiri</h5>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
-                <form method="POST" action="{{ route('bris.store') }}">
+                <form method="POST" action="{{ route('mandiris.store') }}">
                     @csrf
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label class="form-label">Unit</label>
-                            <input name="unit" class="form-control">
+                            <label class="form-label">Uker</label>
+                            <input name="uker" class="form-control">
                         </div>
 
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="form-label">Cabang Bank</label>
                             <input name="cabang_bank" class="form-control">
                         </div>
@@ -286,7 +348,7 @@
                         <div class="mb-3">
                             <label class="form-label">No Box</label>
                             <input name="nomor_box" class="form-control">
-                        </div>
+                        </div> -->
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Posisi</label>
@@ -311,7 +373,7 @@
     </div>
 
     <!-- Upload AKM Modal -->
-    <div class="modal fade" id="uploadBriModal">
+    <!-- <div class="modal fade" id="uploadBriModal">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -344,7 +406,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- AUTO-FORMAT DATE-->
     <script>

@@ -1,0 +1,415 @@
+<x-mandiri-table :mandiris="$mandiris" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1; 
+        }
+    </style>
+</head>
+
+<body>
+    <main class="m-4 pb-16 mandiri-page">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-white" style="z-index:1030">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/logo_askrindo.png') }}" style="max-width: 180px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto"></ul>
+
+                <!-- Add Button -->
+                <button type="button" class="btn p-0 me-3 text-primary" data-bs-toggle="modal" data-bs-target="#addBriModal">
+                    <i class="bi bi-plus-lg fs-4"></i>
+                </button>
+
+                <!-- Search -->
+                <form class="d-flex me-4">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search">
+                        <button class="btn btn-outline-secondary">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- User Menu -->
+                <div class="dropdown">
+                    <a href="#" id="userMenu" data-bs-toggle="dropdown">
+                        <div class="rounded-circle text-white d-flex align-items-center justify-content-center"
+                             style="width: 40px; height: 40px; background-color:#f08523; font-weight:600;">
+                             ASK
+                        </div>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button class="dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <h2 class="text-center mt-2 akm-heading">Daftar Klaim BRI</h2> -->
+
+    <!-- SUCCESS ALERT -->
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show mt-3">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    @endif
+
+    <!-- TABLE WRAPPER -->
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr class="text-center">
+                    <th class="text-white" style="background:#2a3d5e">Uker</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Klaim Diterima</th>
+                    <th class="text-white" style="background:#2a3d5e">Tanggal Klaim Masuk Portal</th>
+                    <th class="text-white" style="background:#2a3d5e">Action</th> -->
+                </tr>
+            </thead>
+
+            <tbody>
+
+            @foreach($mandiris as $mandiri)
+                <tr>
+                    <td>{{ $mandiri->uker }}</td>
+                    <!-- <td>{{ $bri->cabang_bank }}</td>
+                    <td>{{ $bri->nama_debitur }}</td>
+                    <td>{{ $bri->nomor_rekening }}</td>
+                    <td>{{ $bri->nilai_tuntutan_klaim }}</td>
+                    <td>{{ $bri->tanggal_klaim_diterima }}</td>
+                    <td>{{ $bri->tanggal_klaim_masuk_portal }}</td>
+                    <td>{{ $bri->status }}</td>
+                    <td>{{ $bri->tambahan_data }}</td>
+                    <td>{{ $bri->date_update }}</td>
+                    <td>{{ $bri->nomor_box }}</td> -->
+
+                    <!-- @php
+                            $today = \Carbon\Carbon::today();
+                            $wpc = \Carbon\Carbon::parse($claim->wpc);
+                            $daysLeft = $today->diffInDays($wpc, false);
+                        @endphp
+
+                        @if($daysLeft > 0)
+                            @if($daysLeft <= 30)
+                                <span class="badge bg-danger">{{ $daysLeft }} Hari Lagi</span>
+                            @elseif($daysLeft <= 60)
+                                <span class="badge bg-warning">{{ $daysLeft }} Hari Lagi</span>
+                            @elseif($daysLeft <= 90)
+                                <span class="badge bg-success">{{ $daysLeft }} Hari Lagi</span>
+                            @else
+                                <span class="badge bg-secondary">{{ $daysLeft }} Hari Lagi</span>
+                            @endif
+
+                        @elseif($daysLeft === 0)
+                            <span class="badge bg-warning text-dark">Due today</span>
+
+                        @else
+                            <span class="badge bg-danger">{{ abs($daysLeft) }} Hari Lewat</span>
+                        @endif
+                    </td> -->
+
+                    <!-- ACTIONS -->
+                    <td>
+                        <div class="d-flex gap-2 align-items-center">
+                              <!-- SEND EMAIL -->
+                            <button class="btn p-0 text-primary" onclick="sendEmail({{ $mandiri->id }})">
+                                <i class="bi bi-envelope-fill fs-5"></i>
+                            </button>
+
+                            <!-- EDIT BUTTON -->
+                            <button class="btn p-0 text-warning" data-bs-toggle="modal" data-bs-target="#editMandiriModal{{ $mandiri->id }}">
+                                <i class="bi bi-pencil-fill fs-5"></i>
+                            </button>
+
+                            <!-- DELETE -->
+                            <form method="POST" action="{{ route('mandiri.destroy', $mandiri) }}">
+                                @csrf
+                                @method('delete')
+                                <button class="btn p-0 text-danger">
+                                    <i class="bi bi-trash-fill fs-5"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- EDIT MODAL -->
+                <div class="modal fade" id="editMandiriModal{{ $mandiri->id }}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Klaim BRI</h5>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <form method="POST" action="{{ route('mandiri.update', $mandiri) }}">
+                                    @csrf
+                                    @method('PUT')
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Uker</label>
+                                        <input class="form-control" name="uker" value="{{ $mandiri->uker }}">
+                                    </div>
+
+                                    <!-- <div class="mb-3">
+                                        <label class="form-label">Cabang Bank</label>
+                                        <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nama Debitur</label>
+                                        <input class="form-control" name="nama_debitur" value="{{ $bri->nama_debitur }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Rekening</label>
+                                        <input class="form-control" name="nomor_rekening" value="{{ $bri->nomor_rekening }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nilai Tuntutan Klaim</label>
+                                        <input class="form-control" name="nilai_tuntutan_klaim" value="{{ $bri->nilai_tuntutan_klaim }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Klaim Diterima</label>
+                                        <input type="date" class="form-control" name="tanggal_klaim_diterima" value="{{ $bri->tanggal_klaim_diterima }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                                        <input type="date" class="form-control" name="tanggal_klaim_masuk_portal" value="{{ $bri->tanggal_klaim_masuk_portal }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Status</label>
+                                        <select class="form-select" name="status">
+                                            <option value="Batal" {{ $bri->status=='Batal'?'selected':'' }}>Batal</option>
+                                            <option value="Disetujui" {{ $bri->status=='Disetujui'?'selected':'' }}>Disetujui</option>
+                                            <option value="Pending" {{ $bri->status=='Pending'?'selected':'' }}>Pending</option>
+                                            <option value="Regist" {{ $bri->status=='Regist'?'selected':'' }}>Regist</option>
+                                            <option value="Suspect" {{ $bri->status=='Suspect'?'selected':'' }}>Suspect</option>
+                                            <option value="Tamdat" {{ $bri->status=='Tamdat'?'selected':'' }}>Tamdat</option>
+                                            <option value="Tolak" {{ $bri->status=='Tolak'?'selected':'' }}>Tolak</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tambahan Data</label>
+                                        <input class="form-control" name="tambahan_data" value="{{ $bri->tambahan_data }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Date Update</label>
+                                        <input type="date" class="form-control" name="date_update" value="{{ $bri->date_update }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nomor Box</label>
+                                        <input class="form-control" name="nomor_box" value="{{ $bri->nomor_box }}">
+                                    </div> -->
+
+                                    <!-- <div class="mb-3">
+                                        <label class="form-label">Tanggal Polis</label>
+                                        <input type="date" class="form-control" name="tanggal_polis" value="{{ $piutang->tanggal_polis }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Currency</label>
+                                        <select class="form-select" name="currency">
+                                            <option value="IDR" {{ $piutang->currency=='IDR'?'selected':'' }}>IDR</option>
+                                            <option value="USD" {{ $piutang->currency=='USD'?'selected':'' }}>USD</option>
+                                            <option value="EUR" {{ $piutang->currency=='EUR'?'selected':'' }}>EUR</option>
+                                            <option value="SGD" {{ $piutang->currency=='SGD'?'selected':'' }}>SGD</option>
+                                        </select>
+                                    </div> -->
+
+                                    <div class="text-center">
+                                        <button class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Mandiri Modal -->
+    <div class="modal fade" id="addMandiriModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Mandiri</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="POST" action="{{ route('mandiri.store') }}">
+                        @csrf
+                        <div class="mb-3">
+                            <label class="form-label">Uker</label>
+                            <input class="form-control" name="uker">
+                        </div>
+
+                        <!-- <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input class="form-control" name="cabang_bank">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Debitur</label>
+                            <input class="form-control" name="nama_debitur">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input class="form-control" name="nomor_rekening">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan Klaim</label>
+                            <input class="form-control" name="nilai_tuntutan_klaim">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Klaim Diterima</label>
+                            <input type="date" class="form-control" name="tanggal_klaim_diterima">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                            <input type="date" class="form-control" name="tanggal_klaim_masuk_portal">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select" name="status">
+                                <option disabled selected>Pilih Status</option>
+                                <option value="Batal">Batal</option>
+                                <option value="Disetujui">Disetujui</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Regist">Regist</option>
+                                <option value="Suspect">Suspect</option>
+                                <option value="Tamdat">Tamdat</option>
+                                <option value="Suspect">Suspect</option>
+                                <option value="Tolak">Tolak</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tambahan Data</label>
+                            <input class="form-control" name="tambahan_data">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Date Update</label>
+                            <input type="date" class="form-control" name="date_update">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Box</label>
+                            <input class="form-control" name="nomor_box">
+                        </div> -->
+
+                        <!-- <div class="mb-3">
+                            <label class="form-label">Tanggal Polis</label>
+                            <input type="date" class="form-control" name="tanggal_polis">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Currency</label>
+                            <select class="form-select" name="currency">
+                                <option disabled selected>Select currency</option>
+                                <option value="IDR">IDR</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option>
+                            </select>
+                        </div> -->
+
+                        <div class="text-center">
+                            <button class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <div class="container mt-5">
+        <hr>
+        <footer class="py-3 my-4 mt-auto fixed bottom-0 left-0 w-full bg-white shadow z-40">
+            {{-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+                </li>
+            </ul> --}}
+
+            <p class="text-center text-body-secondary">
+                &copy; 2025 PT. Asuransi Kredit Indonesia
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function sendEmail(id) {
+            fetch(`/mandiri/${id}/send-email`)
+                .then(res => res.text())
+                .then(msg => alert(msg))
+                .catch(() => alert("Failed to send email"));
+        }
+    </script>
+</body>
+</html>
