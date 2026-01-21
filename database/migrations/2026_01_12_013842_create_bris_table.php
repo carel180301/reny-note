@@ -11,17 +11,17 @@ return new class extends Migration{
     public function up(): void{
         Schema::create('bris', function (Blueprint $table) {
             $table->id();
-            $table->string('uker')->nullable();
-            // $table->string('cabang_bank')->nullable();
-            // $table->string('nama_debitur')->nullable();
-            // $table->string('nomor_rekening')->nullable();
-            // $table->string('nilai_tuntutan_klaim')->nullable();
-            // $table->date('tanggal_klaim_diterima')->nullable();
-            // $table->date('tanggal_klaim_masuk_portal')->nullable();
-            // $table->string('status')->nullable();
-            // $table->string('tambahan_data')->nullable();
-            // $table->date('date_update')->nullable();
-            // $table->string('nomor_box')->nullable();
+            $table->string('unit')->nullable();
+            $table->string('cabang_bank')->nullable();
+            $table->string('nama_debitur')->nullable();
+            $table->string('nomor_rekening')->nullable();
+            $table->string('nilai_tuntutan_klaim')->nullable();
+            $table->date('tanggal_klaim_diterima')->nullable();
+            $table->date('tanggal_klaim_masuk_portal')->nullable();
+            $table->string('status')->nullable();
+            $table->string('tambahan_data')->nullable();
+            $table->date('date_update')->nullable();
+            $table->string('nomor_box')->nullable();
             $table->timestamps();
         });
     }
