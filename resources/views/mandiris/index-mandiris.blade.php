@@ -91,8 +91,8 @@
             <thead>
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e">Uker</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e">Nama Debitur</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e">Tanggal Klaim Diterima</th>
@@ -106,8 +106,8 @@
             @foreach($mandiris as $mandiri)
                 <tr>
                     <td>{{ $mandiri->uker }}</td>
+                    <td>{{ $mandiri->nama_debitur }}</td>
                     <!-- <td>{{ $bri->cabang_bank }}</td>
-                    <td>{{ $bri->nama_debitur }}</td>
                     <td>{{ $bri->nomor_rekening }}</td>
                     <td>{{ $bri->nilai_tuntutan_klaim }}</td>
                     <td>{{ $bri->tanggal_klaim_diterima }}</td>
@@ -187,14 +187,14 @@
                                         <input class="form-control" name="uker" value="{{ $mandiri->uker }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
-                                        <label class="form-label">Cabang Bank</label>
-                                        <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
-                                    </div>
-
                                     <div class="mb-3">
                                         <label class="form-label">Nama Debitur</label>
                                         <input class="form-control" name="nama_debitur" value="{{ $bri->nama_debitur }}">
+                                    </div>
+
+                                    <!-- <div class="mb-3">
+                                        <label class="form-label">Cabang Bank</label>
+                                        <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
                                     </div>
 
                                     <div class="mb-3">
@@ -290,14 +290,14 @@
                             <input class="form-control" name="uker">
                         </div>
 
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Cabang Bank</label>
-                            <input class="form-control" name="cabang_bank">
-                        </div>
-
                         <div class="mb-3">
                             <label class="form-label">Nama Debitur</label>
                             <input class="form-control" name="nama_debitur">
+                        </div>
+
+                        <!-- <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input class="form-control" name="cabang_bank">
                         </div>
                         
                         <div class="mb-3">

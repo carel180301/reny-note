@@ -11,9 +11,9 @@ class Mandiri extends Model
     use HasFactory;
 
     protected $fillable = [
-        'uker'
+        'uker',
+        'nama_debitur'
         // 'cabang_bank',
-        // 'nama_debitur',
         // 'nomor_rekening',
         // 'nilai_tuntutan_klaim',
         // 'tanggal_klaim_diterima',

@@ -25,6 +25,11 @@
             <input type="text" name="uker" placeholder="Uker">
         </div>
 
+        <div>
+            <label>Nama Debitur:</label>
+            <input type="text" name="nama_debitur" placeholder="nama_debitur">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

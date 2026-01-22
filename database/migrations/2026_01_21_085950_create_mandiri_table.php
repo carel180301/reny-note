@@ -12,8 +12,9 @@ return new class extends Migration{
         Schema::create('mandiris', function (Blueprint $table) {
             $table->id();
             $table->string('uker')->nullable();
+            $table->string('nama_debitur')->nullable();
+
             // $table->string('cabang_bank')->nullable();
-            // $table->string('nama_debitur')->nullable();
             // $table->string('nomor_rekening')->nullable();
             // $table->string('nilai_tuntutan_klaim')->nullable();
             // $table->date('tanggal_klaim_diterima')->nullable();
