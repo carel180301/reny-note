@@ -21,6 +21,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diajukan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kekurangan Data</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
@@ -45,6 +46,7 @@
                     <td class="text-center">{{ $mandiri->tanggal_klaim_diajukan }}</td>
                     <td class="text-center">{{ $mandiri->status }}</td>
                     <td class="text-center">{{ $mandiri->keterangan }}</td>
+                    <td class="text-center">{{ $mandiri->kekurangan_data }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -111,6 +113,10 @@
                 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $mandiri->keterangan }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Kekurangan Data</label><input name="kekurangan_data" class="form-control" value="{{ $mandiri->kekurangan_data }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

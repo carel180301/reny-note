@@ -69,6 +69,12 @@
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
+        
+        <div>
+            <label>Kekurangan Data:</label>
+            <input type="text" name="kekurangan_data" placeholder="Kekurangan_data">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">

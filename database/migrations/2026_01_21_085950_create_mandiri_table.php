@@ -19,6 +19,7 @@ return new class extends Migration{
             $table->date('tanggal_klaim_diajukan')->nullable();
             $table->string('status')->nullable();
             $table->string('keterangan')->nullable();
+            $table->string('kekurangan_data')->nullable();
 
             // $table->string('cabang_bank')->nullable();
             // $table->string('nilai_tuntutan_klaim')->nullable();

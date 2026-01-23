@@ -335,6 +335,10 @@
                             <input name="keterangan" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Kekurangan_data</label>
+                            <input name="kekurangan_data" class="form-control">
+                        </div>
 
                         <!-- <div class="mb-3">
                             <label class="form-label">Cabang Bank</label>

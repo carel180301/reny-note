@@ -18,7 +18,8 @@ class Mandiri extends Model
         'net_klaim',
         'tanggal_klaim_diajukan',
         'status',
-        'keterangan'
+        'keterangan',
+        'kekurangan_data'
 
         // 'cabang_bank',
         // 'nilai_tuntutan_klaim',
