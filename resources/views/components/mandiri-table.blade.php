@@ -20,12 +20,12 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Net Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diajukan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Masuk Portal</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tambahan Data</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">No Box</th> -->
@@ -44,6 +44,7 @@
                     <td class="text-center">{{ $mandiri->net_klaim }}</td>
                     <td class="text-center">{{ $mandiri->tanggal_klaim_diajukan }}</td>
                     <td class="text-center">{{ $mandiri->status }}</td>
+                    <td class="text-center">{{ $mandiri->keterangan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -106,6 +107,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $mandiri->status }}"></div>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $mandiri->keterangan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

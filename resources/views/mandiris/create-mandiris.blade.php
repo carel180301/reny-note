@@ -64,6 +64,11 @@
             </select>
         </div>
 
+        <div>
+            <label>Keterangan:</label>
+            <input type="text" name="keterangan" placeholder="Keterangan">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
@@ -98,16 +103,6 @@
         <!-- <div>
             <label>Tanggal Polis: </label> 
             <input type="date" name="tanggal_polis" placeholder="Tanggal Polis" />
-        </div>
-
-        <div>
-            <label class="form-label">Status:</label>
-            <select name="status" class="form-select">
-                <option value="" disabled selected>Pilih status</option>
-                <option value="terima">Terima</option>
-                <option value="tolak">Tolak</option>
-                <option value="proses_analisa">Proses Analisa</option>
-            </select>
         </div> -->
         <div>
             <input type="submit" value="Save a New Claim"/>

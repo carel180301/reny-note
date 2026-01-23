@@ -64,6 +64,10 @@
         </select>
     </div>
 
+    <div>
+        <label>Keterangan:</label>
+        <input type="text" name="keterangan" value="{{ $mandiris->keterangan }}">
+    </div>
 
     <!-- <div>
         <label>Cabang Bank:</label>
@@ -99,15 +103,6 @@
     <!-- <div>
         <label>Tanggal Polis:</label>
         <input type="date" name="tanggal_polis" value="{{ $akms->tanggal_polis }}">
-    </div>
-
-    <div>
-        <label>Status:</label>
-        <select name="status">
-            <option value="terima" {{ $akms->status == 'terima' ? 'selected' : '' }}>Terima</option>
-            <option value="tolak" {{ $akms->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-            <option value="proses_analisa" {{ $akms->status == 'proses_analisa' ? 'selected' : '' }}>Proses Analisa</option>
-        </select>
     </div> -->
 
     <div>
