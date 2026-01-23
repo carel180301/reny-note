@@ -13,9 +13,9 @@ return new class extends Migration{
             $table->id();
             $table->string('uker')->nullable();
             $table->string('nama_debitur')->nullable();
+            $table->string('nomor_rekening')->nullable();
 
             // $table->string('cabang_bank')->nullable();
-            // $table->string('nomor_rekening')->nullable();
             // $table->string('nilai_tuntutan_klaim')->nullable();
             // $table->date('tanggal_klaim_diterima')->nullable();
             // $table->date('tanggal_klaim_masuk_portal')->nullable();

@@ -22,9 +22,10 @@ class MandiriController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'uker' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255'
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
+
             // 'cabang_bank' => 'nullable|string|max:255',
-            // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
 
             // 'tanggal_klaim_diterima' => 'nullable|date',
@@ -61,10 +62,10 @@ class MandiriController extends Controller
     public function update(Mandiri $mandiris, Request $request){
         $data = $request->validate([
             'uker' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255'
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
 
             // 'cabang_bank' => 'nullable|string|max:255',
-            // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
 
             // 'tanggal_klaim_diterima' => 'nullable|date',
@@ -102,8 +103,9 @@ class MandiriController extends Controller
 
         $data = Mandiri::where('uker', 'like', "%$keyword%")
         ->orWhere('nama_debitur', 'like', "%$keyword%")
+        ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        
         // ->orWhere('cabang_bank', 'like', "%$keyword%")
-        // ->orWhere('nomor_rekening', 'like', "%$keyword%")
         // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_klaim_diterima', 'like', "%$keyword%")
         // ->orWhere('tanggal_klaim_masuk_portal', 'like', "%$keyword%")

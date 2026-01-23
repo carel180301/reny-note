@@ -107,8 +107,9 @@
                 <tr>
                     <td>{{ $mandiri->uker }}</td>
                     <td>{{ $mandiri->nama_debitur }}</td>
+                    <td>{{ $mandiri->nomor_rekening }}</td>
+
                     <!-- <td>{{ $bri->cabang_bank }}</td>
-                    <td>{{ $bri->nomor_rekening }}</td>
                     <td>{{ $bri->nilai_tuntutan_klaim }}</td>
                     <td>{{ $bri->tanggal_klaim_diterima }}</td>
                     <td>{{ $bri->tanggal_klaim_masuk_portal }}</td>
@@ -192,14 +193,14 @@
                                         <input class="form-control" name="nama_debitur" value="{{ $bri->nama_debitur }}">
                                     </div>
 
-                                    <!-- <div class="mb-3">
-                                        <label class="form-label">Cabang Bank</label>
-                                        <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
-                                    </div>
-
                                     <div class="mb-3">
                                         <label class="form-label">Nomor Rekening</label>
                                         <input class="form-control" name="nomor_rekening" value="{{ $bri->nomor_rekening }}">
+                                    </div>
+
+                                    <!-- <div class="mb-3">
+                                        <label class="form-label">Cabang Bank</label>
+                                        <input class="form-control" name="cabang_bank" value="{{ $bri->cabang_bank }}">
                                     </div>
 
                                     <div class="mb-3">
@@ -295,14 +296,14 @@
                             <input class="form-control" name="nama_debitur">
                         </div>
 
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Cabang Bank</label>
-                            <input class="form-control" name="cabang_bank">
-                        </div>
-                        
                         <div class="mb-3">
                             <label class="form-label">Nomor Rekening</label>
                             <input class="form-control" name="nomor_rekening">
+                        </div>
+
+                        <!-- <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input class="form-control" name="cabang_bank">
                         </div>
 
                         <div class="mb-3">

@@ -12,9 +12,10 @@ class Mandiri extends Model
 
     protected $fillable = [
         'uker',
-        'nama_debitur'
+        'nama_debitur',
+        'nomor_rekening'
+
         // 'cabang_bank',
-        // 'nomor_rekening',
         // 'nilai_tuntutan_klaim',
         // 'tanggal_klaim_diterima',
         // 'tanggal_klaim_masuk_portal',

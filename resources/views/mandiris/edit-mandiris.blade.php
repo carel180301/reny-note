@@ -31,19 +31,14 @@
         <input type="text" name="nama_debitur" value="{{ $mandiris->nama_debitur }}">
     </div>
 
+    <div>
+        <label>Nomor Rekening:</label>
+        <input type="text" name="nomor_rekening" value="{{ $mandiris->nomor_rekening }}">
+    </div>
+
     <!-- <div>
         <label>Cabang Bank:</label>
         <input type="text" name="cabang_bank" value="{{ $bris->cabang_bank }}">
-    </div>
-
-    <div>
-        <label>Nama Debitur:</label>
-        <input type="text" name="nama_debitur" value="{{ $bris->nama_debitur }}">
-    </div>
-
-    <div>
-        <label>Nomor Rekening:</label>
-        <input type="text" name="nomor_rekening" value="{{ $bris->nomor_rekening }}">
     </div>
 
     <div>

@@ -15,8 +15,9 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Uker</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
+
+                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Masuk Portal</th>
@@ -34,6 +35,7 @@
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $mandiri->uker }}</td>
                     <td class="text-center">{{ $mandiri->nama_debitur }}</td>
+                    <td class="text-center">{{ $mandiri->nomor_rekening }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -76,6 +78,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $mandiri->nama_debitur }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $mandiri->nomor_rekening }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
