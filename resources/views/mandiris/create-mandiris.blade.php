@@ -50,6 +50,20 @@
             <input type="date" name="tanggal_klaim_diajukan" placeholder="Tanggal Klaim Diajukan">
         </div>
 
+        <div>
+            <label class="form-label">Status:</label>
+            <select name="status" class="form-select">
+                <option value="" disabled selected>Pilih status</option>
+                <option value="batal">Batal</option>
+                <option value="disetujui">Disetujui</option>
+                <option value="pending">Pending</option>
+                <option value="regist">Regist</option>
+                <option value="suspect">Suspect</option>
+                <option value="tamdat">Tamdat</option>
+                <option value="tolak">Tolak</option>
+            </select>
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
@@ -63,20 +77,6 @@
         <div>
             <label>Tanggal Klaim Masuk Portal:</label>
             <input type="date" name="tanggal_klaim_masuk_portal" placeholder="Tanggal Klaim Masuk Portal">
-        </div>
-
-        <div>
-            <label class="form-label">Status:</label>
-            <select name="status" class="form-select">
-                <option value="" disabled selected>Pilih status</option>
-                <option value="batal">Batal</option>
-                <option value="disetujui">Disetujui</option>
-                <option value="pending">Pending</option>
-                <option value="regist">Regist</option>
-                <option value="suspect">Suspect</option>
-                <option value="tamdat">Tamdat</option>
-                <option value="tolak">Tolak</option>
-            </select>
         </div>
 
         <div>

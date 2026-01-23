@@ -51,6 +51,20 @@
         <input type="date" name="tanggal_klaim_diajukan" value="{{ $bris->tanggal_klaim_diajukan }}">
     </div>
 
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="batal" {{ $mandiris->status == 'batal' ? 'selected' : '' }}>Batal</option>
+            <option value="disetujui" {{ $mandiris->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
+            <option value="pending" {{ $mandiris->status == 'pending' ? 'selected' : '' }}>Pending</option>
+            <option value="regist" {{ $mandiris->status == 'regist' ? 'selected' : '' }}>Regist</option>
+            <option value="suspect" {{ $mandiris->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
+            <option value="tamdat" {{ $mandiris->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
+            <option value="tolak" {{ $mandiris->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+        </select>
+    </div>
+
+
     <!-- <div>
         <label>Cabang Bank:</label>
         <input type="text" name="cabang_bank" value="{{ $bris->cabang_bank }}">
@@ -64,19 +78,6 @@
     <div>
         <label>Tanggal Klaim Masuk Portal:</label>
         <input type="date" name="tanggal_klaim_masuk_portal" value="{{ $bris->tanggal_klaim_masuk_portal }}">
-    </div>
-
-    <div>
-        <label>Status:</label>
-        <select name="status">
-            <option value="batal" {{ $bris->status == 'batal' ? 'selected' : '' }}>Batal</option>
-            <option value="disetujui" {{ $bris->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
-            <option value="pending" {{ $bris->status == 'pending' ? 'selected' : '' }}>Pending</option>
-            <option value="regist" {{ $bris->status == 'regist' ? 'selected' : '' }}>Regist</option>
-            <option value="suspect" {{ $bris->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
-            <option value="tamdat" {{ $bris->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
-            <option value="tolak" {{ $bris->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-        </select>
     </div>
 
     <div>

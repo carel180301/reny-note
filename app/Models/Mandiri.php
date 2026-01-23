@@ -16,13 +16,13 @@ class Mandiri extends Model
         'nomor_rekening',
         'tuntutan',
         'net_klaim',
-        'tanggal_klaim_diajukan'
+        'tanggal_klaim_diajukan',
+        'status'
 
         // 'cabang_bank',
         // 'nilai_tuntutan_klaim',
         // 'tanggal_klaim_diterima',
         // 'tanggal_klaim_masuk_portal',
-        // 'status',
         // 'tambahan_data',
         // 'date_update',
         // 'nomor_box'
