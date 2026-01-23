@@ -45,6 +45,11 @@
             <input type="text" name="net_klaim" placeholder="net_klaim">
         </div>
 
+        <div>
+            <label>Tanggal Klaim Diajukan:</label>
+            <input type="date" name="tanggal_klaim_diajukan" placeholder="Tanggal Klaim Diajukan">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
@@ -53,11 +58,6 @@
         <div>
             <label>Nilai Tuntutan Klaim:</label>
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
-        </div>
-
-        <div>
-            <label>Tanggal Klaim Diterima:</label>
-            <input type="date" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
         </div>
 
         <div>

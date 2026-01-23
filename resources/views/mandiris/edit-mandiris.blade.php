@@ -45,6 +45,11 @@
         <label>Net Klaim:</label>
         <input type="text" name="net_klaim" value="{{ $mandiris->net_klaim }}">
     </div>
+    
+    <div>
+        <label>Tanggal Klaim Diajukan:</label>
+        <input type="date" name="tanggal_klaim_diajukan" value="{{ $bris->tanggal_klaim_diajukan }}">
+    </div>
 
     <!-- <div>
         <label>Cabang Bank:</label>
@@ -54,11 +59,6 @@
     <div>
         <label>Nilai Tuntutan Klaim:</label>
         <input type="text" name="nilai_tuntutan_klaim" value="{{ $bris->nilai_tuntutan_klaim }}">
-    </div>
-
-    <div>
-        <label>Tanggal Klaim Diterima:</label>
-        <input type="date" name="tanggal_klaim_diterima" value="{{ $bris->tanggal_klaim_diterima }}">
     </div>
 
     <div>
