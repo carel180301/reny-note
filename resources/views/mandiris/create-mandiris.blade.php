@@ -27,14 +27,18 @@
 
         <div>
             <label>Nama Debitur:</label>
-            <input type="text" name="nama_debitur" placeholder="nama_debitur">
+            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
         </div>
 
         <div>
             <label>Nomor Rekening:</label>
-            <input type="text" name="nomor_rekening" placeholder="nomor_rekening">
+            <input type="text" name="nomor_rekening" placeholder="Nomor Rekening">
         </div>
 
+        <div>
+            <label>Tuntutan:</label>
+            <input type="text" name="tuntutan" placeholder="Tuntutan">
+        </div>
 
         <!-- <div>
             <label>Cabang Bank:</label>

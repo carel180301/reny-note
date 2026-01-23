@@ -36,6 +36,11 @@
         <input type="text" name="nomor_rekening" value="{{ $mandiris->nomor_rekening }}">
     </div>
 
+    <div>
+        <label>Tuntutan:</label>
+        <input type="text" name="tuntutan" value="{{ $mandiris->tuntutan }}">
+    </div>
+
     <!-- <div>
         <label>Cabang Bank:</label>
         <input type="text" name="cabang_bank" value="{{ $bris->cabang_bank }}">

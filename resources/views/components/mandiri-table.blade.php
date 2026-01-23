@@ -16,6 +16,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Uker</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tuntutan</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
@@ -36,6 +37,7 @@
                     <td class="text-center">{{ $mandiri->uker }}</td>
                     <td class="text-center">{{ $mandiri->nama_debitur }}</td>
                     <td class="text-center">{{ $mandiri->nomor_rekening }}</td>
+                    <td class="text-center">{{ $mandiri->tuntutan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -82,6 +84,10 @@
 
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $mandiri->nomor_rekening }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Tuntutan</label><input name="tuntutan" class="form-control" value="{{ $mandiri->tuntutan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

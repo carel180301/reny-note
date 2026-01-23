@@ -108,6 +108,7 @@
                     <td>{{ $mandiri->uker }}</td>
                     <td>{{ $mandiri->nama_debitur }}</td>
                     <td>{{ $mandiri->nomor_rekening }}</td>
+                    <td>{{ $mandiri->tuntutan }}</td>
 
                     <!-- <td>{{ $bri->cabang_bank }}</td>
                     <td>{{ $bri->nilai_tuntutan_klaim }}</td>
@@ -196,6 +197,11 @@
                                     <div class="mb-3">
                                         <label class="form-label">Nomor Rekening</label>
                                         <input class="form-control" name="nomor_rekening" value="{{ $bri->nomor_rekening }}">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Tuntutan</label>
+                                        <input class="form-control" name="tuntutan" value="{{ $mandiri->tuntutan }}">
                                     </div>
 
                                     <!-- <div class="mb-3">
