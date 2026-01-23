@@ -14,7 +14,8 @@ class Mandiri extends Model
         'uker',
         'nama_debitur',
         'nomor_rekening',
-        'tuntutan'
+        'tuntutan',
+        'net_klaim'
 
         // 'cabang_bank',
         // 'nilai_tuntutan_klaim',

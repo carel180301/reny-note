@@ -41,6 +41,11 @@
         <input type="text" name="tuntutan" value="{{ $mandiris->tuntutan }}">
     </div>
 
+    <div>
+        <label>Net Klaim:</label>
+        <input type="text" name="net_klaim" value="{{ $mandiris->net_klaim }}">
+    </div>
+
     <!-- <div>
         <label>Cabang Bank:</label>
         <input type="text" name="cabang_bank" value="{{ $bris->cabang_bank }}">

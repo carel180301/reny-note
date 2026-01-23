@@ -40,6 +40,11 @@
             <input type="text" name="tuntutan" placeholder="Tuntutan">
         </div>
 
+        <div>
+            <label>Net Klaim:</label>
+            <input type="text" name="net_klaim" placeholder="net_klaim">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
