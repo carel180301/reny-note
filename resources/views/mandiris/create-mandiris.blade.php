@@ -75,6 +75,11 @@
             <input type="text" name="kekurangan_data" placeholder="Kekurangan_data">
         </div>
 
+         <div>
+            <label>Tanggal Update:</label>
+            <input type="date" name="tanggal_update" placeholder="Tanggal Update">
+        </div>
+
         <!-- <div>
             <label>Cabang Bank:</label>
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
