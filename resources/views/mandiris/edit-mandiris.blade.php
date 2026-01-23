@@ -73,11 +73,15 @@
         <label>Kekurangan Data:</label>
         <input type="text" name="kekurangan_data" value="{{ $mandiris->kekurangan_data }}">
     </div>
-
     
     <div>
         <label>Tanggal Update:</label>
         <input type="date" name="tanggal_update" value="{{ $mandiris->tanggal_update }}">
+    </div>
+
+    <div>
+        <label>Nomor Box:</label>
+        <input type="text" name="nomor_box" value="{{ $mandiris->nomor_box }}">
     </div>
 
     <!-- <div>

@@ -31,6 +31,8 @@ class MandiriController extends Controller
             'keterangan' => 'nullable|string|max:50',
             'kekurangan_data' => 'nullable|string|max:50',
             'tanggal_update' => 'nullable|date',
+            'nomor_box' => 'nullable|string|max:50'
+
 
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
@@ -77,6 +79,7 @@ class MandiriController extends Controller
             'keterangan' => 'nullable|string|max:50',
             'kekurangan_data' => 'nullable|string|max:50',
             'tanggal_update' => 'nullable|date',
+            'nomor_box' => 'nullable|string|max:255',
 
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
@@ -123,6 +126,7 @@ class MandiriController extends Controller
         ->orWhere('keterangan', 'like', "%$keyword%")
         ->orWhere('kekurangan_data', 'like', "%$keyword%")
         ->orWhere('tanggal_update', 'like', "%$keyword%")
+        ->orWhere('nomor_box', 'like', "%$keyword%")
 
         // ->orWhere('cabang_bank', 'like', "%$keyword%")
         // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")

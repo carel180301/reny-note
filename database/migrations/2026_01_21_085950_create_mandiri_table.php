@@ -21,6 +21,7 @@ return new class extends Migration{
             $table->string('keterangan')->nullable();
             $table->string('kekurangan_data')->nullable();
             $table->date('tanggal_update')->nullable();
+            $table->string('nomor_box')->nullable();
 
             // $table->string('cabang_bank')->nullable();
             // $table->string('nilai_tuntutan_klaim')->nullable();

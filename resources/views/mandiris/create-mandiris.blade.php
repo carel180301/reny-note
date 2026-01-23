@@ -69,16 +69,21 @@
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
-        
         <div>
             <label>Kekurangan Data:</label>
             <input type="text" name="kekurangan_data" placeholder="Kekurangan_data">
         </div>
 
-         <div>
+        <div>
             <label>Tanggal Update:</label>
             <input type="date" name="tanggal_update" placeholder="Tanggal Update">
         </div>
+
+        <div>
+            <label>Nomor Box:</label>
+            <input type="text" name="nomor_box" placeholder="nomor_box">
+        </div>
+
 
         <!-- <div>
             <label>Cabang Bank:</label>

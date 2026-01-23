@@ -20,7 +20,8 @@ class Mandiri extends Model
         'status',
         'keterangan',
         'kekurangan_data',
-        'tanggal_update'
+        'tanggal_update',
+        'nomor_box'
 
         // 'cabang_bank',
         // 'nilai_tuntutan_klaim',
