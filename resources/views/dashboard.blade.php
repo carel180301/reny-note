@@ -119,6 +119,64 @@
                         </a> -->
                     </div>
                 @endif
+
+                @if(request('table') === 'bankjatim')
+                    <div class="d-flex gap-2 flex-wrap">
+                        <!-- Status Filter -->
+                        <!-- <div class="dropdown"> -->
+                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                Status
+                            </button> -->
+                            <!-- <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
+                                        Terima
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
+                                        Tolak
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
+                                        Proses Analisa
+                                    </a>
+                                </li>
+                            </ul> -->
+                        <!-- </div> -->
+
+                        <!-- Status Sistem Filter -->
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                Status Sistem
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
+                                        Done
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
+                                        Not Done
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+                        <!-- Reset -->
+                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
+                            Reset
+                        </a> -->
+                    </div>
+                @endif
             </div>
 
             {{-- CENTER: TITLE --}}
@@ -151,6 +209,10 @@
 
             @if(request('table') === 'mandiri')
                 <x-mandiri-table :mandiris="$mandiris" />
+            @endif
+
+            @if(request('table') === 'bankjatim')
+                <x-bankjatim-table :bankjatims="$bankjatims" />
             @endif
         </div>
     </div>
@@ -402,6 +464,35 @@
         </div>
     </div>
 
+    @push('modals')
+    <div class="modal fade" id="addBankjatimModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Klaim Bank Jatim</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form method="POST" action="{{ route('bankjatims.store') }}">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endpush
+
+
+
     <!-- Upload AKM Modal -->
     <!-- <div class="modal fade" id="uploadBriModal">
         <div class="modal-dialog">
@@ -480,9 +571,12 @@
                 const table = new URLSearchParams(window.location.search).get('table');
 
                 let url = '/bris/search';
-                // if (table === 'asum') {
-                //     url = '/asums/search';
-                // }
+
+                if (table === 'mandiri') {
+                    url = '/mandiris/search';
+                } else if (table === 'bankjatim') {
+                    url = '/bankjatims/search';
+                }
 
                 fetch(url + '?q=' + encodeURIComponent(q))
                     .then(res => res.text())
@@ -491,7 +585,6 @@
                         if (container) container.outerHTML = html;
                     });
             }
-
 
             const desktopInput = document.getElementById('searchInput');
             if (desktopInput) {

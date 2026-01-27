@@ -8,10 +8,12 @@ use App\Http\Controllers\ClaimController;
 // use App\Models\Asum;
 use App\Models\Bri;
 use App\Models\Mandiri;
+use App\Models\Bankjatim;
 // use App\Http\Controllers\AkmController;
 // use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
 use App\Http\Controllers\MandiriController;
+use App\Http\Controllers\BankjatimController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
@@ -19,12 +21,13 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function (Request $request) {
-    $table = $request->get('table', 'bri', 'mandiri');
+    $table = $request->get('table', 'bri', 'mandiri', 'bankjatim');
 
     // $akms = collect();
     // $asums = collect();
     $bris = collect();
     $mandiris = collect();
+    $bankjatims = collect();
 
 
 //    if ($table === 'akm') {
@@ -95,8 +98,26 @@ Route::get('/dashboard', function (Request $request) {
         $mandiris = $query->get();
     }
 
+    else if ($table === 'bankjatim') {
+        $query = Bankjatim::query()->orderBy('created_at', 'asc');
 
-    return view('dashboard', compact('bris', 'mandiris','table'));
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $bankjatims = $query->get();
+    }
+
+
+    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','table'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -148,6 +169,20 @@ Route::middleware('auth')->group(function () {
     Route::post('/mandiris/upload', [MandiriController::class, 'upload'])->name('mandiris.upload');
     Route::resource('mandiris', MandiriController::class);
     Route::post('/mandiris/upload', [MandiriController::class, 'upload'])->name('mandiris.upload');
+
+    Route::get('/bankjatims', [BankjatimController::class, 'index'])->name('bankjatims.index');
+    Route::get('/bankjatims/create', [BankjatimController::class, 'create'])->name('bankjatims.create');
+    Route::post('/bankjatims', [BankjatimController::class, 'store'])->name('bankjatims.store');
+    Route::get('/bankjatims/{bankjatims}/edit', [BankjatimController::class, 'edit'])->name('bankjatims.edit');
+    Route::put('/bankjatims/{bankjatims}/update', [BankjatimController::class, 'update'])->name('bankjatims.update');
+    Route::delete('/bankjatims/{bankjatims}/destroy', [BankjatimController::class, 'destroy'])->name('bankjatims.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/bankjatims/{bankjatims}/send-email', [EmailsController::class, 'sendBankJatimEmail'])->name('bankjatims.sendEmail');
+    Route::get('/bankjatims/search', [BankjatimController::class, 'search'])->name('bankjatims.search');
+    Route::post('/bankjatims/upload', [BankjatimController::class, 'upload'])->name('bankjatims.upload');
+    Route::resource('bankjatims', BankjatimController::class);
+    Route::post('/bankjatims/upload', [BankjatimController::class, 'upload'])->name('bankjatims.upload');
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
