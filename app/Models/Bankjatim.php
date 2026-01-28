@@ -14,7 +14,8 @@ class Bankjatim extends Model
         'cabang_bank',
         'nama',
         'nomor_rekening',
-        'nilai_tuntutan'
+        'nilai_tuntutan',
+        'net_klaim'
 
         // 'net_klaim',
         // 'tanggal_klaim_diajukan',

@@ -40,6 +40,11 @@
             <input type="text" name="nilai_tuntutan" placeholder="Nilai Tuntutan">
         </div>
 
+        <div>
+            <label>Net Klaim:</label>
+            <input type="text" name="net_klaim" placeholder="Net Klaim">
+        </div>
+
 
         <!-- <div>
             <label>Nama Debitur:</label>
