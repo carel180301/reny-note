@@ -21,7 +21,8 @@ class BankjatimController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255'
+            'cabang_bank' => 'nullable|string|max:255',
+            'nama' => 'nullable|string|max:255',
             // 'nama_debitur' => 'nullable|string|max:255',
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
@@ -69,6 +70,7 @@ class BankjatimController extends Controller
     public function update(BankJatim $bankjatims, Request $request){
         $data = $request->validate([
             'cabang_bank' => 'nullable|string|max:255',
+            'nama' => 'nullable|string|max:255',
             // 'nama_debitur' => 'nullable|string|max:255',
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
@@ -116,7 +118,7 @@ class BankjatimController extends Controller
         $keyword = $request->query('q', '');
 
         $data = BankJatim::where('cabang_bank', 'like', "%$keyword%")
-        // ->orWhere('nama_debitur', 'like', "%$keyword%")
+        ->orWhere('nama', 'like', "%$keyword%")
         // ->orWhere('nomor_rekening', 'like', "%$keyword%")
         // ->orWhere('tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")

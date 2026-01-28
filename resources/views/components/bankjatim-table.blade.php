@@ -14,6 +14,7 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama</th>
                     
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
@@ -42,6 +43,7 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $bankjatim->cabang_bank }}</td>
+                    <td class="text-center">{{ $bankjatim->nama }}</td>
                     <!-- <td class="text-center">{{ $mandiri->nama_debitur }}</td>
                     <td class="text-center">{{ $mandiri->nomor_rekening }}</td>
                     <td class="text-center">{{ $mandiri->tuntutan }}</td>
@@ -90,6 +92,10 @@
                 @method('PUT')
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bankjatim->cabang_bank }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3"><label class="form-label">Nama</label><input name="nama" class="form-control" value="{{ $bankjatim->nama }}"></div>
                 </div>
 
                 <!-- <div class="modal-body">

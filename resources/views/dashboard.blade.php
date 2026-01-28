@@ -480,7 +480,16 @@
                             <label class="form-label">Cabang Bank</label>
                             <input name="cabang_bank" class="form-control">
                         </div>
+                           <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input name="nama" class="form-control">
+                        </div>
                     </div>
+
+                    <!-- <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input name="nama" class="form-control">
+                    </div> -->
 
                     <div class="modal-footer">
                         <button class="btn btn-primary">Simpan</button>

@@ -25,6 +25,11 @@
             <input type="text" name="cabang_bank" placeholder="Cabang Bank">
         </div>
 
+        <div>
+            <label>Nama:</label>
+            <input type="text" name="nama" placeholder="Nama">
+        </div>
+
         <!-- <div>
             <label>Nama Debitur:</label>
             <input type="text" name="nama_debitur" placeholder="Nama Debitur">

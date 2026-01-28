@@ -11,8 +11,8 @@ class Bankjatim extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cabang_bank'
-        // 'nama_debitur',
+        'cabang_bank',
+        'nama'
         // 'nomor_rekening',
         // 'tuntutan',
         // 'net_klaim',
