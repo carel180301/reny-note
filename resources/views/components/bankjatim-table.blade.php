@@ -88,27 +88,27 @@
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bankjatim->cabang_bank }}"></div>
+                    <div><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bankjatim->cabang_bank }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nama</label><input name="nama" class="form-control" value="{{ $bankjatim->nama }}"></div>
+                    <div><label class="form-label">Nama</label><input name="nama" class="form-control" value="{{ $bankjatim->nama }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bankjatim->nomor_rekening }}"></div>
+                    <div><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bankjatim->nomor_rekening }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nilai Tuntutan</label><input name="nilai_tuntutan" class="form-control" value="{{ $bankjatim->nilai_tuntutan }}"></div>
+                    <div><label class="form-label">Nilai Tuntutan</label><input name="nilai_tuntutan" class="form-control" value="{{ $bankjatim->nilai_tuntutan }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">NET Klaim</label><input name="net_klaim" class="form-control" value="{{ $bankjatim->net_klaim }}"></div>
+                    <div><label class="form-label">NET Klaim</label><input name="net_klaim" class="form-control" value="{{ $bankjatim->net_klaim }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bankjatim->tanggal_dokumen_diterima }}"></div>
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bankjatim->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
