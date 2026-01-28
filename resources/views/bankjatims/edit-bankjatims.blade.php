@@ -26,6 +26,31 @@
         <input type="text" name="cabang_bank" value="{{ $bankjatims->cabang_bank }}">
     </div>
 
+    <div>
+        <label>Nama:</label>
+        <input type="text" name="nama" value="{{ $bankjatims->nama }}">
+    </div>
+    
+    <div>
+        <label>Nomor Rekening:</label>
+        <input type="text" name="nomor_rekening" value="{{ $bankjatims->nomor_rekening }}">
+    </div>
+
+    <div>
+        <label>Nilai Tuntutan:</label>
+        <input type="text" name="nilai_tuntutan" value="{{ $bankjatims->nilai_tuntutan }}">
+    </div>
+
+    <div>
+        <label>NET Klaim:</label>
+        <input type="text" name="net_klaim" value="{{ $bankjatims->net_klaim }}">
+    </div>
+
+     <!-- <div>
+        <label>Tanggal Dokumen Diterima:</label>
+        <input type="date" name="tanggal_klaim_diajukan" value="{{ $bris->tanggal_klaim_diajukan }}">
+    </div> -->
+
     <!-- <div>
         <label>Nama Debitur:</label>
         <input type="text" name="nama_debitur" value="{{ $mandiris->nama_debitur }}">
@@ -46,10 +71,7 @@
         <input type="text" name="net_klaim" value="{{ $mandiris->net_klaim }}">
     </div>
     
-    <div>
-        <label>Tanggal Klaim Diajukan:</label>
-        <input type="date" name="tanggal_klaim_diajukan" value="{{ $bris->tanggal_klaim_diajukan }}">
-    </div>
+   
 
     <div>
         <label>Status:</label>

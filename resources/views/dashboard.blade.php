@@ -500,6 +500,11 @@
                             <label class="form-label">NET Klaim</label>
                             <input name="net_klaim" class="form-control">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Dokumen Diterima</label>
+                            <input name="tanggal_dokumen_diterima" class="form-control">
+                        </div>
                     </div>
 
                     <!-- <div class="mb-3">

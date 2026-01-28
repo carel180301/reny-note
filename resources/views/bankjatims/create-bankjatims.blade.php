@@ -45,6 +45,11 @@
             <input type="text" name="net_klaim" placeholder="Net Klaim">
         </div>
 
+        <div>
+            <label>Tanggal Dokumen Diterima:</label>
+            <input type="date" name="tanggal_klaim_diajukan" placeholder="Tanggal Klaim Diajukan">
+        </div>
+
 
         <!-- <div>
             <label>Nama Debitur:</label>
@@ -54,11 +59,6 @@
         <div>
             <label>Net Klaim:</label>
             <input type="text" name="net_klaim" placeholder="net_klaim">
-        </div>
-
-        <div>
-            <label>Tanggal Klaim Diajukan:</label>
-            <input type="date" name="tanggal_klaim_diajukan" placeholder="Tanggal Klaim Diajukan">
         </div>
 
         <div>

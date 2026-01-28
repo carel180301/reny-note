@@ -25,7 +25,8 @@ class BankjatimController extends Controller
             'nama' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
             'nilai_tuntutan' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255'
+            'net_klaim' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|date',
 
             // 'nama_debitur' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
@@ -39,7 +40,7 @@ class BankjatimController extends Controller
 
             // 'cabang_bank' => 'nullable|string|max:255',
 
-            // 'tanggal_klaim_diterima' => 'nullable|date',
+  
             // 'tanggal_klaim_masuk_portal' => 'nullable|date',
             // 'date_update' => 'nullable|date',
 
@@ -75,6 +76,7 @@ class BankjatimController extends Controller
             'nomor_rekening' => 'nullable|string|max:255',
             'nilai_tuntutan' => 'nullable|string|max:255',
             'net_klaim' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|string|max:255'
 
             // 'nama_debitur' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
@@ -126,9 +128,9 @@ class BankjatimController extends Controller
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
         ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         ->orWhere('net_klaim', 'like', "%$keyword%")
+        ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
 
         // ->orWhere('net_klaim', 'like', "%$keyword%")
-        // ->orWhere('tanggal_klaim_diajukan', 'like', "%$keyword%")
         // ->orWhere('status', 'like', "%$keyword%")
         // ->orWhere('keterangan', 'like', "%$keyword%")
         // ->orWhere('kekurangan_data', 'like', "%$keyword%")
