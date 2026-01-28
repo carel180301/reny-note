@@ -12,8 +12,8 @@ class Bankjatim extends Model
 
     protected $fillable = [
         'cabang_bank',
-        'nama'
-        // 'nomor_rekening',
+        'nama',
+        'nomor_rekening'
         // 'tuntutan',
         // 'net_klaim',
         // 'tanggal_klaim_diajukan',

@@ -13,7 +13,8 @@ return new class extends Migration{
             $table->id();
             $table->string('cabang_bank')->nullable();
             $table->string('nama')->nullable();
-            // $table->string('nomor_rekening')->nullable();
+            $table->string('nomor_rekening')->nullable();
+            
             // $table->string('tuntutan')->nullable();
             // $table->string('net_klaim')->nullable();
             // $table->date('tanggal_klaim_diajukan')->nullable();

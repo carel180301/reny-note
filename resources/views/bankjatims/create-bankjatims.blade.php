@@ -30,14 +30,14 @@
             <input type="text" name="nama" placeholder="Nama">
         </div>
 
-        <!-- <div>
-            <label>Nama Debitur:</label>
-            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
-        </div>
-
         <div>
             <label>Nomor Rekening:</label>
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening">
+        </div>
+
+        <!-- <div>
+            <label>Nama Debitur:</label>
+            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
         </div>
 
         <div>
