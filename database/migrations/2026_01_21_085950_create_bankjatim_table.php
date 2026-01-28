@@ -17,6 +17,7 @@ return new class extends Migration{
             $table->string('nilai_tuntutan')->nullable();
             $table->string('net_klaim')->nullable();
             $table->string('tanggal_dokumen_diterima')->nullable();
+            $table->string('tanggal_disetujui')->nullable();
 
             // $table->string('net_klaim')->nullable();
             // $table->date('tanggal_klaim_diajukan')->nullable();

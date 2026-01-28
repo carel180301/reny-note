@@ -19,6 +19,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Disetujui</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tuntutan</th>
@@ -51,6 +52,7 @@
                     <td class="text-center">{{ $bankjatim->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bankjatim->net_klaim }}</td>
                     <td class="text-center">{{ $bankjatim->tanggal_dokumen_diterima }}</td>
+                    <td class="text-center">{{ $bankjatim->tanggal_disetujui }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -109,6 +111,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bankjatim->tanggal_dokumen_diterima }}"></div>
+                </div>
+                
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Disetujui</label><input name="tanggal_disetujui" class="form-control" value="{{ $bankjatim->tanggal_disetujui }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

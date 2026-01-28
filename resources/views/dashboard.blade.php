@@ -505,6 +505,11 @@
                             <label class="form-label">Tanggal Dokumen Diterima</label>
                             <input name="tanggal_dokumen_diterima" class="form-control">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal disetujui</label>
+                            <input name="tanggal_disetujui" class="form-control">
+                        </div>
                     </div>
 
                     <!-- <div class="mb-3">
@@ -513,7 +518,7 @@
                     </div> -->
 
                     <div class="modal-footer">
-                        <button class="btn btn-primary">Simpan</button>
+                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
                     </div>
                 </form>
             </div>
