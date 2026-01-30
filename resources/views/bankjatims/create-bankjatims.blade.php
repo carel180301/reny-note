@@ -49,16 +49,10 @@
             <label>Tanggal Dokumen Diterima:</label>
             <input type="date" name="tanggal_klaim_diajukan" placeholder="Tanggal Klaim Diajukan">
         </div>
-
-
-        <!-- <div>
-            <label>Nama Debitur:</label>
-            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
-        </div>
-
+        
         <div>
-            <label>Net Klaim:</label>
-            <input type="text" name="net_klaim" placeholder="net_klaim">
+            <label>Tanggal Disetujui:</label>
+            <input type="date" name="tanggal_disetujui" placeholder="Tanggal Disetujui">
         </div>
 
         <div>
@@ -74,6 +68,19 @@
                 <option value="tolak">Tolak</option>
             </select>
         </div>
+
+
+        <!-- <div>
+            <label>Nama Debitur:</label>
+            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
+        </div>
+
+        <div>
+            <label>Net Klaim:</label>
+            <input type="text" name="net_klaim" placeholder="net_klaim">
+        </div>
+
+       
 
         <div>
             <label>Keterangan:</label>

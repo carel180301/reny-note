@@ -464,6 +464,7 @@
         </div>
     </div>
 
+    <!--add bankjatim modal-->
     @push('modals')
     <div class="modal fade" id="addBankjatimModal" tabindex="-1">
         <div class="modal-dialog">
@@ -509,6 +510,20 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal disetujui</label>
                             <input name="tanggal_disetujui" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-select" required>
+                                <option value="" disabled selected>Pilih Status</option>
+                                <option value="batal">Batal</option>
+                                <option value="disetujui">Disetujui</option>
+                                <option value="pending">Pending</option>
+                                <option value="regist">Regist</option>
+                                <option value="suspect">Suspect</option>
+                                <option value="tamdat">Tamdat</option>
+                                <option value="tolak">Tolak</option>
+                            </select>
                         </div>
                     </div>
 

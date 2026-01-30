@@ -46,19 +46,33 @@
         <input type="text" name="net_klaim" value="{{ $bankjatims->net_klaim }}">
     </div>
 
-     <!-- <div>
+    <div>
         <label>Tanggal Dokumen Diterima:</label>
-        <input type="date" name="tanggal_klaim_diajukan" value="{{ $bris->tanggal_klaim_diajukan }}">
-    </div> -->
+        <input type="date" name="tanggal_dokumen_diterima" value="{{ $bankjatims->tanggal_dokumen_diterima }}">
+    </div>
+    
+    <div>
+        <label>Tanggal Disetujui:</label>
+        <input type="date" name="tanggal_disetujui" value="{{ $bankjatims->tanggal_disetujui }}">
+    </div>
+
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="batal" {{ $bankjatims->status == 'batal' ? 'selected' : '' }}>Batal</option>
+            <option value="disetujui" {{ $bankjatims->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
+            <option value="pending" {{ $bankjatims->status == 'pending' ? 'selected' : '' }}>Pending</option>
+            <option value="regist" {{ $bankjatims->status == 'regist' ? 'selected' : '' }}>Regist</option>
+            <option value="suspect" {{ $bankjatims->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
+            <option value="tamdat" {{ $bankjatims->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
+            <option value="tolak" {{ $bankjatims->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+        </select>
+    </div>
+
 
     <!-- <div>
         <label>Nama Debitur:</label>
         <input type="text" name="nama_debitur" value="{{ $mandiris->nama_debitur }}">
-    </div>
-
-    <div>
-        <label>Nomor Rekening:</label>
-        <input type="text" name="nomor_rekening" value="{{ $mandiris->nomor_rekening }}">
     </div>
 
     <div>
@@ -69,21 +83,6 @@
     <div>
         <label>Net Klaim:</label>
         <input type="text" name="net_klaim" value="{{ $mandiris->net_klaim }}">
-    </div>
-    
-   
-
-    <div>
-        <label>Status:</label>
-        <select name="status">
-            <option value="batal" {{ $mandiris->status == 'batal' ? 'selected' : '' }}>Batal</option>
-            <option value="disetujui" {{ $mandiris->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
-            <option value="pending" {{ $mandiris->status == 'pending' ? 'selected' : '' }}>Pending</option>
-            <option value="regist" {{ $mandiris->status == 'regist' ? 'selected' : '' }}>Regist</option>
-            <option value="suspect" {{ $mandiris->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
-            <option value="tamdat" {{ $mandiris->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
-            <option value="tolak" {{ $mandiris->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-        </select>
     </div>
 
     <div>
@@ -143,7 +142,7 @@
     </div> -->
 
     <div>
-        <button type="submit">Update</button>
+        <button type="submit">update</button>
     </div>
 </form>
 
