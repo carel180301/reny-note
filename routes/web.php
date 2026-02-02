@@ -116,7 +116,6 @@ Route::get('/dashboard', function (Request $request) {
         $bankjatims = $query->get();
     }
 
-
     return view('dashboard', compact('bris', 'mandiris', 'bankjatims','table'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 

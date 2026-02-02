@@ -69,6 +69,11 @@
         </select>
     </div>
 
+    <div>
+        <label>Tambahan Data:</label>
+        <input type="text" name="tambahan_data" value="{{ $bankjatims->tambahan_data }}">
+    </div>
+
 
     <!-- <div>
         <label>Nama Debitur:</label>

@@ -69,6 +69,12 @@
             </select>
         </div>
 
+        <div>
+            <label>Tambahan Data:</label>
+            <input type="text" name="net_klaim" placeholder="Net Klaim">
+        </div>
+
+
 
         <!-- <div>
             <label>Nama Debitur:</label>

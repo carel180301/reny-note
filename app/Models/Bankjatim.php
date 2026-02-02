@@ -18,7 +18,8 @@ class Bankjatim extends Model
         'net_klaim',
         'tanggal_dokumen_diterima',
         'tanggal_disetujui',
-        'status'
+        'status',
+        'tambahan_data'
 
         // 'net_klaim',
         // 'tanggal_klaim_diajukan',

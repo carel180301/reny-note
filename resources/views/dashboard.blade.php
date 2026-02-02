@@ -525,6 +525,11 @@
                                 <option value="tolak">Tolak</option>
                             </select>
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tambahan Data</label>
+                            <input name="tambahan_data" class="form-control">
+                        </div>
                     </div>
 
                     <!-- <div class="mb-3">

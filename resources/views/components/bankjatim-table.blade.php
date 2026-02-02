@@ -21,6 +21,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Disetujui</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tambahan Data</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tuntutan</th>
