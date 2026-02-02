@@ -71,7 +71,7 @@
 
         <div>
             <label>Tambahan Data:</label>
-            <input type="text" name="net_klaim" placeholder="Net Klaim">
+            <input type="text" name="tambahan_data" placeholder="Tambahan Data">
         </div>
 
 

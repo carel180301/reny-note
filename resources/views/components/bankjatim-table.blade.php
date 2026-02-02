@@ -56,6 +56,7 @@
                     <td class="text-center">{{ $bankjatim->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bankjatim->tanggal_disetujui }}</td>
                     <td class="text-center">{{ $bankjatim->status }}</td>
+                    <td class="text-center">{{ $bankjatim->tambahan_data }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -131,6 +132,10 @@
                         <option value="tamdat" {{ $bankjatim->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
                         <option value="tolak" {{ $bankjatim->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
                     </select>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tambahan Data</label><input name="tambahan_data" class="form-control" value="{{ $bankjatim->tambahan_data }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
