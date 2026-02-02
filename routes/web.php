@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function (Request $request) {
-    $table = $request->get('table', 'bri', 'mandiri', 'bankjatim');
+    $table = $request->get('table', 'bri');
 
     // $akms = collect();
     // $asums = collect();

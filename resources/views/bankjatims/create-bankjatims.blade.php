@@ -47,7 +47,7 @@
 
         <div>
             <label>Tanggal Dokumen Diterima:</label>
-            <input type="date" name="tanggal_klaim_diajukan" placeholder="Tanggal Klaim Diajukan">
+            <input type="date" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
         </div>
         
         <div>
