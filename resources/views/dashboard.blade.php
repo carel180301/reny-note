@@ -177,6 +177,64 @@
                         </a> -->
                     </div>
                 @endif
+
+                @if(request('table') === 'btn')
+                    <div class="d-flex gap-2 flex-wrap">
+                        <!-- Status Filter -->
+                        <!-- <div class="dropdown"> -->
+                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                Status
+                            </button> -->
+                            <!-- <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
+                                        Terima
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
+                                        Tolak
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
+                                        Proses Analisa
+                                    </a>
+                                </li>
+                            </ul> -->
+                        <!-- </div> -->
+
+                        <!-- Status Sistem Filter -->
+                        <!-- <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle"
+                                    data-bs-toggle="dropdown">
+                                Status Sistem
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
+                                        Done
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
+                                        Not Done
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+
+                        <!-- Reset -->
+                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
+                            Reset
+                        </a> -->
+                    </div>
+                @endif
             </div>
 
             {{-- CENTER: TITLE --}}
@@ -213,6 +271,10 @@
 
             @if(request('table') === 'bankjatim')
                 <x-bankjatim-table :bankjatims="$bankjatims" />
+            @endif
+
+            @if(request('table') === 'btn')
+                <x-btn-table :btns="$btns" />
             @endif
         </div>
     </div>
@@ -546,6 +608,88 @@
     </div>
     @endpush
 
+    <!--add btn modal-->
+    @push('modals')
+    <div class="modal fade" id="addBtnModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Klaim BTN</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form method="POST" action="{{ route('btns.store') }}">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control">
+                        </div>
+                        
+                        <!-- <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input name="nama" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input name="nomor_rekening" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan</label>
+                            <input name="nilai_tuntutan" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">NET Klaim</label>
+                            <input name="net_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Dokumen Diterima</label>
+                            <input type="date" name="tanggal_dokumen_diterima" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal disetujui</label>
+                            <input type="date" name="tanggal_disetujui" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-select" required>
+                                <option value="" disabled selected>Pilih Status</option>
+                                <option value="batal">Batal</option>
+                                <option value="disetujui">Disetujui</option>
+                                <option value="pending">Pending</option>
+                                <option value="regist">Regist</option>
+                                <option value="suspect">Suspect</option>
+                                <option value="tamdat">Tamdat</option>
+                                <option value="tolak">Tolak</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tambahan Data</label>
+                            <input name="tambahan_data" class="form-control">
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input name="nama" class="form-control">
+                    </div> -->
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endpush
+
 
 
     <!-- Upload AKM Modal -->
@@ -629,8 +773,14 @@
 
                 if (table === 'mandiri') {
                     url = '/mandiris/search';
-                } else if (table === 'bankjatim') {
+                } 
+                
+                else if (table === 'bankjatim') {
                     url = '/bankjatims/search';
+                }
+
+                else if (table === 'btn') {
+                    url = '/btns/search';
                 }
 
                 fetch(url + '?q=' + encodeURIComponent(q))

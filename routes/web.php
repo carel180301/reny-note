@@ -9,11 +9,13 @@ use App\Http\Controllers\ClaimController;
 use App\Models\Bri;
 use App\Models\Mandiri;
 use App\Models\Bankjatim;
+use App\Models\Btn;
 // use App\Http\Controllers\AkmController;
 // use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
 use App\Http\Controllers\MandiriController;
 use App\Http\Controllers\BankjatimController;
+use App\Http\Controllers\BtnController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
@@ -28,6 +30,7 @@ Route::get('/dashboard', function (Request $request) {
     $bris = collect();
     $mandiris = collect();
     $bankjatims = collect();
+    $btns = collect();
 
 
 //    if ($table === 'akm') {
@@ -115,8 +118,27 @@ Route::get('/dashboard', function (Request $request) {
 
         $bankjatims = $query->get();
     }
-    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','table'));
+
+     else if ($table === 'btn') {
+        $query = Btn::query()->orderBy('created_at', 'asc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $bankjatims = $query->get();
+    }
+     return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'table'));
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     // Route::get('/akms', [AkmController::class, 'index'])->name('akms.index');
@@ -181,6 +203,18 @@ Route::middleware('auth')->group(function () {
     Route::resource('bankjatims', BankjatimController::class);
     Route::post('/bankjatims/upload', [BankjatimController::class, 'upload'])->name('bankjatims.upload');
 
+    Route::get('/btns', [BtnController::class, 'index'])->name('btns.index');
+    Route::get('/btns/create', [BtnController::class, 'create'])->name('btns.create');
+    Route::post('/btns', [BtnController::class, 'store'])->name('btns.store');
+    Route::get('/btns/{btns}/edit', [BtnController::class, 'edit'])->name('btns.edit');
+    Route::put('/btns/{btns}/update', [BtnController::class, 'update'])->name('btns.update');
+    Route::delete('/btns/{btns}/destroy', [BtnController::class, 'destroy'])->name('btns.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/btns/{btns}/send-email', [EmailsController::class, 'sendBtnEmail'])->name('btns.sendEmail');
+    Route::get('/btns/search', [BtnController::class, 'search'])->name('btns.search');
+    Route::post('/btns/upload', [BtnController::class, 'upload'])->name('btns.upload');
+    Route::resource('btns', BtnController::class);
+    Route::post('/btns/upload', [BtnController::class, 'upload'])->name('btns.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
