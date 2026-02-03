@@ -14,6 +14,7 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -23,6 +24,7 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $btn->cabang_bank }}</td>
+                    <td class="text-center">{{ $btn->nama_debitur }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -61,6 +63,10 @@
                 @method('PUT')
                 <div class="modal-body">
                     <div><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $btn->cabang_bank }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $btn->nama_debitur }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

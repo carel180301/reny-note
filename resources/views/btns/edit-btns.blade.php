@@ -26,11 +26,12 @@
         <input type="text" name="cabang_bank" value="{{ $btns->cabang_bank }}">
     </div>
 
-    <!-- <div>
-        <label>Nama:</label>
-        <input type="text" name="nama" value="{{ $bankjatims->nama }}">
+    <div>
+        <label>Nama Debitur:</label>
+        <input type="text" name="nama_debitur" value="{{ $btns->nama_debitur }}">
     </div>
-    
+
+    <!-- 
     <div>
         <label>Nomor Rekening:</label>
         <input type="text" name="nomor_rekening" value="{{ $bankjatims->nomor_rekening }}">

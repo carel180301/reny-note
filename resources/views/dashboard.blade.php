@@ -625,12 +625,14 @@
                             <label class="form-label">Cabang Bank</label>
                             <input name="cabang_bank" class="form-control">
                         </div>
-                        
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Nama</label>
-                            <input name="nama" class="form-control">
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Debitur</label>
+                            <input name="nama_debitur" class="form-control">
                         </div>
 
+                        
+                        <!-- 
                         <div class="mb-3">
                             <label class="form-label">Nomor Rekening</label>
                             <input name="nomor_rekening" class="form-control">

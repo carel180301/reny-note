@@ -12,7 +12,7 @@ return new class extends Migration{
         Schema::create('btns', function (Blueprint $table) {
             $table->id();
             $table->string('cabang_bank')->nullable();
-            // $table->string('nama')->nullable();
+            $table->string('nama_debitur')->nullable();
             // $table->string('nomor_rekening')->nullable();
             // $table->string('nilai_tuntutan')->nullable();
             // $table->string('net_klaim')->nullable();
