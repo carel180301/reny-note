@@ -31,12 +31,12 @@
         <input type="text" name="nama_debitur" value="{{ $btns->nama_debitur }}">
     </div>
 
-    <!-- 
     <div>
         <label>Nomor Rekening:</label>
-        <input type="text" name="nomor_rekening" value="{{ $bankjatims->nomor_rekening }}">
+        <input type="text" name="nomor_rekening" value="{{ $btns->nomor_rekening }}">
     </div>
 
+    <!-- 
     <div>
         <label>Nilai Tuntutan:</label>
         <input type="text" name="nilai_tuntutan" value="{{ $bankjatims->nilai_tuntutan }}">

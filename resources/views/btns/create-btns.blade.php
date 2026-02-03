@@ -30,11 +30,12 @@
             <input type="text" name="nama_debitur" placeholder="Nama Debitur">
         </div>
 
-        <!-- <div>
+        <div>
             <label>Nomor Rekening:</label>
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening">
         </div>
 
+        <!-- 
         <div>
             <label>Nilai Tuntutan:</label>
             <input type="text" name="nilai_tuntutan" placeholder="Nilai Tuntutan">

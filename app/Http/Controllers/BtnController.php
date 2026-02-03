@@ -22,7 +22,9 @@ class BtnController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255'
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
+
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
@@ -74,8 +76,8 @@ class BtnController extends Controller
     public function update(Btn $btns, Request $request){
         $data = $request->validate([
             'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255'
-            // 'nomor_rekening' => 'nullable|string|max:255',
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
@@ -130,7 +132,7 @@ class BtnController extends Controller
 
         $data = Btn::where('cabang_bank', 'like', "%$keyword%")
         ->orWhere('nama_debitur', 'like', "%$keyword%")
-        // ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        ->orWhere('nomor_rekening', 'like', "%$keyword%")
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
