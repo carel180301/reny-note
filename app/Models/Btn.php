@@ -11,7 +11,7 @@ class Btn extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cabang_bank',
+        'cabang_bank'
         // 'nama',
         // 'nomor_rekening',
         // 'nilai_tuntutan',

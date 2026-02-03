@@ -134,7 +134,7 @@ Route::get('/dashboard', function (Request $request) {
             $query->where('status_pembayaran', $request->status_pembayaran);
         }
 
-        $bankjatims = $query->get();
+        $btns = $query->get();
     }
      return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'table'));
 })->middleware(['auth', 'verified'])->name('dashboard');
