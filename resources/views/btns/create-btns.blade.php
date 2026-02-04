@@ -86,6 +86,10 @@
             <input type="text" name="nomor_memo" placeholder="Nomor Memo Permohonan Pembayaran Klaim">
         </div>
 
+        <div>
+            <label>Tanggal Memo Permohonan Pembayaran Klaim:</label>
+            <input type="date" name="tanggal_memo" placeholder="Tanggal Memo Permohonan Pembayaran Klaim">
+        </div>
 
         <!-- 
         <div>

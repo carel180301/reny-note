@@ -684,6 +684,11 @@
                             <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
                             <input name="nomor_memo" class="form-control">
                         </div>
+
+                         <div class="mb-3">
+                            <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_memo" class="form-control">
+                        </div>
                         
                         <!-- 
                         <div class="mb-3">

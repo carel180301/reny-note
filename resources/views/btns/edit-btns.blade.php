@@ -84,6 +84,11 @@
         <input type="text" name="nomor_memo" value="{{ $btns->nomor_memo }}">
     </div>
 
+    <div>
+        <label>Tanggal Memo Permohonan Pembayaran Klaim:</label>
+        <input type="date" name="tanggal_memo" value="{{ $btns->tanggal_memo }}">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>

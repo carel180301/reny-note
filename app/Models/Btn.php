@@ -22,6 +22,7 @@ class Btn extends Model
         'nomor_cl',
         'date_update',
         'nomor_memo',
+        'tanggal_memo'
 
         // 'nilai_tuntutan',
         // 'net_klaim',
