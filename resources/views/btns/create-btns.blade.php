@@ -40,15 +40,16 @@
             <input type="text" name="nilai_tuntutan_klaim" placeholder="Nilai Tuntutan Klaim">
         </div>
 
+        
+        <div>
+            <label>Net Klaim:</label>
+            <input type="text" name="net_klaim" placeholder="Net Klaim">
+        </div>
+
         <!-- 
         <div>
             <label>Nilai Tuntutan:</label>
             <input type="text" name="nilai_tuntutan" placeholder="Nilai Tuntutan">
-        </div>
-
-        <div>
-            <label>Net Klaim:</label>
-            <input type="text" name="net_klaim" placeholder="Net Klaim">
         </div>
 
         <div>

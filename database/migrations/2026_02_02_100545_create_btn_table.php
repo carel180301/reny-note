@@ -15,6 +15,7 @@ return new class extends Migration{
             $table->string('nama_debitur')->nullable();
             $table->string('nomor_rekening')->nullable();
             $table->string('nilai_tuntutan_klaim')->nullable();
+            $table->string('net_klaim')->nullable();
 
             // $table->string('nilai_tuntutan')->nullable();
             // $table->string('net_klaim')->nullable();

@@ -41,15 +41,15 @@
         <input type="text" name="nilai_tuntutan_klaim" value="{{ $btns->nilai_tuntutan_klaim }}">
     </div>
 
+    <div>
+        <label>Net Klaim:</label>
+        <input type="text" name="net_klaim" placeholder="Net Klaim">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>
         <input type="text" name="nilai_tuntutan" value="{{ $bankjatims->nilai_tuntutan }}">
-    </div>
-
-    <div>
-        <label>NET Klaim:</label>
-        <input type="text" name="net_klaim" value="{{ $bankjatims->net_klaim }}">
     </div>
 
     <div>

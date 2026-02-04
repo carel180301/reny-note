@@ -641,6 +641,10 @@
                             <input name="nilai_tuntutan_klaim" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">NET Klaim</label>
+                            <input name="net_klaim" class="form-control">
+                        </div>
                         
                         <!-- 
                         <div class="mb-3">
@@ -651,11 +655,6 @@
                         <div class="mb-3">
                             <label class="form-label">Nilai Tuntutan</label>
                             <input name="nilai_tuntutan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">NET Klaim</label>
-                            <input name="net_klaim" class="form-control">
                         </div>
 
                         <div class="mb-3">
