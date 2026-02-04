@@ -70,8 +70,7 @@
             <label>Keterangan:</label>
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
-
-        
+    
         <div>
             <label>Nomor CL:</label>
             <input type="text" name="nomor_cl" placeholder="Nomor CL">
@@ -80,6 +79,11 @@
         <div>
             <label>Date Update:</label>
             <input type="date" name="date_update" placeholder="Date Update">
+        </div>
+
+        <div>
+            <label>Nomor Memo Permohonan Pembayaran Klaim:</label>
+            <input type="text" name="nomor_memo" placeholder="Nomor Memo Permohonan Pembayaran Klaim">
         </div>
 
 

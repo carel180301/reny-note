@@ -20,7 +20,8 @@ class Btn extends Model
         'status',
         'keterangan',
         'nomor_cl',
-        'date_update'
+        'date_update',
+        'nomor_memo',
 
         // 'nilai_tuntutan',
         // 'net_klaim',
