@@ -66,6 +66,11 @@
             </select>
         </div>
 
+        <div>
+            <label>Keterangan:</label>
+            <input type="text" name="keterangan" placeholder="Keterangan">
+        </div>
+
 
         <!-- 
         <div>
@@ -94,13 +99,6 @@
         <div>
             <label>Net Klaim:</label>
             <input type="text" name="net_klaim" placeholder="net_klaim">
-        </div>
-
-       
-
-        <div>
-            <label>Keterangan:</label>
-            <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
         <div>

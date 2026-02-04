@@ -17,7 +17,8 @@ class Btn extends Model
         'nilai_tuntutan_klaim',
         'net_klaim',
         'tanggal_dokumen_diterima',
-        'status'
+        'status',
+        'keterangan'
 
         // 'nilai_tuntutan',
         // 'net_klaim',

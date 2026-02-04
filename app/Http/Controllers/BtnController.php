@@ -27,7 +27,8 @@ class BtnController extends Controller
             'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             'net_klaim' => 'nullable|string|max:255',
             'tanggal_dokumen_diterima' => 'nullable|date',
-            'status' => 'nullable|string|max:50'
+            'status' => 'nullable|string|max:50',
+            'keterangan' => 'nullable|string|max:50'
 
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
@@ -39,7 +40,6 @@ class BtnController extends Controller
             // 'tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_klaim_diajukan' => 'nullable|date',
-            // 'keterangan' => 'nullable|string|max:50',
             // 'kekurangan_data' => 'nullable|string|max:50',
             // 'tanggal_update' => 'nullable|date',
             // 'nomor_box' => 'nullable|string|max:50'
@@ -83,7 +83,8 @@ class BtnController extends Controller
             'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             'net_klaim' => 'nullable|string|max:255',
             'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:50'
+            'status' => 'nullable|string|max:50',
+            'keterangan' => 'nullable|string|max:50'
 
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
@@ -95,7 +96,6 @@ class BtnController extends Controller
             // 'tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_klaim_diajukan' => 'nullable|date',
-            // 'keterangan' => 'nullable|string|max:50',
             // 'kekurangan_data' => 'nullable|string|max:50',
             // 'tanggal_update' => 'nullable|date',
             // 'nomor_box' => 'nullable|string|max:255',
@@ -142,6 +142,7 @@ class BtnController extends Controller
         ->orWhere('net_klaim', 'like', "%$keyword%")
         ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         ->orWhere('status', 'like', "%$keyword%")
+        ->orWhere('keterangan', 'like', "%$keyword%")
 
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
@@ -149,7 +150,6 @@ class BtnController extends Controller
         // ->orWhere('tambahan_data', 'like', "%$keyword%")
 
         // ->orWhere('net_klaim', 'like', "%$keyword%")
-        // ->orWhere('keterangan', 'like', "%$keyword%")
         // ->orWhere('kekurangan_data', 'like', "%$keyword%")
         // ->orWhere('tanggal_update', 'like', "%$keyword%")
         // ->orWhere('nomor_box', 'like', "%$keyword%")

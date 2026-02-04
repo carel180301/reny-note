@@ -18,6 +18,7 @@ return new class extends Migration{
             $table->string('net_klaim')->nullable();
             $table->string('tanggal_dokumen_diterima')->nullable();
             $table->string('status')->nullable();
+            $table->string('keterangan')->nullable();
 
             // $table->string('nilai_tuntutan')->nullable();
             // $table->string('tanggal_disetujui')->nullable();

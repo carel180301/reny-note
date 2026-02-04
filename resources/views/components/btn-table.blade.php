@@ -20,6 +20,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -35,6 +36,7 @@
                     <td class="text-center">{{ $btn->net_klaim }}</td>
                     <td class="text-center">{{ $btn->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $btn->status }}</td>
+                    <td class="text-center">{{ $btn->keterangan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -106,6 +108,10 @@
                         <option value="tamdat" {{ $btn->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
                         <option value="tolak" {{ $btn->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
                     </select>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $btn->keterangan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

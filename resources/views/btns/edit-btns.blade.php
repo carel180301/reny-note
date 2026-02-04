@@ -64,6 +64,11 @@
         </select>
     </div>
 
+    <div>
+        <label>Keterangan:</label>
+        <input type="text" name="keterangan" value="{{ $btns->keterangan }}">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>
