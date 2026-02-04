@@ -19,6 +19,7 @@ return new class extends Migration{
             $table->string('tanggal_dokumen_diterima')->nullable();
             $table->string('status')->nullable();
             $table->string('keterangan')->nullable();
+            $table->string('nomor_cl')->nullable();
 
             // $table->string('nilai_tuntutan')->nullable();
             // $table->string('tanggal_disetujui')->nullable();

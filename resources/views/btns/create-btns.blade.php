@@ -71,6 +71,12 @@
             <input type="text" name="keterangan" placeholder="Keterangan">
         </div>
 
+        
+        <div>
+            <label>Nomor CL:</label>
+            <input type="text" name="nomor_cl" placeholder="Nomor CL">
+        </div>
+
 
         <!-- 
         <div>

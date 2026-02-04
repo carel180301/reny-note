@@ -69,6 +69,11 @@
         <input type="text" name="keterangan" value="{{ $btns->keterangan }}">
     </div>
 
+    <div>
+        <label>Nomor CL:</label>
+        <input type="text" name="nomor_cl" value="{{ $btns->nomor_cl }}">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>
