@@ -26,6 +26,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Pembayaran Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -47,6 +48,7 @@
                     <td class="text-center">{{ $btn->nomor_memo }}</td>
                     <td class="text-center">{{ $btn->tanggal_memo }}</td>
                     <td class="text-center">{{ $btn->tanggal_pembayaran_klaim }}</td>
+                    <td class="text-center">{{ $btn->tanggal_pelunasan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -140,9 +142,12 @@
                     <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input name="tanggal_memo" class="form-control" value="{{ $btn->tanggal_memo }}"></div>
                 </div>
 
-                
                 <div class="modal-body">
                     <div><label class="form-label">Tanggal Pembayaran Klaim</label><input name="tanggal_pembayaran_klaim" class="form-control" value="{{ $btn->tanggal_pembayaran_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label><input name="tanggal_pelunasan" class="form-control" value="{{ $btn->tanggal_pelunasan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

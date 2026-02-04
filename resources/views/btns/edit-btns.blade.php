@@ -94,6 +94,11 @@
         <input type="date" name="tanggal_pembayaran_klaim" value="{{ $btns->tanggal_pembayaran_klaim }}">
     </div>
 
+    <div>
+        <label>Tanggal Pelunasan Di Bagian Keuangan:</label>
+        <input type="date" name="tanggal_pelunasan" value="{{ $btns->tanggal_pelunasan }}">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>

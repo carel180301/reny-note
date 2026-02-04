@@ -91,9 +91,14 @@
             <input type="date" name="tanggal_memo" placeholder="Tanggal Memo Permohonan Pembayaran Klaim">
         </div>
 
-         <div>
+        <div>
             <label>Tanggal Pembayaran Klaim:</label>
             <input type="date" name="tanggal_pembayaran_klaim" placeholder="Tanggal Pembayaran Klaim">
+        </div>
+
+        <div>
+            <label>Tanggal Pelunasan:</label>
+            <input type="date" name="tanggal_pelunasan" placeholder="Tanggal Pelunasan Di Bagian Keuangan">
         </div>
 
         <!-- 
