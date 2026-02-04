@@ -51,6 +51,19 @@
         <input type="date" name="tanggal_dokumen_diterima" value="{{ $btns->tanggal_dokumen_diterima }}">
     </div>
 
+    <div>
+        <label>Status:</label>
+        <select name="status">
+            <option value="batal" {{ $btns->status == 'batal' ? 'selected' : '' }}>Batal</option>
+            <option value="disetujui" {{ $btns->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
+            <option value="pending" {{ $btns->status == 'pending' ? 'selected' : '' }}>Pending</option>
+            <option value="regist" {{ $btns->status == 'regist' ? 'selected' : '' }}>Regist</option>
+            <option value="suspect" {{ $btns->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
+            <option value="tamdat" {{ $btns->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
+            <option value="tolak" {{ $btns->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+        </select>
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>
@@ -60,19 +73,6 @@
     <div>
         <label>Tanggal Disetujui:</label>
         <input type="date" name="tanggal_disetujui" value="{{ $bankjatims->tanggal_disetujui }}">
-    </div>
-
-    <div>
-        <label>Status:</label>
-        <select name="status">
-            <option value="batal" {{ $bankjatims->status == 'batal' ? 'selected' : '' }}>Batal</option>
-            <option value="disetujui" {{ $bankjatims->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
-            <option value="pending" {{ $bankjatims->status == 'pending' ? 'selected' : '' }}>Pending</option>
-            <option value="regist" {{ $bankjatims->status == 'regist' ? 'selected' : '' }}>Regist</option>
-            <option value="suspect" {{ $bankjatims->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
-            <option value="tamdat" {{ $bankjatims->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
-            <option value="tolak" {{ $bankjatims->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-        </select>
     </div>
 
     <div>

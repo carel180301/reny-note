@@ -52,18 +52,6 @@
             <input type="date" name="tanggal_dokumen_diterima" placeholder="Tanggal Dokumen Diterima">
         </div>
 
-        <!-- 
-        <div>
-            <label>Nilai Tuntutan:</label>
-            <input type="text" name="nilai_tuntutan" placeholder="Nilai Tuntutan">
-        </div>
-
-        
-        <div>
-            <label>Tanggal Disetujui:</label>
-            <input type="date" name="tanggal_disetujui" placeholder="Tanggal Disetujui">
-        </div>
-
         <div>
             <label class="form-label">Status:</label>
             <select name="status" class="form-select">
@@ -76,6 +64,19 @@
                 <option value="tamdat">Tamdat</option>
                 <option value="tolak">Tolak</option>
             </select>
+        </div>
+
+
+        <!-- 
+        <div>
+            <label>Nilai Tuntutan:</label>
+            <input type="text" name="nilai_tuntutan" placeholder="Nilai Tuntutan">
+        </div>
+
+        
+        <div>
+            <label>Tanggal Disetujui:</label>
+            <input type="date" name="tanggal_disetujui" placeholder="Tanggal Disetujui">
         </div>
 
         <div>

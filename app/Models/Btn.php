@@ -16,12 +16,12 @@ class Btn extends Model
         'nomor_rekening',
         'nilai_tuntutan_klaim',
         'net_klaim',
-        'tanggal_dokumen_diterima'
+        'tanggal_dokumen_diterima',
+        'status'
 
         // 'nilai_tuntutan',
         // 'net_klaim',
         // 'tanggal_disetujui',
-        // 'status',
         // 'tambahan_data'
 
         // 'net_klaim',
