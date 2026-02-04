@@ -33,6 +33,7 @@ class BtnController extends Controller
             'date_update' => 'nullable|date',
             'nomor_memo' => 'nullable|string|max:255',
             'tanggal_memo' => 'nullable|date',
+            'tanggal_pembayaran_klaim' => 'nullable|date'
         
 
 
@@ -95,6 +96,7 @@ class BtnController extends Controller
             'date_update' => 'nullable|string|max:255',
             'nomor_memo' => 'nullable|string|max:255',
             'tanggal_memo' => 'nullable|string|max:255',
+            'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
 
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
@@ -157,6 +159,7 @@ class BtnController extends Controller
         ->orWhere('date_update', 'like', "%$keyword%")
         ->orWhere('nomor_memo', 'like', "%$keyword%")
         ->orWhere('tanggal_memo', 'like', "%$keyword%")
+        ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")
 
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")

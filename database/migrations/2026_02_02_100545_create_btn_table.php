@@ -23,6 +23,7 @@ return new class extends Migration{
             $table->string('date_update')->nullable();
             $table->string('nomor_memo')->nullable();
             $table->string('tanggal_memo')->nullable();
+            $table->string('tanggal_pembayaran_klaim')->nullable();
 
             // $table->string('nilai_tuntutan')->nullable();
             // $table->string('tanggal_disetujui')->nullable();
