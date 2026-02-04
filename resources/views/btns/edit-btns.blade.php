@@ -74,6 +74,11 @@
         <input type="text" name="nomor_cl" value="{{ $btns->nomor_cl }}">
     </div>
 
+    <div>
+        <label>Date Update:</label>
+        <input type="date" name="date_update" value="{{ $btns->date_update }}">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>

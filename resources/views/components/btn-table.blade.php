@@ -22,6 +22,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -39,6 +40,7 @@
                     <td class="text-center">{{ $btn->status }}</td>
                     <td class="text-center">{{ $btn->keterangan }}</td>
                     <td class="text-center">{{ $btn->Nomor_cl }}</td>
+                    <td class="text-center">{{ $btn->date_update }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -118,6 +120,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Nomor CL</label><input name="nomor_cl" class="form-control" value="{{ $btn->nomor_cl }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Date Update</label><input name="date_update" class="form-control" value="{{ $btn->date_update }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

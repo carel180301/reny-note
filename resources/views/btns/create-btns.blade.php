@@ -77,6 +77,11 @@
             <input type="text" name="nomor_cl" placeholder="Nomor CL">
         </div>
 
+        <div>
+            <label>Date Update:</label>
+            <input type="date" name="date_update" placeholder="Date Update">
+        </div>
+
 
         <!-- 
         <div>

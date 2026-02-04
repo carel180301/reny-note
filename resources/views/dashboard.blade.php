@@ -674,6 +674,11 @@
                             <label class="form-label">Nomor CL</label>
                             <input name="nomor_cl" class="form-control">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Date Update</label>
+                            <input type="date" name="date_update" class="form-control">
+                        </div>
                         
                         <!-- 
                         <div class="mb-3">

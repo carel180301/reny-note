@@ -29,7 +29,9 @@ class BtnController extends Controller
             'tanggal_dokumen_diterima' => 'nullable|date',
             'status' => 'nullable|string|max:255',
             'keterangan' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255'
+            'nomor_cl' => 'nullable|string|max:255',
+            'date_update' => 'nullable|date',
+
 
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
@@ -87,6 +89,7 @@ class BtnController extends Controller
             'status' => 'nullable|string|max:255',
             'keterangan' => 'nullable|string|max:255',
             'nomor_cl' => 'nullable|string|max:255',
+            'date_update' => 'nullable|string|max:255',
 
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
@@ -146,6 +149,7 @@ class BtnController extends Controller
         ->orWhere('status', 'like', "%$keyword%")
         ->orWhere('keterangan', 'like', "%$keyword%")
         ->orWhere('nomor_cl', 'like', "%$keyword%")
+        ->orWhere('date_update', 'like', "%$keyword%")
 
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
