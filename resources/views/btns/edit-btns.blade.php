@@ -36,6 +36,11 @@
         <input type="text" name="nomor_rekening" value="{{ $btns->nomor_rekening }}">
     </div>
 
+    <div>
+        <label>Nilai Tuntutan Klaim:</label>
+        <input type="text" name="nilai_tuntutan_klaim" value="{{ $btns->nilai_tuntutan_klaim }}">
+    </div>
+
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>

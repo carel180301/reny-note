@@ -13,7 +13,9 @@ class Btn extends Model
     protected $fillable = [
         'cabang_bank',
         'nama_debitur',
-        'nomor_rekening'
+        'nomor_rekening',
+        'nilai_tuntutan_klaim'
+
         // 'nilai_tuntutan',
         // 'net_klaim',
         // 'tanggal_dokumen_diterima',

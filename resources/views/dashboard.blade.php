@@ -636,6 +636,11 @@
                             <input name="nomor_rekening" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan Klaim</label>
+                            <input name="nilai_tuntutan_klaim" class="form-control">
+                        </div>
+
                         
                         <!-- 
                         <div class="mb-3">
