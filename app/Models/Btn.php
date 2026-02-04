@@ -15,11 +15,11 @@ class Btn extends Model
         'nama_debitur',
         'nomor_rekening',
         'nilai_tuntutan_klaim',
-        'net_klaim'
+        'net_klaim',
+        'tanggal_dokumen_diterima'
 
         // 'nilai_tuntutan',
         // 'net_klaim',
-        // 'tanggal_dokumen_diterima',
         // 'tanggal_disetujui',
         // 'status',
         // 'tambahan_data'

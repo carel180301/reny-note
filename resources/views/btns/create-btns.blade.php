@@ -46,16 +46,18 @@
             <input type="text" name="net_klaim" placeholder="Net Klaim">
         </div>
 
+        
+        <div>
+            <label>Tanggal Dokumen Diterima:</label>
+            <input type="date" name="tanggal_dokumen_diterima" placeholder="Tanggal Dokumen Diterima">
+        </div>
+
         <!-- 
         <div>
             <label>Nilai Tuntutan:</label>
             <input type="text" name="nilai_tuntutan" placeholder="Nilai Tuntutan">
         </div>
 
-        <div>
-            <label>Tanggal Dokumen Diterima:</label>
-            <input type="date" name="tanggal_klaim_diterima" placeholder="Tanggal Klaim Diterima">
-        </div>
         
         <div>
             <label>Tanggal Disetujui:</label>

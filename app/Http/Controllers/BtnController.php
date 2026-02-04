@@ -25,12 +25,12 @@ class BtnController extends Controller
             'nama_debitur' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
             'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255'
+            'net_klaim' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|date'
 
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
-            // 'tanggal_dokumen_diterima' => 'nullable|date',
             // 'tanggal_disetujui' => 'nullable|date',
             // 'status' => 'nullable|string|max:50',
             // 'tambahan_data' => 'nullable|string|max:255'
@@ -81,11 +81,11 @@ class BtnController extends Controller
             'nama_debitur' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
             'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255'
+            'net_klaim' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|string|max:255'
 
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
-            // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
             // 'tanggal_disetujui' => 'nullable|string|max:255',
             // 'status' => 'nullable|string|max:50',
             // 'tambahan_data' => 'nullable|string|max:255'
@@ -140,10 +140,10 @@ class BtnController extends Controller
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
         ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         ->orWhere('net_klaim', 'like', "%$keyword%")
+        ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
 
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
-        // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         // ->orWhere('tanggal_disetujui', 'like', "%$keyword%")
         // ->orWhere('status', 'like', "%$keyword%")
         // ->orWhere('tambahan_data', 'like', "%$keyword%")

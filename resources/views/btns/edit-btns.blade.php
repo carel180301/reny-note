@@ -43,18 +43,18 @@
 
     <div>
         <label>Net Klaim:</label>
-        <input type="text" name="net_klaim" placeholder="Net Klaim">
+        <input type="text" name="net_klaim" value="{{ $btns->net_klaim }}">
+    </div>
+
+    <div>
+        <label>Tanggal Dokumen Diterima:</label>
+        <input type="date" name="tanggal_dokumen_diterima" value="{{ $btns->tanggal_dokumen_diterima }}">
     </div>
 
     <!-- 
     <div>
         <label>Nilai Tuntutan:</label>
         <input type="text" name="nilai_tuntutan" value="{{ $bankjatims->nilai_tuntutan }}">
-    </div>
-
-    <div>
-        <label>Tanggal Dokumen Diterima:</label>
-        <input type="date" name="tanggal_dokumen_diterima" value="{{ $bankjatims->tanggal_dokumen_diterima }}">
     </div>
     
     <div>

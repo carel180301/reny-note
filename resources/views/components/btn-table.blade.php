@@ -18,6 +18,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -31,6 +32,7 @@
                     <td class="text-center">{{ $btn->nomor_rekening }}</td>
                     <td class="text-center">{{ $btn->nilai_tuntutan_klaim }}</td>
                     <td class="text-center">{{ $btn->net_klaim }}</td>
+                    <td class="text-center">{{ $btn->tanggal_dokumen_diterima }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -85,6 +87,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">NET Klaim</label><input name="net_klaim" class="form-control" value="{{ $btn->net_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $btn->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
