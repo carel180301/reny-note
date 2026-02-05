@@ -16,32 +16,7 @@ class Bukopin extends Model
         'cabang_bank',
         'nilai_tuntutan',
         'nilai_net_klaim',
-        'jw_awal'
-
-        // 'tanggal_dokumen_diterima',
-        // 'status',
-        // 'keterangan',
-        // 'nomor_cl',
-        // 'date_update',
-        // 'nomor_memo',
-        // 'tanggal_memo',
-        // 'tanggal_pembayaran_klaim',
-        // 'tanggal_pelunasan'
-
-        // 'tanggal_disetujui',
-        // 'tambahan_data'
-
-        // 'net_klaim',
-        // 'tanggal_klaim_diajukan',
-        
-        // 'kekurangan_data',
-        // 'tanggal_update',
-        // 'nomor_box'
-
-        // 'tanggal_klaim_diterima',
-        // 'tanggal_klaim_masuk_portal',
-        // 'tambahan_data',
-        // 'date_update',
-        // 'nomor_box'
+        'jw_awal',
+        'jw_akhir'
     ];
 }
