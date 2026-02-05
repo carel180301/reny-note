@@ -22,7 +22,8 @@ class BukopinController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255'
+            'nomor_rekening' => 'nullable|string|max:255',
+            'cabang_bank' => 'nullable|string|max:255'
 
             // 'cabang_bank' => 'nullable|string|max:255'
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
@@ -37,7 +38,6 @@ class BukopinController extends Controller
             // 'tanggal_pembayaran_klaim' => 'nullable|date',
             // 'tanggal_pelunasan' => 'nullable|date'
 
-            // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_disetujui' => 'nullable|date',
@@ -84,9 +84,9 @@ class BukopinController extends Controller
     public function update(Bukopin $bukopins, Request $request){
         $data = $request->validate([
             'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255'
+            'nomor_rekening' => 'nullable|string|max:255',
+            'cabang_bank' => 'nullable|string|max:255'
 
-            // 'cabang_bank' => 'nullable|string|max:255'
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
@@ -148,6 +148,8 @@ class BukopinController extends Controller
 
         $data = Bukopin::where('nama_debitur', 'like', "%$keyword%")
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        ->orWhere('cabang_bank', 'like', "%$keyword%")
+
         // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
@@ -170,7 +172,6 @@ class BukopinController extends Controller
         // ->orWhere('tanggal_update', 'like', "%$keyword%")
         // ->orWhere('nomor_box', 'like', "%$keyword%")
 
-        // ->orWhere('cabang_bank', 'like', "%$keyword%")
         // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_klaim_diterima', 'like', "%$keyword%")
         // ->orWhere('tanggal_klaim_masuk_portal', 'like', "%$keyword%")

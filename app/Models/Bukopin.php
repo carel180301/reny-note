@@ -12,8 +12,9 @@ class Bukopin extends Model
 
     protected $fillable = [
         'nama_debitur',
-        'nomor_rekening'
-        // 'cabang_bank',
+        'nomor_rekening',
+        'cabang_bank'
+
         // 'nilai_tuntutan_klaim',
         // 'net_klaim',
         // 'tanggal_dokumen_diterima',

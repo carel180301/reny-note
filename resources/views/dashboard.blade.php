@@ -285,6 +285,11 @@
                         <label class="form-label">Nomor Rekeninng</label>
                         <input name="nomor_rekening" class="form-control">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cabang Bank</label>
+                        <input name="cabang_bank" class="form-control">
+                    </div>
                 </div>
 
                 <div class="modal-footer">
