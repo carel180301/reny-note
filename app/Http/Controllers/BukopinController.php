@@ -21,10 +21,10 @@ class BukopinController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'nama_debitur' => 'nullable|string|max:255'
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
 
             // 'cabang_bank' => 'nullable|string|max:255'
-            // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|date',
@@ -43,7 +43,6 @@ class BukopinController extends Controller
             // 'tanggal_disetujui' => 'nullable|date',
             // 'tambahan_data' => 'nullable|string|max:255'
 
-            // 'nama_debitur' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_klaim_diajukan' => 'nullable|date',
@@ -84,10 +83,10 @@ class BukopinController extends Controller
 
     public function update(Bukopin $bukopins, Request $request){
         $data = $request->validate([
-            'nama_debitur' => 'nullable|string|max:255'
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
 
             // 'cabang_bank' => 'nullable|string|max:255'
-            // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
@@ -105,7 +104,6 @@ class BukopinController extends Controller
             // 'tanggal_disetujui' => 'nullable|string|max:255',
             // 'tambahan_data' => 'nullable|string|max:255'
 
-            // 'nama_debitur' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_klaim_diajukan' => 'nullable|date',
@@ -149,8 +147,7 @@ class BukopinController extends Controller
         $keyword = $request->query('q', '');
 
         $data = Bukopin::where('nama_debitur', 'like', "%$keyword%")
-        // ->orWhere('nama_debitur', 'like', "%$keyword%")
-        // ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        ->orWhere('nomor_rekening', 'like', "%$keyword%")
         // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")

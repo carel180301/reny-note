@@ -14,9 +14,11 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
+
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th> -->
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
+                
+                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
@@ -26,7 +28,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Pembayaran Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th> -->
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th> --> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -36,6 +38,7 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $bukopin->nama_debitur }}</td>
+                    <td class="text-center">{{ $bukopin->nomor_rekening }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -77,7 +80,9 @@
                     <div><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $bukopin->nama_debitur }}"></div>
                 </div>
 
-                
+                <div class="modal-body">
+                    <div><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bukopin->nomor_rekening }}"></div>
+                </div>
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>

@@ -12,8 +12,8 @@ return new class extends Migration{
         Schema::create('bukopins', function (Blueprint $table) {
             $table->id();
             $table->string('nama_debitur')->nullable();
+            $table->string('nomor_rekening')->nullable();
             // $table->string('cabang_bank')->nullable();
-            // $table->string('nomor_rekening')->nullable();
             // $table->string('nilai_tuntutan_klaim')->nullable();
             // $table->string('net_klaim')->nullable();
             // $table->string('tanggal_dokumen_diterima')->nullable();

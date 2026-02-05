@@ -11,9 +11,9 @@ class Bukopin extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_debitur'
+        'nama_debitur',
+        'nomor_rekening'
         // 'cabang_bank',
-        // 'nomor_rekening',
         // 'nilai_tuntutan_klaim',
         // 'net_klaim',
         // 'tanggal_dokumen_diterima',

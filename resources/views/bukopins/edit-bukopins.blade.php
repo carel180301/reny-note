@@ -27,16 +27,18 @@
         <input type="text" name="nama_debitur" value="{{ $bukopins->nama_debitur }}">
     </div>
 
+    <div>
+        <label>Nomor Rekening:</label>
+        <input type="text" name="nomor_rekening" value="{{ $bukopins->nomor_rekening }}">
+    </div>
+
 <!-- 
     <div>
         <label>Cabang Bank:</label>
         <input type="text" name="cabang_bank" value="{{ $btns->cabang_bank }}">
     </div> -->
 
-    <!-- <div>
-        <label>Nomor Rekening:</label>
-        <input type="text" name="nomor_rekening" value="{{ $btns->nomor_rekening }}">
-    </div>
+    <!-- 
 
     <div>
         <label>Nilai Tuntutan Klaim:</label>
@@ -118,10 +120,7 @@
     </div> -->
 
 
-    <!-- <div>
-        <label>Nama Debitur:</label>
-        <input type="text" name="nama_debitur" value="{{ $mandiris->nama_debitur }}">
-    </div>
+    <!-- 
 
     <div>
         <label>Tuntutan:</label>

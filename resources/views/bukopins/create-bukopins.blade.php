@@ -119,12 +119,6 @@
         </div> -->
 
 
-
-        <!-- <div>
-            <label>Nama Debitur:</label>
-            <input type="text" name="nama_debitur" placeholder="Nama Debitur">
-        </div>
-
         <div>
             <label>Net Klaim:</label>
             <input type="text" name="net_klaim" placeholder="net_klaim">
