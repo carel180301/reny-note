@@ -315,6 +315,16 @@
                         <label class="form-label">Tanggal Dokumen Diterima</label>
                         <input type="date" name="tanggal_dokumen_diterima" class="form-control">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status</option>
+                            @foreach (['batal','setuju','pending','regist','suspect','tamdat','tolak'] as $s)
+                                <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

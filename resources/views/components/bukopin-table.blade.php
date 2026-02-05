@@ -21,18 +21,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
-                
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Pembayaran Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -49,6 +38,7 @@
                     <td class="text-center">{{ $bukopin->jw_awal }}</td>
                     <td class="text-center">{{ $bukopin->jw_akhir }}</td>
                     <td class="text-center">{{ $bukopin->tanggal_dokumen_diterima }}</td>
+                    <td class="text-center">{{ $bukopin->status }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -116,6 +106,19 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bukopin->tanggal_dokumen_diterima }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <label class="form-label">Status</label>
+                    <select name="status" class="form-control">
+                        <option value="batal" {{ $bukopin->status == 'batal' ? 'selected' : '' }}>Batal</option>
+                        <option value="setuju" {{ $bukopin->status == 'setuju' ? 'selected' : '' }}>setuju</option>
+                        <option value="pending" {{ $bukopin->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="regist" {{ $bukopin->status == 'regist' ? 'selected' : '' }}>Regist</option>
+                        <option value="suspect" {{ $bukopin->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
+                        <option value="tamdat" {{ $bukopin->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
+                        <option value="tolak" {{ $bukopin->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
+                    </select>
                 </div>
 
                 <div class="modal-footer justify-content-center">

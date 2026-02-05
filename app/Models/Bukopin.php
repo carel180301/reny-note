@@ -18,6 +18,7 @@ class Bukopin extends Model
         'nilai_net_klaim',
         'jw_awal',
         'jw_akhir',
-        'tanggal_dokumen_diterima'
+        'tanggal_dokumen_diterima',
+        'status'
     ];
 }
