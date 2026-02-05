@@ -11,7 +11,8 @@
             <div class="col-auto"></div>
         </div>
 
-        <div class="bg-white shadow-sm rounded px-1">
+        <div class="bg-white shadow-sm rounded px-1 mt-4">
+
             @switch(request('table'))
                 @case('bri')
                     <x-bri-table :bris="$bris" />
