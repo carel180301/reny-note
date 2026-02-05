@@ -20,6 +20,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
@@ -47,6 +48,7 @@
                     <td class="text-center">{{ $bukopin->nilai_net_klaim }}</td>
                     <td class="text-center">{{ $bukopin->jw_awal }}</td>
                     <td class="text-center">{{ $bukopin->jw_akhir }}</td>
+                    <td class="text-center">{{ $bukopin->tanggal_dokumen_diterima }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -110,6 +112,10 @@
                     
                 <div class="modal-body">
                     <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bukopin->jw_akhir }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bukopin->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
