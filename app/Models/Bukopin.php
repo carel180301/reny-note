@@ -14,10 +14,9 @@ class Bukopin extends Model
         'nama_debitur',
         'nomor_rekening',
         'cabang_bank',
-        'nilai_tuntutan'
+        'nilai_tuntutan',
+        'nilai_net_klaim'
 
-        // 'nilai_tuntutan_klaim',
-        // 'net_klaim',
         // 'tanggal_dokumen_diterima',
         // 'status',
         // 'keterangan',
@@ -28,8 +27,6 @@ class Bukopin extends Model
         // 'tanggal_pembayaran_klaim',
         // 'tanggal_pelunasan'
 
-        // 'nilai_tuntutan',
-        // 'net_klaim',
         // 'tanggal_disetujui',
         // 'tambahan_data'
 

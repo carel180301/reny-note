@@ -24,11 +24,9 @@ class BukopinController extends Controller
             'nama_debitur' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
             'cabang_bank' => 'nullable|string|max:255',
-            'nilai_tuntutan' => 'nullable|string|max:255'
+            'nilai_tuntutan' => 'nullable|string|max:255',
+            'nilai_net_klaim' => 'nullable|string|max:255'
 
-           
-            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|date',
             // 'status' => 'nullable|string|max:255',
             // 'keterangan' => 'nullable|string|max:255',
@@ -39,8 +37,6 @@ class BukopinController extends Controller
             // 'tanggal_pembayaran_klaim' => 'nullable|date',
             // 'tanggal_pelunasan' => 'nullable|date'
 
-            // 'nilai_tuntutan' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_disetujui' => 'nullable|date',
             // 'tambahan_data' => 'nullable|string|max:255'
 
@@ -84,10 +80,9 @@ class BukopinController extends Controller
             'nama_debitur' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
             'cabang_bank' => 'nullable|string|max:255',
-            'nilai_tuntutan' => 'nullable|string|max:255'
+            'nilai_tuntutan' => 'nullable|string|max:255',
+            'nilai_net_klaim' => 'nullable|string|max:255'
 
-            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
             // 'status' => 'nullable|string|max:255',
             // 'keterangan' => 'nullable|string|max:255',
@@ -98,8 +93,6 @@ class BukopinController extends Controller
             // 'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
             // 'tanggal_pelunasan' => 'nullable|string|max:255'
 
-            // 'nilai_tuntutan' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_disetujui' => 'nullable|string|max:255',
             // 'tambahan_data' => 'nullable|string|max:255'
 
@@ -109,8 +102,6 @@ class BukopinController extends Controller
             // 'kekurangan_data' => 'nullable|string|max:50',
             // 'tanggal_update' => 'nullable|date',
             // 'nomor_box' => 'nullable|string|max:255',
-
-            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
 
             // 'tanggal_klaim_diterima' => 'nullable|date',
             // 'tanggal_klaim_masuk_portal' => 'nullable|date',
@@ -148,8 +139,8 @@ class BukopinController extends Controller
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
         ->orWhere('cabang_bank', 'like', "%$keyword%")
         ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
+        ->orWhere('nilai_net_klaim', 'like', "%$keyword%")
 
-        // ->orWhere('net_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         // ->orWhere('status', 'like', "%$keyword%")
         // ->orWhere('keterangan', 'like', "%$keyword%")
@@ -160,8 +151,6 @@ class BukopinController extends Controller
         // ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")
         //  ->orWhere('tanggal_pelunasan', 'like', "%$keyword%")
 
-        // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
-        // ->orWhere('net_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_disetujui', 'like', "%$keyword%")
         // ->orWhere('tambahan_data', 'like', "%$keyword%")
 
@@ -170,7 +159,6 @@ class BukopinController extends Controller
         // ->orWhere('tanggal_update', 'like', "%$keyword%")
         // ->orWhere('nomor_box', 'like', "%$keyword%")
 
-        // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_klaim_diterima', 'like', "%$keyword%")
         // ->orWhere('tanggal_klaim_masuk_portal', 'like', "%$keyword%")
         // ->orWhere('tambahan_data', 'like', "%$keyword%")

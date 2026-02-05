@@ -15,9 +15,8 @@ return new class extends Migration{
             $table->string('nomor_rekening')->nullable();
             $table->string('cabang_bank')->nullable();
             $table->string('nilai_tuntutan')->nullable();
+            $table->string('nilai_net_klaim')->nullable();
 
-            // $table->string('nilai_tuntutan_klaim')->nullable();
-            // $table->string('net_klaim')->nullable();
             // $table->string('tanggal_dokumen_diterima')->nullable();
             // $table->string('status')->nullable();
             // $table->string('keterangan')->nullable();
@@ -28,7 +27,6 @@ return new class extends Migration{
             // $table->string('tanggal_pembayaran_klaim')->nullable();
             // $table->string('tanggal_pelunasan')->nullable();
 
-            // $table->string('nilai_tuntutan')->nullable();
             // $table->string('tanggal_disetujui')->nullable();
             // $table->string('tambahan_data')->nullable();
 
