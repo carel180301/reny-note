@@ -16,8 +16,8 @@ return new class extends Migration{
             $table->string('cabang_bank')->nullable();
             $table->string('nilai_tuntutan')->nullable();
             $table->string('nilai_net_klaim')->nullable();
+            $table->string('jw_awal')->nullable();
 
-            // $table->string('tanggal_dokumen_diterima')->nullable();
             // $table->string('status')->nullable();
             // $table->string('keterangan')->nullable();
             // $table->string('nomor_cl')->nullable();

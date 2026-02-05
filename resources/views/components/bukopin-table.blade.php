@@ -18,6 +18,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
@@ -43,6 +44,7 @@
                     <td class="text-center">{{ $bukopin->cabang_bank }}</td>
                     <td class="text-center">{{ $bukopin->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bukopin->nilai_net_klaim }}</td>
+                    <td class="text-center">{{ $bukopin->jw_awal }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -98,6 +100,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Nilai NET Klaim</label><input name="nilai_net_klaim" class="form-control" value="{{ $bukopin->nilai_net_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">JW Awal</label><input name="jw_awal" class="form-control" value="{{ $bukopin->jw_awal }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

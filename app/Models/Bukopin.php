@@ -15,7 +15,8 @@ class Bukopin extends Model
         'nomor_rekening',
         'cabang_bank',
         'nilai_tuntutan',
-        'nilai_net_klaim'
+        'nilai_net_klaim',
+        'jw_awal'
 
         // 'tanggal_dokumen_diterima',
         // 'status',
