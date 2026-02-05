@@ -13,7 +13,8 @@ class Bukopin extends Model
     protected $fillable = [
         'nama_debitur',
         'nomor_rekening',
-        'cabang_bank'
+        'cabang_bank',
+        'nilai_tuntutan'
 
         // 'nilai_tuntutan_klaim',
         // 'net_klaim',
@@ -39,8 +40,6 @@ class Bukopin extends Model
         // 'tanggal_update',
         // 'nomor_box'
 
-        // 'cabang_bank',
-        // 'nilai_tuntutan_klaim',
         // 'tanggal_klaim_diterima',
         // 'tanggal_klaim_masuk_portal',
         // 'tambahan_data',

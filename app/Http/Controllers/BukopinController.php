@@ -23,9 +23,10 @@ class BukopinController extends Controller
         $data = $request->validate([
             'nama_debitur' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
-            'cabang_bank' => 'nullable|string|max:255'
+            'cabang_bank' => 'nullable|string|max:255',
+            'nilai_tuntutan' => 'nullable|string|max:255'
 
-            // 'cabang_bank' => 'nullable|string|max:255'
+           
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|date',
@@ -49,9 +50,6 @@ class BukopinController extends Controller
             // 'kekurangan_data' => 'nullable|string|max:50',
             // 'tanggal_update' => 'nullable|date',
             // 'nomor_box' => 'nullable|string|max:50'
-
-            // 'cabang_bank' => 'nullable|string|max:255',
-
   
             // 'tanggal_klaim_masuk_portal' => 'nullable|date',
             // 'date_update' => 'nullable|date',
@@ -85,7 +83,8 @@ class BukopinController extends Controller
         $data = $request->validate([
             'nama_debitur' => 'nullable|string|max:255',
             'nomor_rekening' => 'nullable|string|max:255',
-            'cabang_bank' => 'nullable|string|max:255'
+            'cabang_bank' => 'nullable|string|max:255',
+            'nilai_tuntutan' => 'nullable|string|max:255'
 
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
@@ -111,7 +110,6 @@ class BukopinController extends Controller
             // 'tanggal_update' => 'nullable|date',
             // 'nomor_box' => 'nullable|string|max:255',
 
-            // 'cabang_bank' => 'nullable|string|max:255',
             // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
 
             // 'tanggal_klaim_diterima' => 'nullable|date',
@@ -149,8 +147,8 @@ class BukopinController extends Controller
         $data = Bukopin::where('nama_debitur', 'like', "%$keyword%")
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
         ->orWhere('cabang_bank', 'like', "%$keyword%")
+        ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
 
-        // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         // ->orWhere('status', 'like', "%$keyword%")
