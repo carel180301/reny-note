@@ -6,25 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Symfony\Component\Mime\Email;
 
-class Btn extends Model
+class Bukopin extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'cabang_bank',
-        'nama_debitur',
-        'nomor_rekening',
-        'nilai_tuntutan_klaim',
-        'net_klaim',
-        'tanggal_dokumen_diterima',
-        'status',
-        'keterangan',
-        'nomor_cl',
-        'date_update',
-        'nomor_memo',
-        'tanggal_memo',
-        'tanggal_pembayaran_klaim',
-        'tanggal_pelunasan'
+        'nama_debitur'
+        // 'cabang_bank',
+        // 'nomor_rekening',
+        // 'nilai_tuntutan_klaim',
+        // 'net_klaim',
+        // 'tanggal_dokumen_diterima',
+        // 'status',
+        // 'keterangan',
+        // 'nomor_cl',
+        // 'date_update',
+        // 'nomor_memo',
+        // 'tanggal_memo',
+        // 'tanggal_pembayaran_klaim',
+        // 'tanggal_pelunasan'
 
         // 'nilai_tuntutan',
         // 'net_klaim',

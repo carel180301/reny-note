@@ -10,12 +10,14 @@ use App\Models\Bri;
 use App\Models\Mandiri;
 use App\Models\Bankjatim;
 use App\Models\Btn;
+use App\Models\Bukopin;
 // use App\Http\Controllers\AkmController;
 // use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
 use App\Http\Controllers\MandiriController;
 use App\Http\Controllers\BankjatimController;
 use App\Http\Controllers\BtnController;
+use App\Http\Controllers\BukopinController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
@@ -31,6 +33,7 @@ Route::get('/dashboard', function (Request $request) {
     $mandiris = collect();
     $bankjatims = collect();
     $btns = collect();
+    $bukopins = collect();
 
 
 //    if ($table === 'akm') {
@@ -119,7 +122,7 @@ Route::get('/dashboard', function (Request $request) {
         $bankjatims = $query->get();
     }
 
-     else if ($table === 'btn') {
+    else if ($table === 'btn') {
         $query = Btn::query()->orderBy('created_at', 'asc');
 
         if ($request->filled('status')) {
@@ -136,7 +139,27 @@ Route::get('/dashboard', function (Request $request) {
 
         $btns = $query->get();
     }
-     return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'table'));
+
+    else if ($table === 'bukopin') {
+        $query = Bukopin::query()->orderBy('created_at', 'asc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $bukopins = $query->get();
+    }
+
+    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'bukopins', 'table'));
+
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
@@ -215,6 +238,19 @@ Route::middleware('auth')->group(function () {
     Route::post('/btns/upload', [BtnController::class, 'upload'])->name('btns.upload');
     Route::resource('btns', BtnController::class);
     Route::post('/btns/upload', [BtnController::class, 'upload'])->name('btns.upload');
+
+    Route::get('/bukopins', [BukopinController::class, 'index'])->name('bukopins.index');
+    Route::get('/bukopins/create', [BukopinController::class, 'create'])->name('bukopins.create');
+    Route::post('/bukopins', [BukopinController::class, 'store'])->name('bukopins.store');
+    Route::get('/bukopins/{bukopins}/edit', [BukopinController::class, 'edit'])->name('bukopins.edit');
+    Route::put('/bukopins/{bukopins}/update', [BukopinController::class, 'update'])->name('bukopins.update');
+    Route::delete('/bukopins/{bukopins}/destroy', [BukopinController::class, 'destroy'])->name('bukopins.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/bukopins/{bukopins}/send-email', [EmailsController::class, 'sendBukopinnEmail'])->name('bukopins.sendEmail');
+    Route::get('/bukopins/search', [BukopinController::class, 'search'])->name('bukopins.search');
+    Route::post('/bukopins/upload', [BukopinController::class, 'upload'])->name('bukopins.upload');
+    Route::resource('bukopins', BukopinController::class);
+    Route::post('/bukopins/upload', [BukopinController::class, 'upload'])->name('bukopins.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

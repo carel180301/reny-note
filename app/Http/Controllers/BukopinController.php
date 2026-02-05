@@ -3,40 +3,39 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Btn;
+use App\Models\Bukopin;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\BtnsImport;
+use App\Imports\BukopinsImport;
 
-class BtnController extends Controller
+class BukopinController extends Controller
 {
     public function index(){
-        $btns = Btn::orderBy('created_at', 'asc')->get();
+        $bukopins = Bukopin::orderBy('created_at', 'asc')->get();
 
-        return view('btns.index', ['btns' => $btns]);
+        return view('bukopins.index', ['bukopins' => $bukopins]);
     }
 
     public function create(){
-        return view('btns.create');
+        return view('bukopins.create');
     }
 
     public function store(Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|date',
-            'status' => 'nullable|string|max:255',
-            'keterangan' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255',
-            'date_update' => 'nullable|date',
-            'nomor_memo' => 'nullable|string|max:255',
-            'tanggal_memo' => 'nullable|date',
-            'tanggal_pembayaran_klaim' => 'nullable|date',
-            'tanggal_pelunasan' => 'nullable|date'
-        
+            'nama_debitur' => 'nullable|string|max:255'
 
+            // 'cabang_bank' => 'nullable|string|max:255'
+            // 'nomor_rekening' => 'nullable|string|max:255',
+            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
+            // 'net_klaim' => 'nullable|string|max:255',
+            // 'tanggal_dokumen_diterima' => 'nullable|date',
+            // 'status' => 'nullable|string|max:255',
+            // 'keterangan' => 'nullable|string|max:255',
+            // 'nomor_cl' => 'nullable|string|max:255',
+            // 'date_update' => 'nullable|date',
+            // 'nomor_memo' => 'nullable|string|max:255',
+            // 'tanggal_memo' => 'nullable|date',
+            // 'tanggal_pembayaran_klaim' => 'nullable|date',
+            // 'tanggal_pelunasan' => 'nullable|date'
 
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
@@ -73,38 +72,38 @@ class BtnController extends Controller
         //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
         // }
 
-        Btn::create($data);
+        Bukopin::create($data);
 
         // return redirect(route('dashboard'))->with('success', 'Klaim baru berhasil ditambahkan!');
-        return redirect()->route('dashboard', ['table' => 'btn'])->with('success', 'Klaim baru berhasil ditambahkan!');
+        return redirect()->route('dashboard', ['table' => 'bukopin'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Btn $btns){
-        return view('btns.edit', ['btns' => $btns]);
+    public function edit(Bukopin $bukopins){
+        return view('bukopins.edit', ['bukopins' => $bukopins]);
     }
 
-    public function update(Btn $btns, Request $request){
+    public function update(Bukopin $bukopins, Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:255',
-            'keterangan' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255',
-            'date_update' => 'nullable|string|max:255',
-            'nomor_memo' => 'nullable|string|max:255',
-            'tanggal_memo' => 'nullable|string|max:255',
-            'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_pelunasan' => 'nullable|string|max:255'
+            'nama_debitur' => 'nullable|string|max:255'
+
+            // 'cabang_bank' => 'nullable|string|max:255'
+            // 'nomor_rekening' => 'nullable|string|max:255',
+            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
+            // 'net_klaim' => 'nullable|string|max:255',
+            // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
+            // 'status' => 'nullable|string|max:255',
+            // 'keterangan' => 'nullable|string|max:255',
+            // 'nomor_cl' => 'nullable|string|max:255',
+            // 'date_update' => 'nullable|string|max:255',
+            // 'nomor_memo' => 'nullable|string|max:255',
+            // 'tanggal_memo' => 'nullable|string|max:255',
+            // 'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
+            // 'tanggal_pelunasan' => 'nullable|string|max:255'
 
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'net_klaim' => 'nullable|string|max:255',
             // 'tanggal_disetujui' => 'nullable|string|max:255',
             // 'tambahan_data' => 'nullable|string|max:255'
-
 
             // 'nama_debitur' => 'nullable|string|max:255',
             // 'tuntutan' => 'nullable|string|max:255',
@@ -136,33 +135,33 @@ class BtnController extends Controller
         //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
         // }
 
-        $btns->update($data);
+        $bukopins->update($data);
 
         return back()->with('success', 'Klaim berhasil di-update!');
     }
 
-    public function destroy(Btn $btns){
-        $btns->delete();
+    public function destroy(Bukopin $bukopins){
+        $bukopins->delete();
         return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
     }
 
     public function search(Request $request){
         $keyword = $request->query('q', '');
 
-        $data = Btn::where('cabang_bank', 'like', "%$keyword%")
-        ->orWhere('nama_debitur', 'like', "%$keyword%")
-        ->orWhere('nomor_rekening', 'like', "%$keyword%")
-        ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
-        ->orWhere('net_klaim', 'like', "%$keyword%")
-        ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
-        ->orWhere('status', 'like', "%$keyword%")
-        ->orWhere('keterangan', 'like', "%$keyword%")
-        ->orWhere('nomor_cl', 'like', "%$keyword%")
-        ->orWhere('date_update', 'like', "%$keyword%")
-        ->orWhere('nomor_memo', 'like', "%$keyword%")
-        ->orWhere('tanggal_memo', 'like', "%$keyword%")
-        ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")
-         ->orWhere('tanggal_pelunasan', 'like', "%$keyword%")
+        $data = Bukopin::where('nama_debitur', 'like', "%$keyword%")
+        // ->orWhere('nama_debitur', 'like', "%$keyword%")
+        // ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
+        // ->orWhere('net_klaim', 'like', "%$keyword%")
+        // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
+        // ->orWhere('status', 'like', "%$keyword%")
+        // ->orWhere('keterangan', 'like', "%$keyword%")
+        // ->orWhere('nomor_cl', 'like', "%$keyword%")
+        // ->orWhere('date_update', 'like', "%$keyword%")
+        // ->orWhere('nomor_memo', 'like', "%$keyword%")
+        // ->orWhere('tanggal_memo', 'like', "%$keyword%")
+        // ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")
+        //  ->orWhere('tanggal_pelunasan', 'like', "%$keyword%")
 
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('net_klaim', 'like', "%$keyword%")
@@ -183,8 +182,8 @@ class BtnController extends Controller
         // ->orWhere('nomor_box', 'like', "%$keyword%")
         ->get();
 
-        return view('components.btn-table', [
-            'btns' => $data
+        return view('components.bukopin-table', [
+            'bukopins' => $data
         ]);
     }
 
@@ -193,7 +192,7 @@ class BtnController extends Controller
             'file' => 'required|file|mimes:xls,xlsx'
         ]);
 
-        Excel::import(new BtnsImport, $request->file('file'));
+        Excel::import(new BukopinsImport, $request->file('file'));
         
         return redirect()->route('dashboard')->with('success', 'Excel berhasil di-import!');
     }

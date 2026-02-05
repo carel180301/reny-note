@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Tambah Klaim Baru</h1>
-    <form method="post" action="{{ route('bankjatims.store') }}">
+    <form method="post" action="{{ route('bukopins.store') }}">
         <div>
             @if ($errors->any())
                 <ul>
@@ -20,17 +20,17 @@
         </div>
         @csrf
         @method('post')
-        <div>
-            <label>Cabang Bank:</label>
-            <input type="text" name="cabang_bank" placeholder="Cabang Bank">
-        </div>
 
         <div>
             <label>Nama Debitur:</label>
             <input type="text" name="nama_debitur" placeholder="Nama Debitur">
         </div>
+        <!-- <div>
+            <label>Cabang Bank:</label>
+            <input type="text" name="cabang_bank" placeholder="Cabang Bank">
+        </div> -->
 
-        <div>
+        <!-- <div>
             <label>Nomor Rekening:</label>
             <input type="text" name="nomor_rekening" placeholder="Nomor Rekening">
         </div>
@@ -99,7 +99,7 @@
         <div>
             <label>Tanggal Pelunasan:</label>
             <input type="date" name="tanggal_pelunasan" placeholder="Tanggal Pelunasan Di Bagian Keuangan">
-        </div>
+        </div> -->
 
         <!-- 
         <div>

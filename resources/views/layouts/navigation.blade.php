@@ -18,20 +18,27 @@
                             <li>
                                 <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bri']) }}">BRI</a>
                             </li>
+                            
                             <li>
                                 <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'mandiri']) }}">Mandiri</a>
                             </li>
+                            
                             <li>
                                 <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bankjatim']) }}">Bank Jatim</a>
                             </li>
+                            
                             <li>
                                 <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'btn']) }}">BTN</a>
+                            </li>
+                            
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bukopin']) }}">Bukopin</a>
                             </li>
                         </ul>
                     </div>
 
                     @php
-                        $table = request('table', 'bri', 'mandiri', 'bankjatim', 'btn');
+                        $table = request('table', 'bri', 'mandiri', 'bankjatim', 'btn', 'bukopin');
                     @endphp
 
                     <button type="button" class="btn p-0 text-primary" data-bs-toggle="modal" data-bs-target="#add{{ ucfirst($table) }}Modal">

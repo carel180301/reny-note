@@ -1,834 +1,312 @@
 <x-app-layout>
     <div class="container-fluid px-2 px-md-4">
+
         {{-- HEADER ROW --}}
         <div class="row align-items-center mb-2 position-relative">
-            {{-- LEFT: FILTERS --}}
-            <div class="col-auto mt-5">
-                @if(request('table') === 'bri')
-                    <div class="d-flex gap-2 flex-wrap">
-                        <!-- Status Filter -->
-                        <!-- <div class="dropdown"> -->
-                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                                Status
-                            </button> -->
-                            <!-- <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
-                                        Terima
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
-                                        Tolak
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
-                                        Proses Analisa
-                                    </a>
-                                </li>
-                            </ul> -->
-                        <!-- </div> -->
-
-                        <!-- Status Sistem Filter -->
-                        <!-- <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle"
-                                    data-bs-toggle="dropdown">
-                                Status Sistem
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
-                                        Done
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
-                                        Not Done
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> -->
-
-                        <!-- Reset -->
-                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
-                            Reset
-                        </a> -->
-                    </div>
-                @endif
-
-                @if(request('table') === 'mandiri')
-                    <div class="d-flex gap-2 flex-wrap">
-                        <!-- Status Filter -->
-                        <!-- <div class="dropdown"> -->
-                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                                Status
-                            </button> -->
-                            <!-- <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
-                                        Terima
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
-                                        Tolak
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
-                                        Proses Analisa
-                                    </a>
-                                </li>
-                            </ul> -->
-                        <!-- </div> -->
-
-                        <!-- Status Sistem Filter -->
-                        <!-- <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle"
-                                    data-bs-toggle="dropdown">
-                                Status Sistem
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
-                                        Done
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
-                                        Not Done
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> -->
-
-                        <!-- Reset -->
-                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
-                            Reset
-                        </a> -->
-                    </div>
-                @endif
-
-                @if(request('table') === 'bankjatim')
-                    <div class="d-flex gap-2 flex-wrap">
-                        <!-- Status Filter -->
-                        <!-- <div class="dropdown"> -->
-                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                                Status
-                            </button> -->
-                            <!-- <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
-                                        Terima
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
-                                        Tolak
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
-                                        Proses Analisa
-                                    </a>
-                                </li>
-                            </ul> -->
-                        <!-- </div> -->
-
-                        <!-- Status Sistem Filter -->
-                        <!-- <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle"
-                                    data-bs-toggle="dropdown">
-                                Status Sistem
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
-                                        Done
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
-                                        Not Done
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> -->
-
-                        <!-- Reset -->
-                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
-                            Reset
-                        </a> -->
-                    </div>
-                @endif
-
-                @if(request('table') === 'btn')
-                    <div class="d-flex gap-2 flex-wrap">
-                        <!-- Status Filter -->
-                        <!-- <div class="dropdown"> -->
-                            <!-- <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                                Status
-                            </button> -->
-                            <!-- <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'terima'])) }}">
-                                        Terima
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'tolak'])) }}">
-                                        Tolak
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status' => 'proses_analisa'])) }}">
-                                        Proses Analisa
-                                    </a>
-                                </li>
-                            </ul> -->
-                        <!-- </div> -->
-
-                        <!-- Status Sistem Filter -->
-                        <!-- <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle"
-                                    data-bs-toggle="dropdown">
-                                Status Sistem
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'done'])) }}">
-                                        Done
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                    href="{{ route('dashboard', array_merge(request()->query(), ['status_sistem' => 'not_done'])) }}">
-                                        Not Done
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> -->
-
-                        <!-- Reset -->
-                        <!-- <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-outline-danger">
-                            Reset
-                        </a> -->
-                    </div>
-                @endif
-            </div>
-
-            {{-- CENTER: TITLE --}}
             @if(request('table'))
                 <h2 class="mb-0 position-absolute start-50 translate-middle-x text-center" style="top: 50%; pointer-events: none;">
                     Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
                 </h2>
             @endif
-
-            {{-- RIGHT: EMPTY (keeps title centered) --}}
             <div class="col-auto"></div>
         </div>
 
-        <!-- {{-- ACTIVE FILTER BADGES --}} -->
-        <!-- @if(request()->except('table'))
-            <div class="mb-3">
-                <span class="text-muted me-2">Filters:</span>
-                @foreach(request()->except('table') as $key => $value)
-                    <span class="badge bg-secondary me-1">
-                        {{ ucfirst(str_replace('_',' ',$key)) }}: {{ $value }}
-                    </span>
-                @endforeach
-            </div>
-        @endif -->
-
         <div class="bg-white shadow-sm rounded px-1">
-            @if(request('table') === 'bri')
-                <x-bri-table :bris="$bris" />
-            @endif
+            @switch(request('table'))
+                @case('bri')
+                    <x-bri-table :bris="$bris" />
+                    @break
 
-            @if(request('table') === 'mandiri')
-                <x-mandiri-table :mandiris="$mandiris" />
-            @endif
+                @case('mandiri')
+                    <x-mandiri-table :mandiris="$mandiris" />
+                    @break
 
-            @if(request('table') === 'bankjatim')
-                <x-bankjatim-table :bankjatims="$bankjatims" />
-            @endif
+                @case('bankjatim')
+                    <x-bankjatim-table :bankjatims="$bankjatims" />
+                    @break
 
-            @if(request('table') === 'btn')
-                <x-btn-table :btns="$btns" />
-            @endif
+                @case('btn')
+                    <x-btn-table :btns="$btns" />
+                    @break
+
+                @case('bukopin')
+                    <x-bukopin-table :bukopins="$bukopins" />
+                    @break
+            @endswitch
         </div>
     </div>
 
-    <!-- Add BRI Modal-->
+
+    {{-- ================= MODALS ================= --}}
+
+    {{-- BRI MODAL --}}
     <div class="modal fade" id="addBriModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tambah Klaim BRI</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim BRI</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('bris.store') }}">
+                @csrf
+                <div class="modal-body">
+                    @foreach ([
+                        'unit' => 'Unit',
+                        'cabang_bank' => 'Cabang Bank',
+                        'nama_debitur' => 'Nama Debitur',
+                        'nomor_rekening' => 'Nomor Rekening',
+                        'nilai_tuntutan_klaim' => 'Nilai Tuntutan Klaim',
+                        'tambahan_data' => 'Tambahan Data',
+                        'nomor_box' => 'No Box'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    @foreach ([
+                        'tanggal_klaim_diterima' => 'Tanggal Klaim Diterima',
+                        'tanggal_klaim_masuk_portal' => 'Tanggal Klaim Masuk Portal',
+                        'date_update' => 'Date Update'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input type="date" name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status</option>
+                            @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                                <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
-                <form method="POST" action="{{ route('bris.store') }}">
-                    @csrf
-                    <div class="modal-body">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                            <div class="mb-3">
-                                <label class="form-label">Unit</label>
-                                <input name="unit" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Cabang Bank</label>
-                                <input name="cabang_bank" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Nama Debitur</label>
-                                <input name="nama_debitur" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Nomor Rekening</label>
-                                <input name="nomor_rekening" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Nilai Tuntutan Klaim</label>
-                                <input name="nilai_tuntutan_klaim" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Tanggal Klaim Diterima</label>
-                                <input type="date" name="tanggal_klaim_diterima" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Tanggal Klaim Masuk Portal</label>
-                                <input type="date" name="tanggal_klaim_masuk_portal" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Status</label>
-                                <select name="status" class="form-select" required>
-                                    <option value="" disabled selected>Pilih Status</option>
-                                    <option value="batal">Batal</option>
-                                    <option value="disetujui">Disetujui</option>
-                                    <option value="pending">Pending</option>
-                                    <option value="regist">Regist</option>
-                                    <option value="suspect">Suspect</option>
-                                    <option value="tamdat">Tamdat</option>
-                                    <option value="tolak">Tolak</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Tambahan Data</label>
-                                <input name="tambahan_data" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Date Update</label>
-                                <input type="date" name="date_update" class="form-control">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">No Box</label>
-                                <input name="nomor_box" class="form-control">
-                            </div>
-
-                            <!-- <div class="mb-3">
-                                <label class="form-label">Tanggal Polis</label>
-                                <input type="date" name="tanggal_polis" class="form-control" required>
-                            </div>
-
-                            
-                            <div class="mb-3">
-                                <label class="form-label">Status</label>
-                                <select name="status" class="form-select" required>
-                                    <option value="" disabled selected>Select status</option>
-                                    <option value="terima">Terima</option>
-                                    <option value="tolak">Tolak</option>
-                                    <option value="proses_analisa">Proses Analisa</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Currency</label>
-                                <select name="currency" class="form-select">
-                                    <option>IDR</option>
-                                    <option>USD</option>
-                                    <option>EUR</option>
-                                    <option>SGD</option>
-                                </select>
-                            </div> -->
-                        </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+            </form>
+        </div></div>
     </div>
 
-    <!-- Add Mandiri Modal-->
-    <div class="modal fade" id="addMandiriModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tambah Klaim Mandiri</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+
+    {{-- MANDIRI MODAL --}}
+    <div class="modal fade" id="addMandiriModal" tabindex="-1">
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim Mandiri</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('mandiris.store') }}">
+                @csrf
+                <div class="modal-body">
+                    @foreach ([
+                        'uker' => 'Uker',
+                        'nama_debitur' => 'Nama Debitur',
+                        'nomor_rekening' => 'Nomor Rekening',
+                        'tuntutan' => 'Tuntutan',
+                        'net_klaim' => 'NET Klaim',
+                        'keterangan' => 'Keterangan',
+                        'kekurangan_data' => 'Kekurangan Data',
+                        'nomor_box' => 'Nomor Box'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Klaim Diajukan</label>
+                        <input type="date" name="tanggal_klaim_diajukan" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Update</label>
+                        <input type="date" name="tanggal_update" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status</option>
+                            @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                                <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
-                <form method="POST" action="{{ route('mandiris.store') }}">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Uker</label>
-                            <input name="uker" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nama Debitur</label>
-                            <input name="nama_debitur" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">Tuntutan</label>
-                            <input name="tuntutan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">NET Klaim</label>
-                            <input name="net_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Klaim Diajukan</label>
-                            <input type="date" name="tanggal_klaim_diajukan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Status</label>
-                            <select name="status" class="form-select" required>
-                                <option value="" disabled selected>Pilih Status</option>
-                                <option value="batal">Batal</option>
-                                <option value="disetujui">Disetujui</option>
-                                <option value="pending">Pending</option>
-                                <option value="regist">Regist</option>
-                                <option value="suspect">Suspect</option>
-                                <option value="tamdat">Tamdat</option>
-                                <option value="tolak">Tolak</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Keterangan</label>
-                            <input name="keterangan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Kekurangan_data</label>
-                            <input name="kekurangan_data" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Update</label>
-                            <input type="date" name="tanggal_update" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Box</label>
-                            <input name="nomor_box" class="form-control">
-                        </div>
-
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Cabang Bank</label>
-                            <input name="cabang_bank" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nilai Tuntutan Klaim</label>
-                            <input name="nilai_tuntutan_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Klaim Masuk Portal</label>
-                            <input type="date" name="tanggal_klaim_masuk_portal" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tambahan Data</label>
-                            <input name="tambahan_data" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Date Update</label>
-                            <input type="date" name="date_update" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">No Box</label>
-                            <input name="nomor_box" class="form-control">
-                        </div> -->
-
-                        <!-- <div class="mb-3">
-                            <label class="form-label">Posisi</label>
-                            <select name="posisi" class="form-select" required>
-                                <option value="" disabled selected>Pilih Posisi</option>
-                                <option value="member">Member</option>
-                                <option value="non member">Non Member</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Polis</label>
-                            <input type="date" name="tanggal_polis" class="form-control" required>
-                        </div> -->
-
-                    <div class="modal-footer">
-                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+            </form>
+        </div></div>
     </div>
 
-    <!--add bankjatim modal-->
-    @push('modals')
+
+    {{-- BANK JATIM MODAL --}}
     <div class="modal fade" id="addBankjatimModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tambah Klaim Bank Jatim</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim Bank Jatim</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('bankjatims.store') }}">
+                @csrf
+                <div class="modal-body">
+                    @foreach ([
+                        'cabang_bank' => 'Cabang Bank',
+                        'nama' => 'Nama',
+                        'nomor_rekening' => 'Nomor Rekening',
+                        'nilai_tuntutan' => 'Nilai Tuntutan',
+                        'net_klaim' => 'NET Klaim',
+                        'tambahan_data' => 'Tambahan Data'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    @foreach ([
+                        'tanggal_dokumen_diterima' => 'Tanggal Dokumen Diterima',
+                        'tanggal_disetujui' => 'Tanggal Disetujui'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input type="date" name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status</option>
+                            @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                                <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
-                <form method="POST" action="{{ route('bankjatims.store') }}">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Cabang Bank</label>
-                            <input name="cabang_bank" class="form-control">
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">Nama</label>
-                            <input name="nama" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nilai Tuntutan</label>
-                            <input name="nilai_tuntutan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">NET Klaim</label>
-                            <input name="net_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Dokumen Diterima</label>
-                            <input type="date" name="tanggal_dokumen_diterima" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal disetujui</label>
-                            <input type="date" name="tanggal_disetujui" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Status</label>
-                            <select name="status" class="form-select" required>
-                                <option value="" disabled selected>Pilih Status</option>
-                                <option value="batal">Batal</option>
-                                <option value="disetujui">Disetujui</option>
-                                <option value="pending">Pending</option>
-                                <option value="regist">Regist</option>
-                                <option value="suspect">Suspect</option>
-                                <option value="tamdat">Tamdat</option>
-                                <option value="tolak">Tolak</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tambahan Data</label>
-                            <input name="tambahan_data" class="form-control">
-                        </div>
-                    </div>
-
-                    <!-- <div class="mb-3">
-                        <label class="form-label">Nama</label>
-                        <input name="nama" class="form-control">
-                    </div> -->
-
-                    <div class="modal-footer">
-                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+            </form>
+        </div></div>
     </div>
-    @endpush
 
-    <!--add btn modal-->
-    @push('modals')
+
+    {{-- BTN MODAL --}}
     <div class="modal fade" id="addBtnModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Tambah Klaim BTN</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim BTN</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('btns.store') }}">
+                @csrf
+                <div class="modal-body">
+                    @foreach ([
+                        'cabang_bank' => 'Cabang Bank',
+                        'nama_debitur' => 'Nama Debitur',
+                        'nomor_rekening' => 'Nomor Rekening',
+                        'nilai_tuntutan_klaim' => 'Nilai Tuntutan Klaim',
+                        'net_klaim' => 'NET Klaim',
+                        'keterangan' => 'Keterangan',
+                        'nomor_cl' => 'Nomor CL',
+                        'nomor_memo' => 'Nomor Memo'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    @foreach ([
+                        'tanggal_dokumen_diterima' => 'Tanggal Dokumen Diterima',
+                        'date_update' => 'Date Update',
+                        'tanggal_memo' => 'Tanggal Memo',
+                        'tanggal_pembayaran_klaim' => 'Tanggal Pembayaran Klaim',
+                        'tanggal_pelunasan' => 'Tanggal Pelunasan'
+                    ] as $name => $label)
+                        <div class="mb-3">
+                            <label class="form-label">{{ $label }}</label>
+                            <input type="date" name="{{ $name }}" class="form-control">
+                        </div>
+                    @endforeach
+
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled selected>Pilih Status</option>
+                            @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                                <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
-                <form method="POST" action="{{ route('btns.store') }}">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Cabang Bank</label>
-                            <input name="cabang_bank" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nama Debitur</label>
-                            <input name="nama_debitur" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nilai Tuntutan Klaim</label>
-                            <input name="nilai_tuntutan_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">NET Klaim</label>
-                            <input name="net_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Dokumen Diterima</label>
-                            <input type="date" name="tanggal_dokumen_diterima" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Status</label>
-                            <select name="status" class="form-select" required>
-                                <option value="" disabled selected>Pilih Status</option>
-                                <option value="batal">Batal</option>
-                                <option value="disetujui">Disetujui</option>
-                                <option value="pending">Pending</option>
-                                <option value="regist">Regist</option>
-                                <option value="suspect">Suspect</option>
-                                <option value="tamdat">Tamdat</option>
-                                <option value="tolak">Tolak</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Keterangan</label>
-                            <input name="keterangan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor CL</label>
-                            <input name="nomor_cl" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Date Update</label>
-                            <input type="date" name="date_update" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
-                            <input name="nomor_memo" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
-                            <input type="date" name="tanggal_memo" class="form-control">
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Pembayaran Klaim</label>
-                            <input type="date" name="tanggal_pembayaran_klaim" class="form-control">
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
-                            <input type="date" name="tanggal_pelunasan" class="form-control">
-                        </div>
-                        
-
-                        <!-- 
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nilai Tuntutan</label>
-                            <input name="nilai_tuntutan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal disetujui</label>
-                            <input type="date" name="tanggal_disetujui" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tambahan Data</label>
-                            <input name="tambahan_data" class="form-control">
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="mb-3">
-                        <label class="form-label">Nama</label>
-                        <input name="nama" class="form-control">
-                    </div> -->
-
-                    <div class="modal-footer">
-                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+            </form>
+        </div></div>
     </div>
-    @endpush
 
 
+    {{-- BUKOPIN MODAL --}}
+    <div class="modal fade" id="addBukopinModal" tabindex="-1">
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim Bukopin</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
 
-    <!-- Upload AKM Modal -->
-    <!-- <div class="modal fade" id="uploadBriModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h5 class="modal-title">Upload Excel</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
+            <form method="POST" action="{{ route('bukopins.store') }}">
+                @csrf
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Nama Debitur</label>
+                        <input name="nama_debitur" class="form-control">
+                    </div>
                 </div>
 
-                <form method="POST"
-                    action="{{ route('bris.upload') }}"
-                    enctype="multipart/form-data">
-                    @csrf
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+            </form>
+        </div></div>
+    </div>
 
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">File Excel</label>
-                            <input type="file"
-                                name="file"
-                                class="form-control"
-                                accept=".xls,.xlsx"
-                                required>
-                        </div>
-                    </div>
 
-                    <div class="modal-footer">
-                        <button class="btn btn-primary d-block mx-auto">
-                            Upload
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
+    {{-- ================= SCRIPTS ================= --}}
 
-    <!-- AUTO-FORMAT DATE-->
     <script>
-        function formatDateInput(value) {
-            value = value.replace(/\D/g, "");
-
-            if (value.length >= 2) value = value.slice(0,2) + "/" + value.slice(2);
-            if (value.length >= 5) value = value.slice(0,5) + "/" + value.slice(5,9);
-
-            return value.slice(0, 10);
-        }
-
-        function normalizePastedDate(text) {
-            text = text.replace(/\D/g, "");
-            if (text.length === 8) {
-                return text.slice(0,2) + "/" + text.slice(2,4) + "/" + text.slice(4);
-            }
-            return text;
-        }
-
-        document.addEventListener("input", function (e) {
-            if (e.target.classList.contains("date-input")) {
-                e.target.value = formatDateInput(e.target.value);
-            }
-        });
-
-        document.addEventListener("paste", function (e) {
-            if (e.target.classList.contains("date-input")) {
-                e.preventDefault();
-                let paste = (e.clipboardData || window.clipboardData).getData("text");
-                e.target.value = normalizePastedDate(paste);
-                e.target.value = formatDateInput(e.target.value);
-            }
-        });
-
-        /* LIVE SEARCH */
         (function() {
             let searchTimeout = null;
 
             function doSearch(q) {
                 const table = new URLSearchParams(window.location.search).get('table');
 
-                let url = '/bris/search';
+                let urlMap = {
+                    bri: '/bris/search',
+                    mandiri: '/mandiris/search',
+                    bankjatim: '/bankjatims/search',
+                    btn: '/btns/search',
+                    bukopin: '/bukopins/search'
+                };
 
-                if (table === 'mandiri') {
-                    url = '/mandiris/search';
-                } 
-                
-                else if (table === 'bankjatim') {
-                    url = '/bankjatims/search';
-                }
-
-                else if (table === 'btn') {
-                    url = '/btns/search';
-                }
+                let url = urlMap[table] ?? '/bris/search';
 
                 fetch(url + '?q=' + encodeURIComponent(q))
                     .then(res => res.text())
@@ -838,102 +316,16 @@
                     });
             }
 
-            const desktopInput = document.getElementById('searchInput');
-            if (desktopInput) {
-                desktopInput.addEventListener('input', function() {
-                    clearTimeout(searchTimeout);
-                    searchTimeout = setTimeout(() => doSearch(this.value), 300);
-                });
-            }
+            ['searchInput', 'searchInputMobile'].forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
 
-            const mobileInput = document.getElementById('searchInputMobile');
-            if (mobileInput) {
-                mobileInput.addEventListener('input', function() {
+                el.addEventListener('input', function() {
                     clearTimeout(searchTimeout);
                     searchTimeout = setTimeout(() => doSearch(this.value), 300);
                 });
-            }
+            });
         })();
     </script>
 
-    <script>
-        function sendEmail(id) {
-            if (!confirm("Kirim email reminder untuk klaim ini?")) return;
-
-            fetch(`/bri/${id}/send-email`)
-                .then(() => {
-                    window.location.reload();
-                })
-                .catch(err => {
-                    alert("Gagal mengirim email");
-                    console.error(err);
-                });
-        }
-    </script>
-
-    <script>
-    function sendEmail(id) {
-        if (!confirm("Kirim email reminder untuk klaim ini?")) return;
-
-        fetch(`/bri/${id}/send-email`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'ok') {
-                    window.location.reload();
-                }
-            })
-            .catch(err => {
-                alert("Gagal mengirim email");
-                console.error(err);
-            });
-    }
-</script>
-
-<script>
-    function formatCurrencyInput(value) {
-        if (value === "") return "";
-
-        // If user starts with comma, convert to "0,"
-        if (value.startsWith(",")) {
-            value = "0" + value;
-        }
-
-        // Split on comma
-        let parts = value.split(",", 2);
-
-        // Extract digits in each part
-        let intPart = parts[0].replace(/\D/g, "");
-        let decPart = parts[1] ? parts[1].replace(/\D/g, "").slice(0, 2) : "";
-
-        // If somehow everything got deleted, return empty
-        if (!intPart && !decPart) return "";
-
-        // Add thousand separators to integer part
-        if (intPart.length > 0) {
-            intPart = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        // If user typed a trailing comma, keep it
-        if (value.endsWith(",") && decPart === "") {
-            return intPart + ",";
-        }
-
-        // Rebuild number
-        return decPart ? intPart + "," + decPart : intPart;
-    }
-
-    document.addEventListener("input", function(e) {
-        if (e.target.classList.contains("outstanding-input")) {
-            e.target.value = formatCurrencyInput(e.target.value);
-        }
-    });
-
-    document.addEventListener("paste", function(e) {
-        if (e.target.classList.contains("outstanding-input")) {
-            e.preventDefault();
-            let paste = (e.clipboardData || window.clipboardData).getData("text");
-            e.target.value = formatCurrencyInput(paste);
-        }
-    });
-</script>
 </x-app-layout>
