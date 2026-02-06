@@ -19,6 +19,7 @@ class Bukopin extends Model
         'jw_awal',
         'jw_akhir',
         'tanggal_dokumen_diterima',
-        'status'
+        'status',
+        'tanggal_cl'
     ];
 }

@@ -22,6 +22,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -39,6 +40,7 @@
                     <td class="text-center">{{ $bukopin->jw_akhir }}</td>
                     <td class="text-center">{{ $bukopin->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bukopin->status }}</td>
+                    <td class="text-center">{{ $bukopin->tanggal_cl }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -119,6 +121,10 @@
                         <option value="tamdat" {{ $bukopin->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
                         <option value="tolak" {{ $bukopin->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
                     </select>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bukopin->tanggal_cl }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
