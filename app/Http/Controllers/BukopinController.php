@@ -33,7 +33,8 @@ class BukopinController extends Controller
             'tanggal_cl' => 'nullable|date',
             'keterangan_usaha' => 'nullable|string|max:255',
             'nomor_cl' => 'nullable|string|max:255',
-            'kekurangan_data' => 'nullable|string|max:255'
+            'kekurangan_data' => 'nullable|string|max:255',
+            'nomor_box' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -70,7 +71,8 @@ class BukopinController extends Controller
             'tanggal_cl' => 'nullable|string|max:255',
             'keterangan_usaha' => 'nullable|string|max:255',
             'nomor_cl' => 'nullable|string|max:255',
-            'kekurangan_data' => 'nullable|string|max:255'
+            'kekurangan_data' => 'nullable|string|max:255',
+            'nomor_box' => 'nullable|string|max:255',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -110,6 +112,7 @@ class BukopinController extends Controller
         ->orWhere('keterangan_usaha', 'like', "%$keyword%")
         ->orWhere('nomor_cl', 'like', "%$keyword%")
         ->orWhere('kekurangan_data', 'like', "%$keyword%")
+        ->orWhere('nomor_box', 'like', "%$keyword%")
 
         ->get();
 

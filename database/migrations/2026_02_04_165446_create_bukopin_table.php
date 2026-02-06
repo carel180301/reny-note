@@ -24,6 +24,7 @@ return new class extends Migration{
             $table->string('keterangan_usaha')->nullable();
             $table->string('nomor_cl')->nullable();
             $table->string('kekurangan_data')->nullable();
+            $table->string('nomor_box')->nullable();
             $table->timestamps();
         });
     }

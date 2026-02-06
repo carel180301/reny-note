@@ -26,6 +26,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kekurangan Data</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Box</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -47,6 +48,7 @@
                     <td class="text-center">{{ $bukopin->keterangan_usaha }}</td>
                     <td class="text-center">{{ $bukopin->nomor_cl }}</td>
                     <td class="text-center">{{ $bukopin->kekurangan_data }}</td>
+                    <td class="text-center">{{ $bukopin->nomor_box }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -138,9 +140,16 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Nomor CL</label><input name="nilai_tuntutan" class="form-control" value="{{ $bukopin->nilai_tuntutan }}"></div>
+                    <div><label class="form-label">Nomor CL</label><input name="nomor_cl" class="form-control" value="{{ $bukopin->nomor_cl }}"></div>
                 </div>
 
+                <div class="modal-body">
+                    <div><label class="form-label">Kekurangan Data</label><input name="kekurangan_data" class="form-control" value="{{ $bukopin->kekurangan_data }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Nomor Box</label><input name="nomor_box" class="form-control" value="{{ $bukopin->nomor_box }}"></div>
+                </div>
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>
