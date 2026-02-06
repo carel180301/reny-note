@@ -336,6 +336,13 @@
                         <input name="keterangan_usaha" class="form-control">
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Nomor CL</label>
+                        <input name="nomor_cl" class="form-control">
+                    </div>
+
+
+
                 </div>
 
                 <div class="modal-footer">

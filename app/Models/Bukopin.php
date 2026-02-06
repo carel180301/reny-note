@@ -21,7 +21,7 @@ class Bukopin extends Model
         'tanggal_dokumen_diterima',
         'status',
         'tanggal_cl',
-        'nilai_net_klaim',
-
+        'keterangan_usaha',
+        'nomor_cl'
     ];
 }

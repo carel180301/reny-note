@@ -24,6 +24,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -43,6 +44,7 @@
                     <td class="text-center">{{ $bukopin->status }}</td>
                     <td class="text-center">{{ $bukopin->tanggal_cl }}</td>
                     <td class="text-center">{{ $bukopin->keterangan_usaha }}</td>
+                    <td class="text-center">{{ $bukopin->nomor_cl }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -132,6 +134,11 @@
                 <div class="modal-body">
                     <div><label class="form-label">Keterangan Usaha</label><input name="keterangan_usaha" class="form-control" value="{{ $bukopin->keterangan_usaha }}"></div>
                 </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Nomor CL</label><input name="nilai_tuntutan" class="form-control" value="{{ $bukopin->nilai_tuntutan }}"></div>
+                </div>
+
 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>
