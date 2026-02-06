@@ -25,6 +25,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kekurangan Data</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -45,6 +46,7 @@
                     <td class="text-center">{{ $bukopin->tanggal_cl }}</td>
                     <td class="text-center">{{ $bukopin->keterangan_usaha }}</td>
                     <td class="text-center">{{ $bukopin->nomor_cl }}</td>
+                    <td class="text-center">{{ $bukopin->kekurangan_data }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">

@@ -23,6 +23,7 @@ return new class extends Migration{
             $table->string('tanggal_cl')->nullable();
             $table->string('keterangan_usaha')->nullable();
             $table->string('nomor_cl')->nullable();
+            $table->string('kekurangan_data')->nullable();
             $table->timestamps();
         });
     }

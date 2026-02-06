@@ -22,6 +22,7 @@ class Bukopin extends Model
         'status',
         'tanggal_cl',
         'keterangan_usaha',
-        'nomor_cl'
+        'nomor_cl',
+        'kekurangan_data'
     ];
 }
