@@ -20,6 +20,8 @@ class Bukopin extends Model
         'jw_akhir',
         'tanggal_dokumen_diterima',
         'status',
-        'tanggal_cl'
+        'tanggal_cl',
+        'nilai_net_klaim',
+
     ];
 }

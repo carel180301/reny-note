@@ -23,6 +23,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -41,6 +42,7 @@
                     <td class="text-center">{{ $bukopin->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bukopin->status }}</td>
                     <td class="text-center">{{ $bukopin->tanggal_cl }}</td>
+                    <td class="text-center">{{ $bukopin->keterangan_usaha }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -125,6 +127,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bukopin->tanggal_cl }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Keterangan Usaha</label><input name="keterangan_usaha" class="form-control" value="{{ $bukopin->keterangan_usaha }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

@@ -331,6 +331,11 @@
                         <input type="date" name="tanggal_cl" class="form-control">
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Keterangan Usaha</label>
+                        <input name="keterangan_usaha" class="form-control">
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">

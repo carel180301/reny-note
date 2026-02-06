@@ -21,6 +21,7 @@ return new class extends Migration{
             $table->string('tanggal_dokumen_diterima')->nullable();
             $table->string('status')->nullable();       
             $table->string('tanggal_cl')->nullable();
+            $table->string('keterangan_usaha')->nullable();
             $table->timestamps();
         });
     }
