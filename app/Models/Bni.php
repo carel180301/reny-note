@@ -18,7 +18,8 @@ class Bni extends Model
         'nama_debitur',
         'nomor_rekening',
         'nilai_tuntutan',
-        'nilai_net_klaim'
+        'nilai_net_klaim',
+        'jw_awal'
         
         // 'status',
     ];

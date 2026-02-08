@@ -21,6 +21,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
 
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
@@ -51,6 +52,7 @@
                     <td class="text-center">{{ $bni->nomor_rekening }}</td>
                     <td class="text-center">{{ $bni->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bni->nilai_net_klaim }}</td>
+                    <td class="text-center">{{ $bni->jw_awal }}</td>
 
                     <!-- <td class="text-center">{{ $bni->status }}</td> -->
 
@@ -122,15 +124,11 @@
                     <div><label class="form-label">Nilai NET Klaim</label><input name="nilai_net_klaim" class="form-control" value="{{ $bni->nilai_net_klaim }}"></div>
                 </div>
 
-                <!--
-                <div class="modal-body">
-                    <div><label class="form-label">Nilai NET Klaim</label><input name="nilai_net_klaim" class="form-control" value="{{ $bni->nilai_net_klaim }}"></div>
-                </div>
-
                 <div class="modal-body">
                     <div><label class="form-label">JW Awal</label><input name="jw_awal" class="form-control" value="{{ $bni->jw_awal }}"></div>
                 </div>
-                    
+
+                <!--
                 <div class="modal-body">
                     <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bni->jw_akhir }}"></div>
                 </div>

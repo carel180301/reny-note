@@ -19,6 +19,7 @@ return new class extends Migration{
             $table->string('nomor_rekening')->nullable();
             $table->string('nilai_tuntutan')->nullable();
             $table->string('nilai_net_klaim')->nullable();
+            $table->string('jw_awal')->nullable();
             // $table->string('status')->nullable();       
             $table->timestamps();
         });

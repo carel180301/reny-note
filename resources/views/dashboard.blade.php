@@ -417,6 +417,11 @@
                         <label class="form-label">Nilai NET Klaim</label>
                         <input name="nilai_net_klaim" class="form-control">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">JW Awal</label>
+                        <input type="date" name="jw_awal" class="form-control">
+                    </div>
                 </div>
 
                 <div class="modal-footer">
