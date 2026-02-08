@@ -12,9 +12,9 @@ class Bni extends Model
 
     protected $fillable = [
         'tahun',
-        'tanggal_dokumen_diterima'
-
-        // 'nomor_rekening',
+        'tanggal_dokumen_diterima',
+        'nomor_dokumen_diterima'
+        
         // 'cabang_bank',
         // 'nilai_tuntutan',
         // 'nilai_net_klaim',
