@@ -21,16 +21,17 @@ class BniController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'tahun' => 'nullable|string|max:255'
+            'tahun' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|date'
+
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'nilai_net_klaim' => 'nullable|string|max:255',
-            // 'jw_awal' => 'nullable|date',
-            // 'jw_akhir' => 'nullable|date',
-            // 'tanggal_dokumen_diterima' => 'nullable|date',
+            
+            
             // 'status' => 'nullable|string|max:255',
-            // 'tanggal_cl' => 'nullable|date',
+            
             // 'keterangan_usaha' => 'nullable|string|max:255',
             // 'nomor_cl' => 'nullable|string|max:255',
             // 'kekurangan_data' => 'nullable|string|max:255',
@@ -59,12 +60,13 @@ class BniController extends Controller
 
     public function update(Bni $bnis, Request $request){
         $data = $request->validate([
-            'tahun' => 'nullable|string|max:255'
+            'tahun' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|string|max:255'
+
             // 'nomor_rekening' => 'nullable|string|max:255',
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'nilai_net_klaim' => 'nullable|string|max:255',
-            // 'jw_awal' => 'nullable|string|max:255',
             // 'jw_akhir' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|string|max:255',
             // 'status' => 'nullable|string|max:255',
@@ -100,13 +102,14 @@ class BniController extends Controller
         $keyword = $request->query('q', '');
 
         $data = Bni::where('tahun', 'like', "%$keyword%")
+        ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
+        
         // ->orWhere('nomor_rekening', 'like', "%$keyword%")
         // ->orWhere('cabang_bank', 'like', "%$keyword%")
         // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         // ->orWhere('nilai_net_klaim', 'like', "%$keyword%")
         // ->orWhere('jw_awal', 'like', "%$keyword%")
         // ->orWhere('jw_akhir', 'like', "%$keyword%")
-        // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         // ->orWhere('status', 'like', "%$keyword%")
         // ->orWhere('tanggal_cl', 'like', "%$keyword%")
         // ->orWhere('keterangan_usaha', 'like', "%$keyword%")

@@ -14,13 +14,14 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tahun</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
+
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
@@ -36,13 +37,14 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $bni->tahun }}</td>
+                    <td class="text-center">{{ $bni->tanggal_dokumen_diterima }}</td>
+
                     <!-- <td class="text-center">{{ $bni->nomor_rekening }}</td>
                     <td class="text-center">{{ $bni->cabang_bank }}</td>
                     <td class="text-center">{{ $bni->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bni->nilai_net_klaim }}</td>
                     <td class="text-center">{{ $bni->jw_awal }}</td>
                     <td class="text-center">{{ $bni->jw_akhir }}</td>
-                    <td class="text-center">{{ $bni->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bni->status }}</td>
                     <td class="text-center">{{ $bni->tanggal_cl }}</td>
                     <td class="text-center">{{ $bni->keterangan_usaha }}</td>
@@ -90,6 +92,11 @@
                     <div><label class="form-label">Tahun</label><input name="tahun" class="form-control" value="{{ $bni->tahun }}"></div>
                 </div>
 
+                 <div class="modal-body">
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bni->tanggal_dokumen_diterima }}"></div>
+                </div>
+
+
                 <!-- <div class="modal-body">
                     <div><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bni->nomor_rekening }}"></div>
                 </div>
@@ -112,10 +119,6 @@
                     
                 <div class="modal-body">
                     <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bni->jw_akhir }}"></div>
-                </div>
-
-                <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bni->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-body">
