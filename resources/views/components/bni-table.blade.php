@@ -17,6 +17,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
@@ -42,6 +43,7 @@
                     <td class="text-center">{{ $bni->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bni->nomor_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bni->cabang_bank }}</td>
+                    <td class="text-center">{{ $bni->nama_debitur }}</td>
 
                     <!-- <td class="text-center">{{ $bni->status }}</td> -->
 
@@ -97,12 +99,11 @@
                     <div><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bni->cabang_bank }}"></div>
                 </div>
 
-
-                <!--
                 <div class="modal-body">
-                    <div><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bni->cabang_bank }}"></div>
+                    <div><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $bni->nama_debitur }}"></div>
                 </div>
 
+                <!--
                 <div class="modal-body">
                     <div><label class="form-label">Nilai Tuntutan</label><input name="nilai_tuntutan" class="form-control" value="{{ $bni->nilai_tuntutan }}"></div>
                 </div>

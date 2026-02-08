@@ -14,7 +14,8 @@ class Bni extends Model
         'tahun',
         'tanggal_dokumen_diterima',
         'nomor_dokumen_diterima',
-        'cabang_bank'
+        'cabang_bank',
+        'nama_debitur'
         
         // 'status',
     ];
