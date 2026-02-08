@@ -32,13 +32,13 @@
                             </li>
                             
                             <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bukopin']) }}">Bukopin</a>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bni']) }}">BNI</a>
                             </li>
                         </ul>
                     </div>
 
                     @php
-                        $table = request('table', 'bri', 'mandiri', 'bankjatim', 'btn', 'bukopin');
+                        $table = request('table', 'bri', 'mandiri', 'bankjatim', 'btn', 'bni');
                     @endphp
 
                     <button type="button" class="btn p-0 text-primary" data-bs-toggle="modal" data-bs-target="#add{{ ucfirst($table) }}Modal">

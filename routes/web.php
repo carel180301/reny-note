@@ -11,6 +11,7 @@ use App\Models\Mandiri;
 use App\Models\Bankjatim;
 use App\Models\Btn;
 use App\Models\Bukopin;
+use App\Models\Bni;
 // use App\Http\Controllers\AkmController;
 // use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\MandiriController;
 use App\Http\Controllers\BankjatimController;
 use App\Http\Controllers\BtnController;
 use App\Http\Controllers\BukopinController;
+use App\Http\Controllers\BniController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
@@ -34,6 +36,7 @@ Route::get('/dashboard', function (Request $request) {
     $bankjatims = collect();
     $btns = collect();
     $bukopins = collect();
+    $bnis = collect();
 
 
 //    if ($table === 'akm') {
@@ -158,7 +161,25 @@ Route::get('/dashboard', function (Request $request) {
         $bukopins = $query->get();
     }
 
-    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'bukopins', 'table'));
+     else if ($table === 'bni') {
+        $query = Bni::query()->orderBy('created_at', 'asc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $bnis = $query->get();
+    }
+
+    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'bukopins', 'bnis' ,'table'));
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -251,6 +272,19 @@ Route::middleware('auth')->group(function () {
     Route::post('/bukopins/upload', [BukopinController::class, 'upload'])->name('bukopins.upload');
     Route::resource('bukopins', BukopinController::class);
     Route::post('/bukopins/upload', [BukopinController::class, 'upload'])->name('bukopins.upload');
+
+    Route::get('/bnis', [BniController::class, 'index'])->name('bnis.index');
+    Route::get('/bnis/create', [BniController::class, 'create'])->name('bnis.create');
+    Route::post('/bnis', [BniController::class, 'store'])->name('bnis.store');
+    Route::get('/bnis/{bnis}/edit', [BniController::class, 'edit'])->name('bnis.edit');
+    Route::put('/bnis/{bnis}/update', [BniController::class, 'update'])->name('bnis.update');
+    Route::delete('/bnis/{bnis}/destroy', [BniController::class, 'destroy'])->name('bnis.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/bnis/{bnis}/send-email', [EmailsController::class, 'sendBniEmail'])->name('bnis.sendEmail');
+    Route::get('/bnis/search', [BniController::class, 'search'])->name('bnis.search');
+    Route::post('/bnis/upload', [BniController::class, 'upload'])->name('bnis.upload');
+    Route::resource('bnis', BniController::class);
+    Route::post('/bnis/upload', [BniController::class, 'upload'])->name('bnis.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

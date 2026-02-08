@@ -33,6 +33,10 @@
                 @case('bukopin')
                     <x-bukopin-table :bukopins="$bukopins" />
                     @break
+
+                @case('bni')
+                    <x-bni-table :bnis="$bnis" />
+                    @break
             @endswitch
         </div>
     </div>
@@ -359,6 +363,37 @@
             </form>
         </div></div>
     </div>
+
+    {{-- BNI MODAL --}}
+<div class="modal fade" id="addBniModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Tambah Klaim BNI</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('bnis.store') }}">
+                @csrf
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Tahun</label>
+                        <input name="tahun" class="form-control">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
 
 
     {{-- ================= SCRIPTS ================= --}}
