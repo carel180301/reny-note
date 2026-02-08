@@ -402,6 +402,11 @@
                         <label class="form-label">Nama Debitur</label>
                         <input name="nama_debitur" class="form-control">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input name="nomor_rekening" class="form-control">
+                    </div>
                 </div>
 
                 <div class="modal-footer">

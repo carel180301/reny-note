@@ -16,6 +16,7 @@ return new class extends Migration{
             $table->string('nomor_dokumen_diterima')->nullable();
             $table->string('cabang_bank')->nullable();
             $table->string('nama_debitur')->nullable();
+            $table->string('nomor_rekening')->nullable();
             // $table->string('status')->nullable();       
             $table->timestamps();
         });
