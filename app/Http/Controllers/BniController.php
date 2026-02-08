@@ -26,7 +26,8 @@ class BniController extends Controller
             'nomor_dokumen_diterima' => 'nullable|string|max:255',
             'cabang_bank' => 'nullable|string|max:255',
             'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255'
+            'nomor_rekening' => 'nullable|string|max:255',
+            'nilai_tuntutan' => 'nullable|string|max:255'
             
             // 'status' => 'nullable|string|max:255',
         ]);
@@ -58,7 +59,8 @@ class BniController extends Controller
             'nomor_dokumen_diterima' => 'nullable|string|max:255',
             'cabang_bank' => 'nullable|string|max:255',
             'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255'
+            'nomor_rekening' => 'nullable|string|max:255',
+            'nilai_tuntutan' => 'nullable|string|max:255'
 
             // 'status' => 'nullable|string|max:255',
         ]);
@@ -93,6 +95,7 @@ class BniController extends Controller
         ->orWhere('cabang_bank', 'like', "%$keyword%")
         ->orWhere('nama_debitur', 'like', "%$keyword%")
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
 
         // ->orWhere('status', 'like', "%$keyword%")
 

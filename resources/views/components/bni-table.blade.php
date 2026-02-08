@@ -19,6 +19,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
 
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
@@ -47,6 +48,7 @@
                     <td class="text-center">{{ $bni->cabang_bank }}</td>
                     <td class="text-center">{{ $bni->nama_debitur }}</td>
                     <td class="text-center">{{ $bni->nomor_rekening }}</td>
+                    <td class="text-center">{{ $bni->nilai_tuntutan }}</td>
 
                     <!-- <td class="text-center">{{ $bni->status }}</td> -->
 
@@ -110,11 +112,11 @@
                     <div><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bni->nomor_rekening }}"></div>
                 </div>
 
-                <!--
                 <div class="modal-body">
                     <div><label class="form-label">Nilai Tuntutan</label><input name="nilai_tuntutan" class="form-control" value="{{ $bni->nilai_tuntutan }}"></div>
                 </div>
 
+                <!--
                 <div class="modal-body">
                     <div><label class="form-label">Nilai NET Klaim</label><input name="nilai_net_klaim" class="form-control" value="{{ $bni->nilai_net_klaim }}"></div>
                 </div>

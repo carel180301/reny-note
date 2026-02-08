@@ -16,7 +16,8 @@ class Bni extends Model
         'nomor_dokumen_diterima',
         'cabang_bank',
         'nama_debitur',
-        'nomor_rekening'
+        'nomor_rekening',
+        'nilai_tuntutan'
         
         // 'status',
     ];
