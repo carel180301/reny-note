@@ -29,7 +29,8 @@ class BniController extends Controller
             'nomor_rekening' => 'nullable|string|max:255',
             'nilai_tuntutan' => 'nullable|string|max:255',
             'nilai_net_klaim' => 'nullable|string|max:255',
-            'jw_awal' => 'nullable|date'
+            'jw_awal' => 'nullable|date',
+            'jw_akhir' => 'nullable|date'
             
             // 'status' => 'nullable|string|max:255',
         ]);

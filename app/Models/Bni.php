@@ -19,7 +19,8 @@ class Bni extends Model
         'nomor_rekening',
         'nilai_tuntutan',
         'nilai_net_klaim',
-        'jw_awal'
+        'jw_awal',
+        'jw_akhir'
         
         // 'status',
     ];
