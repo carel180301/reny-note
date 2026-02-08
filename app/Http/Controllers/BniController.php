@@ -23,15 +23,10 @@ class BniController extends Controller
         $data = $request->validate([
             'tahun' => 'nullable|string|max:255',
             'tanggal_dokumen_diterima' => 'nullable|date',
-            'nomor_dokumen_diterima' => 'nullable|string|max:255'
-            
+            'nomor_dokumen_diterima' => 'nullable|string|max:255',
+            'cabang_bank' => 'nullable|string|max:255'
             
             // 'status' => 'nullable|string|max:255',
-            
-            // 'keterangan_usaha' => 'nullable|string|max:255',
-            // 'nomor_cl' => 'nullable|string|max:255',
-            // 'kekurangan_data' => 'nullable|string|max:255',
-            // 'nomor_box' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -58,19 +53,10 @@ class BniController extends Controller
         $data = $request->validate([
             'tahun' => 'nullable|string|max:255',
             'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'nomor_dokumen_diterima' => 'nullable|string|max:255'
+            'nomor_dokumen_diterima' => 'nullable|string|max:255',
+            'cabang_bank' => 'nullable|string|max:255'
 
-
-            // 'cabang_bank' => 'nullable|string|max:255',
-            // 'nilai_tuntutan' => 'nullable|string|max:255',
-            // 'nilai_net_klaim' => 'nullable|string|max:255',
-            // 'jw_akhir' => 'nullable|string|max:255',
             // 'status' => 'nullable|string|max:255',
-            // 'tanggal_cl' => 'nullable|string|max:255',
-            // 'keterangan_usaha' => 'nullable|string|max:255',
-            // 'nomor_cl' => 'nullable|string|max:255',
-            // 'kekurangan_data' => 'nullable|string|max:255',
-            // 'nomor_box' => 'nullable|string|max:255',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -100,6 +86,8 @@ class BniController extends Controller
         $data = Bni::where('tahun', 'like', "%$keyword%")
         ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         ->orWhere('nomor_dokumen_diterima', 'like', "%$keyword%")
+        ->orWhere('cabang_bank', 'like', "%$keyword%")
+
         // ->orWhere('status', 'like', "%$keyword%")
 
         ->get();

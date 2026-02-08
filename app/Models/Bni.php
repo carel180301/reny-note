@@ -13,18 +13,9 @@ class Bni extends Model
     protected $fillable = [
         'tahun',
         'tanggal_dokumen_diterima',
-        'nomor_dokumen_diterima'
+        'nomor_dokumen_diterima',
+        'cabang_bank'
         
-        // 'cabang_bank',
-        // 'nilai_tuntutan',
-        // 'nilai_net_klaim',
-        // 'jw_awal',
-        // 'jw_akhir',
         // 'status',
-        // 'tanggal_cl',
-        // 'keterangan_usaha',
-        // 'nomor_cl',
-        // 'kekurangan_data',
-        // 'nomor_box'
     ];
 }

@@ -14,18 +14,8 @@ return new class extends Migration{
             $table->string('tahun')->nullable();
             $table->string('tanggal_dokumen_diterima')->nullable();
             $table->string('nomor_dokumen_diterima')->nullable();
-
-            // $table->string('cabang_bank')->nullable();
-            // $table->string('nilai_tuntutan')->nullable();
-            // $table->string('nilai_net_klaim')->nullable();
-            // $table->string('jw_awal')->nullable();
-            // $table->string('jw_akhir')->nullable();
+            $table->string('cabang_bank')->nullable();
             // $table->string('status')->nullable();       
-            // $table->string('tanggal_cl')->nullable();
-            // $table->string('keterangan_usaha')->nullable();
-            // $table->string('nomor_cl')->nullable();
-            // $table->string('kekurangan_data')->nullable();
-            // $table->string('nomor_box')->nullable();
             $table->timestamps();
         });
     }

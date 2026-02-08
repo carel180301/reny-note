@@ -390,7 +390,12 @@
 
                     <div class="mb-3">
                         <label class="form-label">Nomor Dokumen Diterima</label>
-                        <input name="tahun" class="form-control">
+                        <input name="nomor_dokumen_diterima" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cabang Bank</label>
+                        <input name="cabang_bank" class="form-control">
                     </div>
                 </div>
 
