@@ -11,6 +11,36 @@
             <div class="col-auto"></div>
         </div>
 
+        {{-- ================= STATUS FILTER ================= --}}
+        @if(request('table') === 'bri')
+        <div class="d-flex justify-content-start mb-1 mt-5">
+            <form method="GET" action="{{ route('dashboard') }}" class="d-flex gap-2">
+
+                {{-- keep current table --}}
+                <input type="hidden" name="table" value="bri">
+
+                {{-- status dropdown --}}
+                <select name="status" class="form-select form-select-sm" style="width:180px;">
+                    <option value="">Semua Status</option>
+                    @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                        <option value="{{ $s }}" {{ request('status') == $s ? 'selected' : '' }}>
+                            {{ ucfirst($s) }}
+                        </option>
+                    @endforeach
+                </select>
+
+                {{-- submit --}}
+                <button class="btn btn-sm btn-primary">Filter</button>
+
+                {{-- reset --}}
+                <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-secondary">
+                    Reset
+                </a>
+            </form>
+        </div>
+        @endif
+
+
         <div class="bg-white shadow-sm rounded px-1 mt-4">
 
             @switch(request('table'))
