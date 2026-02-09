@@ -30,10 +30,10 @@
                 </select>
 
                 {{-- submit --}}
-                <button class="btn btn-sm btn-primary">Filter</button>
+                <button class="btn btn-sm btn-primary">Search</button>
 
                 {{-- reset --}}
-                <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-secondary">
+                <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-danger">
                     Reset
                 </a>
             </form>
