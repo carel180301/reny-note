@@ -21,6 +21,7 @@ return new class extends Migration{
             $table->string('keterangan')->nullable();
             $table->string('nomor_cl')->nullable();
             $table->string('date_update')->nullable();
+            $table->string('nomor_memo_permohonan_pembayaran_klaim')->nullable();
             $table->timestamps();
         });
     }

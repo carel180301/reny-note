@@ -558,6 +558,11 @@
                             <input type="date" name="date_update" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
+                            <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
+                        </div>
+
 
                         <!-- 
                         <div class="mb-3">
@@ -595,12 +600,6 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal CL</label>
                             <input type="date" name="tanggal_cl" class="form-control">
-                        </div>
-
-            
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
-                            <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
                         </div>
 
                         <div class="mb-3">

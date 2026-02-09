@@ -22,7 +22,8 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
-                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
 
                     <!-- 
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
@@ -30,7 +31,6 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th> -->
@@ -52,6 +52,7 @@
                     <td class="text-center">{{ $bjb->keterangan }}</td>
                     <td class="text-center">{{ $bjb->nomor_cl }}</td>
                     <td class="text-center">{{ $bjb->date_update }}</td>
+                    <td class="text-center">{{ $bjb->nomor_memo_permohonan_pembayaran_klaim }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">

@@ -20,6 +20,7 @@ class Bjb extends Model
         'status',
         'keterangan',
         'nomor_cl',
-        'date_update'
+        'date_update',
+        'nomor_memo_permohonan_pembayaran_klaim'
     ];
 }
