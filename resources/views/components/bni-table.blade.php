@@ -28,6 +28,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -51,6 +52,7 @@
                     <td class="text-center">{{ $bni->tanggal_cl }}</td>
                     <td class="text-center">{{ $bni->nomor_cl }}</td>
                     <td class="text-center">{{ $bni->nomor_memo_permohonan_pembayaran_klaim }}</td>
+                    <td class="text-center">{{ $bni->tanggal_memo_permohonan_pembayaran_klaim }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -155,6 +157,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label><input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bni->nomor_memo_permohonan_pembayaran_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input name="tanggal_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bni->tanggal_memo_permohonan_pembayaran_klaim }}"></div>
                 </div>
 
 
