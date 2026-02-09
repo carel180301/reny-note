@@ -12,11 +12,11 @@ return new class extends Migration{
         Schema::create('bjbs', function (Blueprint $table) {
             $table->id();
             $table->string('cabang_bank')->nullable();
+            $table->string('nama_debitur')->nullable();
+            $table->string('nomor_rekening')->nullable();
+        
             // $table->string('tanggal_dokumen_diterima')->nullable();
             // $table->string('nomor_dokumen_diterima')->nullable();
-            // $table->string('cabang_bank')->nullable();
-            // $table->string('nama_debitur')->nullable();
-            // $table->string('nomor_rekening')->nullable();
             // $table->string('nilai_tuntutan')->nullable();
             // $table->string('nilai_net_klaim')->nullable();
             // $table->string('jw_awal')->nullable();

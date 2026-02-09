@@ -21,13 +21,13 @@ class BjbController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255'
+            'cabang_bank' => 'nullable|string|max:255',
+            'nama_debitur' => 'nullable|string|max:255',
+            'nomor_rekening' => 'nullable|string|max:255'
 
             // 'tanggal_dokumen_diterima' => 'nullable|date',
             // 'nomor_dokumen_diterima' => 'nullable|string|max:255',
-            // 'cabang_bank' => 'nullable|string|max:255',
-            // 'nama_debitur' => 'nullable|string|max:255',
-            // 'nomor_rekening' => 'nullable|string|max:255',
+            
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'nilai_net_klaim' => 'nullable|string|max:255',
             // 'jw_awal' => 'nullable|date',

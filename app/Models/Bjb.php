@@ -11,12 +11,12 @@ class Bjb extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cabang_bank'
+        'cabang_bank',
+        'nama_debitur',
+        'nomor_rekening'
 
         // 'tanggal_dokumen_diterima',
         // 'nomor_dokumen_diterima',
-        // 'nama_debitur',
-        // 'nomor_rekening',
         // 'nilai_tuntutan',
         // 'nilai_net_klaim',
         // 'jw_awal',
