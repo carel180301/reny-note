@@ -22,6 +22,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
+                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
 
                     <!-- 
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
@@ -50,6 +51,7 @@
                     <td class="text-center">{{ $bjb->status }}</td>
                     <td class="text-center">{{ $bjb->keterangan }}</td>
                     <td class="text-center">{{ $bjb->nomor_cl }}</td>
+                    <td class="text-center">{{ $bjb->date_update }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -130,6 +132,10 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Nomor CL</label><input name="nomor_cl" class="form-control" value="{{ $bjb->nomor_Cl }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Date Update</label><input name="date_update" class="form-control" value="{{ $bjb->date_update }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
