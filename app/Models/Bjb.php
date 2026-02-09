@@ -17,6 +17,7 @@ class Bjb extends Model
         'tuntutan',
         'net_klaim',
         'tanggal_dokumen_diterima',
-        'status'
+        'status',
+        'keterangan'
     ];
 }

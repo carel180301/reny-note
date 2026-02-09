@@ -20,6 +20,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
 
                     <!-- 
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
@@ -47,6 +48,7 @@
                     <td class="text-center">{{ $bjb->net_klaim }}</td>
                     <td class="text-center">{{ $bjb->tanggal_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bjb->status }}</td>
+                    <td class="text-center">{{ $bjb->keterangan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -108,7 +110,7 @@
                     <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bjb->tanggal_dokumen_diterima }}"></div>
                 </div>
 
-                  <div class="modal-body">
+                <div class="modal-body">
                     <label class="form-label">Status</label>
                     <select name="status" class="form-control">
                         <option value="batal" {{ $bjb->status == 'batal' ? 'selected' : '' }}>Batal</option>
@@ -119,6 +121,10 @@
                         <option value="tamdat" {{ $bjb->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
                         <option value="tolak" {{ $bjb->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
                     </select>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $bjb->keterangan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
