@@ -36,7 +36,8 @@ class BniController extends Controller
             'tanggal_cl' => 'nullable|date',
             'nomor_cl' => 'nullable|string|max:255',
             'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|date'
+            'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|date',
+            'tanggal_pembayaran_klaim' => 'nullable|date'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -76,7 +77,8 @@ class BniController extends Controller
             'tanggal_cl' => 'nullable|string|max:255',
             'nomor_cl' => 'nullable|string|max:255',
             'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255'
+            'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
+            'tanggal_pembayaran_klaim' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -119,6 +121,7 @@ class BniController extends Controller
         ->orWhere('nomor_Cl', 'like', "%$keyword%")
         ->orWhere('nomor_memo_permohonan_pembayaran_klaim', 'like', "%$keyword%")
         ->orWhere('tanggal_memo_permohonan_pembayaran_klaim', 'like', "%$keyword%")
+        ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")
         ->get();
 
         return view('components.bni-table', [
