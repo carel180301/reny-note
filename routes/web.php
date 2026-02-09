@@ -12,6 +12,7 @@ use App\Models\Bankjatim;
 use App\Models\Btn;
 use App\Models\Bukopin;
 use App\Models\Bni;
+use App\Models\Bjb;
 // use App\Http\Controllers\AkmController;
 // use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\BankjatimController;
 use App\Http\Controllers\BtnController;
 use App\Http\Controllers\BukopinController;
 use App\Http\Controllers\BniController;
+use App\Http\Controllers\BjbController;
 use Illuminate\Http\Request;
 
 Route::get('/', function () {
@@ -37,6 +39,7 @@ Route::get('/dashboard', function (Request $request) {
     $btns = collect();
     $bukopins = collect();
     $bnis = collect();
+    $bjbs = collect();
 
 
 //    if ($table === 'akm') {
@@ -161,7 +164,7 @@ Route::get('/dashboard', function (Request $request) {
         $bukopins = $query->get();
     }
 
-     else if ($table === 'bni') {
+    else if ($table === 'bni') {
         $query = Bni::query()->orderBy('created_at', 'asc');
 
         if ($request->filled('status')) {
@@ -179,35 +182,30 @@ Route::get('/dashboard', function (Request $request) {
         $bnis = $query->get();
     }
 
-    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'bukopins', 'bnis' ,'table'));
+    else if ($table === 'bjb') {
+        $query = Bjb::query()->orderBy('created_at', 'asc');
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('status_sistem')) {
+            $query->where('status_sistem', $request->status_sistem);
+        }
+
+        if ($request->filled('status_pembayaran')) {
+            $query->where('status_pembayaran', $request->status_pembayaran);
+        }
+
+        $bjbs = $query->get();
+    }
+
+    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'bukopins', 'bnis' , 'bjbs', 'table'));
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
-    // Route::get('/akms', [AkmController::class, 'index'])->name('akms.index');
-    // Route::get('/akms/create', [AkmController::class, 'create'])->name('akms.create');
-    // Route::post('/akms', [AkmController::class, 'store'])->name('akms.store');
-    // Route::get('/akms/{akms}/edit', [AkmController::class, 'edit'])->name('akms.edit');
-    // Route::put('/akms/{akms}/update', [AkmController::class, 'update'])->name('akms.update');
-    // Route::delete('/akms/{akms}/destroy', [AkmController::class, 'destroy'])->name('akms.destroy');
-    // Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    // Route::get('/akms/{akms}/send-email', [EmailsController::class, 'sendAkmEmail'])->name('akms.sendEmail');
-    // Route::get('/akms/search', [AkmController::class, 'search'])->name('akms.search');
-    // Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
-    // Route::resource('akms', AkmController::class);
-    // Route::post('/akms/upload', [AkmController::class, 'upload'])->name('akms.upload');
-    // Route::get('/akm', [AkmController::class, 'index']);
-
-    // Route::get('/asums', [AsumController::class, 'index'])->name('asums.index');
-    // Route::get('/asums/create', [AsumController::class, 'create'])->name('asums.create');
-    // Route::post('/asums', [AsumController::class, 'store'])->name('asums.store');
-    // Route::get('/asums/{asums}/edit', [AsumController::class, 'edit'])->name('asums.edit');
-    // Route::put('/asums/{asums}/update', [AsumController::class, 'update'])->name('asums.update');
-    // Route::delete('/asums/{asums}/destroy', [AsumController::class, 'destroy'])->name('asums.destroy');
-    // Route::get('/asums/search', [AsumController::class, 'search'])->name('asums.search');
-    // Route::post('/asums/upload', [AsumController::class, 'upload'])->name('asums.upload');
-
     Route::get('/bris', [BriController::class, 'index'])->name('bris.index');
     Route::get('/bris/create', [BriController::class, 'create'])->name('bris.create');
     Route::post('/bris', [BriController::class, 'store'])->name('bris.store');
@@ -285,6 +283,19 @@ Route::middleware('auth')->group(function () {
     Route::post('/bnis/upload', [BniController::class, 'upload'])->name('bnis.upload');
     Route::resource('bnis', BniController::class);
     Route::post('/bnis/upload', [BniController::class, 'upload'])->name('bnis.upload');
+
+    Route::get('/bjbs', [BjbController::class, 'index'])->name('bjbs.index');
+    Route::get('/bjbs/create', [BjbController::class, 'create'])->name('bjbs.create');
+    Route::post('/bjbs', [BjbController::class, 'store'])->name('bjbs.store');
+    Route::get('/bjbs/{bjbs}/edit', [BjbController::class, 'edit'])->name('bjbs.edit');
+    Route::put('/bjbs/{bjbs}/update', [BjbController::class, 'update'])->name('bjbs.update');
+    Route::delete('/bjbs/{bjbs}/destroy', [BjbController::class, 'destroy'])->name('bjbs.destroy');
+    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
+    Route::get('/bjbs/{bjbs}/send-email', [EmailsController::class, 'sendBjbEmail'])->name('bjbs.sendEmail');
+    Route::get('/bjbs/search', [BjbController::class, 'search'])->name('bjbs.search');
+    Route::post('/bjbs/upload', [BjbController::class, 'upload'])->name('bjbs.upload');
+    Route::resource('bjbs', BjbController::class);
+    Route::post('/bjbs/upload', [BjbController::class, 'upload'])->name('bjbs.upload');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

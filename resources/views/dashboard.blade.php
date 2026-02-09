@@ -37,6 +37,10 @@
                 @case('bni')
                     <x-bni-table :bnis="$bnis" />
                     @break
+
+                @case('bjb')
+                    <x-bjb-table :bjbs="$bjbs" />
+                    @break
             @endswitch
         </div>
     </div>
@@ -365,124 +369,245 @@
     </div>
 
     {{-- BNI MODAL --}}
-<div class="modal fade" id="addBniModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
+    <div class="modal fade" id="addBniModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-            <div class="modal-header">
-                <h5 class="modal-title">Tambah Klaim BNI</h5>
-                <button class="btn-close" data-bs-dismiss="modal"></button>
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Klaim BNI</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form method="POST" action="{{ route('bnis.store') }}">
+                    @csrf
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Tahun</label>
+                            <input name="tahun" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Dokumen Diterima</label>
+                            <input type="date" name="tanggal_dokumen_diterima" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Dokumen Diterima</label>
+                            <input name="nomor_dokumen_diterima" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Debitur</label>
+                            <input name="nama_debitur" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input name="nomor_rekening" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan</label>
+                            <input name="nilai_tuntutan" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai NET Klaim</label>
+                            <input name="nilai_net_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">JW Awal</label>
+                            <input type="date" name="jw_awal" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">JW Akhir</label>
+                            <input type="date" name="jw_akhir" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-select" required>
+                                <option value="" disabled selected>Pilih Status</option>
+                                @foreach (['batal','setuju','pending','regist','suspect','tamdat','tolak'] as $s)
+                                    <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Keterangan</label>
+                            <input name="keterangan" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal CL</label>
+                            <input type="date" name="tanggal_cl" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor CL</label>
+                            <input name="nomor_cl" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
+                            <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_memo_permohonan_pembayaran_kaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_pembayaran_kaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
+                            <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                    </div>
+
+                </form>
+
             </div>
-
-            <form method="POST" action="{{ route('bnis.store') }}">
-                @csrf
-
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label class="form-label">Tahun</label>
-                        <input name="tahun" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Dokumen Diterima</label>
-                        <input type="date" name="tanggal_dokumen_diterima" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Dokumen Diterima</label>
-                        <input name="nomor_dokumen_diterima" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Cabang Bank</label>
-                        <input name="cabang_bank" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nama Debitur</label>
-                        <input name="nama_debitur" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Rekening</label>
-                        <input name="nomor_rekening" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nilai Tuntutan</label>
-                        <input name="nilai_tuntutan" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nilai NET Klaim</label>
-                        <input name="nilai_net_klaim" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">JW Awal</label>
-                        <input type="date" name="jw_awal" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">JW Akhir</label>
-                        <input type="date" name="jw_akhir" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Status</label>
-                        <select name="status" class="form-select" required>
-                            <option value="" disabled selected>Pilih Status</option>
-                            @foreach (['batal','setuju','pending','regist','suspect','tamdat','tolak'] as $s)
-                                <option value="{{ $s }}">{{ ucfirst($s) }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Keterangan</label>
-                        <input name="keterangan" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal CL</label>
-                        <input type="date" name="tanggal_cl" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor CL</label>
-                        <input name="nomor_cl" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
-                        <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
-                        <input type="date" name="tanggal_memo_permohonan_pembayaran_kaim" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Pembayaran Klaim</label>
-                        <input type="date" name="tanggal_pembayaran_kaim" class="form-control">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
-                        <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button class="btn btn-primary d-block mx-auto">Simpan</button>
-                </div>
-
-            </form>
-
         </div>
     </div>
-</div>
+
+
+    {{-- BJB MODAL --}}
+    <div class="modal fade" id="addBjbModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Klaim BJB</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form method="POST" action="{{ route('bjbs.store') }}">
+                    @csrf
+
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control">
+                        </div>
+
+                        <!-- <div class="mb-3">
+                            <label class="form-label">Tanggal Dokumen Diterima</label>
+                            <input type="date" name="tanggal_dokumen_diterima" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Dokumen Diterima</label>
+                            <input name="nomor_dokumen_diterima" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cabang Bank</label>
+                            <input name="cabang_bank" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nama Debitur</label>
+                            <input name="nama_debitur" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Rekening</label>
+                            <input name="nomor_rekening" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai Tuntutan</label>
+                            <input name="nilai_tuntutan" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nilai NET Klaim</label>
+                            <input name="nilai_net_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">JW Awal</label>
+                            <input type="date" name="jw_awal" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">JW Akhir</label>
+                            <input type="date" name="jw_akhir" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select name="status" class="form-select" required>
+                                <option value="" disabled selected>Pilih Status</option>
+                                @foreach (['batal','setuju','pending','regist','suspect','tamdat','tolak'] as $s)
+                                    <option value="{{ $s }}">{{ ucfirst($s) }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Keterangan</label>
+                            <input name="keterangan" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal CL</label>
+                            <input type="date" name="tanggal_cl" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor CL</label>
+                            <input name="nomor_cl" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
+                            <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_memo_permohonan_pembayaran_kaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_pembayaran_kaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
+                            <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
+                        </div>
+                    </div> -->
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary d-block mx-auto">Simpan</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
 
 
 

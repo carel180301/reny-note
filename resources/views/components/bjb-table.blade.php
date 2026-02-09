@@ -1,0 +1,91 @@
+﻿<!-- SUCCESS ALERT -->
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show mt-3">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+@endif
+
+<div id="bjbTable">
+    <!-- ================= TABLE ================= -->
+    <div class="table-responsive">
+        <table class="table table-hover w-100 align-middle">
+            <thead>
+                <tr class="text-center">
+                    <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
+                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pembayaran Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th> -->
+                    <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            @foreach($bjbs as $index => $bjb)
+                <tr>
+                    <td class="text-center">{{ $index + 1 }}</td>
+                    <td class="text-center">{{ $bjb->cabang_bank }}</td>
+
+                    <td class="text-center">
+                        <div class="d-inline-flex gap-2">
+                            <button class="btn p-0 text-warning" data-bs-toggle="modal" data-bs-target="#editBjbModal{{ $bjb->id }}">
+                                <i class="bi bi-pencil-fill fs-5"></i>
+                            </button>
+
+                            <form method="POST" action="{{ route('bjbs.destroy', $bjb) }}" onsubmit="return confirm('Yakin ingin menghapus data ini?');">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn p-0 text-danger">
+                                    <i class="bi bi-trash-fill fs-5"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ================ Edit Modals ================= -->
+@foreach($bjbs as $bjb)
+<div class="modal fade" id="editBjbModal{{ $bjb->id }}" tabindex="-1">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Klaim</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{{ route('bjbs.update', $bjb) }}">
+                @csrf
+                @method('PUT')
+                
+                <div class="modal-body">
+                    <div><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bjb->cabang_bank }}"></div>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
