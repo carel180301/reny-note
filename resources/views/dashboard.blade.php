@@ -59,32 +59,49 @@
             <form method="POST" action="{{ route('bris.store') }}">
                 @csrf
                 <div class="modal-body">
-                    @foreach ([
-                        'unit' => 'Unit',
-                        'cabang_bank' => 'Cabang Bank',
-                        'nama_debitur' => 'Nama Debitur',
-                        'nomor_rekening' => 'Nomor Rekening',
-                        'nilai_tuntutan_klaim' => 'Nilai Tuntutan Klaim',
-                        'tambahan_data' => 'Tambahan Data',
-                        'nomor_box' => 'No Box'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
+                    {{-- Unit --}}
+                    <div class="mb-3">
+                        <label class="form-label">Unit</label>
+                        <input name="unit" class="form-control">
+                    </div>
 
-                    @foreach ([
-                        'tanggal_klaim_diterima' => 'Tanggal Klaim Diterima',
-                        'tanggal_klaim_masuk_portal' => 'Tanggal Klaim Masuk Portal',
-                        'date_update' => 'Date Update'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input type="date" name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
+                    {{-- Cabang Bank --}}
+                    <div class="mb-3">
+                        <label class="form-label">Cabang Bank</label>
+                        <input name="cabang_bank" class="form-control">
+                    </div>
 
+                    {{-- Nama Debitur --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nama Debitur</label>
+                        <input name="nama_debitur" class="form-control">
+                    </div>
+
+                    {{-- Nomor Rekening --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input name="nomor_rekening" class="form-control">
+                    </div>
+
+                    {{-- Nilai Tuntutan Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nilai Tuntutan Klaim</label>
+                        <input name="nilai_tuntutan_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Klaim Diterima --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Klaim Diterima</label>
+                        <input type="date" name="tanggal_klaim_diterima" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Klaim Masuk Portal --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Klaim Masuk Portal</label>
+                        <input type="date" name="tanggal_klaim_masuk_portal" class="form-control">
+                    </div>
+
+                    {{-- Status --}}
                     <div class="mb-3">
                         <label class="form-label">Status</label>
                         <select name="status" class="form-select" required>
@@ -93,6 +110,24 @@
                                 <option value="{{ $s }}">{{ ucfirst($s) }}</option>
                             @endforeach
                         </select>
+                    </div>
+
+                    {{-- Tambahan Data --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tambahan Data</label>
+                        <input name="tambahan_data" class="form-control">
+                    </div>
+
+                    {{-- Date Update --}}
+                    <div class="mb-3">
+                        <label class="form-label">Date Update</label>
+                        <input type="date" name="date_update" class="form-control">
+                    </div>
+
+                    {{-- No Box --}}
+                    <div class="mb-3">
+                        <label class="form-label">No Box</label>
+                        <input name="nomor_box" class="form-control">
                     </div>
                 </div>
 
@@ -537,47 +572,11 @@
                             <label class="form-label">Status</label>
                             <select name="status" class="form-select" required>
                                 <option value="" disabled selected>Pilih Status</option>
-                                @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                                @foreach (['batal','setuju','pending','regist','suspect','tamdat','tolak'] as $s)
                                     <option value="{{ $s }}">{{ ucfirst($s) }}</option>
                                 @endforeach
                             </select>
                         </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Keterangan</label>
-                            <input name="keterangan" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor CL</label>
-                            <input name="nomor_cl" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Date Update</label>
-                            <input type="date" name="date_update" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
-                            <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
-                            <input type="date" name="tanggal_memo_permohonan_pembayaran_kaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Pembayaran Klaim</label>
-                            <input type="date" name="tanggal_pembayaran_klaim" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
-                            <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
-                        </div>
-
 
                         <!-- 
                         <div class="mb-3">
@@ -612,9 +611,41 @@
                             <input type="date" name="jw_akhir" class="form-control">
                         </div>
 
+                        
+
+                        <div class="mb-3">
+                            <label class="form-label">Keterangan</label>
+                            <input name="keterangan" class="form-control">
+                        </div>
+
                         <div class="mb-3">
                             <label class="form-label">Tanggal CL</label>
                             <input type="date" name="tanggal_cl" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor CL</label>
+                            <input name="nomor_cl" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
+                            <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_memo_permohonan_pembayaran_kaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pembayaran Klaim</label>
+                            <input type="date" name="tanggal_pembayaran_kaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
+                            <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
                         </div>
                     </div> -->
 
