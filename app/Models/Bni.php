@@ -24,6 +24,7 @@ class Bni extends Model
         'status',
         'keterangan',
         'tanggal_cl',
-        'nomor_cl'
+        'nomor_cl',
+        'nomor_memo_permohonan_pembayaran_klaim'
     ];
 }

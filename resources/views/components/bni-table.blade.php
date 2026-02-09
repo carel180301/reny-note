@@ -27,6 +27,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -49,6 +50,7 @@
                     <td class="text-center">{{ $bni->keterangan }}</td>
                     <td class="text-center">{{ $bni->tanggal_cl }}</td>
                     <td class="text-center">{{ $bni->nomor_cl }}</td>
+                    <td class="text-center">{{ $bni->nomor_memo_permohonan_pembayaran_klaim }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -151,12 +153,12 @@
                     <div><label class="form-label">Nomor CL</label><input name="nomor_cl" class="form-control" value="{{ $bni->nomor_cl }}"></div>
                 </div>
 
-
-                <!--
                 <div class="modal-body">
-                    <div><label class="form-label">Nomor CL</label><input name="nomor_cl" class="form-control" value="{{ $bni->nomor_cl }}"></div>
+                    <div><label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label><input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bni->nomor_memo_permohonan_pembayaran_klaim }}"></div>
                 </div>
 
+
+                <!--
                 <div class="modal-body">
                     <div><label class="form-label">Kekurangan Data</label><input name="kekurangan_data" class="form-control" value="{{ $bni->kekurangan_data }}"></div>
                 </div>
