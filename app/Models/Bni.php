@@ -20,7 +20,8 @@ class Bni extends Model
         'nilai_tuntutan',
         'nilai_net_klaim',
         'jw_awal',
-        'jw_akhir'
+        'jw_akhir',
+        'status'
         
         // 'status',
     ];

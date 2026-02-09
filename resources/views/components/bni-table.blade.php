@@ -23,15 +23,12 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
-
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
 
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
@@ -55,8 +52,7 @@
                     <td class="text-center">{{ $bni->nilai_net_klaim }}</td>
                     <td class="text-center">{{ $bni->jw_awal }}</td>
                     <td class="text-center">{{ $bni->jw_akhir }}</td>
-
-                    <!-- <td class="text-center">{{ $bni->status }}</td> -->
+                    <td class="text-center">{{ $bni->status }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -134,11 +130,6 @@
                     <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bni->jw_akhir }}"></div>
                 </div>
 
-                <!--
-                <div class="modal-body">
-                    <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bni->jw_akhir }}"></div>
-                </div>
-
                 <div class="modal-body">
                     <label class="form-label">Status</label>
                     <select name="status" class="form-control">
@@ -152,6 +143,7 @@
                     </select>
                 </div>
 
+                <!--
                 <div class="modal-body">
                     <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bni->tanggal_cl }}"></div>
                 </div>

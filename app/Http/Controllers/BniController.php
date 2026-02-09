@@ -30,9 +30,8 @@ class BniController extends Controller
             'nilai_tuntutan' => 'nullable|string|max:255',
             'nilai_net_klaim' => 'nullable|string|max:255',
             'jw_awal' => 'nullable|date',
-            'jw_akhir' => 'nullable|date'
-            
-            // 'status' => 'nullable|string|max:255',
+            'jw_akhir' => 'nullable|date',
+            'status' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
