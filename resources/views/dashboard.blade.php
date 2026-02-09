@@ -573,6 +573,11 @@
                             <input type="date" name="tanggal_pembayaran_klaim" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
+                            <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
+                        </div>
+
 
                         <!-- 
                         <div class="mb-3">
@@ -610,11 +615,6 @@
                         <div class="mb-3">
                             <label class="form-label">Tanggal CL</label>
                             <input type="date" name="tanggal_cl" class="form-control">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
-                            <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
                         </div>
                     </div> -->
 

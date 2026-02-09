@@ -33,16 +33,14 @@ class BjbController extends Controller
             'date_update' => 'nullable|date',
             'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
             'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|date',
-            'tanggal_pembayaran_klaim' => 'nullable|date'
-
+            'tanggal_pembayaran_klaim' => 'nullable|date',
+            'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|date'
 
             // 'nomor_dokumen_diterima' => 'nullable|string|max:255',
             
             // 'jw_awal' => 'nullable|date',
             // 'jw_akhir' => 'nullable|date',
             // 'tanggal_cl' => 'nullable|date',
-        
-            // 'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|date'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -80,12 +78,12 @@ class BjbController extends Controller
             'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
             'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
             'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
+            'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|string|max:255'
 
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'jw_awal' => 'nullable|string|max:255',
             // 'jw_akhir' => 'nullable|string|max:255',
             // 'tanggal_cl' => 'nullable|string|max:255',
-            // 'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -125,10 +123,10 @@ class BjbController extends Controller
         ->orWhere('nomor_memo_permohonan_pembayaran_klaim', 'like', "%$keyword%")
         ->orWhere('tanggal_memo_permohonan_pembayaran_klaim', 'like', "%$keyword%")
         ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")
+        ->orWhere('tanggal_pelunasan_di_bagian_keuangan', 'like', "%$keyword%")
 
         // ->orWhere('jw_akhir', 'like', "%$keyword%")
         // ->orWhere('tanggal_cl', 'like', "%$keyword%")
-        // ->orWhere('tanggal_pelunasan_di_bagian_keuangan', 'like', "%$keyword%")
         ->get();
 
         return view('components.bjb-table', [
