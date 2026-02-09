@@ -467,6 +467,11 @@
                         <label class="form-label">Tanggal Pembayaran Klaim</label>
                         <input type="date" name="tanggal_pembayaran_kaim" class="form-control">
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
+                        <input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control">
+                    </div>
                 </div>
 
                 <div class="modal-footer">
