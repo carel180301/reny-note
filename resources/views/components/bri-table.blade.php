@@ -108,7 +108,17 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $bri->status }}"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-select" required>
+                            <option value="" disabled>Pilih Status</option>
+                            @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                                <option value="{{ $s }}" {{ $bri->status == $s ? 'selected' : '' }}>
+                                    {{ ucfirst($s) }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
                 <div class="modal-body">
