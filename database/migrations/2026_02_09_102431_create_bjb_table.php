@@ -17,12 +17,11 @@ return new class extends Migration{
             $table->string('tuntutan')->nullable();
             $table->string('net_klaim')->nullable();
             $table->string('tanggal_dokumen_diterima')->nullable();
+            $table->string('status')->nullable();  
 
-            // $table->string('tanggal_dokumen_diterima')->nullable();
             // $table->string('nomor_dokumen_diterima')->nullable();
             // $table->string('jw_awal')->nullable();
-            // $table->string('jw_akhir')->nullable();
-            // $table->string('status')->nullable();       
+            // $table->string('jw_akhir')->nullable();     
             // $table->string('keterangan')->nullable();
             // $table->string('tanggal_cl')->nullable();
             // $table->string('nomor_cl')->nullable();

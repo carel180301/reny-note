@@ -16,6 +16,7 @@ class Bjb extends Model
         'nomor_rekening',
         'tuntutan',
         'net_klaim',
-        'tanggal_dokumen_diterima'
+        'tanggal_dokumen_diterima',
+        'status'
     ];
 }
