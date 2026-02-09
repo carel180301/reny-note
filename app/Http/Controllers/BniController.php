@@ -33,7 +33,8 @@ class BniController extends Controller
             'jw_akhir' => 'nullable|date',
             'status' => 'nullable|string|max:255',
             'keterangan' => 'nullable|string|max:255',
-            'tanggal_cl' => 'nullable|date'
+            'tanggal_cl' => 'nullable|date',
+            'nomor_cl' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -71,6 +72,7 @@ class BniController extends Controller
             'status' => 'nullable|string|max:255',
             'keterangan' => 'nullable|string|max:255',
             'tanggal_cl' => 'nullable|string|max:255',
+            'nomor_cl' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -110,6 +112,7 @@ class BniController extends Controller
         ->orWhere('status', 'like', "%$keyword%")
         ->orWhere('keterangan', 'like', "%$keyword%")
         ->orWhere('tanggal_cl', 'like', "%$keyword%")
+        ->orWhere('nomor_Cl', 'like', "%$keyword%")
         ->get();
 
         return view('components.bni-table', [

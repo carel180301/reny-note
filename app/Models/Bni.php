@@ -23,6 +23,7 @@ class Bni extends Model
         'jw_akhir',
         'status',
         'keterangan',
-        'tanggal_cl'
+        'tanggal_cl',
+        'nomor_cl'
     ];
 }
