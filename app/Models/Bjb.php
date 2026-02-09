@@ -18,6 +18,7 @@ class Bjb extends Model
         'net_klaim',
         'tanggal_dokumen_diterima',
         'status',
-        'keterangan'
+        'keterangan',
+        'nomor_cl'
     ];
 }

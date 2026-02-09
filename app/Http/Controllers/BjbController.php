@@ -29,6 +29,7 @@ class BjbController extends Controller
             'tanggal_dokumen_diterima' => 'nullable|date',
             'status' => 'nullable|string|max:255',
             'keterangan' => 'nullable|string|max:255',
+            'nomor_cl' => 'nullable|string|max:255'
 
             // 'nomor_dokumen_diterima' => 'nullable|string|max:255',
             
@@ -70,14 +71,13 @@ class BjbController extends Controller
             'net_klaim' => 'nullable|string|max:255',
             'tanggal_dokumen_diterima' => 'nullable|string|max:255',
             'status' => 'nullable|string|max:255',
-            'Keterangan' => 'nullable|string|max:255'
-            
+            'Keterangan' => 'nullable|string|max:255',
+            'nomor_cl' => 'nullable|string|max:255'
+
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'jw_awal' => 'nullable|string|max:255',
             // 'jw_akhir' => 'nullable|string|max:255',
-            // 'keterangan' => 'nullable|string|max:255',
             // 'tanggal_cl' => 'nullable|string|max:255',
-            // 'nomor_cl' => 'nullable|string|max:255',
             // 'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
             // 'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
             // 'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
@@ -116,11 +116,11 @@ class BjbController extends Controller
         ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
         ->orWhere('status', 'like', "%$keyword%")
         ->orWhere('keterangan', 'like', "%$keyword%")
+        ->orWhere('nomor_Cl', 'like', "%$keyword%")
 
         // ->orWhere('jw_awal', 'like', "%$keyword%")
         // ->orWhere('jw_akhir', 'like', "%$keyword%")
         // ->orWhere('tanggal_cl', 'like', "%$keyword%")
-        // ->orWhere('nomor_Cl', 'like', "%$keyword%")
         // ->orWhere('nomor_memo_permohonan_pembayaran_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_memo_permohonan_pembayaran_klaim', 'like', "%$keyword%")
         // ->orWhere('tanggal_pembayaran_klaim', 'like', "%$keyword%")

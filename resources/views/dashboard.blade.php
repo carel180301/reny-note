@@ -548,6 +548,12 @@
                             <input name="keterangan" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nomor CL</label>
+                            <input name="nomor_cl" class="form-control">
+                        </div>
+
+
                         <!-- 
                         <div class="mb-3">
                             <label class="form-label">Nomor Dokumen Diterima</label>
@@ -581,23 +587,12 @@
                             <input type="date" name="jw_akhir" class="form-control">
                         </div>
 
-                        
-
-                        <div class="mb-3">
-                            <label class="form-label">Keterangan</label>
-                            <input name="keterangan" class="form-control">
-                        </div>
-
                         <div class="mb-3">
                             <label class="form-label">Tanggal CL</label>
                             <input type="date" name="tanggal_cl" class="form-control">
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Nomor CL</label>
-                            <input name="nomor_cl" class="form-control">
-                        </div>
-
+            
                         <div class="mb-3">
                             <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
                             <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">

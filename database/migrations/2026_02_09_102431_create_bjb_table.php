@@ -19,16 +19,7 @@ return new class extends Migration{
             $table->string('tanggal_dokumen_diterima')->nullable();
             $table->string('status')->nullable();  
             $table->string('keterangan')->nullable();
-
-            // $table->string('nomor_dokumen_diterima')->nullable();
-            // $table->string('jw_awal')->nullable();
-            // $table->string('jw_akhir')->nullable();     
-            // $table->string('tanggal_cl')->nullable();
-            // $table->string('nomor_cl')->nullable();
-            // $table->string('nomor_memo_permohonan_pembayaran_klaim')->nullable();
-            // $table->string('tanggal_memo_permohonan_pembayaran_klaim')->nullable();
-            // $table->string('tanggal_pembayaran_klaim')->nullable();
-            // $table->string('tanggal_pelunasan_di_bagian_keuangan')->nullable();
+            $table->string('nomor_cl')->nullable();
             $table->timestamps();
         });
     }
