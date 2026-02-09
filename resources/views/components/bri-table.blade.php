@@ -37,11 +37,22 @@
                     <td class="text-center">{{ $bri->nama_debitur }}</td>
                     <td class="text-center">{{ $bri->nomor_rekening }}</td>
                     <td class="text-center">{{ $bri->nilai_tuntutan_klaim }}</td>
-                    <td class="text-center">{{ $bri->tanggal_klaim_diterima }}</td>
-                    <td class="text-center">{{ $bri->tanggal_klaim_masuk_portal }}</td>
+
+                    <!-- FIXED DATE FORMAT FOR TABLE -->
+                    <td class="text-center">
+                        {{ $bri->tanggal_klaim_diterima ? \Carbon\Carbon::parse($bri->tanggal_klaim_diterima)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bri->tanggal_klaim_masuk_portal ? \Carbon\Carbon::parse($bri->tanggal_klaim_masuk_portal)->format('d/m/Y') : '' }}
+                    </td>
+
                     <td class="text-center">{{ $bri->status }}</td>
                     <td class="text-center">{{ $bri->tambahan_data }}</td>
-                    <td class="text-center">{{ $bri->date_update }}</td>
+
+                    <td class="text-center">
+                        {{ $bri->date_update ? \Carbon\Carbon::parse($bri->date_update)->format('d/m/Y') : '' }}
+                    </td>
+
                     <td class="text-center">{{ $bri->nomor_box }}</td>
 
                     <td class="text-center">
@@ -66,6 +77,7 @@
     </div>
 </div>
 
+
 <!-- ================ Edit Modals ================= -->
 @foreach($bris as $bri)
 <div class="modal fade" id="editBriModal{{ $bri->id }}" tabindex="-1">
@@ -79,39 +91,27 @@
             <form method="POST" action="{{ route('bris.update', $bri) }}">
                 @csrf
                 @method('PUT')
+
                 <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Unit</label><input name="unit" class="form-control" value="{{ $bri->unit }}"></div>
-                </div>
-
-                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Cabang Bank</label><input name="cabang_bank" class="form-control" value="{{ $bri->cabang_bank }}"></div>
-                </div>
-
-                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $bri->nama_debitur }}"></div>
-                </div>
-
-                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bri->nomor_rekening }}"></div>
-                </div>
-
-                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nilai Tuntutan Klaim</label><input name="nilai_tuntutan_klaim" class="form-control" value="{{ $bri->nilai_tuntutan_klaim }}"></div>
-                </div>
 
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Klaim Diterima</label><input type="date" name="tanggal_klaim_diterima" class="form-control" value="{{ $bri->tanggal_klaim_diterima }}"></div>
-                </div>
+                    <!-- CORRECT HTML DATE FORMAT -->
+                    <div class="mb-3"><label class="form-label">Tanggal Klaim Diterima</label>
+                        <input type="date" name="tanggal_klaim_diterima" class="form-control" value="{{ $bri->tanggal_klaim_diterima }}">
+                    </div>
 
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Klaim Masuk Portal</label><input type="date" name="tanggal_klaim_masuk_portal" class="form-control" value="{{ $bri->tanggal_klaim_masuk_portal }}"></div>
-                </div>
+                    <div class="mb-3"><label class="form-label">Tanggal Klaim Masuk Portal</label>
+                        <input type="date" name="tanggal_klaim_masuk_portal" class="form-control" value="{{ $bri->tanggal_klaim_masuk_portal }}">
+                    </div>
 
-                <div class="modal-body">
+                    <!-- STATUS DROPDOWN FIX -->
                     <div class="mb-3">
                         <label class="form-label">Status</label>
                         <select name="status" class="form-select" required>
-                            <option value="" disabled>Pilih Status</option>
                             @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
                                 <option value="{{ $s }}" {{ $bri->status == $s ? 'selected' : '' }}>
                                     {{ ucfirst($s) }}
@@ -119,17 +119,13 @@
                             @endforeach
                         </select>
                     </div>
-                </div>
 
-                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Tambahan Data</label><input name="tambahan_data" class="form-control" value="{{ $bri->tambahan_data }}"></div>
-                </div>
 
-                <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Date Update</label><input type="date" name="date_update" class="form-control" value="{{ $bri->date_update }}"></div>
-                </div>
+                    <div class="mb-3"><label class="form-label">Date Update</label>
+                        <input type="date" name="date_update" class="form-control" value="{{ $bri->date_update }}">
+                    </div>
 
-                <div class="modal-body">
                     <div class="mb-3"><label class="form-label">Nomor Box</label><input name="nomor_box" class="form-control" value="{{ $bri->nomor_box }}"></div>
                 </div>
 
