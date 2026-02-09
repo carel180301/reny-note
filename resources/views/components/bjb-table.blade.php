@@ -16,11 +16,12 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tuntutan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">NET Klaim</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
 
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
+                    <!-- 
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
@@ -42,6 +43,9 @@
                     <td class="text-center">{{ $bjb->cabang_bank }}</td>
                     <td class="text-center">{{ $bjb->nama_debitur }}</td>
                     <td class="text-center">{{ $bjb->nomor_rekening }}</td>
+                    <td class="text-center">{{ $bjb->tuntutan }}</td>
+                    <td class="text-center">{{ $bjb->net_klaim }}</td>
+                    <td class="text-center">{{ $bjb->tanggal_dokumen_diterima }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -89,6 +93,18 @@
 
                 <div class="modal-body">
                     <div><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $bjb->nomor_rekening }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tuntutan</label><input name="tuntutan" class="form-control" value="{{ $bjb->tuntutan }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">NET Klaim</label><input name="net_klaim" class="form-control" value="{{ $bjb->net_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bjb->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

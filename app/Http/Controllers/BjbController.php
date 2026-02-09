@@ -23,13 +23,13 @@ class BjbController extends Controller
         $data = $request->validate([
             'cabang_bank' => 'nullable|string|max:255',
             'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255'
+            'nomor_rekening' => 'nullable|string|max:255',
+            'tuntutan' => 'nullable|string|max:255',
+            'net_klaim' => 'nullable|string|max:255',
+            'tanggal_dokumen_diterima' => 'nullable|date'
 
-            // 'tanggal_dokumen_diterima' => 'nullable|date',
             // 'nomor_dokumen_diterima' => 'nullable|string|max:255',
             
-            // 'nilai_tuntutan' => 'nullable|string|max:255',
-            // 'nilai_net_klaim' => 'nullable|string|max:255',
             // 'jw_awal' => 'nullable|date',
             // 'jw_akhir' => 'nullable|date',
             // 'status' => 'nullable|string|max:255',
@@ -37,7 +37,6 @@ class BjbController extends Controller
             // 'tanggal_cl' => 'nullable|date',
             // 'nomor_cl' => 'nullable|string|max:255',
             // 'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            // 'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|date',
             // 'tanggal_pembayaran_klaim' => 'nullable|date',
             // 'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|date'
         ]);
@@ -69,7 +68,6 @@ class BjbController extends Controller
             // 'nomor_dokumen_diterima' => 'nullable|string|max:255',
             // 'cabang_bank' => 'nullable|string|max:255',
             // 'nama_debitur' => 'nullable|string|max:255',
-            // 'nomor_rekening' => 'nullable|string|max:255',
             // 'nilai_tuntutan' => 'nullable|string|max:255',
             // 'nilai_net_klaim' => 'nullable|string|max:255',
             // 'jw_awal' => 'nullable|string|max:255',
@@ -109,13 +107,12 @@ class BjbController extends Controller
         $keyword = $request->query('q', '');
 
         $data = Bjb::where('cabang_bank', 'like', "%$keyword%")
-        // ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
-        // ->orWhere('nomor_dokumen_diterima', 'like', "%$keyword%")
-        // ->orWhere('cabang_bank', 'like', "%$keyword%")
-        // ->orWhere('nama_debitur', 'like', "%$keyword%")
-        // ->orWhere('nomor_rekening', 'like', "%$keyword%")
-        // ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
-        // ->orWhere('nilai_net_klaim', 'like', "%$keyword%")
+        ->orWhere('nama_debitur', 'like', "%$keyword%")
+        ->orWhere('nomor_rekening', 'like', "%$keyword%")
+        ->orWhere('tuntutan', 'like', "%$keyword%")
+        ->orWhere('net_klaim', 'like', "%$keyword%")
+        ->orWhere('tanggal_dokumen_diterima', 'like', "%$keyword%")
+
         // ->orWhere('jw_awal', 'like', "%$keyword%")
         // ->orWhere('jw_akhir', 'like', "%$keyword%")
         // ->orWhere('status', 'like', "%$keyword%")

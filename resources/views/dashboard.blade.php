@@ -518,11 +518,22 @@
                             <input name="nomor_rekening" class="form-control">
                         </div>
 
-                        <!-- <div class="mb-3">
+                        <div class="mb-3">
+                            <label class="form-label">Tuntutan</label>
+                            <input name="tuntutan" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">NET Klaim</label>
+                            <input name="net_klaim" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label">Tanggal Dokumen Diterima</label>
                             <input type="date" name="tanggal_dokumen_diterima" class="form-control">
                         </div>
 
+                        <!-- 
                         <div class="mb-3">
                             <label class="form-label">Nomor Dokumen Diterima</label>
                             <input name="nomor_dokumen_diterima" class="form-control">
@@ -534,10 +545,6 @@
                             <input name="nama_debitur" class="form-control">
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Nomor Rekening</label>
-                            <input name="nomor_rekening" class="form-control">
-                        </div>
 
                         <div class="mb-3">
                             <label class="form-label">Nilai Tuntutan</label>

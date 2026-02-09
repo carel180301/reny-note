@@ -13,21 +13,9 @@ class Bjb extends Model
     protected $fillable = [
         'cabang_bank',
         'nama_debitur',
-        'nomor_rekening'
-
-        // 'tanggal_dokumen_diterima',
-        // 'nomor_dokumen_diterima',
-        // 'nilai_tuntutan',
-        // 'nilai_net_klaim',
-        // 'jw_awal',
-        // 'jw_akhir',
-        // 'status',
-        // 'keterangan',
-        // 'tanggal_cl',
-        // 'nomor_cl',
-        // 'nomor_memo_permohonan_pembayaran_klaim',
-        // 'tanggal_memo_permohonan_pembayaran_klaim',
-        // 'tanggal_pembayaran_klaim',
-        // 'tanggal_pelunasan_di_bagian_keuangan'
+        'nomor_rekening',
+        'tuntutan',
+        'net_klaim',
+        'tanggal_dokumen_diterima'
     ];
 }
