@@ -21,6 +21,7 @@ class Bjb extends Model
         'keterangan',
         'nomor_cl',
         'date_update',
-        'nomor_memo_permohonan_pembayaran_klaim'
+        'nomor_memo_permohonan_pembayaran_klaim',
+        'tanggal_memo_permohonan_pembayaran_klaim'
     ];
 }
