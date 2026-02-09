@@ -21,8 +21,7 @@ class Bni extends Model
         'nilai_net_klaim',
         'jw_awal',
         'jw_akhir',
-        'status'
-        
-        // 'status',
+        'status',
+        'keterangan'
     ];
 }

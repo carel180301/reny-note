@@ -24,16 +24,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
-
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Rekening</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai NET Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan Usaha</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kekurangan Data</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Box</th> -->
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -53,6 +44,7 @@
                     <td class="text-center">{{ $bni->jw_awal }}</td>
                     <td class="text-center">{{ $bni->jw_akhir }}</td>
                     <td class="text-center">{{ $bni->status }}</td>
+                    <td class="text-center">{{ $bni->keterangan }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -143,13 +135,13 @@
                     </select>
                 </div>
 
+                <div class="modal-body">
+                    <div><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $bni->keterangan }}"></div>
+                </div>
+
                 <!--
                 <div class="modal-body">
                     <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bni->tanggal_cl }}"></div>
-                </div>
-
-                <div class="modal-body">
-                    <div><label class="form-label">Keterangan Usaha</label><input name="keterangan_usaha" class="form-control" value="{{ $bni->keterangan_usaha }}"></div>
                 </div>
 
                 <div class="modal-body">

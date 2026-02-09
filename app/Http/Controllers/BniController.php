@@ -31,7 +31,8 @@ class BniController extends Controller
             'nilai_net_klaim' => 'nullable|string|max:255',
             'jw_awal' => 'nullable|date',
             'jw_akhir' => 'nullable|date',
-            'status' => 'nullable|string|max:255'
+            'status' => 'nullable|string|max:255',
+            'keterangan' => 'nullable|string|max:255'
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -64,9 +65,10 @@ class BniController extends Controller
             'nomor_rekening' => 'nullable|string|max:255',
             'nilai_tuntutan' => 'nullable|string|max:255',
             'nilai_net_klaim' => 'nullable|string|max:255',
-            'jw_awal' => 'nullable|string|max:255'
-
-            // 'status' => 'nullable|string|max:255',
+            'jw_awal' => 'nullable|string|max:255',
+            'jw_akhir' => 'nullable|string|max:255',
+            'status' => 'nullable|string|max:255',
+            'keterangan' => 'nullable|string|max:255',
         ]);
 
         // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
@@ -101,10 +103,10 @@ class BniController extends Controller
         ->orWhere('nomor_rekening', 'like', "%$keyword%")
         ->orWhere('nilai_tuntutan', 'like', "%$keyword%")
         ->orWhere('nilai_net_klaim', 'like', "%$keyword%")
-         ->orWhere('jw_awal', 'like', "%$keyword%")
-
-        // ->orWhere('status', 'like', "%$keyword%")
-
+        ->orWhere('jw_awal', 'like', "%$keyword%")
+        ->orWhere('jw_akhir', 'like', "%$keyword%")
+        ->orWhere('status', 'like', "%$keyword%")
+        ->orWhere('keterangan', 'like', "%$keyword%")
         ->get();
 
         return view('components.bni-table', [
