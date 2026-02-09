@@ -25,6 +25,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -45,6 +46,7 @@
                     <td class="text-center">{{ $bni->jw_akhir }}</td>
                     <td class="text-center">{{ $bni->status }}</td>
                     <td class="text-center">{{ $bni->keterangan }}</td>
+                    <td class="text-center">{{ $bni->tanggal_cl }}</td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -139,11 +141,12 @@
                     <div><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $bni->keterangan }}"></div>
                 </div>
 
-                <!--
-                <div class="modal-body">
+                 <div class="modal-body">
                     <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bni->tanggal_cl }}"></div>
                 </div>
 
+
+                <!--
                 <div class="modal-body">
                     <div><label class="form-label">Nomor CL</label><input name="nomor_cl" class="form-control" value="{{ $bni->nomor_cl }}"></div>
                 </div>

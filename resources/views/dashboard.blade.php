@@ -443,6 +443,11 @@
                         <input name="keterangan" class="form-control">
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal CL</label>
+                        <input type="date" name="tanggal_cl" class="form-control">
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">

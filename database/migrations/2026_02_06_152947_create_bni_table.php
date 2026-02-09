@@ -23,6 +23,7 @@ return new class extends Migration{
             $table->string('jw_akhir')->nullable();
             $table->string('status')->nullable();       
             $table->string('keterangan')->nullable();
+            $table->string('tanggal_cl')->nullable();
             $table->timestamps();
         });
     }
