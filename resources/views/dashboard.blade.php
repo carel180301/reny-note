@@ -68,11 +68,15 @@
                         @endforeach
                     </select>
 
-                    <button class="btn btn-sm btn-primary">Search</button>
+                    <div class="d-flex gap-2 flex-nowrap">
+                        <button class="btn btn-sm btn-primary">Search</button>
 
-                    <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-danger">
-                        Reset
-                    </a>
+                        <a href="{{ route('dashboard', ['table' => 'bri']) }}"
+                        class="btn btn-sm btn-danger">
+                            Reset
+                        </a>
+                    </div>
+
                 </form>
             </div>
         @endif
