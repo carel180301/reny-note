@@ -4,8 +4,6 @@ use App\Http\Controllers\EmailsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClaimController;
-// use App\Models\Akm;
-// use App\Models\Asum;
 use App\Models\Bri;
 use App\Models\Mandiri;
 use App\Models\Bankjatim;
@@ -13,8 +11,6 @@ use App\Models\Btn;
 use App\Models\Bukopin;
 use App\Models\Bni;
 use App\Models\Bjb;
-// use App\Http\Controllers\AkmController;
-// use App\Http\Controllers\AsumController;
 use App\Http\Controllers\BriController;
 use App\Http\Controllers\MandiriController;
 use App\Http\Controllers\BankjatimController;
@@ -29,10 +25,16 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function (Request $request) {
+
+    /**
+     * ✅ FIX: If no table parameter, redirect to default BRI table
+     */
+    if (!$request->has('table')) {
+        return redirect()->route('dashboard', ['table' => 'bri']);
+    }
+
     $table = $request->get('table', 'bri');
 
-    // $akms = collect();
-    // $asums = collect();
     $bris = collect();
     $mandiris = collect();
     $bankjatims = collect();
@@ -40,39 +42,6 @@ Route::get('/dashboard', function (Request $request) {
     $bukopins = collect();
     $bnis = collect();
     $bjbs = collect();
-
-
-//    if ($table === 'akm') {
-//     $query = Akm::query()->orderBy('created_at', 'asc');
-
-//         if ($request->filled('status')) {
-//             $query->where('status', $request->status);
-//         }
-
-//         if ($request->filled('status_sistem')) {
-//             $query->where('status_sistem', $request->status_sistem);
-//         }
-
-//         $akms = $query->get();
-//     }
-
-    // if ($table === 'asum') {
-    //     $query = Asum::query()->orderBy('created_at', 'asc');
-
-    //     if ($request->filled('status')) {
-    //         $query->where('status', $request->status);
-    //     }
-
-    //     if ($request->filled('status_sistem')) {
-    //         $query->where('status_sistem', $request->status_sistem);
-    //     }
-
-    //     if ($request->filled('status_pembayaran')) {
-    //         $query->where('status_pembayaran', $request->status_pembayaran);
-    //     }
-
-    //     $asums = $query->get();
-    // }
 
     if ($table === 'bri') {
         $query = Bri::query()->orderBy('created_at', 'asc');
@@ -200,102 +169,59 @@ Route::get('/dashboard', function (Request $request) {
         $bjbs = $query->get();
     }
 
-    return view('dashboard', compact('bris', 'mandiris', 'bankjatims','btns', 'bukopins', 'bnis' , 'bjbs', 'table'));
+    return view('dashboard', compact(
+        'bris',
+        'mandiris',
+        'bankjatims',
+        'btns',
+        'bukopins',
+        'bnis',
+        'bjbs',
+        'table'
+    ));
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
+/**
+ * ===================== AUTH ROUTES =====================
+ */
 Route::middleware('auth')->group(function () {
-    Route::get('/bris', [BriController::class, 'index'])->name('bris.index');
-    Route::get('/bris/create', [BriController::class, 'create'])->name('bris.create');
-    Route::post('/bris', [BriController::class, 'store'])->name('bris.store');
-    Route::get('/bris/{bris}/edit', [BriController::class, 'edit'])->name('bris.edit');
-    Route::put('/bris/{bris}/update', [BriController::class, 'update'])->name('bris.update');
-    Route::delete('/bris/{bris}/destroy', [BriController::class, 'destroy'])->name('bris.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/bris/{bris}/send-email', [EmailsController::class, 'sendBriEmail'])->name('bris.sendEmail');
+
+    Route::resource('bris', BriController::class);
     Route::get('/bris/search', [BriController::class, 'search'])->name('bris.search');
     Route::post('/bris/upload', [BriController::class, 'upload'])->name('bris.upload');
-    Route::resource('bris', BriController::class);
-    Route::post('/bris/upload', [BriController::class, 'upload'])->name('bris.upload');
+    Route::get('/bris/{bris}/send-email', [EmailsController::class, 'sendBriEmail'])->name('bris.sendEmail');
 
-    Route::get('/mandiris', [MandiriController::class, 'index'])->name('mandiris.index');
-    Route::get('/mandiris/create', [MandiriController::class, 'create'])->name('mandiris.create');
-    Route::post('/mandiris', [MandiriController::class, 'store'])->name('mandiris.store');
-    Route::get('/mandiris/{mandiris}/edit', [MandiriController::class, 'edit'])->name('mandiris.edit');
-    Route::put('/mandiris/{mandiris}/update', [MandiriController::class, 'update'])->name('mandiris.update');
-    Route::delete('/mandiris/{mandiris}/destroy', [MandiriController::class, 'destroy'])->name('mandiris.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/mandiris/{mandiris}/send-email', [EmailsController::class, 'sendMandiriEmail'])->name('mandiris.sendEmail');
+    Route::resource('mandiris', MandiriController::class);
     Route::get('/mandiris/search', [MandiriController::class, 'search'])->name('mandiris.search');
     Route::post('/mandiris/upload', [MandiriController::class, 'upload'])->name('mandiris.upload');
-    Route::resource('mandiris', MandiriController::class);
-    Route::post('/mandiris/upload', [MandiriController::class, 'upload'])->name('mandiris.upload');
+    Route::get('/mandiris/{mandiris}/send-email', [EmailsController::class, 'sendMandiriEmail'])->name('mandiris.sendEmail');
 
-    Route::get('/bankjatims', [BankjatimController::class, 'index'])->name('bankjatims.index');
-    Route::get('/bankjatims/create', [BankjatimController::class, 'create'])->name('bankjatims.create');
-    Route::post('/bankjatims', [BankjatimController::class, 'store'])->name('bankjatims.store');
-    Route::get('/bankjatims/{bankjatims}/edit', [BankjatimController::class, 'edit'])->name('bankjatims.edit');
-    Route::put('/bankjatims/{bankjatims}/update', [BankjatimController::class, 'update'])->name('bankjatims.update');
-    Route::delete('/bankjatims/{bankjatims}/destroy', [BankjatimController::class, 'destroy'])->name('bankjatims.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/bankjatims/{bankjatims}/send-email', [EmailsController::class, 'sendBankJatimEmail'])->name('bankjatims.sendEmail');
+    Route::resource('bankjatims', BankjatimController::class);
     Route::get('/bankjatims/search', [BankjatimController::class, 'search'])->name('bankjatims.search');
     Route::post('/bankjatims/upload', [BankjatimController::class, 'upload'])->name('bankjatims.upload');
-    Route::resource('bankjatims', BankjatimController::class);
-    Route::post('/bankjatims/upload', [BankjatimController::class, 'upload'])->name('bankjatims.upload');
+    Route::get('/bankjatims/{bankjatims}/send-email', [EmailsController::class, 'sendBankJatimEmail'])->name('bankjatims.sendEmail');
 
-    Route::get('/btns', [BtnController::class, 'index'])->name('btns.index');
-    Route::get('/btns/create', [BtnController::class, 'create'])->name('btns.create');
-    Route::post('/btns', [BtnController::class, 'store'])->name('btns.store');
-    Route::get('/btns/{btns}/edit', [BtnController::class, 'edit'])->name('btns.edit');
-    Route::put('/btns/{btns}/update', [BtnController::class, 'update'])->name('btns.update');
-    Route::delete('/btns/{btns}/destroy', [BtnController::class, 'destroy'])->name('btns.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/btns/{btns}/send-email', [EmailsController::class, 'sendBtnEmail'])->name('btns.sendEmail');
+    Route::resource('btns', BtnController::class);
     Route::get('/btns/search', [BtnController::class, 'search'])->name('btns.search');
     Route::post('/btns/upload', [BtnController::class, 'upload'])->name('btns.upload');
-    Route::resource('btns', BtnController::class);
-    Route::post('/btns/upload', [BtnController::class, 'upload'])->name('btns.upload');
+    Route::get('/btns/{btns}/send-email', [EmailsController::class, 'sendBtnEmail'])->name('btns.sendEmail');
 
-    Route::get('/bukopins', [BukopinController::class, 'index'])->name('bukopins.index');
-    Route::get('/bukopins/create', [BukopinController::class, 'create'])->name('bukopins.create');
-    Route::post('/bukopins', [BukopinController::class, 'store'])->name('bukopins.store');
-    Route::get('/bukopins/{bukopins}/edit', [BukopinController::class, 'edit'])->name('bukopins.edit');
-    Route::put('/bukopins/{bukopins}/update', [BukopinController::class, 'update'])->name('bukopins.update');
-    Route::delete('/bukopins/{bukopins}/destroy', [BukopinController::class, 'destroy'])->name('bukopins.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/bukopins/{bukopins}/send-email', [EmailsController::class, 'sendBukopinnEmail'])->name('bukopins.sendEmail');
+    Route::resource('bukopins', BukopinController::class);
     Route::get('/bukopins/search', [BukopinController::class, 'search'])->name('bukopins.search');
     Route::post('/bukopins/upload', [BukopinController::class, 'upload'])->name('bukopins.upload');
-    Route::resource('bukopins', BukopinController::class);
-    Route::post('/bukopins/upload', [BukopinController::class, 'upload'])->name('bukopins.upload');
+    Route::get('/bukopins/{bukopins}/send-email', [EmailsController::class, 'sendBukopinnEmail'])->name('bukopins.sendEmail');
 
-    Route::get('/bnis', [BniController::class, 'index'])->name('bnis.index');
-    Route::get('/bnis/create', [BniController::class, 'create'])->name('bnis.create');
-    Route::post('/bnis', [BniController::class, 'store'])->name('bnis.store');
-    Route::get('/bnis/{bnis}/edit', [BniController::class, 'edit'])->name('bnis.edit');
-    Route::put('/bnis/{bnis}/update', [BniController::class, 'update'])->name('bnis.update');
-    Route::delete('/bnis/{bnis}/destroy', [BniController::class, 'destroy'])->name('bnis.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/bnis/{bnis}/send-email', [EmailsController::class, 'sendBniEmail'])->name('bnis.sendEmail');
+    Route::resource('bnis', BniController::class);
     Route::get('/bnis/search', [BniController::class, 'search'])->name('bnis.search');
     Route::post('/bnis/upload', [BniController::class, 'upload'])->name('bnis.upload');
-    Route::resource('bnis', BniController::class);
-    Route::post('/bnis/upload', [BniController::class, 'upload'])->name('bnis.upload');
+    Route::get('/bnis/{bnis}/send-email', [EmailsController::class, 'sendBniEmail'])->name('bnis.sendEmail');
 
-    Route::get('/bjbs', [BjbController::class, 'index'])->name('bjbs.index');
-    Route::get('/bjbs/create', [BjbController::class, 'create'])->name('bjbs.create');
-    Route::post('/bjbs', [BjbController::class, 'store'])->name('bjbs.store');
-    Route::get('/bjbs/{bjbs}/edit', [BjbController::class, 'edit'])->name('bjbs.edit');
-    Route::put('/bjbs/{bjbs}/update', [BjbController::class, 'update'])->name('bjbs.update');
-    Route::delete('/bjbs/{bjbs}/destroy', [BjbController::class, 'destroy'])->name('bjbs.destroy');
-    Route::get('send-mail', [EmailsController::class, 'reminderEmail']);
-    Route::get('/bjbs/{bjbs}/send-email', [EmailsController::class, 'sendBjbEmail'])->name('bjbs.sendEmail');
+    Route::resource('bjbs', BjbController::class);
     Route::get('/bjbs/search', [BjbController::class, 'search'])->name('bjbs.search');
     Route::post('/bjbs/upload', [BjbController::class, 'upload'])->name('bjbs.upload');
-    Route::resource('bjbs', BjbController::class);
-    Route::post('/bjbs/upload', [BjbController::class, 'upload'])->name('bjbs.upload');
+    Route::get('/bjbs/{bjbs}/send-email', [EmailsController::class, 'sendBjbEmail'])->name('bjbs.sendEmail');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
