@@ -40,6 +40,7 @@
                             '30' => '1 Bulan',
                             '90' => '3 Bulan',
                             '180' => '6 Bulan',
+                            '365' => '1 tahun'
                         ];
                     @endphp
 
@@ -106,6 +107,7 @@
                             '30' => '1 Bulan',
                             '90' => '3 Bulan',
                             '180' => '6 Bulan',
+                            '365' => '1 tahun'
                         ];
                     @endphp
 
@@ -172,6 +174,7 @@
                             '30' => '1 Bulan',
                             '90' => '3 Bulan',
                             '180' => '6 Bulan',
+                            '365' => '1 tahun'
                         ];
                     @endphp
 
@@ -189,6 +192,91 @@
                         @foreach($intervals as $val => $label)
                             <option value="{{ $val }}" {{ request('disetujui') == $val ? 'selected' : '' }}>
                                 Tanggal Disetujui: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    <button class="btn btn-sm btn-primary">Search</button>
+
+                    <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-danger">
+                        Reset
+                    </a>
+                </form>
+            </div>
+        @endif
+
+        @if(request('table') === 'btn')
+            <!-- <div class="d-flex flex-wrap gap-2 mb-1 mt-5"> -->
+            <div class="d-flex justify-content-center mb-0 mt-5">
+                <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap gap-2">
+
+                    <input type="hidden" name="table" value="btn">
+
+                    {{-- STATUS --}}
+                    <select name="status" class="form-select form-select-sm" style="width:160px;">
+                        <option value="">Semua Status</option>
+                        @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                            <option value="{{ $s }}" {{ request('status') == $s ? 'selected' : '' }}>
+                                {{ ucfirst($s) }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    {{-- DATE INTERVAL OPTIONS --}}
+                    @php
+                        $intervals = [
+                            '' => 'Semua Waktu',
+                            '7' => '7 Hari',
+                            '14' => '14 Hari',
+                            '21' => '21 Hari',
+                            '30' => '1 Bulan',
+                            '90' => '3 Bulan',
+                            '180' => '6 Bulan',
+                            '365' => '1 tahun'
+                        ];
+                    @endphp
+
+                    {{-- Tanggal Dokumen Diterima --}}
+                    <select name="dokumen_diterima" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('dokumen_diterima') == $val ? 'selected' : '' }}>
+                            Dokumen Diterima: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    {{-- Date Update --}}
+                    <select name="update" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('update') == $val ? 'selected' : '' }}>
+                                Date Update: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    {{-- Tanggal Memo Permohonan Pembayaran Klaim --}}
+                    <select name="tanggal_memo" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('tanggal_memo') == $val ? 'selected' : '' }}>
+                                Tanggal Memo Permohonan Pembayaran Klaim: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                     {{-- Tanggal Pembayaran Klaim --}}
+                    <select name="tanggal_pembayaran_klaim" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('tanggal_pembayaran_klaim') == $val ? 'selected' : '' }}>
+                                Tanggal Pembayaran Klaim: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    {{-- Tanggal Pelunasan Di Bagian Keuangan --}}
+                    <select name="tanggal_pelunasan" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('tanggal_pelunasan') == $val ? 'selected' : '' }}>
+                                Tanggal Pelunasan Di Bagian Keuangan: {{ $label }}
                             </option>
                         @endforeach
                     </select>
