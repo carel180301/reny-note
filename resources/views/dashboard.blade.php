@@ -218,32 +218,43 @@
             <form method="POST" action="{{ route('mandiris.store') }}">
                 @csrf
                 <div class="modal-body">
-                    @foreach ([
-                        'uker' => 'Uker',
-                        'nama_debitur' => 'Nama Debitur',
-                        'nomor_rekening' => 'Nomor Rekening',
-                        'tuntutan' => 'Tuntutan',
-                        'net_klaim' => 'NET Klaim',
-                        'keterangan' => 'Keterangan',
-                        'kekurangan_data' => 'Kekurangan Data',
-                        'nomor_box' => 'Nomor Box'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
+                    {{-- Uker --}}
+                    <div class="mb-3">
+                        <label class="form-label">Uker</label>
+                        <input name="uker" class="form-control">
+                    </div>
 
+                    {{-- Nama Debitur --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nama Debitur</label>
+                        <input name="nama_debitur" class="form-control">
+                    </div>
+
+                    {{-- Nomor Rekening --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input name="nomor_rekening" class="form-control">
+                    </div>
+
+                    {{-- Tuntutan --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tuntutan</label>
+                        <input name="tuntutan" class="form-control">
+                    </div>
+
+                    {{-- NET Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">NET Klaim</label>
+                        <input name="net_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Klaim Diajukan --}}
                     <div class="mb-3">
                         <label class="form-label">Tanggal Klaim Diajukan</label>
                         <input type="date" name="tanggal_klaim_diajukan" class="form-control">
                     </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Tanggal Update</label>
-                        <input type="date" name="tanggal_update" class="form-control">
-                    </div>
-
+                    {{-- Status --}}
                     <div class="mb-3">
                         <label class="form-label">Status</label>
                         <select name="status" class="form-select" required>
@@ -253,6 +264,31 @@
                             @endforeach
                         </select>
                     </div>
+
+                    {{-- Keterangan --}}
+                    <div class="mb-3">
+                        <label class="form-label">Keterangan</label>
+                        <input name="keterangan" class="form-control">
+                    </div>
+
+                    {{-- Kekurangan Data --}}
+                    <div class="mb-3">
+                        <label class="form-label">Kekurangan Data</label>
+                        <input name="kekurangan_data" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Update --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Update</label>
+                        <input type="date" name="tanggal_update" class="form-control">
+                    </div>
+
+                    {{-- Nomor Box --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Box</label>
+                        <input name="nomor_box" class="form-control">
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">
