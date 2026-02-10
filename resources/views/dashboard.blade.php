@@ -13,14 +13,14 @@
 
         {{-- ================= STATUS FILTER ================= --}}
         @if(request('table') === 'bri')
-        <div class="d-flex justify-content-start mb-1 mt-5">
-            <form method="GET" action="{{ route('dashboard') }}" class="d-flex gap-2">
+        <div class="d-flex flex-wrap gap-2 mb-1 mt-5">
 
-                {{-- keep current table --}}
+            <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap gap-2">
+
                 <input type="hidden" name="table" value="bri">
 
-                {{-- status dropdown --}}
-                <select name="status" class="form-select form-select-sm" style="width:180px;">
+                {{-- STATUS --}}
+                <select name="status" class="form-select form-select-sm" style="width:160px;">
                     <option value="">Semua Status</option>
                     @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
                         <option value="{{ $s }}" {{ request('status') == $s ? 'selected' : '' }}>
@@ -29,17 +29,54 @@
                     @endforeach
                 </select>
 
-                {{-- submit --}}
+                {{-- DATE INTERVAL OPTIONS --}}
+                @php
+                    $intervals = [
+                        '' => 'Semua Waktu',
+                        '7' => '7 Hari',
+                        '14' => '14 Hari',
+                        '21' => '21 Hari',
+                        '30' => '1 Bulan',
+                        '90' => '3 Bulan',
+                        '180' => '6 Bulan',
+                    ];
+                @endphp
+
+                {{-- Tanggal Klaim Diterima --}}
+                <select name="diterima" class="form-select form-select-sm" style="width:150px;">
+                    @foreach($intervals as $val => $label)
+                        <option value="{{ $val }}" {{ request('diterima') == $val ? 'selected' : '' }}>
+                            Diterima: {{ $label }}
+                        </option>
+                    @endforeach
+                </select>
+
+                {{-- Tanggal Klaim Masuk Portal --}}
+                <select name="portal" class="form-select form-select-sm" style="width:150px;">
+                    @foreach($intervals as $val => $label)
+                        <option value="{{ $val }}" {{ request('portal') == $val ? 'selected' : '' }}>
+                            Portal: {{ $label }}
+                        </option>
+                    @endforeach
+                </select>
+
+                {{-- Date Update --}}
+                <select name="update" class="form-select form-select-sm" style="width:150px;">
+                    @foreach($intervals as $val => $label)
+                        <option value="{{ $val }}" {{ request('update') == $val ? 'selected' : '' }}>
+                            Date Update: {{ $label }}
+                        </option>
+                    @endforeach
+                </select>
+
                 <button class="btn btn-sm btn-primary">Search</button>
 
-                {{-- reset --}}
                 <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-danger">
                     Reset
                 </a>
             </form>
         </div>
         @endif
-
 
         <div class="bg-white shadow-sm rounded px-1 mt-4">
 
