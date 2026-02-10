@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bjb->tanggal_dokumen_diterima }}"></div>
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input type="date" name="tanggal_dokumen_diterima" class="form-control" value="{{ $bjb->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -141,7 +141,23 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Date Update</label><input name="date_update" class="form-control" value="{{ $bjb->date_update }}"></div>
+                    <div><label class="form-label">Date Update</label><input type="date" name="date_update" class="form-control" value="{{ $bjb->date_update }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label><input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bjb->nomor_memo_permohonan_pembayaran_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input type="date" name="tanggal_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bjb->tanggal_memo_permohonan_pembayaran_klaim }}"></div>
+                </div>
+
+                <div class="modal-body">
+                    <div><label class="form-label">Tanggal Pembayaran Klaim</label><input type="date" name="tanggal_pembayaran_klaim" class="form-control" value="{{ $bjb->tanggal_pembayaran_klaim }}"></div>
+                </div>
+
+                 <div class="modal-body">
+                    <div><label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label><input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control" value="{{ $bjb->tanggal_pelunasan_di_bagian_keuangan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">
