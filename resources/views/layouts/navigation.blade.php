@@ -55,14 +55,14 @@
                         <i class="bi bi-upload fs-4"></i>
                     </button> -->
 
-                    <form class="d-none d-sm-flex" onsubmit="return false;">
+                    <form class="d-none d-md-flex" onsubmit="return false;">
                         <div class="input-group">
                             <input type="search" id="searchInput" class="form-control" placeholder="Search">
                         </div>
                     </form>
                 @endif
 
-                <div class="relative hidden sm:block" x-data="{ dropdownOpen: false }">
+                <div class="relative hidden md:block" x-data="{ dropdownOpen: false }">
                     @php
                         $name = Auth::user()->name ?? '';
                         $initials = strtoupper(substr($name, 0, 3));
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="flex sm:hidden">
+                <div class="flex md:hidden">
                     <button @click="open = !open"
                             class="inline-flex items-center justify-center p-2 rounded-md 
                                    text-gray-400 hover:text-red-600 hover:bg-red-50">
@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
+    <div :class="{ 'block': open, 'hidden': !open }" class="hidden md:hidden">
         <div class="pt-4 pb-3 border-t border-gray-200" x-data="{ mobileProfileOpen: false }">
             <div class="flex items-center justify-between px-4">
                 <div class="flex items-center space-x-4">

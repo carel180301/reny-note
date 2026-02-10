@@ -3,7 +3,7 @@
         {{-- HEADER ROW --}}
         <div class="row align-items-center mb-0 position-relative">
             @if(request('table'))
-                <h2 class="mb-0 position-absolute start-50 translate-middle-x text-center" style="top: 50%; pointer-events: none;">
+                <h2 class="mb-0 text-center w-100 mt-3 mt-md-0">
                     Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
                 </h2>
             @endif
@@ -13,9 +13,8 @@
         {{-- ================= STATUS FILTER ================= --}}
         @if(request('table') === 'bri')
             <!-- <div class="d-flex flex-wrap gap-2 mb-1 mt-5"> -->
-            <div class="d-flex justify-content-center mb-0 mt-5">
-                <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap gap-2">
-
+            <div class="d-flex justify-content-center mb-0 mt-4 mt-md-5 px-2">
+                <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap justify-content-center gap-2 w-100 w-md-auto">
                     <input type="hidden" name="table" value="bri">
 
                     {{-- STATUS --}}
