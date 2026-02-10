@@ -10,7 +10,7 @@
     <!-- ================= TABLE ================= -->
     <div class="table-responsive">
         <table class="table table-hover w-100 align-middle">
-            <thead>
+            <thead style="position: sticky; top: 0; z-index: 10;">
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $btn->tanggal_dokumen_diterima }}"></div>
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input type="date" name="tanggal_dokumen_diterima" class="form-control" value="{{ $btn->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Date Update</label><input name="date_update" class="form-control" value="{{ $btn->date_update }}"></div>
+                    <div><label class="form-label">Date Update</label><input type="date" name="date_update" class="form-control" value="{{ $btn->date_update }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -139,15 +139,15 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input name="tanggal_memo" class="form-control" value="{{ $btn->tanggal_memo }}"></div>
+                    <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input type="date" name="tanggal_memo" class="form-control" value="{{ $btn->tanggal_memo }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Pembayaran Klaim</label><input name="tanggal_pembayaran_klaim" class="form-control" value="{{ $btn->tanggal_pembayaran_klaim }}"></div>
+                    <div><label class="form-label">Tanggal Pembayaran Klaim</label><input type="date" name="tanggal_pembayaran_klaim" class="form-control" value="{{ $btn->tanggal_pembayaran_klaim }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label><input name="tanggal_pelunasan" class="form-control" value="{{ $btn->tanggal_pelunasan }}"></div>
+                    <div><label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label><input type="date" name="tanggal_pelunasan" class="form-control" value="{{ $btn->tanggal_pelunasan }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

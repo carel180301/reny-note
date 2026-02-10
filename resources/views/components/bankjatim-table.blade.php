@@ -10,7 +10,7 @@
     <!-- ================= TABLE ================= -->
     <div class="table-responsive">
         <table class="table table-hover w-100 align-middle">
-            <thead>
+            <thead style="position: sticky; top: 0; z-index: 10;">
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
@@ -114,11 +114,11 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bankjatim->tanggal_dokumen_diterima }}"></div>
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input type="date" name="tanggal_dokumen_diterima" class="form-control" value="{{ $bankjatim->tanggal_dokumen_diterima }}"></div>
                 </div>
                 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Disetujui</label><input name="tanggal_disetujui" class="form-control" value="{{ $bankjatim->tanggal_disetujui }}"></div>
+                    <div><label class="form-label">Tanggal Disetujui</label><input type="date" name="tanggal_disetujui" class="form-control" value="{{ $bankjatim->tanggal_disetujui }}"></div>
                 </div>
 
                 <div class="modal-body">

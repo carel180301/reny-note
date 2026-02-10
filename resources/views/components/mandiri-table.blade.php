@@ -10,7 +10,7 @@
     <!-- ================= TABLE ================= -->
     <div class="table-responsive">
         <table class="table table-hover w-100 align-middle">
-            <thead>
+            <thead style="position: sticky; top: 0; z-index: 10;">
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Uker</th>
@@ -88,47 +88,47 @@
                 @csrf
                 @method('PUT')
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Uker</label><input name="uker" class="form-control" value="{{ $mandiri->uker }}"></div>
+                    <div><label class="form-label">Uker</label><input name="uker" class="form-control" value="{{ $mandiri->uker }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $mandiri->nama_debitur }}"></div>
+                    <div><label class="form-label">Nama Debitur</label><input name="nama_debitur" class="form-control" value="{{ $mandiri->nama_debitur }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $mandiri->nomor_rekening }}"></div>
+                    <div><label class="form-label">Nomor Rekening</label><input name="nomor_rekening" class="form-control" value="{{ $mandiri->nomor_rekening }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tuntutan</label><input name="tuntutan" class="form-control" value="{{ $mandiri->tuntutan }}"></div>
+                    <div><label class="form-label">Tuntutan</label><input name="tuntutan" class="form-control" value="{{ $mandiri->tuntutan }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Net Klaim</label><input name="net_klaim" class="form-control" value="{{ $mandiri->net_klaim }}"></div>
+                    <div><label class="form-label">Net Klaim</label><input name="net_klaim" class="form-control" value="{{ $mandiri->net_klaim }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Klaim Diajukan</label><input name="tanggal_klaim_diajukan" class="form-control" value="{{ $mandiri->tanggal_klaim_diajukan }}"></div>
+                    <div><label class="form-label">Tanggal Klaim Diajukan</label><input type="date" name="tanggal_klaim_diajukan" class="form-control" value="{{ $mandiri->tanggal_klaim_diajukan }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $mandiri->status }}"></div>
+                    <div><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $mandiri->status }}"></div>
                 </div>
                 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $mandiri->keterangan }}"></div>
+                    <div><label class="form-label">Keterangan</label><input name="keterangan" class="form-control" value="{{ $mandiri->keterangan }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Kekurangan Data</label><input name="kekurangan_data" class="form-control" value="{{ $mandiri->kekurangan_data }}"></div>
+                    <div><label class="form-label">Kekurangan Data</label><input name="kekurangan_data" class="form-control" value="{{ $mandiri->kekurangan_data }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Tanggal Update</label><input name="tanggal_update" class="form-control" value="{{ $mandiri->tanggal_klaim_diajukan }}"></div>
+                    <div><label class="form-label">Tanggal Update</label><input type="date" name="tanggal_update" class="form-control" value="{{ $mandiri->tanggal_klaim_diajukan }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div class="mb-3"><label class="form-label">Nomor Box</label><input name="nomor_box" class="form-control" value="{{ $mandiri->nomor_box }}"></div>
+                    <div><label class="form-label">Nomor Box</label><input name="nomor_box" class="form-control" value="{{ $mandiri->nomor_box }}"></div>
                 </div>
 
                 <div class="modal-footer justify-content-center">

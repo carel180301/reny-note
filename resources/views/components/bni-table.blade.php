@@ -10,7 +10,7 @@
     <!-- ================= TABLE ================= -->
     <div class="table-responsive">
         <table class="table table-hover w-100 align-middle">
-            <thead>
+            <thead style="position: sticky; top: 0; z-index: 10;">
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tahun</th>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bni->tanggal_dokumen_diterima }}"></div>
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input type="date" name="tanggal_dokumen_diterima" class="form-control" value="{{ $bni->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -127,11 +127,11 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">JW Awal</label><input name="jw_awal" class="form-control" value="{{ $bni->jw_awal }}"></div>
+                    <div><label class="form-label">JW Awal</label><input type="date" name="jw_awal" class="form-control" value="{{ $bni->jw_awal }}"></div>
                 </div>
                 
                 <div class="modal-body">
-                    <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bni->jw_akhir }}"></div>
+                    <div><label class="form-label">JW Akhir</label><input type="date" name="jw_akhir" class="form-control" value="{{ $bni->jw_akhir }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -152,7 +152,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bni->tanggal_cl }}"></div>
+                    <div><label class="form-label">Tanggal CL</label><input type="date" name="tanggal_cl" class="form-control" value="{{ $bni->tanggal_cl }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -164,15 +164,15 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input name="tanggal_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bni->tanggal_memo_permohonan_pembayaran_klaim }}"></div>
+                    <div><label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label><input type="date" name="tanggal_memo_permohonan_pembayaran_klaim" class="form-control" value="{{ $bni->tanggal_memo_permohonan_pembayaran_klaim }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Pembayaran Klaim</label><input name="tanggal_pembayaran_klaim" class="form-control" value="{{ $bni->tanggal_pembayaran_klaim }}"></div>
+                    <div><label class="form-label">Tanggal Pembayaran Klaim</label><input type="date" name="tanggal_pembayaran_klaim" class="form-control" value="{{ $bni->tanggal_pembayaran_klaim }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label><input name="tanggal_pelunasan_di_bagian_keuangan" class="form-control" value="{{ $bni->tanggal_pelunasan_di_bagian_keuangan }}"></div>
+                    <div><label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label><input type="date" name="tanggal_pelunasan_di_bagian_keuangan" class="form-control" value="{{ $bni->tanggal_pelunasan_di_bagian_keuangan }}"></div>
                 </div>
 
                 <!--
