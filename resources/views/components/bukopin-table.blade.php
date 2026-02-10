@@ -107,15 +107,15 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">JW Awal</label><input name="jw_awal" class="form-control" value="{{ $bukopin->jw_awal }}"></div>
+                    <div><label class="form-label">JW Awal</label><input type="date" name="jw_awal" class="form-control" value="{{ $bukopin->jw_awal }}"></div>
                 </div>
                     
                 <div class="modal-body">
-                    <div><label class="form-label">JW Akhir</label><input name="jw_akhir" class="form-control" value="{{ $bukopin->jw_akhir }}"></div>
+                    <div><label class="form-label">JW Akhir</label><input type="date" name="jw_akhir" class="form-control" value="{{ $bukopin->jw_akhir }}"></div>
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input name="tanggal_dokumen_diterima" class="form-control" value="{{ $bukopin->tanggal_dokumen_diterima }}"></div>
+                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input type="date" name="tanggal_dokumen_diterima" class="form-control" value="{{ $bukopin->tanggal_dokumen_diterima }}"></div>
                 </div>
 
                 <div class="modal-body">
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Tanggal CL</label><input name="tanggal_cl" class="form-control" value="{{ $bukopin->tanggal_cl }}"></div>
+                    <div><label class="form-label">Tanggal CL</label><input type="date" name="tanggal_cl" class="form-control" value="{{ $bukopin->tanggal_cl }}"></div>
                 </div>
 
                 <div class="modal-body">

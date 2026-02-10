@@ -26,6 +26,10 @@
                             <li>
                                 <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bankjatim']) }}">Bank Jatim</a>
                             </li>
+
+                            <li>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bukopin']) }}">Bukopin</a>
+                            </li>
                             
                             <li>
                                 <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'btn']) }}">BTN</a>
