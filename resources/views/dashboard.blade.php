@@ -79,7 +79,7 @@
             </div>
         @endif
 
-         @if(request('table') === 'mandiri')
+        @if(request('table') === 'mandiri')
             <!-- <div class="d-flex flex-wrap gap-2 mb-1 mt-5"> -->
             <div class="d-flex justify-content-center mb-0 mt-5">
                 <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap gap-2">
@@ -132,6 +132,63 @@
                         @foreach($intervals as $val => $label)
                             <option value="{{ $val }}" {{ request('update') == $val ? 'selected' : '' }}>
                                 Tanggal Update: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    <button class="btn btn-sm btn-primary">Search</button>
+
+                    <a href="{{ route('dashboard', ['table' => 'bri']) }}" class="btn btn-sm btn-danger">
+                        Reset
+                    </a>
+                </form>
+            </div>
+        @endif
+
+        @if(request('table') === 'bankjatim')
+            <!-- <div class="d-flex flex-wrap gap-2 mb-1 mt-5"> -->
+            <div class="d-flex justify-content-center mb-0 mt-5">
+                <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap gap-2">
+
+                    <input type="hidden" name="table" value="bankjatim">
+
+                    {{-- STATUS --}}
+                    <select name="status" class="form-select form-select-sm" style="width:160px;">
+                        <option value="">Semua Status</option>
+                        @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                            <option value="{{ $s }}" {{ request('status') == $s ? 'selected' : '' }}>
+                                {{ ucfirst($s) }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    {{-- DATE INTERVAL OPTIONS --}}
+                    @php
+                        $intervals = [
+                            '' => 'Semua Waktu',
+                            '7' => '7 Hari',
+                            '14' => '14 Hari',
+                            '21' => '21 Hari',
+                            '30' => '1 Bulan',
+                            '90' => '3 Bulan',
+                            '180' => '6 Bulan',
+                        ];
+                    @endphp
+
+                    {{-- Tanggal Dokumen Diterima --}}
+                    <select name="dokumen_diterima" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('dokumen_diterima') == $val ? 'selected' : '' }}>
+                            Dokumen Diterima: {{ $label }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                    {{-- Tanggal Disetujui --}}
+                    <select name="disetujui" class="form-select form-select-sm" style="width:150px;">
+                        @foreach($intervals as $val => $label)
+                            <option value="{{ $val }}" {{ request('disetujui') == $val ? 'selected' : '' }}>
+                                Tanggal Disetujui: {{ $label }}
                             </option>
                         @endforeach
                     </select>
@@ -377,30 +434,49 @@
             <form method="POST" action="{{ route('bankjatims.store') }}">
                 @csrf
                 <div class="modal-body">
-                    @foreach ([
-                        'cabang_bank' => 'Cabang Bank',
-                        'nama' => 'Nama',
-                        'nomor_rekening' => 'Nomor Rekening',
-                        'nilai_tuntutan' => 'Nilai Tuntutan',
-                        'net_klaim' => 'NET Klaim',
-                        'tambahan_data' => 'Tambahan Data'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
+                    {{-- Cabang Bank --}}
+                    <div class="mb-3">
+                        <label class="form-label">Cabang Bank</label>
+                        <input name="cabang_bank" class="form-control">
+                    </div>
 
-                    @foreach ([
-                        'tanggal_dokumen_diterima' => 'Tanggal Dokumen Diterima',
-                        'tanggal_disetujui' => 'Tanggal Disetujui'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input type="date" name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
+                    {{-- Nama --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input name="nama" class="form-control">
+                    </div>
 
+                    {{-- Nomor Rekening --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input name="nomor_rekening" class="form-control">
+                    </div>
+
+                    {{-- Nilai Tuntutan --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nilai Tuntutan</label>
+                        <input name="nilai_tuntutan" class="form-control">
+                    </div>
+
+                    {{-- NET Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">NET Klaim</label>
+                        <input name="net_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Dokumen Diterima --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Dokumen Diterima</label>
+                        <input type="date" name="tanggal_dokumen_diterima" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Disetujui --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Disetujui</label>
+                        <input type="date" name="tanggal_disetujui" class="form-control">
+                    </div>
+
+                    {{-- Status --}}
                     <div class="mb-3">
                         <label class="form-label">Status</label>
                         <select name="status" class="form-select" required>
@@ -409,6 +485,12 @@
                                 <option value="{{ $s }}">{{ ucfirst($s) }}</option>
                             @endforeach
                         </select>
+                    </div>
+
+                    {{-- Tambahan Data --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tambahan Data</label>
+                        <input name="tambahan_data" class="form-control">
                     </div>
                 </div>
 
