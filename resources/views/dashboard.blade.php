@@ -1,8 +1,7 @@
 <x-app-layout>
     <div class="container-fluid px-2 px-md-4">
-
         {{-- HEADER ROW --}}
-        <div class="row align-items-center mb-2 position-relative">
+        <div class="row align-items-center mb-0 position-relative">
             @if(request('table'))
                 <h2 class="mb-0 position-absolute start-50 translate-middle-x text-center" style="top: 50%; pointer-events: none;">
                     Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
@@ -13,7 +12,9 @@
 
         {{-- ================= STATUS FILTER ================= --}}
         @if(request('table') === 'bri')
-        <div class="d-flex flex-wrap gap-2 mb-1 mt-5">
+        <!-- <div class="d-flex flex-wrap gap-2 mb-1 mt-5"> -->
+        <div class="d-flex justify-content-center mb-0 mt-5">
+
 
             <form method="GET" action="{{ route('dashboard') }}" class="d-flex flex-wrap gap-2">
 
@@ -46,7 +47,7 @@
                 <select name="diterima" class="form-select form-select-sm" style="width:150px;">
                     @foreach($intervals as $val => $label)
                         <option value="{{ $val }}" {{ request('diterima') == $val ? 'selected' : '' }}>
-                            Diterima: {{ $label }}
+                           Diterima: {{ $label }}
                         </option>
                     @endforeach
                 </select>
@@ -55,7 +56,7 @@
                 <select name="portal" class="form-select form-select-sm" style="width:150px;">
                     @foreach($intervals as $val => $label)
                         <option value="{{ $val }}" {{ request('portal') == $val ? 'selected' : '' }}>
-                            Portal: {{ $label }}
+                       Masuk Portal: {{ $label }}
                         </option>
                     @endforeach
                 </select>
