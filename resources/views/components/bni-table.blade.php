@@ -40,23 +40,37 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $bni->tahun }}</td>
-                    <td class="text-center">{{ $bni->tanggal_dokumen_diterima }}</td>
+                    <td class="text-center">
+                        {{ $bni->tanggal_dokumen_diterima ? \Carbon\Carbon::parse($bni->tanggal_dokumen_diterima)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bni->nomor_dokumen_diterima }}</td>
                     <td class="text-center">{{ $bni->cabang_bank }}</td>
                     <td class="text-center">{{ $bni->nama_debitur }}</td>
                     <td class="text-center">{{ $bni->nomor_rekening }}</td>
                     <td class="text-center">{{ $bni->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bni->nilai_net_klaim }}</td>
-                    <td class="text-center">{{ $bni->jw_awal }}</td>
-                    <td class="text-center">{{ $bni->jw_akhir }}</td>
+                    <td class="text-center">
+                        {{ $bni->jw_awal ? \Carbon\Carbon::parse($bni->jw_awal)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bni->jw_akhir ? \Carbon\Carbon::parse($bni->jw_akhir)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bni->status }}</td>
                     <td class="text-center">{{ $bni->keterangan }}</td>
-                    <td class="text-center">{{ $bni->tanggal_cl }}</td>
+                    <td class="text-center">
+                        {{ $bni->tanggal_cl ? \Carbon\Carbon::parse($bni->tanggal_cl)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bni->nomor_cl }}</td>
                     <td class="text-center">{{ $bni->nomor_memo_permohonan_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $bni->tanggal_memo_permohonan_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $bni->tanggal_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $bni->tanggal_pelunasan_di_bagian_keuangan }}</td>
+                    <td class="text-center">
+                        {{ $bni->tanggal_memo_permohonan_pembayaran_klaim ? \Carbon\Carbon::parse($bni->tanggal_memo_permohonan_pembayaran_klaim)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bni->tanggal_pembayaran_klaim ? \Carbon\Carbon::parse($bni->tanggal_pembayaran_klaim)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bni->tanggal_pelunasan_di_bagian_keuangan ? \Carbon\Carbon::parse($bni->tanggal_pelunasan_di_bagian_keuangan)->format('d/m/Y') : '' }}
+                    </td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">

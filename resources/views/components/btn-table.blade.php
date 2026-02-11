@@ -40,16 +40,26 @@
                     <td class="text-center">{{ $btn->nomor_rekening }}</td>
                     <td class="text-center">{{ $btn->nilai_tuntutan_klaim }}</td>
                     <td class="text-center">{{ $btn->net_klaim }}</td>
-                    <td class="text-center">{{ $btn->tanggal_dokumen_diterima }}</td>
+                    <td class="text-center">
+                        {{ $btn->tanggal_dokumen_diterima ? \Carbon\Carbon::parse($btn->tanggal_dokumen_diterima)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $btn->status }}</td>
                     <td class="text-center">{{ $btn->keterangan }}</td>
                     <td class="text-center">{{ $btn->Nomor_cl }}</td>
-                    <td class="text-center">{{ $btn->date_update }}</td>
+                    <td class="text-center">
+                        {{ $btn->date_update ? \Carbon\Carbon::parse($btn->date_update)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $btn->nomor_memo }}</td>
-                    <td class="text-center">{{ $btn->tanggal_memo }}</td>
-                    <td class="text-center">{{ $btn->tanggal_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $btn->tanggal_pelunasan }}</td>
-
+                    <td class="text-center">
+                        {{ $btn->tanggal_memo ? \Carbon\Carbon::parse($btn->tanggal_memo)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $btn->tanggal_pembayaran_klaim ? \Carbon\Carbon::parse($btn->tanggal_pembayaran_klaim)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $btn->tanggal_pelunasan ? \Carbon\Carbon::parse($btn->tanggal_pelunasan)->format('d/m/Y') : '' }}
+                    </td>
+                    
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
                             <button class="btn p-0 text-warning" data-bs-toggle="modal" data-bs-target="#editBtnModal{{ $btn->id }}">

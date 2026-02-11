@@ -24,14 +24,6 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kekurangan Data</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">tanggal update</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Box</th>
-
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diterima</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Masuk Portal</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">No Box</th> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -45,11 +37,15 @@
                     <td class="text-center">{{ $mandiri->nomor_rekening }}</td>
                     <td class="text-center">{{ $mandiri->tuntutan }}</td>
                     <td class="text-center">{{ $mandiri->net_klaim }}</td>
-                    <td class="text-center">{{ $mandiri->tanggal_klaim_diajukan }}</td>
+                    <td class="text-center">
+                        {{ $mandiri->tanggal_klaim_diajukan ? \Carbon\Carbon::parse($mandiri->tanggal_klaim_diajukan)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $mandiri->status }}</td>
                     <td class="text-center">{{ $mandiri->keterangan }}</td>
                     <td class="text-center">{{ $mandiri->kekurangan_data }}</td>
-                    <td class="text-center">{{ $mandiri->tanggal_update }}</td>
+                    <td class="text-center">
+                        {{ $mandiri->tanggal_update ? \Carbon\Carbon::parse($mandiri->tanggal_update)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $mandiri->nomor_box }}</td>
 
                     <td class="text-center">

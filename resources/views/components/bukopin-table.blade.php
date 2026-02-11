@@ -40,11 +40,19 @@
                     <td class="text-center">{{ $bukopin->cabang_bank }}</td>
                     <td class="text-center">{{ $bukopin->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bukopin->nilai_net_klaim }}</td>
-                    <td class="text-center">{{ $bukopin->jw_awal }}</td>
-                    <td class="text-center">{{ $bukopin->jw_akhir }}</td>
-                    <td class="text-center">{{ $bukopin->tanggal_dokumen_diterima }}</td>
+                    <td class="text-center">
+                        {{ $bukopin->jw_awal ? \Carbon\Carbon::parse($bukopin->jw_awal)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bukopin->jw_akhir ? \Carbon\Carbon::parse($bukopin->jw_akhir)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bukopin->tanggal_dokumen_diterima ? \Carbon\Carbon::parse($bukopin->tanggal_dokumen_diterima)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bukopin->status }}</td>
-                    <td class="text-center">{{ $bukopin->tanggal_cl }}</td>
+                    <td class="text-center">
+                        {{ $bukopin->tanggal_cl ? \Carbon\Carbon::parse($bukopin->tanggal_cl)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bukopin->keterangan_usaha }}</td>
                     <td class="text-center">{{ $bukopin->nomor_cl }}</td>
                     <td class="text-center">{{ $bukopin->kekurangan_data }}</td>

@@ -27,15 +27,6 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Memo Permohonan Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pembayaran Klaim</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th>
-
-                    <!-- 
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Dokumen Diterima</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Awal</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">JW Akhir</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal CL</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor CL</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pembayaran Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Pelunasan Di Bagian Keuangan</th> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -49,15 +40,25 @@
                     <td class="text-center">{{ $bjb->nomor_rekening }}</td>
                     <td class="text-center">{{ $bjb->tuntutan }}</td>
                     <td class="text-center">{{ $bjb->net_klaim }}</td>
-                    <td class="text-center">{{ $bjb->tanggal_dokumen_diterima }}</td>
+                    <td class="text-center">
+                        {{ $bjb->tanggal_dokumen_diterima ? \Carbon\Carbon::parse($bjb->tanggal_dokumen_diterima)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bjb->status }}</td>
                     <td class="text-center">{{ $bjb->keterangan }}</td>
                     <td class="text-center">{{ $bjb->nomor_cl }}</td>
-                    <td class="text-center">{{ $bjb->date_update }}</td>
+                    <td class="text-center">
+                        {{ $bjb->date_update ? \Carbon\Carbon::parse($bjb->date_update)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bjb->nomor_memo_permohonan_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $bjb->tanggal_memo_permohonan_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $bjb->tanggal_pembayaran_klaim }}</td>
-                    <td class="text-center">{{ $bjb->tanggal_pelunasan_di_bagian_keuangan }}</td>
+                    <td class="text-center">
+                        {{ $bjb->tanggal_memo_permohonan_pembayaran_klaim ? \Carbon\Carbon::parse($bjb->tanggal_memo_permohonan_pembayaran_klaim)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bjb->tanggal_pembayaran_klaim ? \Carbon\Carbon::parse($bjb->tanggal_pembayaran_klaim)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bjb->tanggal_pelunasan_di_bagian_keuangan ? \Carbon\Carbon::parse($bjb->tanggal_pelunasan_di_bagian_keuangan)->format('d/m/Y') : '' }}
+                    </td>
 
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">

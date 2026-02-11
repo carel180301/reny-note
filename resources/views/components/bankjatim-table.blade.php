@@ -22,24 +22,6 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Disetujui</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tambahan Data</th>
-
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Debitur</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tuntutan</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Net Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diajukan</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Keterangan</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kekurangan Data</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">tanggal update</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nomor Box</th> -->
-
-                    <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Cabang Bank</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nilai Tuntutan Klaim</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Diterima</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Klaim Masuk Portal</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tambahan Data</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Date Update</th>
-                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">No Box</th> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
                 </tr>
             </thead>
@@ -53,8 +35,12 @@
                     <td class="text-center">{{ $bankjatim->nomor_rekening }}</td>
                     <td class="text-center">{{ $bankjatim->nilai_tuntutan }}</td>
                     <td class="text-center">{{ $bankjatim->net_klaim }}</td>
-                    <td class="text-center">{{ $bankjatim->tanggal_dokumen_diterima }}</td>
-                    <td class="text-center">{{ $bankjatim->tanggal_disetujui }}</td>
+                    <td class="text-center">
+                        {{ $bankjatim->tanggal_dokumen_diterima ? \Carbon\Carbon::parse($bankjatim->tanggal_dokumen_diterima)->format('d/m/Y') : '' }}
+                    </td>
+                    <td class="text-center">
+                        {{ $bankjatim->tanggal_disetujui ? \Carbon\Carbon::parse($bankjatim->tanggal_disetujui)->format('d/m/Y') : '' }}
+                    </td>
                     <td class="text-center">{{ $bankjatim->status }}</td>
                     <td class="text-center">{{ $bankjatim->tambahan_data }}</td>
 

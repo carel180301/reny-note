@@ -106,14 +106,6 @@ class MandiriController extends Controller
         ->orWhere('kekurangan_data', 'like', "%$keyword%")
         ->orWhere('tanggal_update', 'like', "%$keyword%")
         ->orWhere('nomor_box', 'like', "%$keyword%")
-
-        // ->orWhere('cabang_bank', 'like', "%$keyword%")
-        // ->orWhere('nilai_tuntutan_klaim', 'like', "%$keyword%")
-        // ->orWhere('tanggal_klaim_diterima', 'like', "%$keyword%")
-        // ->orWhere('tanggal_klaim_masuk_portal', 'like', "%$keyword%")
-        // ->orWhere('tambahan_data', 'like', "%$keyword%")
-        // ->orWhere('date_update', 'like', "%$keyword%")
-        // ->orWhere('nomor_box', 'like', "%$keyword%")
         ->get();
 
         return view('components.mandiri-table', [
