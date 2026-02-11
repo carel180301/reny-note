@@ -53,47 +53,34 @@ class BukopinController extends Controller
         return redirect()->route('dashboard', ['table' => 'bukopin'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Bukopin $bukopins){
-        return view('bukopins.edit', ['bukopins' => $bukopins]);
+    public function edit(Bukopin $bukopin){
+        return view('bukopins.edit', ['bukopins'=>$bukopin]);
     }
 
-    public function update(Bukopin $bukopins, Request $request){
+    public function update(Bukopin $bukopin, Request $request){
         $data = $request->validate([
-            'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'cabang_bank' => 'nullable|string|max:255',
-            'nilai_tuntutan' => 'nullable|string|max:255',
-            'nilai_net_klaim' => 'nullable|string|max:255',
-            'jw_awal' => 'nullable|string|max:255',
-            'jw_akhir' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:255',
-            'tanggal_cl' => 'nullable|string|max:255',
-            'keterangan_usaha' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255',
-            'kekurangan_data' => 'nullable|string|max:255',
-            'nomor_box' => 'nullable|string|max:255',
+            'nama_debitur'=>'nullable|string|max:255',
+            'nomor_rekening'=>'nullable|string|max:255',
+            'cabang_bank'=>'nullable|string|max:255',
+            'nilai_tuntutan'=>'nullable|string|max:255',
+            'nilai_net_klaim'=>'nullable|string|max:255',
+            'jw_awal'=>'nullable|date',
+            'jw_akhir'=>'nullable|date',
+            'tanggal_dokumen_diterima'=>'nullable|date',
+            'status'=>'nullable|string|max:50',
+            'tanggal_cl'=>'nullable|date',
+            'keterangan_usaha'=>'nullable|string|max:255',
+            'nomor_cl'=>'nullable|string|max:255',
+            'kekurangan_data'=>'nullable|string|max:255',
         ]);
 
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
-        $bukopins->update($data);
-
-        return back()->with('success', 'Klaim berhasil di-update!');
+        $bukopin->update($data);
+        return back()->with('success','Klaim berhasil di-update!');
     }
 
-    public function destroy(Bukopin $bukopins){
-        $bukopins->delete();
-        return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+    public function destroy(Bukopin $bukopin){
+        $bukopin->delete();
+        return redirect(route('dashboard'))->with('success','Klaim berhasil dihapus!');
     }
 
     public function search(Request $request){
