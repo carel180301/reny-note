@@ -57,52 +57,41 @@ class BniController extends Controller
         return redirect()->route('dashboard', ['table' => 'bni'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Bni $bnis){
-        return view('bnis.edit', ['bnis' => $bnis]);
+    public function edit(Bni $bni){
+        return view('bnis.edit', ['bnis'=>$bni]);
     }
 
-    public function update(Bni $bnis, Request $request){
+    public function update(Bni $bni, Request $request){
         $data = $request->validate([
-            'tahun' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'nomor_dokumen_diterima' => 'nullable|string|max:255',
-            'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'nilai_tuntutan' => 'nullable|string|max:255',
-            'nilai_net_klaim' => 'nullable|string|max:255',
-            'jw_awal' => 'nullable|string|max:255',
-            'jw_akhir' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:255',
-            'keterangan' => 'nullable|string|max:255',
-            'tanggal_cl' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255',
-            'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|string|max:255'
+            'tahun'=>'nullable|string|max:255',
+            'tanggal_dokumen_diterima'=>'nullable|date',
+            'nomor_dokumen_diterima'=>'nullable|string|max:255',
+            'cabang_bank'=>'nullable|string|max:255',
+            'nama_debitur'=>'nullable|string|max:255',
+            'nomor_rekening'=>'nullable|string|max:255',
+            'nilai_tuntutan'=>'nullable|string|max:255',
+            'nilai_net_klaim'=>'nullable|string|max:255',
+            'jw_awal'=>'nullable|date',
+            'jw_akhir'=>'nullable|date',
+            'status'=>'nullable|string|max:50',
+            'keterangan'=>'nullable|string|max:255',
+            'tanggal_cl'=>'nullable|date',
+            'nomor_cl'=>'nullable|string|max:255',
+            'nomor_memo_permohonan_pembayaran_klaim'=>'nullable|string|max:255',
+            'tanggal_memo_permohonan_pembayaran_kaim'=>'nullable|date',
+            'tanggal_pembayaran_kaim'=>'nullable|date',
+            'tanggal_pelunasan_di_bagian_keuangan'=>'nullable|date',
         ]);
 
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
-        $bnis->update($data);
-
-        return back()->with('success', 'Klaim berhasil di-update!');
+        $bni->update($data);
+        return back()->with('success','Klaim berhasil di-update!');
     }
 
-    public function destroy(Bni $bnis){
-        $bnis->delete();
-        return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+    public function destroy(Bni $bni){
+        $bni->delete();
+        return redirect(route('dashboard'))->with('success','Klaim berhasil dihapus!');
     }
+
 
     public function search(Request $request){
         $keyword = $request->query('q', '');
