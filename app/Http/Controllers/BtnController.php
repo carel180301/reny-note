@@ -79,72 +79,37 @@ class BtnController extends Controller
         return redirect()->route('dashboard', ['table' => 'btn'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Btn $btns){
-        return view('btns.edit', ['btns' => $btns]);
+    public function edit(Btn $btn){
+        return view('btns.edit', ['btns'=>$btn]);
     }
 
-    public function update(Btn $btns, Request $request){
+    public function update(Btn $btn, Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:255',
-            'keterangan' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255',
-            'date_update' => 'nullable|string|max:255',
-            'nomor_memo' => 'nullable|string|max:255',
-            'tanggal_memo' => 'nullable|string|max:255',
-            'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_pelunasan' => 'nullable|string|max:255'
-
-            // 'nilai_tuntutan' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
-            // 'tanggal_disetujui' => 'nullable|string|max:255',
-            // 'tambahan_data' => 'nullable|string|max:255'
-
-
-            // 'nama_debitur' => 'nullable|string|max:255',
-            // 'tuntutan' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
-            // 'tanggal_klaim_diajukan' => 'nullable|date',
-            // 'kekurangan_data' => 'nullable|string|max:50',
-            // 'tanggal_update' => 'nullable|date',
-            // 'nomor_box' => 'nullable|string|max:255',
-
-            // 'cabang_bank' => 'nullable|string|max:255',
-            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-
-            // 'tanggal_klaim_diterima' => 'nullable|date',
-            // 'tanggal_klaim_masuk_portal' => 'nullable|date',
-            // 'date_update' => 'nullable|date',
-
-            // 'tambahan_data' => 'nullable|string|max:255',
-            // 'nomor_box' => 'nullable|string|max:255',
+            'cabang_bank'=>'nullable|string|max:255',
+            'nama_debitur'=>'nullable|string|max:255',
+            'nomor_rekening'=>'nullable|string|max:255',
+            'nilai_tuntutan_klaim'=>'nullable|string|max:255',
+            'net_klaim'=>'nullable|string|max:255',
+            'keterangan'=>'nullable|string|max:255',
+            'nomor_cl'=>'nullable|string|max:255',
+            'nomor_memo'=>'nullable|string|max:255',
+            'tanggal_dokumen_diterima'=>'nullable|date',
+            'date_update'=>'nullable|date',
+            'tanggal_memo'=>'nullable|date',
+            'tanggal_pembayaran_klaim'=>'nullable|date',
+            'tanggal_pelunasan'=>'nullable|date',
+            'status'=>'nullable|string|max:50',
         ]);
 
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
-        $btns->update($data);
-
-        return back()->with('success', 'Klaim berhasil di-update!');
+        $btn->update($data);
+        return back()->with('success','Klaim berhasil di-update!');
     }
 
-    public function destroy(Btn $btns){
-        $btns->delete();
-        return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+    public function destroy(Btn $btn){
+        $btn->delete();
+        return redirect(route('dashboard'))->with('success','Klaim berhasil dihapus!');
     }
+
 
     public function search(Request $request){
         $keyword = $request->query('q', '');
