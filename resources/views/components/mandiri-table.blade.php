@@ -112,7 +112,14 @@
                 </div>
 
                 <div class="modal-body">
-                    <div><label class="form-label">Status</label><input name="status" class="form-control" value="{{ $mandiri->status }}"></div>
+                    <label class="form-label">Status</label>
+                    <select name="status" class="form-select" required>
+                        @foreach (['batal','disetujui','pending','regist','suspect','tamdat','tolak'] as $s)
+                        <option value="{{ $s }}" {{ $mandiri->status == $s ? 'selected' : '' }}>
+                            {{ ucfirst($s) }}
+                        </option>
+                        @endforeach
+                    </select>
                 </div>
                 
                 <div class="modal-body">
