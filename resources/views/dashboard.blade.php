@@ -410,7 +410,6 @@
         @endif
 
         @if(request('table') === 'bjb')
-
             @php
             $intervals = [
                 '' => 'Semua Waktu',
@@ -775,7 +774,7 @@
     </div>
 
 
-    {{-- BTN MODAL --}}
+   {{-- BTN MODAL --}}
     <div class="modal fade" id="addBtnModal" tabindex="-1">
         <div class="modal-dialog"><div class="modal-content">
             <div class="modal-header">
@@ -786,35 +785,44 @@
             <form method="POST" action="{{ route('btns.store') }}">
                 @csrf
                 <div class="modal-body">
-                    @foreach ([
-                        'cabang_bank' => 'Cabang Bank',
-                        'nama_debitur' => 'Nama Debitur',
-                        'nomor_rekening' => 'Nomor Rekening',
-                        'nilai_tuntutan_klaim' => 'Nilai Tuntutan Klaim',
-                        'net_klaim' => 'NET Klaim',
-                        'keterangan' => 'Keterangan',
-                        'nomor_cl' => 'Nomor CL',
-                        'nomor_memo' => 'Nomor Memo'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
 
-                    @foreach ([
-                        'tanggal_dokumen_diterima' => 'Tanggal Dokumen Diterima',
-                        'date_update' => 'Date Update',
-                        'tanggal_memo' => 'Tanggal Memo',
-                        'tanggal_pembayaran_klaim' => 'Tanggal Pembayaran Klaim',
-                        'tanggal_pelunasan' => 'Tanggal Pelunasan'
-                    ] as $name => $label)
-                        <div class="mb-3">
-                            <label class="form-label">{{ $label }}</label>
-                            <input type="date" name="{{ $name }}" class="form-control">
-                        </div>
-                    @endforeach
+                    {{-- Cabang Bank --}}
+                    <div class="mb-3">
+                        <label class="form-label">Cabang Bank</label>
+                        <input name="cabang_bank" class="form-control">
+                    </div>
 
+                    {{-- Nama Debitur --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nama Debitur</label>
+                        <input name="nama_debitur" class="form-control">
+                    </div>
+
+                    {{-- Nomor Rekening --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Rekening</label>
+                        <input name="nomor_rekening" class="form-control">
+                    </div>
+
+                    {{-- Nilai Tuntutan Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nilai Tuntutan Klaim</label>
+                        <input name="nilai_tuntutan_klaim" class="form-control">
+                    </div>
+
+                    {{-- NET Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">NET Klaim</label>
+                        <input name="net_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Dokumen Diterima --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Dokumen Diterima</label>
+                        <input type="date" name="tanggal_dokumen_diterima" class="form-control">
+                    </div>
+
+                    {{-- Status --}}
                     <div class="mb-3">
                         <label class="form-label">Status</label>
                         <select name="status" class="form-select" required>
@@ -824,6 +832,49 @@
                             @endforeach
                         </select>
                     </div>
+
+                    {{-- Keterangan --}}
+                    <div class="mb-3">
+                        <label class="form-label">Keterangan</label>
+                        <input name="keterangan" class="form-control">
+                    </div>
+
+                    {{-- Nomor CL --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor CL</label>
+                        <input name="nomor_cl" class="form-control">
+                    </div>
+
+                    {{-- Date Update --}}
+                    <div class="mb-3">
+                        <label class="form-label">Date Update</label>
+                        <input type="date" name="date_update" class="form-control">
+                    </div>
+
+                    {{-- Nomor Memo Permohonan Pembayaran Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Memo Permohonan Pembayaran Klaim</label>
+                        <input name="nomor_memo_permohonan_pembayaran_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Memo Permohonan Pembayaran Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Memo Permohonan Pembayaran Klaim</label>
+                        <input type="date" name="tanggal_memo_permohonan_pembayaran_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Pembayaran Klaim --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Pembayaran Klaim</label>
+                        <input type="date" name="tanggal_pembayaran_klaim" class="form-control">
+                    </div>
+
+                    {{-- Tanggal Pelunasan Di Bagian Keuangan --}}
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Pelunasan Di Bagian Keuangan</label>
+                        <input type="date" name="tanggal_pelunasan" class="form-control">
+                    </div>
+
                 </div>
 
                 <div class="modal-footer">
@@ -832,6 +883,7 @@
             </form>
         </div></div>
     </div>
+
 
 
     {{-- BUKOPIN MODAL --}}
