@@ -36,29 +36,23 @@ class BriController extends Controller
             'nomor_box' => 'nullable|string|max:255',
         ]);
 
-
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
         Bri::create($data);
 
-        // return redirect(route('dashboard'))->with('success', 'Klaim baru berhasil ditambahkan!');
-        return redirect()->route('dashboard', ['table' => 'bri'])->with('success', 'Klaim baru berhasil ditambahkan!');
+        return redirect()->route('dashboard', ['table' => 'bri'])
+            ->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Bri $bris){
-        return view('bris.edit', ['bris' => $bris]);
+    /**
+     * 🔧 FIXED: use $bri (singular) for route model binding
+     */
+    public function edit(Bri $bri){
+        return view('bris.edit', ['bris' => $bri]);
     }
 
-    public function update(Bri $bris, Request $request){
+    /**
+     * 🔧 FIXED: use $bri (singular)
+     */
+    public function update(Bri $bri, Request $request){
         $data = $request->validate([
             'unit' => 'nullable|string|max:255',
             'cabang_bank' => 'nullable|string|max:255',
@@ -75,24 +69,17 @@ class BriController extends Controller
             'nomor_box' => 'nullable|string|max:255',
         ]);
 
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
-        $bris->update($data);
+        $bri->update($data);
 
         return back()->with('success', 'Klaim berhasil di-update!');
     }
 
-    public function destroy(Bri $bris){
-        $bris->delete();
+    /**
+     * 🔧 FIXED: use $bri (singular)
+     */
+    public function destroy(Bri $bri){
+        $bri->delete();
+
         return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
     }
 
