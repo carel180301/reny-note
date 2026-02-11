@@ -59,52 +59,34 @@ class BjbController extends Controller
         return redirect()->route('dashboard', ['table' => 'bjb'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(Bjb $bjbs){
-        return view('bjbs.edit', ['bjbs' => $bjbs]);
+    public function edit(Bjb $bjb){
+        return view('bjbs.edit', ['bjbs'=>$bjb]);
     }
 
-    public function update(Bjb $bjbs, Request $request){
+    public function update(Bjb $bjb, Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255',
-            'nama_debitur' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'tuntutan' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:255',
-            'Keterangan' => 'nullable|string|max:255',
-            'nomor_cl' => 'nullable|string|max:255',
-            'date_update' => 'nullable|string|max:255',
-            'nomor_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_memo_permohonan_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_pembayaran_klaim' => 'nullable|string|max:255',
-            'tanggal_pelunasan_di_bagian_keuangan' => 'nullable|string|max:255'
-
-            // 'cabang_bank' => 'nullable|string|max:255',
-            // 'jw_awal' => 'nullable|string|max:255',
-            // 'jw_akhir' => 'nullable|string|max:255',
-            // 'tanggal_cl' => 'nullable|string|max:255',
+            'cabang_bank'=>'nullable|string|max:255',
+            'nama_debitur'=>'nullable|string|max:255',
+            'nomor_rekening'=>'nullable|string|max:255',
+            'tuntutan'=>'nullable|string|max:255',
+            'net_klaim'=>'nullable|string|max:255',
+            'tanggal_dokumen_diterima'=>'nullable|date',
+            'status'=>'nullable|string|max:50',
+            'keterangan'=>'nullable|string|max:255',
+            'date_update'=>'nullable|date',
+            'nomor_memo_permohonan_pembayaran_klaim'=>'nullable|string|max:255',
+            'tanggal_memo_permohonan_pembayaran_klaim'=>'nullable|date',
+            'tanggal_pembayaran_klaim'=>'nullable|date',
+            'tanggal_pelunasan_di_bagiian_keuangan'=>'nullable|date',
         ]);
 
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
-        $bjbs->update($data);
-
-        return back()->with('success', 'Klaim berhasil di-update!');
+        $bjb->update($data);
+        return back()->with('success','Klaim berhasil di-update!');
     }
 
-    public function destroy(Bjb $bjbs){
-        $bjbs->delete();
-        return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+    public function destroy(Bjb $bjb){
+        $bjb->delete();
+        return redirect(route('dashboard'))->with('success','Klaim berhasil dihapus!');
     }
 
     public function search(Request $request){
