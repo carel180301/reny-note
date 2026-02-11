@@ -67,62 +67,30 @@ class BankjatimController extends Controller
         return redirect()->route('dashboard', ['table' => 'bankjatim'])->with('success', 'Klaim baru berhasil ditambahkan!');
     }
 
-    public function edit(BankJatim $bankjatims){
-        return view('bankjatims.edit', ['bankjatims' => $bankjatims]);
+    public function edit(Bankjatim $bankjatim){
+        return view('bankjatims.edit', ['bankjatims'=>$bankjatim]);
     }
 
-    public function update(BankJatim $bankjatims, Request $request){
+    public function update(Bankjatim $bankjatim, Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255',
-            'nama' => 'nullable|string|max:255',
-            'nomor_rekening' => 'nullable|string|max:255',
-            'nilai_tuntutan' => 'nullable|string|max:255',
-            'net_klaim' => 'nullable|string|max:255',
-            'tanggal_dokumen_diterima' => 'nullable|string|max:255',
-            'tanggal_disetujui' => 'nullable|string|max:255',
-            'status' => 'nullable|string|max:50',
-            'tambahan_data' => 'nullable|string|max:255'
-
-
-            // 'nama_debitur' => 'nullable|string|max:255',
-            // 'tuntutan' => 'nullable|string|max:255',
-            // 'net_klaim' => 'nullable|string|max:255',
-            // 'tanggal_klaim_diajukan' => 'nullable|date',
-            // 'keterangan' => 'nullable|string|max:50',
-            // 'kekurangan_data' => 'nullable|string|max:50',
-            // 'tanggal_update' => 'nullable|date',
-            // 'nomor_box' => 'nullable|string|max:255',
-
-            // 'cabang_bank' => 'nullable|string|max:255',
-            // 'nilai_tuntutan_klaim' => 'nullable|string|max:255',
-
-            // 'tanggal_klaim_diterima' => 'nullable|date',
-            // 'tanggal_klaim_masuk_portal' => 'nullable|date',
-            // 'date_update' => 'nullable|date',
-
-            // 'tambahan_data' => 'nullable|string|max:255',
-            // 'nomor_box' => 'nullable|string|max:255',
+            'cabang_bank'=>'nullable|string|max:255',
+            'nama'=>'nullable|string|max:255',
+            'nomor_rekening'=>'nullable|string|max:255',
+            'nilai_tuntutan'=>'nullable|string|max:255',
+            'net_klaim'=>'nullable|string|max:255',
+            'tanggal_dokumen_diterima'=>'nullable|date',
+            'tanggal_disetujui'=>'nullable|date',
+            'status'=>'nullable|string|max:50',
+            'tambahan_data'=>'nullable|string|max:255',
         ]);
 
-        // $data['outstanding'] = str_replace('.', '', $data['outstanding']);
-        // $data['outstanding'] = str_replace(',', '.', $data['outstanding']);
-        // $data['outstanding'] = (float)$data['outstanding'];
-
-        // if (strpos($data['tanggal_polis'], '/') !== false) {
-        //     $data['tanggal_polis'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['tanggal_polis'])->format('Y-m-d');
-        // }
-        // if (strpos($data['wpc'], '/') !== false) {
-        //     $data['wpc'] = \Carbon\Carbon::createFromFormat('d/m/Y', $data['wpc'])->format('Y-m-d');
-        // }
-
-        $bankjatims->update($data);
-
-        return back()->with('success', 'Klaim berhasil di-update!');
+        $bankjatim->update($data);
+        return back()->with('success','Klaim berhasil di-update!');
     }
 
-    public function destroy(BankJatim $bankjatims){
-        $bankjatims->delete();
-        return redirect(route('dashboard'))->with('success', 'Klaim berhasil dihapus!');
+    public function destroy(Bankjatim $bankjatim){
+        $bankjatim->delete();
+        return redirect(route('dashboard'))->with('success','Klaim berhasil dihapus!');
     }
 
     public function search(Request $request){
