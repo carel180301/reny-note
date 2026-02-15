@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Symfony\Component\Mime\Email;
 
-class Claim extends Model
+class Datapantry extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nomor_rekening'
+        'produk'
     ];
 }

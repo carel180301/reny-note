@@ -33,7 +33,7 @@
         <!-- Footer -->
         <footer class="bg-white fixed bottom-0 left-0 w-full z-40">
             <div class="w-full py-3 px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-                &copy; 2025 PT. Asuransi Kredit Indonesia
+                &copy; 2026 Reny Note
             </div>
         </footer>
 
