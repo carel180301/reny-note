@@ -1,9 +1,8 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100 sticky top-0" style="z-index: 1000;">
-
     <div class="w-full px-4 sm:px-6 lg:px-8 pt-5">
         <div class="flex justify-between items-center h-16">
             <div class="flex items-center">
-                <a href="{{ route('dashboard') }}">
+                <a href="{{ route('dashboard', ['table' => 'pantry']) }}">
                     <img src="{{ asset('assets/logo_askrindo.png') }}" alt="Logo" class="block h-12 w-auto" style="max-width:200px;" />
                 </a>
             </div>
@@ -16,48 +15,18 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bri']) }}">BRI</a>
-                            </li>
-                            
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'mandiri']) }}">Mandiri</a>
-                            </li>
-                            
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bankjatim']) }}">Bank Jatim</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bukopin']) }}">Bukopin</a>
-                            </li>
-                            
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'btn']) }}">BTN</a>
-                            </li>
-                            
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bni']) }}">BNI</a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'bjb']) }}">BJB</a>
+                                <a class="dropdown-item" href="{{ route('dashboard', ['table' => 'pantry']) }}">Pantry</a>
                             </li>
                         </ul>
                     </div>
 
                     @php
-                        $table = request('table', 'bri', 'mandiri', 'bankjatim', 'btn', 'bni', 'bjb');
+                        $table = request('table', 'pantry');
                     @endphp
 
                     <button type="button" class="btn p-0 text-primary" data-bs-toggle="modal" data-bs-target="#add{{ ucfirst($table) }}Modal">
                         <i class="bi bi-plus-lg fs-4"></i>
                     </button>
-
-                    <!-- <button type="button" class="btn p-0 text-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#uploadClaimModal">
-                        <i class="bi bi-upload fs-4"></i>
-                    </button> -->
 
                     <form class="d-none d-md-flex" onsubmit="return false;">
                         <div class="input-group">
@@ -142,7 +111,6 @@
                               d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-
             </div>
 
             <div x-show="mobileProfileOpen"
