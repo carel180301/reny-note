@@ -3,9 +3,9 @@
 use App\Http\Controllers\EmailsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PantryController;
+use App\Models\Pantry;
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DatapantryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +21,19 @@ Route::get('/', function () {
 | Dashboard (FIXED)
 |--------------------------------------------------------------------------
 */
-Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// Route::get('/pantry', [PantryController::class, 'index'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('pantry');
+
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+Route::get('/dashboard', function () {
+    $pantrys = Pantry::orderBy('created_at', 'asc')->get();
+    return view('dashboard', compact('pantrys'));
+})->middleware(['auth'])->name('dashboard');
 
 /*
 |--------------------------------------------------------------------------
@@ -31,11 +41,12 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 |--------------------------------------------------------------------------
 */
 Route::middleware('auth')->group(function () {
-    // ================= Data Pantry =================
-    Route::resource('datapantries', DatapantryController::class);
-    Route::get('/datapantries/search', [DatapantryController::class, 'search'])->name('datapantries.search');
-    Route::post('/datapantries/upload', [DatapantryController::class, 'upload'])->name('datapantries.upload');
-    Route::get('/datapantries/{datapantries}/send-email', [EmailsController::class, 'sendDatapantryEmail'])->name('datapantries.sendEmail');
+
+    // ================= Pantry =================
+    Route::resource('pantrys', PantryController::class);
+    Route::get('/pantrys/search', [PantryController::class, 'search'])->name('pantrys.search');
+    Route::post('/pantrys/upload', [PantryController::class, 'upload'])->name('pantrys.upload');
+    Route::get('/pantrys/{pantrys}/send-email', [EmailsController::class, 'sendPantryEmail'])->name('pantrys.sendEmail');
 
     // ================= PROFILE =================
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

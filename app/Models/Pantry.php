@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Symfony\Component\Mime\Email;
 
-class Datapantry extends Model
+class Pantry extends Model
 {
     use HasFactory;
+
+    protected $table = 'pantrys';
 
     protected $fillable = [
         'produk'
