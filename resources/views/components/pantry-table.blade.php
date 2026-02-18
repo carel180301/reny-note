@@ -25,10 +25,6 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $pantry->produk }}</td>
-                    <!-- <td class="text-center">
-                        {{ $bjb->tanggal_dokumen_diterima ? \Carbon\Carbon::parse($bjb->tanggal_dokumen_diterima)->format('d/m/Y') : '' }}
-                    </td>
-                    <td class="text-center">{{ $bjb->status }}</td> -->
                     
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -69,23 +65,6 @@
                 <div class="modal-body">
                     <div><label class="form-label">Produk</label><input name="produk" class="form-control" value="{{ $pantry->produk }}"></div>
                 </div>
-                
-                <!-- <div class="modal-body">
-                    <div><label class="form-label">Tanggal Dokumen Diterima</label><input type="date" name="tanggal_dokumen_diterima" class="form-control" value="{{ $bjb->tanggal_dokumen_diterima }}"></div>
-                </div>
-
-                <div class="modal-body">
-                    <label class="form-label">Status</label>
-                    <select name="status" class="form-control">
-                        <option value="batal" {{ $bjb->status == 'batal' ? 'selected' : '' }}>Batal</option>
-                        <option value="disetujui" {{ $bjb->status == 'disetujui' ? 'selected' : '' }}>Disetujui</option>
-                        <option value="pending" {{ $bjb->status == 'pending' ? 'selected' : '' }}>Pending</option>
-                        <option value="regist" {{ $bjb->status == 'regist' ? 'selected' : '' }}>Regist</option>
-                        <option value="suspect" {{ $bjb->status == 'suspect' ? 'selected' : '' }}>Suspect</option>
-                        <option value="tamdat" {{ $bjb->status == 'tamdat' ? 'selected' : '' }}>Tamdat</option>
-                        <option value="tolak" {{ $bjb->status == 'tolak' ? 'selected' : '' }}>Tolak</option>
-                    </select>
-                </div> -->
                 
                 <div class="modal-footer justify-content-center">
                     <button class="btn btn-primary">Update</button>

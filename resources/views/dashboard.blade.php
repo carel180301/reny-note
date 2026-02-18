@@ -4,12 +4,12 @@
         <div class="row align-items-center mb-0 position-relative">
             @if(request('table'))
                 <h2 class="mb-0 text-center w-100 mt-3 mt-md-0">
-                    Daftar Klaim <strong>{{ strtoupper(request('table')) }}</strong>
+                    Data <strong>{{ strtoupper(request('table')) }}</strong>
                 </h2>
             @endif
             <div class="col-auto"></div>
         </div>
-
+<!-- 
             <div class="d-flex justify-content-center mb-0 mt-4 mt-md-5 px-2">
                 <form method="GET" action="{{ route('dashboard') }}"
                     class="d-flex flex-wrap justify-content-center gap-2 w-100 w-md-auto">
@@ -19,7 +19,7 @@
                     <a href="{{ route('dashboard', ['table' => 'pantry']) }}" class="btn btn-sm btn-danger">Reset</a>
                     </div>
                 </form>
-            </div>
+            </div> -->
 
         <div class="bg-white shadow-sm rounded px-1 mt-4">
 

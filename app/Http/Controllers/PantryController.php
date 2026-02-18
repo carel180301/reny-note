@@ -21,7 +21,7 @@ class PantryController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'cabang_bank' => 'nullable|string|max:255',
+            'produk' => 'nullable|string|max:255',
             // 'tanggal_dokumen_diterima' => 'nullable|date',
             // 'status' => 'nullable|string|max:255',
         ]);
