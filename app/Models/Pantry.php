@@ -15,6 +15,7 @@ class Pantry extends Model
     protected $fillable = [
         'produk',
         'kategori',
-        'nama_brand'
+        'nama_brand',
+        'jumlah'
     ];
 }

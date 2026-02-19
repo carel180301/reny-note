@@ -16,6 +16,7 @@
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Produk</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kategori</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Nama Brand</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Jumlah</th>
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
@@ -29,6 +30,7 @@
                     <td class="text-center">{{ $pantry->produk }}</td>
                     <td class="text-center">{{ $pantry->kategori }}</td>
                     <td class="text-center">{{ $pantry->nama_brand }}</td>
+                    <td class="text-center">{{ $pantry->jumlah }}</td>
                     
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -70,6 +72,7 @@
                     <div><label class="form-label">Produk</label><input name="produk" class="form-control" value="{{ $pantry->produk }}"></div>
                     <div><label class="form-label">Kategori</label><input name="kategori" class="form-control" value="{{ $pantry->kategori }}"></div>
                     <div><label class="form-label">Nama Brand</label><input name="nama_brand" class="form-control" value="{{ $pantry->nama_brand }}"></div>
+                    <div><label class="form-label">Jumlah</label><input name="jumlah" class="form-control" value="{{ $pantry->jumlah }}"></div>
                 </div>
                 
                 <div class="modal-footer justify-content-center">

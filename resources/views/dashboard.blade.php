@@ -61,6 +61,11 @@
                             <input name="nama_brand" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Jumlah</label>
+                            <input name="jumlah" class="form-control">
+                        </div>
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Tanggal Dokumen Diterima</label>
                             <input type="date" name="tanggal_dokumen_diterima" class="form-control">
