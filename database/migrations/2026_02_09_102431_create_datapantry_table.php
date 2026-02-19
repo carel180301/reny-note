@@ -12,6 +12,7 @@ return new class extends Migration{
         Schema::create('pantries', function (Blueprint $table) {
             $table->id();
             $table->string('produk')->nullable();
+            $table->string('kategori')->nullable();
             // $table->string('tanggal_dokumen_diterima')->nullable();
             // $table->string('status')->nullable();  
             $table->timestamps();

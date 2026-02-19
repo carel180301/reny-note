@@ -14,6 +14,7 @@
                 <tr class="text-center">
                     <th class="text-white" style="background:#2a3d5e; min-width:100px;">No.</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Produk</th>
+                    <th class="text-white" style="background:#2a3d5e; min-width:300px;">Kategori</th>
                     <!-- <th class="text-white" style="background:#2a3d5e; min-width:300px;">Tanggal Dokumen Diterima</th>
                     <th class="text-white" style="background:#2a3d5e; min-width:300px;">Status</th> -->
                     <th class="text-white" style="background:#2a3d5e; min-width:200px;">Action</th>
@@ -25,6 +26,7 @@
                 <tr>
                     <td class="text-center">{{ $index + 1 }}</td>
                     <td class="text-center">{{ $pantry->produk }}</td>
+                    <td class="text-center">{{ $pantry->kategori }}</td>
                     
                     <td class="text-center">
                         <div class="d-inline-flex gap-2">
@@ -64,6 +66,7 @@
                 
                 <div class="modal-body">
                     <div><label class="form-label">Produk</label><input name="produk" class="form-control" value="{{ $pantry->produk }}"></div>
+                    <div><label class="form-label">Kategori</label><input name="kategori" class="form-control" value="{{ $pantry->kategori }}"></div>
                 </div>
                 
                 <div class="modal-footer justify-content-center">

@@ -13,6 +13,7 @@ class Pantry extends Model
     protected $table = 'pantrys';
 
     protected $fillable = [
-        'produk'
+        'produk',
+        'kategori'
     ];
 }

@@ -22,6 +22,7 @@ class PantryController extends Controller
     public function store(Request $request){
         $data = $request->validate([
             'produk' => 'nullable|string|max:255',
+            'kategori' => 'nullable|string|max:255'
             // 'tanggal_dokumen_diterima' => 'nullable|date',
             // 'status' => 'nullable|string|max:255',
         ]);
@@ -66,7 +67,7 @@ class PantryController extends Controller
         $keyword = $request->query('q', '');
 
         $data = Pantry::where('produk', 'like', "%$keyword%")
-        // ->orWhere('jw_akhir', 'like', "%$keyword%")
+        ->orWhere('kategori', 'like', "%$keyword%")
         ->get();
 
         return view('components.pantry-table', [
