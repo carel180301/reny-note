@@ -56,6 +56,11 @@
                             <input name="kategori" class="form-control">
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Nama Brand</label>
+                            <input name="nama_brand" class="form-control">
+                        </div>
+
                         <!-- <div class="mb-3">
                             <label class="form-label">Tanggal Dokumen Diterima</label>
                             <input type="date" name="tanggal_dokumen_diterima" class="form-control">

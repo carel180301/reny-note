@@ -13,7 +13,8 @@ return new class extends Migration{
             $table->id();
             $table->string('produk')->nullable();
             $table->string('kategori')->nullable();
-            // $table->string('tuntutan')->nullable();
+            $table->string('nama_brand')->nullable();
+
             // $table->string('net_klaim')->nullable();
             // $table->string('tanggal_dokumen_diterima')->nullable();
             // $table->string('status')->nullable();  
